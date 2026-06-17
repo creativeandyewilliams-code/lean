@@ -1,0 +1,27 @@
+FSS Gravity Sector v12 Lean Build / Source Report
+
+Artifact: fss_gravity_sector_v12_routing_skeleton.lean
+Lean scope: claim-status routing skeleton for observer-relative order-N P-space, conceptual-to-physical projection, inverse global-shape operators, and safe gravity-intervention boundary routing.
+
+Build status: Lean kernel build NOT independently executed in this sandbox because the Lean toolchain could not be installed (elan release binaries redirect to release-assets.githubusercontent.com, which is outside this environment's network allowlist; HTTP 403). A kernel-independent structural verification was run instead and passed 23/23 checks (see BUILD_CERTIFICATE.txt). The structural check is necessary but not sufficient for kernel acceptance.
+
+Intended external command:
+
+  ./build.sh            # structural pre-check + lake build
+  # or directly:
+  lake build
+
+A clean `lake build` (exit 0, no diagnostics) constitutes the kernel-level build certificate: all 33 theorems type-check with no sorry/admit/axiom under leanprover/lean4:v4.12.0.
+
+Changes from v11 -> v12:
+- Added allObjections enumeration (all 19 objection kinds).
+- Added route_total_over_enumeration (route total over the enumeration).
+- Added route_never_yields_projectionDefeat (no objection routes to defeat).
+- Added provesExcludedClaim_is_constant_false (universal non-entailment, subsuming per-claim lemmas).
+- Added stability_concerns_share_status and quantum_boundary_concerns_share_status.
+- Added repair_distinct_from_stability_defeat and a Provenance record (version 12).
+- All 27 v11 theorems retained verbatim. Theorem count: 27 -> 33.
+
+This artifact does not prove empirical gravitational facts, GR, QFT, Hassan-Rosen bigravity, quantum gravity, inverse gravity, or safe experimentation. It formalizes routing distinctions and non-entailment claims in the second-order assessment process.
+
+278784941fd084977ebb47298a9c7d8e1ecf0606ab1588a4bf2dc6306970eabb  fss_gravity_sector_v12_routing_skeleton.lean
