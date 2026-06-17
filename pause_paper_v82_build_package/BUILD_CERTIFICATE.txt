@@ -1,0 +1,222 @@
+PAUSE PAPER v82 — BUILD CERTIFICATE
+====================================
+
+Artifact (library module): ClaimStatusRouting/RoutingSkeleton.lean
+Source provenance:          pause_paper_v81_routing_skeleton_full.lean
+                             (uploaded by user; namespace ClaimStatusRoutingV81)
+Certificate date:           2026-06-17
+Lean target version:        leanprover/lean4:v4.12.0 (pinned in lean-toolchain)
+Dependencies:                none (pure-Lean; no Mathlib required)
+
+SCOPE
+-----
+This certificate attests to a claim-status routing skeleton for the
+pre-validation admission boundary in risk analysis (v81/v82). It formalizes
+status non-entailments and the non-decomposability / assessment-regress
+boundary as typed distinctions. It does NOT prove empirical risk, policy
+efficacy, reviewer behavior, propagation efficacy, AI-risk claims, Great
+Filter claims, journal fitness, or governance feasibility. Those exclusions
+are encoded as theorems (provesExcludedClaim c = false for every excluded
+claim).
+
+
+0. CHANGES FROM v81 (this revision)
+------------------------------------
+The v81 source as uploaded did NOT pass a Lean kernel build: `lake build`
+failed with exit code 1 on two theorems. A simulated peer review (ChatGPT)
+independently flagged both the build-fragility issue and a separate
+semantic concern; both were verified against a real kernel build and fixed
+here. RoutingSkeleton.lean in this v82 package therefore differs from the
+originally uploaded pause_paper_v81_routing_skeleton_full.lean in exactly
+two ways:
+
+  (a) PROOF FIX (no statement changed). `fixed_point_requires_type_preservation`
+      and `fixed_point_requires_independence` used `cases a; simp [...] at h ⊢;
+      exact h`, which fails to type-check: `cases a` destructs the structure
+      into fresh field variables, after which `h` (stated in terms of the
+      original field projection) no longer matches the rewritten goal, so
+      `exact h` is a type mismatch. Fix: drop `cases a` and the `at h ⊢` form;
+      `simp [fixedPointGate, h]` rewrites the goal directly using `h` as a
+      simp lemma against the unreduced field projection. THEOREM STATEMENTS
+      ARE UNCHANGED. Verified independently by direct `lake build` (see
+      Section "BUILD-FAILURE FINDING" below) before applying the fix.
+
+  (b) SEMANTIC FIX. `wordingObjectionStatus` previously routed
+      `wordingRoutesToRiskShape o = true` directly to `RoutedStatus.projectionDefeat`.
+      This conflicts with the paper's own stated principle (object
+      preservation before objection evaluation): crossing the risk-shape
+      gate with a stable target should make a wording objection
+      risk-shape-relevant and route it onward for review, not automatically
+      defeat the projection. Fix: added a new `RoutedStatus.riskShapeReview`
+      constructor; `wordingObjectionStatus` now returns `riskShapeReview` in
+      the gated branch instead of `projectionDefeat`. Added one new theorem,
+      `wording_risk_shape_not_automatic_projection_defeat`, stating that a
+      gated wording objection's status is never `projectionDefeat`. The
+      false-branch behavior (`canonical_weak_wording_status_carrier`) is
+      unaffected.
+
+  Theorem count: 41 -> 42. RoutedStatus constructors: 17 -> 18.
+  pause_paper_v81_routing_skeleton_full.lean itself was left unmodified;
+  only the copy inside this v82 build package was changed.
+
+
+1. SANDBOX VERIFICATION STATUS (what was machine-checked here)
+-------------------------------------------------------------
+Lean kernel build: EXECUTED twice, 2026-06-17 (UTC).
+  Run 1 (unmodified v81 source, copied verbatim into this package):
+    `lake build` FAILED, exit code 1. See "BUILD-FAILURE FINDING" below.
+  Run 2 (after applying fixes (a) and (b) above):
+    `lake build` SUCCEEDED, exit code 0.
+
+Toolchain: Lean (version 4.12.0, x86_64-unknown-linux-gnu, commit
+dc2533473114, Release); Lake version 5.0.0-dc25334 (Lean version 4.12.0).
+This is the exact toolchain pinned in lean-toolchain
+(leanprover/lean4:v4.12.0) -- no version substitution occurred. (As in the
+v12 package, elan's installer could not reach release.lean-lang.org from
+this sandbox; the pinned release archive was instead fetched directly from
+github.com/leanprover/lean4/releases, which redirects through a signed
+release-assets.githubusercontent.com URL that is reachable.)
+
+Structural pre-check (verify_structure.py, kernel-independent,
+post-fix source): 22 / 22 checks PASSED.
+
+Checks performed:
+  [PASS] namespace_balanced
+  [PASS] no_sorry / no_admit / no_axiom_decl / no_native_decide
+  [PASS] inductive_Coordinate / ObjectionKind / RoutedStatus / ChannelKind /
+         FailureMode / ExcludedClaim
+  [PASS] structure_RiskStatusObject / WordingObjection / RouterApparatus
+  [PASS] route_exhaustive            (17 objection ctors, 17 routed, 0 missing/extra)
+  [PASS] retypingCapacity_exhaustive (5 channel ctors, 5 mapped, 0 missing/extra)
+  [PASS] theorems_present            (42 theorems)
+  [PASS] theorems_have_terminal_tactic
+  [PASS] provesExcludedClaim_false
+  [PASS] angle_brackets_balanced
+  [PASS] namespace_name_matches_end  (ClaimStatusRoutingV81)
+  [PASS] all_excluded_claims_have_nonentailment_theorem (8/8 covered)
+
+Counts: ObjectionKind constructors = 17 ; ChannelKind constructors = 5 ;
+theorems = 42.
+
+Independent grep confirmation: no `sorry`, `admit`, `axiom`, or
+`native_decide` anywhere in the source (both before and after the fix).
+
+
+2. BUILD-FAILURE FINDING (unmodified v81 source, for the record)
+------------------------------------------------------------------
+`lake build` on the verbatim v81 source produced:
+
+  error: ClaimStatusRouting/RoutingSkeleton.lean:291:2: type mismatch
+    h
+  has type
+    typePreservingExternalization✝ = false : Prop
+  but is expected to have type
+    typePreservingExternalization✝ = true →
+      independentCrossChecks✝ = true → retypingCapable✝ = true → coverageMaintained✝ = false : Prop
+  error: ClaimStatusRouting/RoutingSkeleton.lean:299:2: type mismatch
+    h
+  has type
+    independentCrossChecks✝ = false : Prop
+  but is expected to have type
+    typePreservingExternalization✝ = true →
+      independentCrossChecks✝ = true → retypingCapable✝ = true → coverageMaintained✝ = false : Prop
+  error: Lean exited with code 1
+  Some required builds logged failures:
+  - ClaimStatusRouting.RoutingSkeleton
+
+This confirms, by direct kernel execution rather than inspection, that
+`fixed_point_requires_type_preservation` and `fixed_point_requires_independence`
+as originally written did not type-check under Lean 4.12.0. 39 of 41
+theorems compiled; these two did not. Fix (a) in Section 0 resolves this;
+no theorem statements were weakened or removed.
+
+
+3. EXTERNAL REPRODUCTION
+-------------------------
+On any machine with network access to the Lean release infrastructure:
+
+  curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh
+  source "$HOME/.elan/env"
+  ./build.sh
+  #   -> runs verify_structure.py (structural pre-check)
+  #   -> runs `lake build`        (kernel type-checks every theorem)
+
+A clean `lake build` with exit code 0 and no diagnostics is the kernel-level
+build certificate. Because the file uses only `rfl`, `decide`, `simp`,
+`cases`, `rcases`, and `exact` (no `native_decide`, no `axiom`), the proofs
+are checked entirely by the trusted kernel.
+
+Observed kernel result (this certificate, 2026-06-17, post-fix source):
+`lake build` exit code 0. All 42 theorems accepted by the Lean 4 kernel:
+0 errors, 0 sorries, 0 warnings, empty stderr.
+
+
+4. FILE HASHES (SHA-256)
+------------------------
+RoutingSkeleton.lean   0e317e82a4a4899b6357d8f8e89b7671a20e8102328a805db314d4eaabc30e56
+lakefile.lean          1f5e35f10e2c8d511d9224b604f7536d4037e93e9c9f26ac8f1bdfa51cdf7342
+lean-toolchain         e6930c662006db4d6dc76c651d60a608e4f6a18bcfd53e6b0167d70a125285d5
+verify_structure.py    54b07d3fac7f4e4ca2e0353cad5c5248abffdd24de316743dd8565d8693b6b3c
+build.sh               9e15b50ea0d52a458582c19d95fd5cd6bd5554fca12d0ace84279f7f0641562c
+
+These hashes are of the v82 package's RoutingSkeleton.lean (post-fix), and
+will NOT match the originally uploaded pause_paper_v81_routing_skeleton_full.lean
+(SHA-256 21d18f6876c4605a72e2a7ad6c8e040d513b13a25fb4ed821208aabc37691bcc),
+because of the two fixes documented in Section 0. The uploaded v81 file
+itself was left unmodified in the repository.
+
+
+5. KERNEL BUILD LOG (2026-06-17, UTC)
+---------------------------------------
+  $ lean --version
+  Lean (version 4.12.0, x86_64-unknown-linux-gnu, commit dc2533473114, Release)
+
+  $ lake --version
+  Lake version 5.0.0-dc25334 (Lean version 4.12.0)
+
+  $ python3 verify_structure.py ClaimStatusRouting/RoutingSkeleton.lean
+  RESULT: 22/22 structural checks passed
+
+  $ rm -rf .lake   # force a clean build, no cached artifacts
+  $ lake build
+  (stdout:) ✔ [2/3] Built ClaimStatusRouting.RoutingSkeleton
+            Build completed successfully.
+  (stderr:) (empty)
+  $ echo $?
+  0
+
+  $ grep -nE "\bsorry\b|\badmit\b|\baxiom\b|\bnative_decide\b" \
+      ClaimStatusRouting/RoutingSkeleton.lean
+  (no output -- grep exit code 1, i.e. zero matches)
+
+Summary: clean `lake build` exit code 0, zero warnings, zero errors, empty
+stderr; structural pre-check 22/22; source confirmed free of sorry/admit/
+axiom/native_decide. This is a genuine kernel-checked result, not a
+prediction, and reflects the source AFTER the two fixes in Section 0.
+
+
+6. ATTESTATION
+---------------
+What is certified here: the v82 source is structurally well-formed, the
+`route` and `retypingCapacity` functions are exhaustive over their
+respective constructors, every theorem is closed by a kernel-checkable
+tactic, the file contains no `sorry`, `admit`, `axiom`, or `native_decide`,
+AND `lake build` was actually executed against this exact source under the
+pinned leanprover/lean4:v4.12.0 toolchain and succeeded with exit code 0 --
+meaning the Lean 4 kernel itself accepted all 42 theorems with no proof
+holes and no added axioms.
+
+What changed from the uploaded v81 source, and why: two proof-tactic
+fixes (no change in theorem meaning) and one semantic fix (wording
+objections that cross the risk-shape gate now route to a new
+`riskShapeReview` status for further review, rather than automatically to
+`projectionDefeat`), per a simulated peer review that was independently
+verified against a real kernel build before being applied.
+
+What is NOT certified here: any empirical risk fact, policy efficacy
+claim, reviewer-behavior claim, journal-acceptance claim, propagation
+efficacy claim, Great Filter claim, centralized-AGI claim, or governance
+feasibility claim. The skeleton's only object-level claims are about
+routing and explicit non-entailment (Section "SCOPE" above);
+`provesExcludedClaim c = false` for every excluded claim is itself one of
+the kernel-checked theorems.

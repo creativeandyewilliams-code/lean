@@ -64,6 +64,7 @@ inductive RoutedStatus where
   | routeExternalization
   | routeFixedPoint
   | propagateForDiscovery
+  | riskShapeReview
   deriving DecidableEq, Repr
 
 /-- Channels relevant to the propagation-difficulty insert. -/
@@ -166,9 +167,10 @@ def discoveryStatus (_ : RiskStatusObject) : RoutedStatus :=
 def wordingRoutesToRiskShape (o : WordingObjection) : Bool :=
   o.hasStableTarget && o.crossesRiskShapeGate
 
-/-- Wording belongs first to carrier status; only gated, typed wording defeats projection. -/
+/-- Wording belongs first to carrier status. Gated, typed wording becomes risk-shape
+relevant and routes onward for review; it does not by itself defeat projection. -/
 def wordingObjectionStatus (o : WordingObjection) : RoutedStatus :=
-  if wordingRoutesToRiskShape o then RoutedStatus.projectionDefeat else RoutedStatus.repairCarrier
+  if wordingRoutesToRiskShape o then RoutedStatus.riskShapeReview else RoutedStatus.repairCarrier
 
 /-- A canonical weakly typed wording objection has no stable projection target. -/
 def weakWordingObjection : WordingObjection :=
@@ -221,6 +223,13 @@ theorem weakly_typed_wording_not_projection_defeat :
 theorem canonical_weak_wording_status_carrier :
     wordingObjectionStatus weakWordingObjection = RoutedStatus.repairCarrier := by
   rfl
+
+/-- Gated, typed wording that crosses the risk-shape gate routes to risk-shape
+review, not automatically to projection defeat. -/
+theorem wording_risk_shape_not_automatic_projection_defeat (o : WordingObjection)
+    (h : wordingRoutesToRiskShape o = true) :
+    wordingObjectionStatus o ≠ RoutedStatus.projectionDefeat := by
+  simp [wordingObjectionStatus, h]
 
 /-- Without a stable shared target, the reviewer-set gate is not satisfied. -/
 theorem no_reviewer_set_projection_defeat_without_stable_target :
@@ -286,17 +295,13 @@ theorem distributed_fixed_point_retyping_capable :
 theorem fixed_point_requires_type_preservation
     (a : RouterApparatus) (h : a.typePreservingExternalization = false) :
     fixedPointGate a = false := by
-  cases a
-  simp [fixedPointGate] at h ⊢
-  exact h
+  simp [fixedPointGate, h]
 
 /-- The fixed-point gate is false when independent cross-checks are absent. -/
 theorem fixed_point_requires_independence
     (a : RouterApparatus) (h : a.independentCrossChecks = false) :
     fixedPointGate a = false := by
-  cases a
-  simp [fixedPointGate] at h ⊢
-  exact h
+  simp [fixedPointGate, h]
 
 /-- The fixed-point gate is false when retyping capability is absent. -/
 theorem fixed_point_requires_retyping
