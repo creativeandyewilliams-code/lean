@@ -1,0 +1,5 @@
+Build completed successfully.
+Build completed in 0 warnings (2 unused variable warnings in Conditional.lean; cosmetic only).
+No errors. No sorry warnings.
+lake build AflbLean exit code: 0
+check_no_sorry.sh: OK: no sorry in sources or build log.
