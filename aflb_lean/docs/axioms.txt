@@ -1,23 +1,21 @@
 'AflbLean.inverseBranchResponsePositive' depends on axioms: [propext, Quot.sound]
 'AflbLean.regularBranchCoefficientPositivity' depends on axioms: [propext, Quot.sound]
+'AflbLean.viableAdmSignInvariant' depends on axioms: [propext]
 'AflbLean.signInvariance' depends on axioms: [propext, Quot.sound]
 'AflbLean.fiberCriterion' does not depend on any axioms
-'AflbLean.finiteCertificateClosure' does not depend on any axioms
+'AflbLean.classifyCovers' depends on axioms: [propext]
+'AflbLean.classifyExclusive' depends on axioms: [propext]
+'AflbLean.finiteCertificateClosureAscending' does not depend on any axioms
+'AflbLean.finiteCertificateClosureComplete' depends on axioms: [propext, Classical.choice, Quot.sound]
 'AflbLean.viabilityNonReducibility' depends on axioms: [propext]
-'AflbLean.secondOrderResult' depends on axioms: [propext,
- Quot.sound,
- AflbLean.Posits.pairResolution,
- AflbLean.Posits.pairResolution_holds]
-'AflbLean.scheduleRealizesInverse' does not depend on any axioms
-'AflbLean.Conditional.syncResidueBlindSpot' depends on axioms: [propext,
- AflbLean.Hypotheses.sharedBasis,
- AflbLean.Hypotheses.syncResidueWellDefined]
-'AflbLean.Conditional.topologicalClosureTwoSpaces' depends on axioms: [AflbLean.Hypotheses.pachnerTyped,
- AflbLean.Hypotheses.sharedBasis]
-'AflbLean.Posits.pairResolution' depends on axioms: [AflbLean.Posits.pairResolution]
-'AflbLean.Posits.physicalOperativity' depends on axioms: [AflbLean.Posits.physicalOperativity]
-'AflbLean.Hypotheses.sharedBasis' depends on axioms: [AflbLean.Hypotheses.sharedBasis]
-'AflbLean.Hypotheses.pachnerTyped' depends on axioms: [AflbLean.Hypotheses.pachnerTyped]
-'AflbLean.Hypotheses.syncResidueWellDefined' depends on axioms: [AflbLean.Hypotheses.syncResidueWellDefined]
-'AflbLean.Imported.odeGlobalExistence' depends on axioms: [AflbLean.Imported.odeGlobalExistence]
-'AflbLean.Imported.energyDescentIdentity' depends on axioms: [AflbLean.Imported.energyDescentIdentity]
+'AflbLean.secondOrderResult' depends on axioms: [propext, Quot.sound]
+'AflbLean.Legacy.Conditional.syncResidueBlindSpot' depends on axioms: [propext,
+ AflbLean.Legacy.Hypotheses.sharedBasis,
+ AflbLean.Legacy.Hypotheses.syncResidueWellDefined]
+'AflbLean.Legacy.Conditional.topologicalClosureTwoSpaces' depends on axioms: [AflbLean.Legacy.Hypotheses.pachnerTyped,
+ AflbLean.Legacy.Hypotheses.sharedBasis]
+'AflbLean.Legacy.Hypotheses.sharedBasis' depends on axioms: [AflbLean.Legacy.Hypotheses.sharedBasis]
+'AflbLean.Legacy.Hypotheses.pachnerTyped' depends on axioms: [AflbLean.Legacy.Hypotheses.pachnerTyped]
+'AflbLean.Legacy.Hypotheses.syncResidueWellDefined' depends on axioms: [AflbLean.Legacy.Hypotheses.syncResidueWellDefined]
+'AflbLean.Legacy.Imported.odeGlobalExistence' depends on axioms: [AflbLean.Legacy.Imported.odeGlobalExistence]
+'AflbLean.Legacy.Imported.energyDescentIdentity' depends on axioms: [AflbLean.Legacy.Imported.energyDescentIdentity]

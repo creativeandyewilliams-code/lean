@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this Lean formalization, please cite it as below."
+title: "AFLB Lean Formalization (v51): A Stdlib-Only Kernel-Checked Verification of the Second-Order Antigravity-Leverage/Branching Gravitation Supplement"
+type: software
+version: "51"
+date-released: "2026-06-30"
+license: MIT
+authors:
+  - family-names: Williams
+    given-names: Andye
+references:
+  - type: generic
+    title: "Antigravity Second-Order Gravitation (main manuscript, v50)"
+    notes: "antigravity_secondorder_main_v50_AFLB.tex"
+  - type: generic
+    title: "Antigravity Second-Order Gravitation (supplement, v50)"
+    notes: "antigravity_secondorder_supplement_v50_AFLB.tex"

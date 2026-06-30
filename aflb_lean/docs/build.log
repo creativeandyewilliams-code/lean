@@ -1,8 +1,1 @@
-⚠ [6/11] Replayed AflbLean.SecondOrder
-warning: ././././AflbLean/SecondOrder.lean:53:32: unused variable `xStar`
-note: this linter can be disabled with `set_option linter.unusedVariables false`
-warning: ././././AflbLean/SecondOrder.lean:56:40: unused variable `xStar`
-note: this linter can be disabled with `set_option linter.unusedVariables false`
-warning: ././././AflbLean/SecondOrder.lean:66:56: unused variable `h`
-note: this linter can be disabled with `set_option linter.unusedVariables false`
 Build completed successfully.

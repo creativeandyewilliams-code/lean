@@ -7,7 +7,7 @@ Source: antigravity_secondorder_supplement_v50_AFLB.tex, prop:closure
 (sec:falsification, lines 1169-1199).
 -/
 
-namespace AflbLean.Imported
+namespace AflbLean.Legacy.Imported
 
 /--
 **Global existence and uniqueness of the gradient flow [imported, ODE theory].**
@@ -35,4 +35,4 @@ Source: supplement eq:descent (line 365).
 axiom energyDescentIdentity : Prop
 axiom energyDescentIdentity_holds : energyDescentIdentity
 
-end AflbLean.Imported
+end AflbLean.Legacy.Imported

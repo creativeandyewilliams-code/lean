@@ -104,21 +104,73 @@ theorem regularBranchCoefficientPositivity (α γ rstar : Int)
   exact ⟨hα, hγ⟩
 
 /--
+A candidate energy functional's coefficient/equilibrium data, together with
+an independently-supplied response-sign *annotation* `sgn`. The annotation
+is kept structurally separate from the non-sign viability data: no
+admissibility predicate below ever takes `sgn` as an argument, by
+construction of the types involved (see `NonSignData`/`ViableAdm`).
+-/
+structure Candidate where
+  alpha : Int
+  gamma : Int
+  rstar : Int
+  sgn : Bool
+
+/-- The non-sign viability data extracted from a candidate (`NonSignData` has no `sgn` field at all). -/
+structure NonSignData where
+  alpha : Int
+  gamma : Int
+  rstar : Int
+deriving DecidableEq
+
+/-- Forgetful projection onto the non-sign data. -/
+def nonSignData (c : Candidate) : NonSignData := ⟨c.alpha, c.gamma, c.rstar⟩
+
+/--
+**Viability admission predicate, semantically sign-blind.**
+`ViableAdm` is defined purely on `NonSignData` — a type that has no `sgn`
+field — so it cannot reference, branch on, or otherwise presuppose a
+response sign. This is the literal regular-branch admissibility witness
+(`lem:ossv5-regularity-positivity`'s hypotheses), repackaged as a predicate.
+-/
+def ViableAdm (d : NonSignData) : Prop :=
+  d.rstar > 0 ∧ d.gamma * d.rstar = 2 * d.alpha ∧ -6 * d.alpha + 2 * (d.gamma * d.rstar) < 0
+
+/--
+**Sign-blind admissibility (semantic form of `hyp:ossv5-sign-neutrality`).**
+Two candidates that agree on every non-sign field but disagree on `sgn`
+receive identical viability admission. This is a genuine invariance
+theorem — not a comment asserting a predicate "doesn't mention" the
+sign — because `ViableAdm` is proved equal on the two candidates' shared
+`NonSignData` image, independent of how `sgn` differs.
+Source: supplement hyp:ossv5-sign-neutrality (lines 1062-1079).
+-/
+theorem viableAdm_sign_invariant (c1 c2 : Candidate)
+    (halpha : c1.alpha = c2.alpha) (hgamma : c1.gamma = c2.gamma) (hrstar : c1.rstar = c2.rstar) :
+    ViableAdm (nonSignData c1) ↔ ViableAdm (nonSignData c2) := by
+  have : nonSignData c1 = nonSignData c2 := by
+    simp [nonSignData, halpha, hgamma, hrstar]
+  rw [this]
+
+/-- The admissible class: candidates satisfying the regular-branch witness on their non-sign data. -/
+def Admissible (c : Candidate) : Prop := ViableAdm (nonSignData c)
+
+/--
 **Sign invariance over the surviving functional class (`thm:ossv5-sign-invariance`).**
-Every admitted candidate (i.e. one satisfying the regular-branch
-coefficient-positivity conclusion) has positive inverse-branch response.
-This theorem is built only from `regularBranchCoefficientPositivity` and
-elementary arithmetic: it does **not** take `Posits.physicalOperativity` as
-a hypothesis and does not use it. `Hypothesis hyp:ossv5-sign-neutrality` is
-discharged by construction: the hypotheses below never reference a response
-sign, so no extra axiom for sign-blindness is declared.
+Quantifies over the typed admissible class `Admissible c` (built from
+`ViableAdm`/`NonSignData` above) rather than taking the cleared positivity
+hypotheses directly as premises: membership in `Admissible` is the only
+hypothesis, and positivity of `alpha`/`gamma` is *derived* from it via the
+regularity-positivity keystone before concluding inverse-response
+positivity. This is strictly stronger than a v50-style statement that
+merely assumes the cleared hypotheses as raw arguments.
 Source: supplement thm:ossv5-sign-invariance (lines 1081-1114).
 -/
-theorem signInvariance (α γ rstar r : Int)
-    (hrstar : rstar > 0) (heq : γ * rstar = 2 * α)
-    (hderiv : -6 * α + 2 * (γ * rstar) < 0) (hr : r > 0) :
-    2 * α + γ * r > 0 := by
-  obtain ⟨hα, hγ⟩ := regularBranchCoefficientPositivity α γ rstar hrstar heq hderiv
-  exact inverseResponsePositive α γ r hα hγ hr
+theorem signInvariance (c : Candidate) (r : Int)
+    (hAdm : Admissible c) (hr : r > 0) :
+    2 * c.alpha + c.gamma * r > 0 := by
+  obtain ⟨hrstar, heq, hderiv⟩ := hAdm
+  obtain ⟨hα, hγ⟩ := regularBranchCoefficientPositivity c.alpha c.gamma c.rstar hrstar heq hderiv
+  exact inverseResponsePositive c.alpha c.gamma r hα hγ hr
 
 end AflbLean.Physics

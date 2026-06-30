@@ -13,11 +13,11 @@ hypothesis list). A result that reduces to a tautology is not a result;
 see CLAIM_INVENTORY.md.
 -/
 
-import AflbLean.Hypotheses
+import AflbLean.Legacy.Hypotheses
 
-namespace AflbLean.Conditional
+namespace AflbLean.Legacy.Conditional
 
-open AflbLean.Hypotheses
+open AflbLean.Legacy.Hypotheses
 
 /-- Sync Residue Blind Spot (Bucket C). Source: main prop:sync-residue (v50 line 386). -/
 theorem syncResidueBlindSpot
@@ -29,4 +29,4 @@ theorem syncResidueBlindSpot
 /-- Topological Closure in Two Spaces (Bucket C). Source: main prop:shared-basis, prop:smallest-scale. -/
 theorem topologicalClosureTwoSpaces (_ : sharedBasis) (_ : pachnerTyped) : True := trivial
 
-end AflbLean.Conditional
+end AflbLean.Legacy.Conditional

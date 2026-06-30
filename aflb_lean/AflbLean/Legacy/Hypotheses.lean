@@ -7,7 +7,7 @@ Downstream theorems in Conditional.lean are proved relative to these axioms.
 Source: antigravity_secondorder_main_v50_AFLB.tex
 -/
 
-namespace AflbLean.Hypotheses
+namespace AflbLean.Legacy.Hypotheses
 
 /--
 **Shared Basis Hypothesis.**
@@ -37,4 +37,4 @@ Source: main prop:sync-residue (v50 line 386).
 axiom syncResidueWellDefined : Prop
 axiom syncResidueWellDefined_holds : syncResidueWellDefined
 
-end AflbLean.Hypotheses
+end AflbLean.Legacy.Hypotheses
