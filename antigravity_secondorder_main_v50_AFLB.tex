@@ -1,0 +1,1220 @@
+\documentclass[10pt,twoside,a5paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+\setlength{\emergencystretch}{3em}
+\def\volnum{Manuscrit}
+\usepackage{aflb-web}
+\pdebut{1}
+\def\pacs#1{\LP P.A.C.S.: #1}
+\def\email#1{{email: \tt #1}}
+
+% ================== notation ==================
+\newcommand{\Pspace}{\ensuremath{\mathcal P_H}}
+\newcommand{\ARspace}{\ensuremath{\mathcal A_H}}
+\newcommand{\Reg}{\ensuremath{\mathsf{Reg}}}
+\newcommand{\Bridge}{\ensuremath{\mathcal B}}
+\newcommand{\Quot}{\ensuremath{\mathcal Q}}
+\newcommand{\Perspective}{\ensuremath{\Pi}}
+\newcommand{\Inv}{\ensuremath{\mathfrak I}}
+\newcommand{\Grav}{\ensuremath{\mathsf{grav}}}
+\newcommand{\IGrav}{\ensuremath{\mathsf{igrav}}}
+\newcommand{\Edge}{\ensuremath{\mathsf e}}
+\newcommand{\PathSet}{\ensuremath{\mathsf{Path}}}
+\newcommand{\Constraint}{\ensuremath{\mathsf K}}
+
+\theoremstyle{definition}
+\newtheorem{definitionx}{Definition}
+\newtheorem{claimprop}{Proposition}
+
+% ================== front matter ==================
+\title{Second-order physics of gravitation:\
+Physical-state topology, perspective, and inverse transitions}
+\titleshort{Second-order physics of gravitation}
+\author{Andy E. Williams}
+\authorshort{A. E. Williams}
+\address{Caribbean Center for Collective Intelligence, St. John's, Antigua and Barbuda\\
+Nobeah Foundation, Nairobi, Kenya\\
+\email{info@cc4ci.org}}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\small\itshape Physique de second ordre de la gravitation :
+topologie des \`etats physiques, perspective et transitions inverses
+\end{center}
+\vskip 4pt
+\begin{abstract}
+\textbf{R\'ESUM\'E.} Cet article développe l'hypothèse selon laquelle la matière présente un angle mort structurel dans sa capacité à observer d'autres éléments matériels, angle mort qui constitue par conséquent une lacune de la physique actuelle. Un observateur matériel conserve l'historique de ses interactions locales, alors que la cible physique qu'il cherche à caractériser peut dépendre d'une structure d'interaction globale régissant une évolution ultérieure susceptible de différer par un résidu de synchronisation. L'article élabore une physique du second ordre en tant qu'analyse topologique de cette relation et y adjoint des familles spécifiques de témoins physiques. L'angle mort qui en résulte s'auto-propage lorsque deux branches productives émergent : l'une développe le résidu de synchronisation et ses conséquences, tandis que l'autre accumule des résultats locaux au sein de l'architecture d'observation en cours. Chaque branche peut engendrer une famille illimitée d'objets physiques. La conclusion issue d'une évaluation finie est alors attirée par la branche à l'origine de cette évaluation, à moins qu'une analyse topologique n'identifie le résidu pour soit l'enregistrer, soit démontrer sa non-pertinence vis-à-vis de la cible.
+
+{\it
+\textbf{ABSTRACT.} This paper develops the hypothesis that matter has a structural blind spot in its ability to observe other matter, and that this blind spot is therefore also a blind spot in current physics. A material observer retains local interaction history, while the physical target it seeks to determine can depend on global interaction structure governing subsequent evolution that can differ by a synchronization residue. The paper develops second-order physics as a topological analysis of this relation and adds selected physical witness families. The resulting blind spot is self-propagating when two productive branches emerge: one expands the synchronization residue and its consequences; the other accumulates local results in the current observation architecture. Each branch can generate an unbounded family of physics objects. The conclusion reached by a finite assessment is then attracted by the branch from which the assessment begins, unless a topological analysis identifies the residue and either registers it or proves it irrelevant to the target. }
+\end{abstract}
+
+\pacs{04.20.-q; 04.60.-m; 03.65.Ta}
+\noindent\textbf{Mots-cl\'es / Keywords:} second-order physics; physical state space; registration space; perspective; inverse gravitational transition; topological navigation; blind spots.
+
+%-----------------------------------------------------------------
+\section{Introduction}
+\label{sec:intro}
+
+Matter observes other matter through physical interactions and through the records
+those interactions leave behind. Operational measurement theory already treats the
+physical state, the measurement interaction, and the registered outcome as related but
+distinct objects~\cite{DaviesLewis1970,Ozawa1984}. Those records are local: they retain a material
+observer's accessible interaction history. The physical target being assessed can,
+however, depend on relations distributed across a larger interaction network. The
+paper calls the difference between the locally retained record and the globally
+consequential relation a \emph{synchronization residue}. When an observation
+architecture erases a residue on which the target changes, the architecture has a
+blind spot: two physically different situations generate the same retained material
+record.
+
+% -----------------------------------------------------------------
+\section{The physical object: two bridged functional state spaces}
+\label{sec:object}
+
+This paper introduces a second-order representation of physics. In a first-order representation of physics, the perspective of the observer is not forced to be part of the field of observation. As a result, it may be assumed and weakly typed. In a second-order representation, the observer is part of the strongly-typed field of observation as well.
+
+From a functional modeling perspective, matter and its interactions
+with other matter at any scale and at any specific $t$ can be
+represented in terms of a network in which each region of matter is a
+node with a well-defined functional state (a given set of properties)
+arising from the nodes that it itself is composed of, and each
+interaction that any region of matter has with any other is an edge
+represented by some composition of a closed set of fundamental
+interactions. This representational stance---systems as graphs whose
+nodes carry the states of their elements and whose edges carry the
+interactions between them---is standard in network
+science~\cite{villegas2024networks}. The further structure we impose,
+a strongly-typed graph embedded in a three-dimensional manifold whose
+nodes and edges carry data drawn from a fixed algebraic set, has its
+closest precedent in the spin-network construction of Penrose, later
+developed in loop quantum gravity, in which a graph is embedded in a
+three-manifold with edges labelled by group representations and
+vertices by intertwiners~\cite{penrose1971spin, rovelli1995spin,
+bianchi2009length}. As in that setting, the matter is embedded into a
+three-dimensional Riemann manifold in which space might be curved,
+with the curvature carried by the labeling rather than fixed as a
+background~\cite{marcolli2010spinfoams}. This strongly-typed
+representation of matter and its interactions, hypothetically capable
+of modeling the entire space of possible behaviors of matter at any
+scale, is called the physical state space or P-space. Any distribution
+of fields and therefore of energy in this potentially curved manifold
+can be modeled as well, and the evolution of the energy and the matter
+is given by some energy functional $H$, which might be approximated by
+some composition of energy functionals that are each valid in
+different domains.
+
+We now introduce a second state space of the same representational
+form but a distinct domain object. Whereas the nodes of the
+spin-network lineage and of P-space are regions of matter or geometry,
+the nodes of this second space are \emph{registrations} of the state
+of matter; to our knowledge this construction has no direct precedent
+in the literature.\footnote{The strongly-typed graph-on-a-manifold
+\emph{form} is inherited from the spin-network
+construction~\cite{penrose1971spin, rovelli1995spin}; the
+registration-state-space \emph{content}---a state space of
+registrations propagating as perturbations on the fields of
+P-space---is, as far as we are aware, novel to this work.} From the
+same functional modeling perspective, registration of the state of
+matter and its interactions with other registrations of the state of
+matter at any scale and at any time $t$ can be represented in terms of
+a network in which each registration of the state of a region of
+matter is a node with a well-defined functional state arising from the
+nodes (registrations) that it itself is composed of, and each
+interaction that any registration has with any other is an edge
+represented by some composition of a closed set of perturbation
+channels---the interactions through which registrations
+propagate---closed because registrations propagate only on the field
+perturbations available in the underlying P-space. These registrations
+are embedded into a three-dimensional Riemann manifold in which space
+might be curved. This strongly-typed representation of registration,
+hypothetically capable of modeling the entire space of possible
+behaviors of registration at any scale, is called the registration
+state space or A(R)-space. Where the interactions between functional
+states of matter in P-space occur through fields, the interactions
+between registrations of functional states of matter occur through
+perturbations on those fields. Because those perturbations live on the
+same fields, any distribution of energy in this potentially curved
+manifold is modeled by---and the evolution of the energy and the
+registrations is governed by---the same potentially composite energy
+functional $H$ that governs P-space, inherited through the
+perturbation relation rather than posited separately.
+
+Let $H$ be the declared energy-accounting constraint for the physical domain and
+observational architecture under analysis. The physical-state space is the typed
+compositional network
+\begin{equation}
+\Pspace=(N_P,E_P,s_P,t_P,\tau_P,\circ_P;H),
+\label{eq:physical-space}
+\end{equation}
+where $N_P$ contains admissible physical-state representations, $E_P$ contains
+admissible physical transitions, $s_P$ and $t_P$ give ordered endpoints,
+$\tau_P$ assigns physical types, and $\circ_P$ composes compatible physical edges.
+
+The registration space is a distinct typed compositional network
+\begin{equation}
+\ARspace=(N_{A,R},E_{A,R},s_A,t_A,\tau_A,\circ_A;H),
+\label{eq:registration-space}
+\end{equation}
+where $N_{A,R}$ contains admissible registration compositions under perspective
+$R$, $E_{A,R}$ contains registration transitions, and $\circ_A$ composes compatible
+registration edges. The two spaces are non-identical and neither is a subspace of
+the other:
+\begin{equation}
+\Pspace\not\equiv\ARspace,
+\qquad
+\Pspace\not\subset\ARspace,
+\qquad
+\ARspace\not\subset\Pspace.
+\label{eq:space-separation}
+\end{equation}
+
+Their relation is supplied only by an explicit typed bridge,
+\begin{equation}
+\Bridge_R:\PathSet(\Pspace)\rightharpoonup\PathSet(\ARspace),
+\label{eq:typed-bridge}
+\end{equation}
+defined on the physical paths that the observational architecture can register. A
+bridge is an inter-space interface: it is not an untyped inclusion of physical
+objects in registration space, nor of registration objects in physical-state space.
+
+%-----------------------------------------------------------------
+\section{Local and global topological operations in functional state spaces and the blind spot}
+\label{sec:topological-operations-blindspot}
+
+The preceding sections represented each Functional State Space as a strongly typed
+metric graph whose edges are admitted operations. This section identifies those
+operations, at the smallest declared scale, with a closed set of topological moves on
+the graph, and shows that the same closed set generates the operations of both
+$\mathcal{P}_{E,r}$ and $\mathcal{A}_{R}$. The argument proceeds in four steps. First,
+the elementary edges of a Functional State Space are topological operations on its
+node set, in a sense made precise through graph rewriting and its simplicial
+realization. Second, because every edge at any scale is a composition of elementary
+edges, every operation on a Functional State Space carries a potential topological
+implication, so that a change in the represented shape of matter at any scale is the
+value of a composition over a closed operation set. Third, the same closed set is
+hypothesized to generate the operations of $\mathcal{A}_{R}$, the two spaces differing
+in their node type rather than in their operation basis. Fourth, two synchronizations
+of a registration record to a target---a global one and a local one---can differ, and
+their residue is a candidate blind spot. Throughout, P-space and registration-space
+operations are distinguished by subscripts $P$ and $R$; the conditions under which
+the two subscripted families coincide beyond their shared generators are deferred and
+held as a conditional hypothesis, not assumed.
+
+%-----------------------------------------------------------------
+\subsection{Elementary edges as expanding and contracting graph operations}
+\label{subsec:elementary-edges-topological}
+
+Fix a Functional State Space as in Definition~1: a strongly typed metric multigraph
+whose nodes are functional states and whose edges are admitted operations. At the
+smallest declared resolution, an edge is not a composition of smaller edges; it is an
+elementary operation on the graph. We characterize the elementary operations by their
+action on the node set.
+
+\begin{definition}[Expanding and contracting operations]
+\label{def:expand-contract}
+An elementary graph operation is \emph{expanding} when its application enlarges the
+admitted node set---introducing a node, splitting a node into a typed pair, or
+inserting an edge that creates a new admissible composition---and \emph{contracting}
+when its application reduces the admitted node set---deleting a node, contracting an
+edge so that two nodes are identified, or removing an admissible composition. Write
+$\mathsf{G}$ for the expanding operation and $\mathsf{L}$ for the contracting
+operation, subscripted $\mathsf{G}_{P},\mathsf{L}_{P}$ when they act on
+$\mathcal{P}_{E,r}$ and $\mathsf{G}_{R},\mathsf{L}_{R}$ when they act on
+$\mathcal{A}_{R}$.
+\end{definition}
+
+This characterization is not a new postulate about physics. It is the standard
+generating structure of an algebraic graph-transformation system, in which a
+finite set of productions---each adding or removing typed nodes and edges---generates
+the category of admissible rewrites on typed graphs~\cite{Ehrig2006,Arrighi2013}. The
+content of Definition~\ref{def:expand-contract} is only that the productions of a
+Functional State Space partition, by their effect on the node set, into an enlarging
+class and a reducing class, collected as the operations $\mathsf{G}$ and $\mathsf{L}$.
+
+\paragraph{Topological content.}
+That the operations are \emph{topological}, and not merely combinatorial bookkeeping
+on a node list, is supplied by the simplicial realization of the same moves. Take the
+complex dual to the Functional State Space graph at the declared resolution. The
+enlarging and reducing graph operations realize, on that complex, the elementary
+bistellar moves: a subdividing move that raises the simplex count and an aggregating
+move that lowers it. By Pachner's theorem, any two triangulations of the same
+piecewise-linear manifold are connected by a finite sequence of these elementary
+moves~\cite{Pachner1991,Lickorish1999}. The expanding and contracting operations of
+Definition~\ref{def:expand-contract} are therefore the graph-level presentation of a
+generating set whose simplicial presentation is known to be complete for
+piecewise-linear topology. We record this as the operation basis.
+
+\begin{definition}[Topological operation basis]
+\label{def:operation-basis}
+The \emph{topological operation basis} of a Functional State Space is the closed set
+$\mathsf{Op}_{\Top}=\{\mathsf{G},\mathsf{L}\}$ of expanding and contracting elementary
+operations. At the native graph level its closure is the production-completeness of
+the rewrite system~\cite{Ehrig2006}; at the simplicial level its closure is Pachner
+completeness for piecewise-linear manifolds~\cite{Pachner1991}.
+\end{definition}
+
+\begin{claimprop}[Smallest-scale topological reading]
+\label{prop:smallest-scale}
+At the smallest declared resolution, each elementary edge of a Functional State Space
+is an element of $\mathsf{Op}_{\Top}$: it expands or contracts the node set, and its
+simplicial realization is an elementary bistellar move. Under a local
+($\mathsf{L}_{P}$) reading this contracts to the familiar statement that an
+interaction rewires local connectivity; under a global ($\mathsf{G}_{P}$) reading it
+states additionally that the operation set is closed---no elementary edge acts outside
+$\mathsf{Op}_{\Top}$.
+\end{claimprop}
+
+The closure clause is the load-bearing one and is not retained by a local reading. Its
+defeater is explicit: an elementary edge whose action on the graph, or whose
+simplicial realization on the dual complex, cannot be written as a composition of
+$\mathsf{G}$ and $\mathsf{L}$ defeats Proposition~\ref{prop:smallest-scale} and the
+lift below. The graph-rewriting and Pachner citations are what make this a defeasible
+theorem rather than a declaration: closure is inherited from two established
+completeness results, not asserted of an unspecified set.
+
+%-----------------------------------------------------------------
+\subsection{Composition lifts the topological reading to every scale}
+\label{subsec:composition-lifts}
+
+The defining property of a Functional State Space (Definition~1) is that an edge at
+any scale is a composition of edges, terminating in compositions of elementary edges.
+Applying this to $\mathsf{Op}_{\Top}$ gives the lift directly.
+
+\begin{claimprop}[Scale-free topological implication]
+\label{prop:scale-free}
+Let an edge $e$ between functional states at any scale be a composition
+$e=o_{n}\circ\cdots\circ o_{1}$ of elementary edges, with each
+$o_{i}\in\mathsf{Op}_{\Top}$ by Proposition~\ref{prop:smallest-scale}. Then $e$ is a
+composition of expanding and contracting topological operations, and its action on the
+graph is a \emph{potential} topological operation: it changes the represented shape
+whenever its constituent operations do not cancel on the target-relevant retained
+quotient. Consequently every operation on a Functional State Space, at every scale,
+carries a potential topological implication.
+\end{claimprop}
+
+The qualifier \emph{potential} is precise, not hedging. A composition of nontrivial
+expanding and contracting operations may leave a given retained distinction invariant:
+an expansion followed by the matching contraction returns the node set, in the same
+way that a bistellar move followed by its inverse returns the triangulation. The
+proposition does not claim that every interaction alters every aspect of shape. It
+claims that the change in the represented shape of matter at any scale \emph{is} the
+value of a composition over the closed set $\{\mathsf{G},\mathsf{L}\}$, so that no
+change of represented shape at any scale falls outside that set. This is stronger than
+the informal reading that interactions change how matter looks: the informal reading
+reports an effect, whereas Proposition~\ref{prop:scale-free} names the generators of
+the effect and asserts they are closed. A local reading retains the former and
+discards the latter; a global reading retains the operative claim that macroscopic,
+mesoscopic, and microscopic shape change are one typed object---compositions over a
+single two-element basis---differing only in composition depth and in which
+constituent operations cancel.
+
+%-----------------------------------------------------------------
+\subsection{The shared operation basis for \texorpdfstring{$\mathcal{A}_{R}$}{A(R)-space}}
+\label{subsec:shared-basis}
+
+By Definition~3, $\mathcal{A}_{R}$ is a Functional State Space of the same form as
+$\mathcal{P}_{E,r}$: a strongly typed metric graph, embedded in the declared
+realization, whose domain object is the registration of a physical state rather than a
+region of matter, and whose edges are admissible registration operations on
+perturbation channels rather than interactions on fields. Because the operation basis
+$\mathsf{Op}_{\Top}$ was characterized in Definition~\ref{def:operation-basis} by its
+action on a typed graph---expansion and contraction of the node set, with the
+simplicial realization fixing its topological content---and not by any property
+specific to matter, it applies to any Functional State Space carrying that structure.
+This motivates the operator hypothesis for the registration space.
+
+\begin{claimprop}[Shared topological operation basis]
+\label{prop:shared-basis}
+\textsc{[hypothesis]} The operators of $\mathcal{A}_{R}$ are generated by the same
+topological operation basis $\mathsf{Op}_{\Top}=\{\mathsf{G},\mathsf{L}\}$ as those of
+$\mathcal{P}_{E,r}$, acting on registration nodes and perturbation-channel edges. The
+expanding operation $\mathsf{G}_{R}$ enlarges the admitted set of registration nodes;
+the contracting operation $\mathsf{L}_{R}$ reduces it; and the read/write registration
+operations of $\mathcal{A}_{R}$---$\Register$ and $\Recall$---are compositions over
+this basis applied in the matter-to-record and record-to-matter directions
+respectively. A topological change in $\mathcal{A}_{R}$ that has no representation as a
+composition over $\mathsf{Op}_{\Top}$ defeats the hypothesis.
+\end{claimprop}
+
+The status label is deliberate. Proposition~\ref{prop:shared-basis} is a hypothesis,
+and its warrant is structural: $\mathcal{A}_{R}$ is generated as a Functional State
+Space of the same form, and the basis was individuated by its action on that form, so
+the basis applies wherever the form is present. What the hypothesis does \emph{not}
+assert is an identification of the two spaces. A registration is not a region of
+matter, a perturbation channel is not a field, and the basis acts on different domain
+objects in the two cases; this is exactly the type distinction recorded by the
+subscripts $P$ and $R$. Whether $\mathsf{G}_{R}$ and $\mathsf{L}_{R}$ coincide with
+$\mathsf{G}_{P}$ and $\mathsf{L}_{P}$ beyond their shared generating role---whether,
+for instance, the global/local distinction they carry is the same support distinction
+that classifies the P-space interaction operations---is a further question. The
+present section accepts the subscripted distinction conditionally and does not turn on
+its resolution: the shared object asserted here is the generating basis, expansion and
+contraction, not the operands and not the finer classification.
+
+This discipline matches the treatment of the shared dynamical specification elsewhere
+in the framework. There the functionals are shared across the two spaces because
+registration rides on the same fields; here the operation basis is shared because
+$\mathcal{A}_{R}$ is a Functional State Space of the same form and the basis was
+characterized by its action on that form. In both cases the shared object is a
+consequence of the construction and carries a hypothesis status until a bridge
+certificate or a defeater resolves it.
+
+%-----------------------------------------------------------------
+\subsection{The blind spot as a global/local synchronization residue}
+\label{subsec:blindspot-residue}
+
+The shared-basis hypothesis lets the two synchronization routes be compared in one
+language. Fix a declared target $Q$ and a material observer $M$. Synchronizing the
+observer's registration graph to the target graph means applying operations from
+$\mathsf{Op}_{\Top}$ until the target-relevant relations carried by the target graph
+are carried by the observer's. Two synchronizations are available and are not
+interchangeable. A global synchronization $\mathsf{G}_{R}$ enlarges the registration
+graph until it retains the graph-scale relations---boundary, support, extended path
+composition---required for $Q$ to factor through the physical-to-registration bridge.
+A local synchronization $\mathsf{L}_{R}$ contracts the registration graph to the
+observer's bounded task and retains only what survives that contraction.
+
+\begin{claimprop}[Synchronization-residue blind spot]
+\label{prop:sync-residue}
+Let $\Sigma_{\mathsf{G}}^{M,Q}(\delta)$ denote the registration graph obtained by
+global synchronization of $M$ to $Q$ at resolution $\delta$, and
+$\Sigma_{\mathsf{L}}^{M,Q}(\delta)$ the graph obtained by local synchronization. Their
+relative registration class
+\begin{equation}
+\rho_{\mathsf{G}/\mathsf{L}}^{M,Q}(\delta)
+=
+\bigl[\,
+\Sigma_{\mathsf{L}}^{M,Q}(\delta),\;
+\Sigma_{\mathsf{G}}^{M,Q}(\delta)
+\,\bigr]_{\mathrm{rel},Q}
+\label{eq:GL-sync-residue}
+\end{equation}
+is zero when a target-preserving composition over $\mathsf{Op}_{\Top}$ deforms one
+graph into the other without loss. It is nonzero, and is a candidate
+matter-observation blind spot for $Q$, whenever the global route retains a support,
+boundary, path, or composition relation that the local route's contraction
+$\mathsf{L}_{R}$ merges.
+\end{claimprop}
+
+Two remarks fix the status of this result. First, the residue is a \emph{candidate}
+blind spot, not an established one. A nonzero $\rho_{\mathsf{G}/\mathsf{L}}$ becomes an
+actual blind spot for $Q$ precisely when no admitted registration record supplies a
+bridge that recovers the merged relation---that is, when the required physical-to-%
+registration factorization is unavailable. When a bridge is available, the residue is
+recoverable and no blind spot obtains; the proposition then records the cost of
+synchronizing locally rather than a permanent limit. The residue is the locus to
+inspect, not a verdict.
+
+Second, the comparison is well posed only because of the shared-basis hypothesis,
+Proposition~\ref{prop:shared-basis}. If the two spaces drew on different operation
+sets, the globally and locally synchronized graphs would not be commensurable and
+their relative class would be undefined rather than zero or nonzero. Thus
+Proposition~\ref{prop:sync-residue} inherits the status of the hypothesis it depends
+on and is defeasible by the same defeater. This dependence is a feature: it states
+exactly the condition under which the blind-spot comparison has content, and it is the
+condition a bounded local assessment---which never forms the globally synchronized
+graph $\Sigma_{\mathsf{G}}$---cannot itself check.
+
+%-----------------------------------------------------------------
+\section{Observability and Self-Selection of the Energy Functional}
+\label{sec:observability-self-selection-energy-functional}
+
+The preceding section defines the physical object as a bridge-coupled pair of
+functional state spaces, \Pspace{} and \ARspace{}, constrained by one declared
+energy functional $H$. This section closes that construction under
+observation. The claim is not that the literature already proves a universal
+self-selecting Hamiltonian; it is that four established results---effective
+Hamiltonians may be recursively transformed across scale
+\cite{Kadanoff1966,Wilson1971}; energy-functional descriptions may select
+self-consistent states \cite{HohenbergKohn1964,KohnSham1965}; measurements and
+their state changes are physical processes \cite{DaviesLewis1970,Ozawa1984};
+and physical interaction can dynamically select stable registration states
+\cite{Zurek1982}---compose, under the already declared shared-$H$ bridge, into
+a single recursive selection.
+
+Write $f_H[T]$ for the typed execution of $H$ relative to a declared target
+$T$, and let $\Xi_{T,\delta}$ collect the physical state, the registration
+state, its carrier, and every admitted parameter on which the evaluation of
+$H$ depends at resolution $\delta$. The recursive physical step transforms the
+effective functional across scale and, in the same step, applies an
+$H$-constrained selection that runs the physical and registration dynamics,
+tests the typed bridge, and retains only the energy-viable successor:
+\begin{equation}
+H_{\delta_{n+1}}
+=
+\mathcal R_{\delta_n\rightarrow\delta_{n+1}}
+\!\left(H_{\delta_n}\right),
+\qquad
+\Xi_{T,\delta_{n+1}}
+=
+\mathsf{Sel}_{H,T,\delta_n}
+\!\left(\Xi_{T,\delta_n}\right).
+\label{eq:H-recursive-selection}
+\end{equation}
+Here $\mathcal R$ is the declared scale or realization transformation and
+$\mathsf{Sel}_{H,T,\delta}$ is the $H$-constrained selection just described.
+Because the physical object contains no selector external to this composition,
+every accepted state, carrier, and parameter is retained only through
+$\mathsf{Sel}_{H,T,\delta}$. The single load-bearing consequence is that the
+registering observer, the registered target, and the parameters of their
+interaction all belong to one recursively selected, bridge-coupled,
+energy-viable object: $H$ is not a scalar attached to matter after the fact,
+but the process that selects the admissible paired successor on which the next
+evaluation depends. This is the first-order content---observations can be
+observed---and it is the platform on which the second-order residue is defined.
+
+At second order, the registration-side execution of $f_H[T]$ may be realized
+by typed words composed from the local operators
+\[
+\omega_{H,T,\delta}(R)
+\in
+\left\langle
+L_{f_H[T]}(R),\,
+G_{f_H[T]}(R)
+\right\rangle .
+\]
+The $L(R)$-realized and $G(R)$-realized synchronizations of a material
+observer $M$ to a target $Q$ therefore define a relative residue
+\begin{equation}
+\Res_{H}^{M,Q}(p;t,\delta)
+=
+\left[
+\Sigma_{L}^{M,Q}(p;t,\delta),\,
+\Sigma_{G}^{M,Q}(p;t,\delta)
+\right]_{\mathrm{rel},Q},
+\label{eq:H-observability-residue}
+\end{equation}
+where $\Sigma_L$ is generated through the admissible
+$L_{f_H[T]}(R)$-contractions and $\Sigma_G$ through the corresponding
+certificate-preserving $G_{f_H[T]}(R)$-successors.
+
+\begin{claimprop}[Second-order observability condition]
+\label{prop:second-order-observability-condition}
+\textsc{[conditional consequence]} Let
+$\mathsf{FactCert}_Q$ denote an admitted bridge certificate recovering every
+target-relevant relation retained by the $G(R)$-route. Then
+\begin{equation}
+\mathsf{Obs}^{(2)}_H(Q)
+\;\Longleftrightarrow\;
+\mathsf{Obs}^{(1)}_H(Q)
+\;\wedge\;
+\left(
+\Res_{H}^{M,Q}=0
+\;\vee\;
+\mathsf{FactCert}_Q
+\right).
+\label{eq:second-order-observability}
+\end{equation}
+Equivalently, the blind spot is
+\begin{equation}
+\mathsf{Blind}_{H}^{M,Q}
+\;\Longleftrightarrow\;
+\Res_{H}^{M,Q}\neq 0
+\;\wedge\;
+\neg\mathsf{FactCert}_Q.
+\label{eq:H-self-selection-blind-spot}
+\end{equation}
+\end{claimprop}
+
+The first-order result is therefore: observations can be observed. The
+second-order result is stronger and target-relative: observations can be
+observed except where the recursive $H$-constrained realization leaves a
+non-recoverable residue between the $L(R)$- and $G(R)$-routes. The residue
+does not deny physical observability; it identifies the precise condition under
+which local registration is insufficient to recover the globally retained
+target relation.
+
+% -----------------------------------------------------------------
+\section{Theories as typed paths and physics as navigation}
+\label{sec:navigation}
+
+In this representation, a theory $T$ is a typed edge or a typed path through
+$\Pspace$:
+\begin{equation}
+\Edge_T:x\longrightarrow y,
+\qquad \tau(\Edge_T)=T.
+\label{eq:theory-edge}
+\end{equation}
+A continuous evolution is a path whose adjacent transitions share a common type and
+domain. A multi-domain theory is a typed piecewise composition,
+\begin{equation}
+C_T=\Edge_n\circ\cdots\circ\Edge_2\circ\Edge_1,
+\qquad
+x_0\xrightarrow{\Edge_1}x_1\xrightarrow{\Edge_2}\cdots
+\xrightarrow{\Edge_n}x_n,
+\label{eq:piecewise}
+\end{equation}
+where every $\Edge_i$ has a declared domain of validity and every interface
+$x_i$ has a declared compatibility relation. The piecewise character is therefore
+represented directly rather than discovered only after a failure of a single
+undifferentiated model.
+
+First-order analysis studies the physical path in $\Pspace$ while holding the
+perspective that registers it fixed. Second-order physics represents that
+perspective and its quotient composition in $\ARspace$, together with the explicit
+typed bridge by which a physical path becomes registrable. It can therefore ask a
+question unavailable to a fixed-perspective analysis: whether the registration path
+that appears to answer the physical question omits a physical composition on which
+the answer depends.
+
+\paragraph{Subsystems as navigators of projected functional state spaces.}
+In $\Pspace$, every bounded and potentially recursively defined region of matter
+evolves according to the potentially recursively defined energy functional $H$. The
+representation imposes no exception for the region of matter that registers a path:
+the cognitive system is such a region, and therefore also evolves according to $H$.
+This is not a separate postulate. It is the closure of the $\Pspace$ construction
+applied to a particular subsystem, and it is what licenses representing that subsystem
+inside the same functional state spaces rather than in a separate formalism.
+
+A bounded subsystem that is observable as operating within a well-defined domain of
+functionality, and that navigates a \emph{discrete} functional state space, can then
+be represented as navigating some projection of $\Pspace$; a subsystem observable as
+operating within a well-defined domain of functionality that navigates a
+\emph{continuous} functional state space can be represented as navigating some
+projection of $\ARspace$. The projection is the content of the claim: the subsystem
+need not be re-modeled, only located within the projection of an already-declared
+space whose nodes, edges, and constraints it inherits. The same functional-state-space
+modeling approach used to define $\Pspace$ and $\ARspace$ has been applied to define a
+functional model of cognition~\cite{williams2026cognition} and a functional model of
+consciousness~\cite{williams2026consciousness}; the present section uses only the
+structural features of the cognition model required to type its reasoning operations,
+and does not depend on the further content of either.
+
+\paragraph{Cognition as navigation of a conceptual space.}
+In the functional model of cognition, cognition navigates a \emph{conceptual space}:
+the functional state space whose nodes are hypotheses and whose edges are the
+operations that assess and compose them. Two assessment operations on this space are
+relevant here, and they are the same two operations---local and global---that organize
+the assessment-relative claims of this paper, now read as reasoning operations on the
+conceptual space rather than as topological operations on a physical-state graph.
+
+A local operation, $L$, assesses the validity of a hypothesis. It is generally a
+one-shot process, and it returns one of three statuses---\emph{valid},
+\emph{invalid}, or \emph{undetermined within the assessment budget}---on the basis of
+priors such as empirical reasoning or established consensus. At the level of a single
+reasoning process, an $L$ assessment corresponds to System~1 reasoning: fast,
+prior-driven, and terminating in a verdict drawn from what is already
+held~\cite{Kahneman2011}.
+
+A global operation, $G$, assesses the global coherence of a hypothesis. It often
+requires a recursive and therefore multi-shot process, and it returns one of three
+statuses---\emph{globally coherent}, \emph{globally incoherent}, or
+\emph{undetermined within the assessment budget}. Unlike $L$, a $G$ assessment can
+operate reliably even where priors are absent, because it evaluates the internal
+compositional consistency of the hypothesis rather than its agreement with a held
+prior. At the level of a single reasoning process, a $G$ assessment corresponds to
+System~2 reasoning: slow, recursive, and capable of reaching a verdict in novel
+territory where System~1 has no prior to apply~\cite{Kahneman2011}.
+
+\paragraph{The unbounded support and objection sets.}
+The two operations are not symmetric in what they can generate against each other. For
+any globally coherent hypothesis there is a potentially unbounded set of supporting
+arguments obtainable by applying a $G$ approach---each a further composition shown to
+preserve coherence. There is likewise a potentially unbounded set of objections to the
+$G$ approach, and a potentially unbounded set of requests for additional empirical
+evidence before a $G$-based assessment is granted, obtainable for the same hypothesis
+by applying an $L$-based approach---each a prior the hypothesis has not yet been shown
+to satisfy. Neither set terminates on its own. The existence of further $L$-objections
+is therefore not evidence of incoherence, and the existence of further $G$-supports is
+not evidence of empirical adequacy; the two sequences are generated by different
+operations answering different questions, and the length of one places no bound on the
+other.
+
+\paragraph{The branch attractor and its residue.}
+A consequence follows for any reasoner who applies the wrong operation to a given
+target. An observation that requires a $G$-based assessment, assessed instead by $L$,
+and an observation that requires an $L$-based assessment, assessed instead by $G$, are
+each driven by an attractor toward failure to make the correct assessment. The
+reasoner is attracted by the branch from which the assessment begins: an $L$-first
+reasoner facing a coherence target keeps generating objections and evidence requests
+without converging, and a $G$-first reasoner facing a validity target keeps generating
+supporting compositions without ever discharging the prior that the target actually
+turns on. The attractor is not removed by additional effort within the starting
+branch, because, by the preceding paragraph, that effort is precisely what is
+unbounded.
+
+What removes it is a topological analysis of the residue between the two assessments.
+The residue is the target-relevant relation retained by the operation the target
+requires but merged by the operation the reasoner applied. Identifying it returns the
+reasoner one of two admissible outcomes: the residue is \emph{registered}---the
+missing $G$-coherence relation or the missing $L$-prior is named and supplied---or it
+is \emph{proved irrelevant to the target}, so that the starting branch was adequate
+after all. Absent that analysis, the reasoner has no internal signal distinguishing
+``the assessment is not yet complete'' from ``the assessment is complete but in the
+wrong type,'' and the branch attractor is indistinguishable from progress. This is the
+cognitive instance of the matter-observation blind spot: a distinction the active
+assessment quotient cannot recover is not registered as missing until a typed analysis
+of the residue exhibits it.
+
+\paragraph{An algebra of constraints.}
+The same representation provides an algebra of constraints. For a typed object
+$X$ confined to either $\Pspace$ or $\ARspace$, let $\Constraint(X)$ denote the
+set of constraints preserved by $X$. Compatible paths compose only within their
+respective functional state spaces through interfaces that satisfy the constraints
+of both components:
+\begin{equation}
+\Constraint(\Edge_2\circ\Edge_1)
+=
+\Constraint(\Edge_1)\cap\Constraint(\Edge_2)\cap
+\Constraint(\partial_{12}),
+\label{eq:constraint-algebra}
+\end{equation}
+A constraint relation crossing $\Pspace$ and $\ARspace$ must be stated through a
+declared bridge; no cross-space composition is licensed by treating an object of
+either space as an object of the other. Even when the full topology of a domain is
+unavailable, this algebra can eliminate inadmissible compositions, preserve known
+invariants, and state exactly which missing node-edge relations must be supplied
+before a proposed path is licensed.
+
+A retained library of such topologies is generative. If $\mathcal L_n$ is the
+library of typed paths, bridges, and constraints at stage $n$, then
+\begin{equation}
+\mathcal L_{n+1}\supseteq
+\{X_j\circ X_i:\,X_i,X_j\in\mathcal L_n\ \hbox{and their interfaces are admissible}\}.
+\label{eq:library}
+\end{equation}
+The physical content of Equation~\eqref{eq:library} is reuse: a topology that has
+already been validated can be composed with another validated topology to generate
+new hypotheses, proof obligations, simulation designs, and experimental
+registrations. The available navigation library can therefore increase the rate of
+physics by reducing the number of structures that must be rediscovered from local
+cases.
+
+% -----------------------------------------------------------------
+
+\section{A second-order theory of gravitation}
+\label{sec:gravity}
+
+Gravity enters this construction as a typed physical transition. A gravitational
+edge is
+\begin{equation}
+g:x\longrightarrow y,
+\qquad \tau(g)=\Grav.
+\label{eq:gravity-edge}
+\end{equation}
+
+The physical hypothesis of this section concerns the internal structure of such an
+edge at the smallest declared scale. We hypothesize that a gravitational interaction
+is composed of two opposite sub-interactions, and we let
+\begin{equation}
+\Delta(g)\;=\;\text{the structural non-coincidence of the two sub-interactions of }g,
+\label{eq:delta-definition}
+\end{equation}
+a quantity carried by the configuration itself and not by any record of it. In
+ordinary attractive gravity the two sub-interactions are exactly coincident,
+$\Delta(g)=0$: their non-coincidence is identically zero, so no observation
+architecture---at any noise floor---can resolve them as other than simultaneous.
+\emph{Inverse gravity} is the hypothesis that there exist gravitational configurations
+for which the two sub-interactions are structurally non-coincident,
+$\Delta(g)\neq 0$. The distinction between attractive and inverse gravity is therefore
+a structural property of the configuration, $\Delta=0$ versus $\Delta\neq0$, fixed
+independently of whether any observer can register it. Noise enters only at the
+separate, second-order question of \emph{detection}: a nonzero $\Delta$ is registered
+when, and only when, it exceeds the noise floor of the observation architecture
+through which $g$ is observed. This separation---structure in P-space, resolvability
+in the P-to-registration bridge---is the same separation the rest of the framework
+imposes between a physical relation and its registration, applied here to the
+sub-structure of the gravitational edge.
+
+The inverse gravitational transition is then the edge that realizes the inverse member
+of the declared gravitational state relation,
+\begin{equation}
+\bar g:y\longrightarrow x,
+\qquad \bar g\in\Inv_R(g),
+\qquad \tau(\bar g)=\IGrav.
+\label{eq:inverse-edge}
+\end{equation}
+The inverse relation $\Inv_R$ holds for the selected gravitational transition exactly
+when its configuration carries $\Delta(g)\neq 0$; the endpoints, invariants, bridge,
+support, and regime it specifies are the conditions under which that structural
+non-coincidence is registrable across the physical--registration map, not an
+alternative definition of inversion in their own right. The edge relation is primary,
+and attractive gravity is recovered as the $\Delta\to 0$ sublimit of $\Inv_R$: as the
+two sub-interactions approach coincidence, the inverse transition degenerates
+continuously into the ordinary gravitational transition, which is the correspondence
+condition any second-order theory of gravitation must satisfy. Ordered physical
+operations are candidate paths that construct, traverse, or register the inverse edge.
+
+The dynamical kernel of the paper's second-order theory of gravitation is the typed
+composite
+\begin{equation}
+H_G=H_P+H_A+H_\Sigma,
+\label{eq:second-order-gravitational-kernel}
+\end{equation}
+where $H_P$ carries declared first-order gravitational evolution in physical state
+space, $H_A$ carries the dynamics of material registration, and $H_\Sigma$ carries the
+typed physical--registration interface. The structural non-coincidence $\Delta$ is a quantity of the physical
+carrier.  In the finite carrier supplied in the supplement, it is represented
+by the intrinsic transport-relative pair separation $\delta_e$ together with
+its ordered interaction history; the P-space pair-resolution law compares
+$\delta_e$ with the intrinsic threshold $\eta_e$ and thereby selects the
+co-registered or resolved branch.  The physical energy $H_P$ does not create
+$\Delta$: conditional on the branch already selected by that carrier coordinate,
+its gradient flow determines the radial response.  The positive response on the
+resolved branch is not an admission criterion.  In the supplementary carrier it
+follows from the regular-branch stability component of full admissibility, which
+algebraically forces the relevant coefficient positivity before the inverse
+response sign is inferred.  The interface term $H_\Sigma$ has a different role.
+It governs whether the already physical pair-resolution distinction is retained
+by the physical--registration bridge above the relevant noise floor.  Thus
+branch determination belongs to the P-space carrier, whereas registrability
+belongs to the interface; the composite couples them without identifying them.
+
+Within this object, an inverse-gravitational transition is admissible when its
+configuration carries $\Delta\neq 0$, and it is \emph{registrable}---decidable from a
+material record---when, in addition, $\Delta$ exceeds the noise floor of the
+observation architecture and the target relation factorizes through the relevant
+physical--registration map. The kernel furnishes a constrained space of gravitational
+hypotheses together with operations for their comparison, simulation, discovery, and
+experimental routing. For the worked configuration of Section~\ref{sec:worked}, the supplement
+supplies a finite P-space carrier in which the relation
+$\delta_e\leq\eta_e$ versus $\delta_e>\eta_e$ determines the physical branch,
+and the declared energy gradient determines the corresponding branch response.
+For each candidate functional, full admission requires both a closed
+fitness/viability certificate generated by that candidate's own coupled
+physical, registration, and bridge consequences and a positive locally stable
+regular-branch equilibrium.  The latter condition derives the coefficient
+positivity used in the inverse-branch response calculation; no inverse-response
+sign is used to admit a candidate.  The construction therefore returns an
+admissible functional class rather than treating the energy as an arbitrary
+external choice.
+\footnote{The supplement supplies the finite carrier, its pair-resolution law,
+the energy and response calculation, the typed physical--registration bridge,
+and the viability-bearing operand closure.  It derives the coefficient
+positivity required for the inverse response from the carrier-regularity
+component of full admissibility.  It derives a branch condition and a response
+sign within the carrier; a continuum reconstruction or empirical bound remains
+a separately stated obligation.}
+
+A candidate inverse transition is a path
+\begin{equation}
+C=\Edge_n\circ\cdots\circ\Edge_1
+\label{eq:gravity-composition}
+\end{equation}
+with a macro-edge $\Edge_C:x\to y$. It receives the inverse-gravitational type when
+its endpoint, invariant, support, regime, and bridge constraints establish
+$\Edge_C\in\Inv_R(g)$---that is, when the composed configuration carries
+$\Delta(\Edge_C)\neq 0$. The factorization criterion then determines whether the chosen
+perspective can decide that membership from its registered record, rather than silently
+replacing the edge by a local proxy that retains the gain while merging the
+sub-interaction structure on which $\Delta$, and hence the attractive/inverse
+distinction, depends.
+
+
+\paragraph{Two layers, separately weighted.}
+The following discussion contains a model-internal result and a broader physical
+hypothesis.  The \emph{result} is the finite-carrier determination: for every
+candidate satisfying the stated full-admissibility condition, a positive locally
+stable regular branch forces the relevant coefficients to be positive, and the
+resolved inverse branch then has a positive radial response.  The supplement
+also proves that this sign is invariant over the surviving admissible functional
+class.  Neither the carrier-regularity condition nor the viability predicate
+uses that positive inverse sign as a criterion of admission.
+
+The \emph{physical hypothesis} is broader: energy functionals and matter
+mutually select one another, so that physically consequential
+fluctuation-induced executions are retained only through endogenous closure of
+their own viability-bearing operands.  The hypothesis identifies the intended
+ontic scope of the supplemental closure construction; it is not a premise of
+the carrier response calculation.  The dependency runs one way: if the
+hypothesis is correct, it explains why closed admissibility is physically
+relevant; the branch determination and its sign invariance remain available to a
+reader who declines that hypothesis.
+
+\paragraph{Endogenous physical self-selection.}
+First-order physics normally seeks a law that explains the matter we observe.
+The proposed inversion in second-order physics is that energy functionals and
+matter mutually select one another: a fluctuation can become physically
+consequential only when what it produces creates the conditions required for
+that same physical process to continue.
+
+The relevant candidate class is not the set of theories proposed by observers.
+It is the declared class of fluctuation-induced physical or registration-capable
+executions.  The supplement represents such a candidate by a realization
+$q\mapsto(h_q,x_q)$, where $h_q$ is a candidate energy-functional execution and
+$x_q$ is its typed matter--registration record.  A fluctuation is not thereby
+identified with a Hamiltonian.  Rather, the map records the functional execution
+and operand that the fluctuation induces in the declared model.  The claim that
+physical operativity requires closure is explicitly a hypothesis of the theory;
+the supplement's fixed-point theorem proves the corresponding certificate
+closure once a candidate execution has been supplied.
+
+For each $h$ in the declared candidate class $\mathcal H$, the supplement
+constructs a closed fitness/viability-bearing operand
+$\Xi_h^\star=(x,\phi_h^\star)$, where $\phi_h^\star$ is the least fixed point
+of a monotone update on a finite lattice of viability certificates generated by
+$h$'s own coupled P-space, $A(R)$-space, and bridge consequences.  Full
+admissibility additionally requires a regular-branch stability condition of the
+same candidate carrier.  The functional $H_h$ is admitted only when this
+fitness/viability-bearing operand and regularity condition jointly satisfy the
+declared admissibility predicate.  The result is the surviving class
+$\mathcal H_{\mathrm{adm}}$, not a claim that all human-authored theories
+converge or that a unique law has already been proved; a unique energy is
+selected only when $|\mathcal H_{\mathrm{adm}}|=1$.
+
+This is an endogenous domain condition on energy-functional evaluation.  It
+does not add fitness to $H_P$, and it does not identify fitness with physical
+energy.  It requires instead that $H_h$ be evaluated only on an operand
+retaining the viable continuation generated under $h$ itself.  The supplement
+proves that no representation which erases an admissibility-relevant viability
+distinction can implement this selection exactly.  It separately proves that
+full admissibility entails the coefficient positivity used by the inverse
+response, through the regular-branch equilibrium condition.  Thus every member
+of $\mathcal H_{\mathrm{adm}}$ has the same positive inverse-branch response
+sign, while that sign is not used as a premise for admission.
+
+\paragraph{Provenance (context of discovery, not of justification).}
+The inverse-response branch of Section~\ref{sec:gravity} was first identified in a
+different functional state space and then transported. Treating a discrete
+functional state space---conceptual space under second-order (auditing) reasoning---as
+a carrier of the same second-order invariant, one asks when an audited reasoning
+operation makes two concepts attract and when it makes them repel. An enforced
+\emph{simultaneous} constraint defines a single frame in which the two concepts must
+be mutually consistent and co-registers them; an \emph{asynchronous} constraint
+defines distinct frames in which they are free to diverge and resolves them apart.
+The attractive/inverse structure used here for gravitation was abstracted from that
+observation and carried to the $\Pspace$ gravitational carrier. We record this only
+as the route by which the model was found.
+
+The justification given in this paper does \emph{not} rely on that transport. The
+attractive and inverse responses are determined directly from the declared finite
+energy functional on $\Pspace$ and its gradient flow (this paper's
+Section~\ref{sec:gravity} and the supplement), with no premise drawn from conceptual
+space. Whether a transport principle \emph{between} functional state spaces is itself
+valid is governed by a shared-invariant hypothesis across the two spaces; that
+hypothesis is stated as an open obligation, is not assumed by any result of this
+paper, and is the proper subject of a separate treatment. The candidate functional class is declared as part of the model domain, but its
+admissible members are retained only through the full operand-level condition
+supplied in the supplement: endogenous viability closure together with
+carrier-regularity.  That condition is invoked here to define the surviving
+class over which the P-space response sign is invariant; it neither relies on
+the conceptual-space provenance route nor assumes a transport principle between
+functional state spaces.
+
+% -----------------------------------------------------------------
+\section{Worked gravitational topology: shock-wave gain and registration}
+\label{sec:worked}
+
+A physical witness must contain a calculable gravitational transition and the
+node-edge composition through which it is registered. The holographic shock-wave
+regime supplies such a witness. In a two-sided AdS black-hole construction, a
+perturbation at boost parameter $\tau$ produces a horizon null shift with eikonal
+gain
+\begin{equation}
+\begin{aligned}
+\alpha(\tau)&=\alpha_0e^{\kappa\tau},\\
+\Edge_\tau&:x_\tau\longrightarrow y_\tau,
+\qquad \tau(\Edge_\tau)=\Grav.
+\end{aligned}
+\label{eq:shock}
+\end{equation}
+within the declared nonextremal shock-wave regime.\footnote{The shock-wave
+and scrambling gain relations are due respectively to Dray and 't~Hooft (1985)
+and Shenker and Stanford (2014).} For a specified transition threshold $\alpha_c$,
+the physical threshold time is
+\begin{equation}
+\begin{aligned}
+\tau_c&=\kappa^{-1}\ln\!\left(\frac{\alpha_c}{\alpha_0}\right),\\
+\alpha(\tau_c)&=\alpha_c.
+\end{aligned}
+\label{eq:threshold}
+\end{equation}
+Equations~\eqref{eq:shock} and \eqref{eq:threshold} give a reader-checkable
+coordinate for the gravitational edge: $\alpha_0$, $\kappa$, and $\alpha_c$ fix
+both the gain and the threshold time.
+
+The second-order content of this witness is its full topology. Let
+$\Bridge_{\mathrm{holo}}$ be the entanglement/geometry bridge and let
+$\Perspective_{\mathrm{holo}}$ include the distributed boundary support through
+which the relevant bulk relation is registered. Entanglement-wedge reconstruction
+shows why support is part of the witness rather than an optional annotation
+\cite{AlmheiriDongHarlow2015,DongHarlowWall2016}. The witness is therefore
+\begin{equation}
+\mathcal W_{\tau}=
+(x_\tau,y_\tau,\Edge_\tau,\alpha(\tau),\alpha_c,\tau_c,
+\Perspective_{\mathrm{holo}},\Quot_{\mathrm{holo}},\Bridge_{\mathrm{holo}},
+\Constraint_{\mathrm{shock}}).
+\label{eq:witness}
+\end{equation}
+It contains the physical edge, its quantitative coordinate, the perspective that
+registers it, the quotient composition, bridge composition, support, and
+regime constraints. A local record that retains the gain while omitting the
+bridge or support is a different node-edge composition; it does not carry the
+same gravitational decision object.
+
+This worked topology establishes the physical component from which inverse
+gravity is assessed. One declares $\Inv_R$ for the selected gravitational edge,
+constructs a candidate path $C$, and tests the macro-edge $\Edge_C$ against the
+same endpoint, support, bridge, regime, and invariant structure. The model thus
+supplies both a numerical gravitational witness and a finite representation of
+what must be preserved when a new transition type is investigated.
+
+% -----------------------------------------------------------------
+\section{The blind-spot scenario: experiment, simulation, and hazard}
+\label{sec:scenario}
+
+The second-order reading has a direct consequence for how a gravitational question
+may be safely pursued. Gravitational edges compose. A candidate composition $C$ is
+a path $\Edge_C=o_n\circ\cdots\circ o_1$ over the topological operation basis of
+\S\ref{sec:topological-operations-blindspot}, and the gain it accumulates along the
+path is the value of that composition. Nothing in the local registration of $C$
+guarantees that this accumulated effect is bounded: a composition of expanding and
+contracting operations may settle to a fixed value, may saturate against a barrier,
+or may compound. The shock-wave witness makes the compounding branch concrete---the
+gain coordinate $\alpha(\tau)=\alpha_0 e^{\kappa\tau}$ of \eqref{eq:shock} grows
+without an internal ceiling, and only a declared regime constraint
+$\Constraint_{\mathrm{shock}}$ fixes where it terminates. Whether a given $C$ lies
+in the bounded or the compounding branch is exactly the kind of answer-changing
+relation that the synchronization residue can carry.
+
+Write $B(C)$ for the proposition that the accumulated gravitational effect of $C$
+is bounded. The point of this paper is that $B(C)$ is not, in general, decidable
+from a local registration of $C$. A local perspective $R_L$ retains the
+$\mathsf{L}_R$-contraction of the composition---its nearest familiar antecedent---and
+discards the residue on which $B(C)$ can turn. It can therefore exhibit two
+candidate paths it cannot separate,
+\begin{equation}
+\Reg_{R_L}(C_0)=\Reg_{R_L}(C_1),
+\qquad
+B(C_0)\ne B(C_1),
+\label{eq:local-blindspot}
+\end{equation}
+and, worse, it tends to \emph{report} the bounded antecedent it recognizes, so that
+the unbounded branch is not flagged as open but is silently absent from the
+assessment. Within $R_L$ the only apparent route to distinction is experimental
+traversal, because the local architecture holds no registered composition that
+separates the candidate paths before they are physically enacted.
+
+This is precisely where the blind spot becomes a hazard rather than a curiosity. To
+detect such an effect experimentally is to instantiate the physical edge $\Edge_C$
+whose boundedness is undetermined. If $C$ lies in the compounding branch, the
+experiment does not measure a bounded quantity; it enacts an effect that local
+registration could not certify as bounded in the first place. The exposure accepted
+by experimenting before the bound is established is therefore the exposure of the
+undetermined branch itself: a potential for unbounded effect that the experiment can
+resolve only by realizing it. This is an epistemic claim about what local
+registration can establish in advance, not a prediction that the strong branch is
+occupied; but it is enough, because safety cannot rest on the assumption that an
+undecided question has fallen the favorable way.
+
+The resolution is supplied by the second-order perspective $R_G$, which carries the
+support, the bridge, and the residue that $R_L$ discards, and can therefore evaluate
+the full topology of $C$ without enacting its physical edge. A full-support
+simulation is such a second-order path: it carries the candidate composition, its
+constraints, its support, and its bridge as node--edge objects in $\ARspace$ while
+declining the corresponding traversal in $\Pspace$, and it can search the composition
+for a \emph{closure certificate}---a barrier, a saturation condition, a containment
+relation, or an explicit regime bound such as $\Constraint_{\mathrm{shock}}$---that
+establishes $B(C)$. The decision rule follows directly: simulation must precede
+experiment whenever $B(C)$ is undecided from local registration, and experiment on
+$\Edge_C$ becomes admissible once, and only once, a closure certificate bounds the
+compounding. This discharge condition is the same discipline the paper applies to
+every residue---register it or prove it irrelevant---now applied to hazard: the
+certificate is what converts an undetermined branch into a bounded one, and nothing
+weaker licenses the physical traversal.
+
+The scenario thus gives the blind spot a concrete decision role. An analysis confined
+to $R_L$ classifies experiment as necessary because it cannot register the residue on
+which boundedness depends. The second-order analysis in $R_G$ exposes the missing
+composition, names the certificate that would discharge it, and so makes simulation
+the first decision path. The difference is not a change in evidential standards; it is
+a change in the topology represented by the assessment, and with it a change in which
+actions can be taken before the question of boundedness is closed.
+
+% -----------------------------------------------------------------
+\section{Conclusion}
+\label{sec:conclusion}
+The paper defines a second-order theory of gravitation in this form. A declared
+first-order gravitational carrier supplies the physical edge in its stated regime;
+the second-order contribution supplies the registration, quotient, bridge, and
+factorization conditions required to decide that edge or a candidate composition of
+such edges. Gravity is therefore a typed transition in physical state space, and
+inverse gravity is the inverse member of a declared gravitational transition
+relation. The factorization criterion states when a perspective can decide such a
+transition. The holographic shock-wave witness provides a finite gravitational edge
+with a calculable gain and threshold. The blind-spot scenario then shows why the
+same representation can reverse a practical priority. Because gravitational edges
+compose, the accumulated effect of a candidate composition is itself the value of a
+composition, and its boundedness need not be decidable from a local registration
+that retains only the nearest familiar antecedent. Where that boundedness is
+undecided, detecting the effect experimentally instantiates the very edge whose
+boundedness is in question, so a local perspective that directs such a question
+toward experiment can be accepting the exposure of an undetermined branch. The
+second-order analysis registers the residue on which boundedness depends and names
+the closure certificate---a barrier, saturation, containment, or declared regime
+bound---that would establish it. The practical priority follows: simulation precedes
+experiment until such a certificate discharges the question, at which point physical
+traversal becomes admissible. This is an epistemic discipline about what local
+registration can establish in advance, and it is the same register-or-discharge
+discipline the framework applies to every blind spot.
+
+
+\vspace{4pt}
+\noindent\textbf{Supplementary material.} The supplementary material supplies a finite second-order theory of inverse gravity. At a declared primitive scale, a counterposed gravitational interaction pair is physically co-registered below an intrinsic synchronization threshold and physically resolved above it. These conditions select, respectively, attractive and inverse-response branches of one finite clock-orientation gravitational carrier. A distinct P-space-to-A(R)-space bridge then determines whether a material record retains or erases that physical distinction.
+\url{https://doi.org/10.5281/zenodo.20809011}
+
+\noindent\textbf{Funding.} This research received no external funding.
+
+\noindent\textbf{Data availability.} No new data were created or analyzed in this study.
+
+\noindent\textbf{Conflicts of interest.} The author declares no conflict of interest.
+
+% -----------------------------------------------------------------
+\begin{eref}
+\bibitem[Davies and Lewis(1970)]{DaviesLewis1970}
+E.~B.~Davies and J.~T.~Lewis, An operational approach to quantum probability,
+\emph{Communications in Mathematical Physics} \textbf{17} (1970) 239--260.
+\url{https://doi.org/10.1007/BF01647093}.
+
+\bibitem[Ozawa(1984)]{Ozawa1984}
+M.~Ozawa, Quantum measuring processes of continuous observables,
+\emph{Journal of Mathematical Physics} \textbf{25} (1984) 79--87.
+\url{https://doi.org/10.1063/1.526000}.
+
+\bibitem[Dray and 't~Hooft(1985)]{DraytHooft1985}
+T.~Dray and G.~'t~Hooft, The gravitational shock wave of a massless particle,
+\emph{Nuclear Physics B} \textbf{253} (1985) 173--188.
+\url{https://doi.org/10.1016/0550-3213(85)90525-5}.
+
+\bibitem[Shenker and Stanford(2014)]{ShenkerStanford2014}
+S.~H.~Shenker and D.~Stanford, Black holes and the butterfly effect,
+\emph{Journal of High Energy Physics} \textbf{03} (2014) 067.
+\url{https://doi.org/10.1007/JHEP03(2014)067}.
+
+\bibitem[Almheiri et al.(2015)]{AlmheiriDongHarlow2015}
+A.~Almheiri, X.~Dong, and D.~Harlow, Bulk locality and quantum error correction in
+AdS/CFT, \emph{Journal of High Energy Physics} \textbf{2015}(04) (2015) 163.
+
+\bibitem[Dong et al.(2016)]{DongHarlowWall2016}
+X.~Dong, D.~Harlow, and A.~C.~Wall, Reconstruction of bulk operators within the
+entanglement wedge in gauge-gravity duality, \emph{Physical Review Letters}
+\textbf{117} (2016) 021601.
+
+\bibitem{ADM1962}
+R.~Arnowitt, S.~Deser, and C.~W.~Misner,
+\emph{The Dynamics of General Relativity},
+in \emph{Gravitation: An Introduction to Current Research}, edited by L.~Witten
+(Wiley, New York, 1962), pp.~227--265.
+
+\bibitem{Teitelboim1973}
+C.~Teitelboim,
+How commutators of constraints reflect the spacetime structure,
+\emph{Annals of Physics} \textbf{79} (1973) 542--557.
+
+\bibitem{penrose1971spin}
+R.~Penrose,
+\emph{Angular Momentum: An Approach to Combinatorial Space-Time},
+in \emph{Quantum Theory and Beyond}, edited by T.~Bastin
+(Cambridge University Press, Cambridge, 1971), pp.~151--180.
+
+\bibitem{rovelli1995spin}
+C.~Rovelli and L.~Smolin,
+\emph{Spin Networks and Quantum Gravity},
+Phys. Rev. D \textbf{52}, 5743--5759 (1995).
+
+\bibitem{bianchi2009length}
+E.~Bianchi,
+\emph{The Length Operator in Loop Quantum Gravity},
+Nucl. Phys. B \textbf{807}, 591--624 (2009),
+arXiv:0806.4710.
+
+\bibitem{marcolli2010spinfoams}
+M.~Marcolli and A.~Z.~Al-Yasry,
+\emph{Coverings, Correspondences, and Noncommutative Geometry},
+J. Geom. Phys. \textbf{58}, 1639--1661 (2010),
+arXiv:1005.1057.
+
+\bibitem{villegas2024networks}
+P.~Villegas \emph{et al.},
+\emph{Laplacian Renormalization Group for Heterogeneous Networks},
+arXiv:2308.13604 (2024).
+
+\bibitem{Pachner1991}
+U.~Pachner,
+\emph{P.L. homeomorphic manifolds are equivalent by elementary shellings},
+European J. Combin. \textbf{12} (1991), no.~2, 129--145.
+
+\bibitem{Lickorish1999}
+W.~B.~R.~Lickorish,
+\emph{Simplicial moves on complexes and manifolds},
+in \emph{Proceedings of the Kirbyfest},
+Geom. Topol. Monogr. \textbf{2} (1999), 299--320.
+
+\bibitem{williams2026cognition}
+A. E. Williams, Functional modeling of cognition as the solution to a constraint
+algebra, Zenodo (2026), doi:10.5281/zenodo.18321161.
+
+\bibitem{williams2026consciousness}
+A. E. Williams, Functional model of consciousness: a second-order framework for
+awareness dynamics, Zenodo (2026), doi:10.5281/zenodo.18646157.
+
+\bibitem{Kahneman2011}
+D. Kahneman, Thinking, Fast and Slow, Farrar, Straus and Giroux, New York, 2011.
+
+\bibitem{Kadanoff1966}
+L.~P.~Kadanoff,
+``Scaling laws for Ising models near ($T_c$),''
+\emph{Physics} \textbf{2}, 263--272 (1966).
+doi:10.1103/PhysicsPhysiqueFizika.2.263.
+
+\bibitem{Wilson1971}
+K.~G.~Wilson,
+``Renormalization group and critical phenomena. I. Renormalization group and
+the Kadanoff scaling picture,''
+\emph{Physical Review B} \textbf{4}, 3174--3183 (1971).
+doi:10.1103/PhysRevB.4.3174.
+
+\bibitem{HohenbergKohn1964}
+P.~Hohenberg and W.~Kohn,
+``Inhomogeneous electron gas,''
+\emph{Physical Review} \textbf{136}, B864--B871 (1964).
+doi:10.1103/PhysRev.136.B864.
+
+\bibitem{KohnSham1965}
+W.~Kohn and L.~J.~Sham,
+``Self-consistent equations including exchange and correlation effects,''
+\emph{Physical Review} \textbf{140}, A1133--A1138 (1965).
+doi:10.1103/PhysRev.140.A1133.
+
+\bibitem{DaviesLewis1970}
+E.~B.~Davies and J.~T.~Lewis,
+``An operational approach to quantum probability,''
+\emph{Communications in Mathematical Physics} \textbf{17}, 239--260 (1970).
+doi:10.1007/BF01647093.
+
+\bibitem{Ozawa1984}
+M.~Ozawa,
+``Quantum measuring processes of continuous observables,''
+\emph{Journal of Mathematical Physics} \textbf{25}, 79--87 (1984).
+doi:10.1063/1.526000.
+
+\bibitem{Zurek1982}
+W.~H.~Zurek,
+``Environment-induced superselection rules,''
+\emph{Physical Review D} \textbf{26}, 1862--1880 (1982).
+doi:10.1103/PhysRevD.26.1862.
+
+\bibitem{Ehrig2006}
+H.~Ehrig, K.~Ehrig, U.~Prange, and G.~Taentzer,
+\textit{Fundamentals of Algebraic Graph Transformation},
+Monographs in Theoretical Computer Science. An EATCS Series,
+Springer, Berlin, 2006.
+doi:10.1007/3-540-31188-2.
+
+\bibitem{Arrighi2013}
+P.~Arrighi and G.~Dowek,
+``Causal graph dynamics,''
+\textit{Information and Computation} \textbf{223}, 78--93 (2013).
+doi:10.1016/j.ic.2012.10.019.
+
+\end{eref}
+
+\end{document}
