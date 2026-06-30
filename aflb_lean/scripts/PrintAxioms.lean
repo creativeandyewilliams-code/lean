@@ -1,38 +1,36 @@
 /-
-Axiom audit driver.
+Axiom audit driver (v50).
 Run: lake env lean scripts/PrintAxioms.lean > docs/axioms.txt 2>&1
 
-Bucket-A results should show only Lean core axioms (propext, Quot.sound or none).
-Bucket-B/C results will additionally show project axioms.
+Bucket-A determination results must show core axioms only (propext,
+Quot.sound, or none) — in particular none of them may depend on
+Posits.physicalOperativity or Posits.pairResolution. See BUILD_REPORT.md
+facts (1) and (2).
 -/
 
 import AflbLean
 
--- Bucket A: fully kernel-certified
+-- Bucket A: the physics-determination theorems (core axioms only)
+#print axioms AflbLean.inverseBranchResponsePositive
+#print axioms AflbLean.regularBranchCoefficientPositivity
+#print axioms AflbLean.signInvariance
 #print axioms AflbLean.fiberCriterion
-#print axioms AflbLean.nonReducibility
-#print axioms AflbLean.secondOrderMinimality
-#print axioms AflbLean.ghzSupportBase
-#print axioms AflbLean.ghzSupportRecurrence
-#print axioms AflbLean.finiteTargetGain
-#print axioms AflbLean.minRenderingDim
-#print axioms AflbLean.properSupportIndistinguishability
-#print axioms AflbLean.strictSeparationWitness
-#print axioms AflbLean.noLocalDecider
+#print axioms AflbLean.finiteCertificateClosure
+#print axioms AflbLean.viabilityNonReducibility
 
--- Bucket B/C: hypothesis-gated
-#print axioms AflbLean.secondOrderObservability
-#print axioms AflbLean.observabilityPairedClosure
+-- Bucket B: conditional results (cite pairResolution via secondOrderResult)
+#print axioms AflbLean.secondOrderResult
+#print axioms AflbLean.scheduleRealizesInverse
 
--- Project axiom inventory
-#print axioms AflbLean.GhzSupport.ghzSupportIsFullSupport
-#print axioms AflbLean.GainBound.finiteTargetGain_real
-#print axioms AflbLean.Rendering.existsRendering3D
+-- Legacy registration-layer conditionals (Bucket C, relative to sharedBasis)
+#print axioms AflbLean.Conditional.syncResidueBlindSpot
+#print axioms AflbLean.Conditional.topologicalClosureTwoSpaces
+
+-- Named axiom inventory (never expected to be "no axioms")
+#print axioms AflbLean.Posits.pairResolution
+#print axioms AflbLean.Posits.physicalOperativity
 #print axioms AflbLean.Hypotheses.sharedBasis
 #print axioms AflbLean.Hypotheses.pachnerTyped
 #print axioms AflbLean.Hypotheses.syncResidueWellDefined
-#print axioms AflbLean.Assumptions.shockGainImported
-#print axioms AflbLean.Assumptions.jeansGainEmpirical
-#print axioms AflbLean.Assumptions.nonemptyGravitationalGainClass
-#print axioms AflbLean.Assumptions.gravitationalLeverageCert
-#print axioms AflbLean.Assumptions.validationHazardCoupling
+#print axioms AflbLean.Imported.odeGlobalExistence
+#print axioms AflbLean.Imported.energyDescentIdentity

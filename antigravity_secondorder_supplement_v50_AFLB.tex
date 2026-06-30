@@ -1,0 +1,1239 @@
+%=================================================================
+% Supplementary Materials for
+% "Composition-Level Constraints in Alternative Gravity:
+%  A Recursive Constraint-Transport Criterion"
+%=================================================================
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,array,longtable}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+\setlength{\parskip}{0.45em}
+\setlength{\parindent}{0pt}
+\setlist{itemsep=0.3em,topsep=0.4em}
+
+\title{Supplementary Material: A Finite Second-Order Theory of Inverse Gravity\\
+\large Clock-Orientation Carrier, Pair Resolution, and Registration Limits}
+\author{Andy E. Williams\thanks{Correspondence: info@cc4ci.org}\\[4pt]
+\small Caribbean Center for Collective Intelligence, St.~John's, Antigua and Barbuda\\
+\small Nobeah Foundation, Nairobi, Kenya}
+\date{}
+
+%----------------------- notation -----------------------
+\newcommand{\Pspace}{\ensuremath{\mathcal P}}
+\newcommand{\ARspace}{\ensuremath{\mathcal A_R}}
+\newcommand{\Graph}{\ensuremath{\Gamma}}
+\newcommand{\Kgroup}{\ensuremath{K}}
+\newcommand{\Uone}{\ensuremath{\mathrm U(1)}}
+\newcommand{\SOthree}{\ensuremath{\mathrm{SO}(3)}}
+\newcommand{\Id}{\ensuremath{\mathbf 1}}
+\newcommand{\zinv}{\ensuremath{\mathsf z}}
+\newcommand{\State}{\ensuremath{\mathcal Q}}
+\newcommand{\Defect}{\ensuremath{\mathcal E}}
+\newcommand{\Flow}{\ensuremath{\mathsf{Flow}}}
+\newcommand{\Resp}{\ensuremath{\mathsf{Resp}}}
+\newcommand{\Reg}{\ensuremath{\mathsf{Reg}}}
+\newcommand{\Obs}{\ensuremath{\mathsf{Obs}}}
+\newcommand{\Bridge}{\ensuremath{\mathfrak B}}
+\newcommand{\Quot}{\ensuremath{\mathsf q}}
+\newcommand{\Branch}{\ensuremath{\mathsf B}}
+\newcommand{\Pair}{\ensuremath{\Pi}}
+\newcommand{\PairRes}{\ensuremath{\mathsf{PairRes}}}
+\newcommand{\Resolve}{\ensuremath{\mathsf{Resolve}}}
+\newcommand{\Sched}{\ensuremath{\mathsf{Sched}}}
+\newcommand{\Adm}{\operatorname{Adm}}
+\newcommand{\supp}{\mathsf{supp}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\grad}{\operatorname{grad}}
+\newcommand{\argmin}{\operatorname*{arg\,min}}
+\newcommand{\Phys}{\ensuremath{\mathsf{Phys}}}
+\newcommand{\Emp}{\ensuremath{\mathsf{Emp}}}
+\newcommand{\GC}{\ensuremath{\mathsf{GC}}}
+\newcommand{\Status}{\ensuremath{\mathsf{Status}}}
+\newcommand{\Register}{\operatorname{Register}}
+\newcommand{\Recall}{\operatorname{Recall}}
+\newcommand{\GOp}{\ensuremath{\mathsf G}}
+\newcommand{\LOp}{\ensuremath{\mathsf L}}
+\newcommand{\Inv}{\ensuremath{\mathsf{Inv}}}
+
+% claim tags
+\newcommand{\Defn}{\textsc{[def]}}
+\newcommand{\Asm}{\textsc{[asm]}}
+\newcommand{\Hyp}{\textsc{[hyp]}}
+\newcommand{\Thm}{\textsc{[thm]}}
+\newcommand{\Cnd}{\textsc{[cnd]}}
+\newcommand{\Open}{\textsc{[open]}}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{hypothesis}[definition]{Hypothesis}
+\newtheorem{construction}[definition]{Construction}
+\newtheorem{proposition}[definition]{Proposition}
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{corollary}[definition]{Corollary}
+\newtheorem{remark}[definition]{Remark}
+\newtheorem{obligation}[definition]{Empirical obligation}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This supplement supplies a self-contained finite second-order theory of inverse
+gravity.  Its first-order physical carrier is a finite matter-generated
+clock-orientation gravity model with carrier
+$K=\mathrm U(1)\times\mathrm{SO}(3)$.  A primitive counterposed interaction
+pair has an intrinsic transport-relative separation and an intrinsic
+synchronization threshold.  Below the threshold the pair is physically
+co-registered and selects the regular attractive branch; above it the same
+counterposed pair is physically resolved and selects an inverse-response branch.
+One finite energy and its gradient flow then give the forced branch responses:
+regular configurations have a stable attractive separation, while inverse
+configurations satisfy a positive separation response.
+
+The second-order layer is a distinct registration theory.  A typed bridge maps
+P-space states into material records and a quotient retains only the record
+available to a declared observer.  The resulting factorization theorem states
+exactly when a material record can decide the physical branch.  Thus an inverse
+response may be physically present while an admissible local record co-registers
+it with an attractive state.  The supplement also states the role of a
+target-conditioned schedule: it is a conditional realization or preparation
+object for an already-defined inverse branch, not the definition of inverse
+gravity.  The theory is complete on its declared finite model domain; physical
+realization, continuum recovery, and empirical selection remain separately typed
+questions.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{Reading guide, status, and space discipline}
+\label{sec:guide}
+
+The main article studies a decision problem: when does a material observation
+record preserve the relation needed to decide a physical target?  The present
+supplement supplies the missing physical object for that problem.  The object has
+two distinct spaces:
+\begin{equation}
+\Pspace \not\equiv \ARspace.
+\label{eq:spaces-distinct}
+\end{equation}
+\Pspace{} contains physical carriers, interaction pairs, transports, branch
+conditions, and responses.  $\ARspace$ contains registrations, retained records,
+resolution budgets, and quotients.  A conclusion may move between them only
+through an explicit bridge.
+
+The theory uses two complete generator inventories without identifying them.
+The physical interaction inventory in \Pspace{} is
+\begin{equation}
+\mathcal I_P=
+\{\text{strong},\text{weak},\text{electromagnetic},\text{gravity}\}.
+\label{eq:physical-inventory}
+\end{equation}
+The operational grammar in $\ARspace$ is
+\begin{equation}
+\mathcal O_{A(R)}=\{\Register,\Recall,\GOp,\LOp\}.
+\label{eq:registration-grammar}
+\end{equation}
+The present construction uses $\GOp$ and $\LOp$ only as the expansion and
+contraction component of the registration/topological grammar.  They are not
+asserted to replace the four physical interactions in Equation~\eqref{eq:physical-inventory}.
+
+Every numbered statement is tagged by logical form.  A \Defn{} fixes an object;
+an \Asm{} is a constitutive condition of this declared model class; a \Hyp{} is a
+physical hypothesis; a \Thm{} follows from the stated definitions and
+assumptions; a \Cnd{} states a conditional result; and an \Open{} entry records a
+separate realization or empirical obligation.
+
+\begin{definition}[Status record]
+\label{def:status}
+\Defn{} For a theory object $H$, write
+\begin{equation}
+\Status(H)=\bigl(\mathsf{Form}(H),\ \mathsf{Domain}(H),\
+\mathsf{Bridge}(H),\ \mathsf{Selection}(H)\bigr).
+\label{eq:status}
+\end{equation}
+The first coordinate distinguishes definition, hypothesis, theorem, and
+conditional consequence.  The second names the finite carrier and regime.  The
+third records the P-space--$A(R)$-space bridges on which any observability claim
+depends.  The fourth records whether the object is mathematically defined,
+physically realized, or empirically selected.  A finite theory may be complete
+on its declared domain while its physical realization and empirical selection
+remain open.
+\end{definition}
+
+\section{The finite P-space carrier}
+\label{sec:carrier}
+
+\subsection{Clock-orientation data}
+
+\begin{definition}[Admissible finite gravity datum]
+\label{def:datum}
+\Defn{} An admissible finite datum is
+\begin{equation}
+\mathbf p=\bigl(
+\Graph,T,E^+,\mathcal C_T,K,m,\xi,p,\mathsf S,
+\Pair,\eta,c,h,\alpha,\gamma,\lambda,\kappa,\Lambda
+\bigr),
+\label{eq:datum}
+\end{equation}
+with the following components.
+\begin{enumerate}
+\item $\Graph=(V,E)$ is a finite connected graph, $E^+$ selects one orientation
+of each unoriented edge, $T\subseteq E$ is a spanning tree, and $\mathcal C_T$
+is the finite family of rooted, ordered fundamental cycles induced by the chords
+of $T$.
+\item The clock-orientation carrier is
+\begin{equation}
+K:=\Uone\times\SOthree,
+\qquad
+\zinv:=(-1,I_3)\in K,
+\qquad \zinv^2=\Id.
+\label{eq:K}
+\end{equation}
+$K$ contains one clock phase and one spatial orientation.  It does not posit a
+full spacetime-frame group.
+\item Each node $v$ carries a matter closure
+$\eta_v=(m_v,\xi_v)\in(0,\infty)\times X_v$, where $X_v$ is a declared
+finite-dimensional internal carrier.  Each oriented edge $e=(u,v)$ carries a
+finite port datum $p_e$ and a total, matter-sensitive source map
+\begin{equation}
+U_e=\mathsf S_e(\eta_u,\eta_v,p_e)\in K,
+\qquad U_{\bar e}=U_e^{-1}.
+\label{eq:source-map}
+\end{equation}
+Matter sensitivity means that on every gravitational edge the source map changes
+for at least one admissible change of endpoint closure data.
+\item Every edge carries a counterposed primitive interaction pair
+\begin{equation}
+\Pair_e=(a_e^+,a_e^-,\delta_e,\vartheta_e),
+\qquad \mathsf{Opp}_e(a_e^+,a_e^-)=1.
+\label{eq:pair}
+\end{equation}
+Here $\delta_e\ge0$ is the pair's declared transport-relative separation and
+$\vartheta_e$ retains the ordered interaction history needed to evaluate that
+separation.  Neither is a raw global coordinate.
+\item Every edge has an intrinsic synchronization threshold $\eta_e>0$ and a
+central branch target $c_e\in\{\Id,\zinv\}$ defined in
+Hypothesis~\ref{hyp:pair-resolution}.  Every fundamental cycle has a fixed
+sector value $h_C\in K$.  Finally,
+$\alpha_e,\gamma_e,\lambda_e,\kappa_e>0$ and $\Lambda_C\ge0$ are declared
+finite coefficients.
+\end{enumerate}
+\end{definition}
+
+\begin{hypothesis}[Primitive counterposition and intrinsic pair resolution]
+\label{hyp:pair-resolution}
+\Hyp{} At the declared primitive scale, a gravitational interaction is represented
+by a counterposed pair as in Equation~\eqref{eq:pair}.  Its physical branch is
+not decided by an observer.  It is decided in \Pspace{} by the intrinsic
+transport-relative pair-resolution map
+\begin{equation}
+\PairRes_e(\Pair_e)=c_e:=
+\begin{cases}
+\Id, & 0\le \delta_e\le \eta_e,\\[2mm]
+\zinv, & \delta_e>\eta_e.
+\end{cases}
+\label{eq:pair-resolution}
+\end{equation}
+The case $c_e=\Id$ is the co-registered branch: the counterposed pair is
+unresolved relative to the intrinsic synchronization threshold.  The case
+$c_e=\zinv$ is the resolved branch: the counterposed pair remains counterposed
+but its separation is physically retained by the carrier.
+\end{hypothesis}
+
+The word ``intrinsic'' in Hypothesis~\ref{hyp:pair-resolution} is decisive.  The
+threshold $\eta_e$ belongs to the declared P-space carrier.  It is not a detector
+resolution and does not change merely because a different material observer is
+used.  Detector noise appears later, in $\ARspace$.
+
+\begin{remark}[Meaning of ``simultaneous'']
+\label{rem:simultaneous}
+\Defn{} In this supplement, ``simultaneous'' means co-registered below the
+intrinsic transport-relative threshold $\eta_e$.  It does not assert a
+frame-independent global simultaneity relation.  The primitive input is the
+ordered pair history $\vartheta_e$, together with its declared separation
+functional $\delta_e$.
+\end{remark}
+
+\subsection{State, transport, and integrability}
+
+\begin{definition}[State space and relative mismatch]
+\label{def:state}
+\Defn{} For an admissible datum $\mathbf p$, the total finite state space is
+\begin{equation}
+\State_{\mathbf p}:=K^V\times K^{E^+}\times(0,\infty)^{E^+}.
+\label{eq:state-space}
+\end{equation}
+A state is $z=(q,W,r)$, with node clock orientations $q_v\in K$, actual
+edge transports $W_e\in K$, and positive interaction separations $r_e>0$.
+The transport-relative mismatch is
+\begin{equation}
+\mu_e(q,W):=q_v^{-1}W_eq_u\in K
+\qquad(e=(u,v)\in E^+).
+\label{eq:mismatch}
+\end{equation}
+A datum is source-target integrable in the identity sector when there is a
+$q^\star\in K^V$ such that
+\begin{equation}
+(q_v^\star)^{-1}U_eq_u^\star=c_e
+\quad\text{for all }e\in E^+,
+\qquad h_C=\Id\quad\text{for all }C\in\mathcal C_T.
+\label{eq:integrability}
+\end{equation}
+\end{definition}
+
+Equation~\eqref{eq:integrability} is the finite common-clock condition.  It does
+not identify node clock-orientation data with an externally imposed universal
+time.  It asks only whether the matter-generated source transports and their
+branch targets admit one compatible global section on the declared finite graph.
+
+\section{One energy, two gravitational response branches}
+\label{sec:energy}
+
+\subsection{The finite synchronization energy}
+
+For $k=(e^{i\theta},R)\in K$, define the phase character and full
+clock-orientation discrepancy
+\begin{equation}
+\chi(k):=\cos\theta,
+\qquad
+\Psi(k):=1-\cos\theta+\frac{1}{2}\lVert R-I_3\rVert_F^2.
+\label{eq:character}
+\end{equation}
+Then $\chi(\Id)=1$, $\chi(\zinv)=-1$,
+$\chi(\zinv k)=-\chi(k)$, and $\Psi(k)\ge0$ with equality exactly at
+$k=\Id$.  The character $\chi$ supplies the signed radial response term.  The
+function $\Psi$ retains the full $\mathrm U(1)\times\mathrm{SO}(3)$ target,
+transport, and cycle information in the alignment energy.
+
+\begin{definition}[Finite clock-orientation energy]
+\label{def:energy}
+\Defn{} The complete energy is
+\begin{align}
+\Defect_{\mathbf p}(q,W,r)
+={}&\sum_{e\in E^+}\left[
+\frac{\alpha_e}{r_e^2}
+-\frac{\gamma_e}{r_e}\chi\bigl(\mu_e(q,W)\bigr)
++\lambda_e\Psi\bigl(c_e^{-1}\mu_e(q,W)\bigr)
++\kappa_e\Psi\bigl(U_e^{-1}W_e\bigr)
+\right] \nonumber\\
+&+\sum_{C\in\mathcal C_T}\Lambda_C\Psi(h_C).
+\label{eq:energy}
+\end{align}
+The final term fixes the declared cycle sector.  The first two terms give the
+radial response; the third anchors the mismatch to the branch target selected by
+Equation~\eqref{eq:pair-resolution}; and the fourth anchors actual transport to
+matter-generated source transport.
+\end{definition}
+
+\begin{definition}[Complete flow and response]
+\label{def:flow}
+\Defn{} Equip the compact $K$ factors with a fixed product bi-invariant metric
+and $(0,\infty)^{E^+}$ with its Euclidean metric.  The flow is
+\begin{equation}
+\dot q_v=-\grad_{q_v}\Defect_{\mathbf p},
+\qquad
+\dot W_e=-\grad_{W_e}\Defect_{\mathbf p},
+\qquad
+\dot r_e=-\partial_{r_e}\Defect_{\mathbf p}.
+\label{eq:flow}
+\end{equation}
+Let $\Flow_{\mathbf p}(t,z_0)$ denote its solution.  Its radial response map is
+\begin{equation}
+\Resp_{\mathbf p}(q,W,r):=(\dot r_e)_{e\in E^+},
+\qquad
+\dot r_e=
+\frac{2\alpha_e}{r_e^3}
+-\frac{\gamma_e\chi(\mu_e)}{r_e^2}.
+\label{eq:response}
+\end{equation}
+\end{definition}
+
+\begin{proposition}[Finite dynamical closure]
+\label{prop:closure}
+\Thm{} For every admissible datum and every initial state in
+$\State_{\mathbf p}$, the flow in Equation~\eqref{eq:flow} has a unique solution
+for all $t\ge0$, remains in $\State_{\mathbf p}$, and satisfies
+\begin{align}
+\frac{d}{dt}\Defect_{\mathbf p}\bigl(\Flow_{\mathbf p}(t,z_0)\bigr)
+={}&-\sum_{v\in V}\|\grad_{q_v}\Defect_{\mathbf p}\|^2
+-\sum_{e\in E^+}\|\grad_{W_e}\Defect_{\mathbf p}\|^2
+-\sum_{e\in E^+}|\partial_{r_e}\Defect_{\mathbf p}|^2
+\le0.
+\label{eq:descent}
+\end{align}
+\end{proposition}
+
+\begin{proof}
+The $K$ factors are compact and the energy is smooth.  For each edge,
+$\alpha_e/r_e^2-\gamma_e\chi(\mu_e)/r_e\ge
+\alpha_e/r_e^2-\gamma_e/r_e$, which tends to $+\infty$ as $r_e\downarrow0$
+and is bounded below.  Energy descent therefore prevents a finite-time approach
+to the excluded boundary $r_e=0$.  On every strip $r_e\ge\epsilon>0$, the
+vector field is bounded on finite time intervals, so standard ODE extension gives
+global existence and uniqueness.  Equation~\eqref{eq:descent} is the gradient-flow
+identity.
+\end{proof}
+
+\subsection{Attractive, inverse, and frustrated sectors}
+
+\begin{definition}[Physical branch predicates]
+\label{def:branches}
+\Defn{} For a source-target-integrable datum, define
+\begin{align}
+\Branch_+(\mathbf p):={}&\{z:\ h_C=\Id,\ c_e=\Id,\ W_e=U_e,
+\ \mu_e=\Id\ \forall e,C\},
+\label{eq:bplus}\\
+\Branch_-(\mathbf p):={}&\{z:\ h_C=\Id,\ c_e=\zinv,\ W_e=U_e,
+\ \mu_e=\zinv,\ r_e>\gamma_e/\lambda_e\ \forall e,C\},
+\label{eq:bminus}\\
+\Branch_{\mathrm{fr}}(\mathbf p):={}&\{z\in\State_{\mathbf p}:\exists C\in\mathcal C_T,
+\ h_C\ne\Id\}.
+\label{eq:bfr}
+\end{align}
+The labels are physical branch labels.  By Hypothesis~\ref{hyp:pair-resolution},
+$\Branch_+$ is selected by physically co-registered counterposed pairs and
+$\Branch_-$ by physically resolved counterposed pairs.
+\end{definition}
+
+\begin{proposition}[Forced attractive and inverse response]
+\label{prop:response}
+\Thm{} The branches in Definition~\ref{def:branches} are invariant under the
+complete flow.  On the attractive branch,
+\begin{equation}
+\dot r_e=\frac{2\alpha_e-\gamma_er_e}{r_e^3}.
+\label{eq:attractive-response}
+\end{equation}
+Thus $r_e^\star=2\alpha_e/\gamma_e$ is a stable radial equilibrium: $\dot r_e<0$
+for $r_e>r_e^\star$ and $\dot r_e>0$ for $0<r_e<r_e^\star$.  On the inverse
+branch,
+\begin{equation}
+\dot r_e=\frac{2\alpha_e+\gamma_er_e}{r_e^3}>0.
+\label{eq:inverse-response}
+\end{equation}
+Moreover, the inverse mismatch target is a strict local minimum of the
+edge energy on the mismatch quotient exactly when
+\begin{equation}
+r_e>\frac{\gamma_e}{\lambda_e}.
+\label{eq:inverse-stability}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+On either aligned branch, the mismatch and transport penalty terms vanish with
+their gradients.  In $\Branch_+$, $\chi(\mu_e)=1$; substituting into
+Equation~\eqref{eq:response} gives Equation~\eqref{eq:attractive-response}.
+In $\Branch_-$, $\chi(\mu_e)=\chi(\zinv)=-1$; substituting gives
+Equation~\eqref{eq:inverse-response}.  The sign and stability statement for the
+regular radial equilibrium follow by direct differentiation.
+
+For the inverse target, write $\mu_e=\zinv\zeta$ near $\zeta=\Id$.  The
+mismatch-dependent part of the edge energy is, up to terms fixed on the local
+quotient,
+\begin{equation}
+-\frac{\gamma_e}{r_e}\chi(\mu_e)
++\lambda_e\Psi(c_e^{-1}\mu_e)
+=
+\lambda_e+
+\left(\lambda_e-\frac{\gamma_e}{r_e}\right)\chi(\mu_e)
++\frac{\lambda_e}{2}\lVert R(\mu_e)-I_3\rVert_F^2.
+\label{eq:inverse-local-energy}
+\end{equation}
+The phase coefficient in Equation~\eqref{eq:inverse-local-energy} is positive
+exactly under Equation~\eqref{eq:inverse-stability}; the additional orientation
+part of $\Psi$ is nonnegative and vanishes only at the aligned orientation.
+Hence the full $K$-valued target is a strict local minimum on the mismatch
+quotient exactly under Equation~\eqref{eq:inverse-stability}.  The condition is
+preserved because Equation~\eqref{eq:inverse-response} makes $r_e$ increase.
+The cycle sector is fixed datum-level boundary data, so the frustrated sector is
+also invariant.
+\end{proof}
+
+Proposition~\ref{prop:response} is the required physical determination.  Once an
+admissible finite datum, a pair-resolution branch, and the state are specified,
+the theory fixes the sign of the edge response.  The inverse branch is therefore
+not introduced by a later observer's label and not by a force-sign substitution in
+an otherwise unchanged first-order equation.  It is a different, stable target
+sector of the same finite gravitational dynamics.
+
+\section{A(R)-space: registration, resolution, and blind spots}
+\label{sec:registration}
+
+\subsection{Typed registration bridge}
+
+\begin{definition}[Registration bridge and observer quotient]
+\label{def:bridge}
+\Defn{} Fix a declared material observer/protocol $R$.  Its registration carrier
+$\mathcal A_{\mathbf p,R}$ is a tagged record space.  A physical-to-registration
+bridge is a total map
+\begin{equation}
+\Bridge_R:\State_{\mathbf p}\longrightarrow\mathcal A_{\mathbf p,R},
+\qquad
+z\longmapsto
+\Reg_R(z):=\left(
+\operatorname{tag}(\mathbf p),
+\{\widehat\mu_{e,R},\widehat r_{e,R},\widehat\delta_{e,R}\}_{e\in E^+},
+\widehat h_R,\mathcal N_R
+\right),
+\label{eq:bridge}
+\end{equation}
+where the hats denote registered quantities and $\mathcal N_R$ is the declared
+instrument/noise and retention budget.  A quotient
+\begin{equation}
+\Quot_R:\mathcal A_{\mathbf p,R}\longrightarrow\overline{\ARspace}_{\mathbf p,R}
+\label{eq:quotient}
+\end{equation}
+retains only the material record available under the protocol.  The composed
+observation map is
+\begin{equation}
+\Obs_R:=\Quot_R\circ\Bridge_R.
+\label{eq:observation-map}
+\end{equation}
+\end{definition}
+
+\begin{definition}[Registration-side resolution]
+\label{def:registration-resolution}
+\Defn{} Let $\delta_R>0$ be the protocol's declared discrimination threshold and
+$\epsilon_R\ge0$ a certified error bound for the registered pair-separation
+coordinate.  The observer resolves the pair on edge $e$ at state $z$ only when
+\begin{equation}
+\Resolve_R(e;z)=1
+\quad\Longleftrightarrow\quad
+\widehat\delta_{e,R}(z)-\epsilon_R>\delta_R.
+\label{eq:registration-resolution}
+\end{equation}
+Otherwise $\Resolve_R(e;z)=0$.  This is an A(R)-space condition.  It may differ
+from the P-space condition $\delta_e>\eta_e$ in
+Equation~\eqref{eq:pair-resolution}.
+\end{definition}
+
+There are therefore two thresholds with different types:
+\begin{equation}
+\underbrace{\eta_e}_{\text{intrinsic P-space branch threshold}}
+\qquad\text{and}\qquad
+\underbrace{(\delta_R,\epsilon_R)}_{\text{A(R)-space registration budget}}.
+\label{eq:two-thresholds}
+\end{equation}
+A worse detector can alter $\Resolve_R$ but cannot alter $c_e$, the physical
+branch target selected by Equation~\eqref{eq:pair-resolution}.
+
+\subsection{The decision criterion}
+
+\begin{definition}[Physical inverse target]
+\label{def:target}
+\Defn{} The physical inverse target is the branch predicate
+\begin{equation}
+\Theta_{\mathrm{inv}}(z)=
+\begin{cases}
+1,& z\in\Branch_-(\mathbf p),\\
+0,& z\notin\Branch_-(\mathbf p).
+\end{cases}
+\label{eq:inverse-target}
+\end{equation}
+An observation map decides this target only when there is a function
+$\overline\Theta_{\mathrm{inv},R}$ such that
+\begin{equation}
+\Theta_{\mathrm{inv}}
+=
+\overline\Theta_{\mathrm{inv},R}\circ\Obs_R.
+\label{eq:factorization}
+\end{equation}
+\end{definition}
+
+\begin{theorem}[Fiber criterion for the inverse branch]
+\label{thm:fiber}
+\Thm{} If there are states $z_+\in\Branch_+(\mathbf p)$ and
+$z_-\in\Branch_-(\mathbf p)$ such that
+\begin{equation}
+\Obs_R(z_+)=\Obs_R(z_-),
+\label{eq:co-registration}
+\end{equation}
+then no function $\overline\Theta_{\mathrm{inv},R}$ satisfying
+Equation~\eqref{eq:factorization} exists.  Consequently, the material record
+available through $\Obs_R$ cannot decide whether the physical state is in the
+inverse branch.
+\end{theorem}
+
+\begin{proof}
+If Equation~\eqref{eq:factorization} held, then equality of the two observations
+would imply
+$\Theta_{\mathrm{inv}}(z_+)=\Theta_{\mathrm{inv}}(z_-)$.
+But Definition~\ref{def:target} gives
+$\Theta_{\mathrm{inv}}(z_+)=0$ and
+$\Theta_{\mathrm{inv}}(z_-)=1$, a contradiction.
+\end{proof}
+
+\begin{corollary}[Resolved P-space branch, unresolved material record]
+\label{cor:blindspot}
+\Cnd{} Suppose $z_-\in\Branch_-(\mathbf p)$, so that the pair is physically
+resolved in P-space, and suppose its material record satisfies
+$\Resolve_R(e;z_-)=0$.  If the quotient identifies this record with an
+attractive-branch record as in Equation~\eqref{eq:co-registration}, then the
+inverse branch is physically present but unresolvable by that material
+observation map.
+\end{corollary}
+
+\begin{corollary}[Energy scaling inside an unchanged quotient]
+\label{cor:energy}
+\Cnd{} Let $E$ label a family of protocols whose retained quotient is invariant:
+$\Obs_{R,E}=\Obs_R$ for all declared $E$.  If the hypothesis of
+Theorem~\ref{thm:fiber} holds for $\Obs_R$, then increasing $E$ within that
+unchanged observation quotient cannot make $\Theta_{\mathrm{inv}}$ factor
+through the record.  A changed energy scale helps only if it changes the bridge
+or quotient so that the relevant fiber is separated.
+\end{corollary}
+
+\section{The second-order theory object}
+\label{sec:secondorder}
+
+\begin{definition}[Finite second-order inverse-gravity theory]
+\label{def:secondorder}
+\Defn{} For an admissible finite datum $\mathbf p$ and a declared registration
+protocol $R$, the second-order theory object is
+\begin{equation}
+\mathfrak G^{(2)}_{\mathbf p,R}:=
+\left(
+\underbrace{\Pspace_{\mathbf p},\State_{\mathbf p},\Defect_{\mathbf p},
+\Flow_{\mathbf p},\Resp_{\mathbf p},\Branch_+,\Branch_-,\Branch_{\mathrm{fr}}}_{\text{first-order gravitational carrier}},
+\underbrace{\mathcal A_{\mathbf p,R},\Bridge_R,\Quot_R,\Obs_R,\Resolve_R}_{\text{registration theory}},
+\Theta_{\mathrm{inv}}
+\right).
+\label{eq:second-order-object}
+\end{equation}
+It is a bridged composition, not an identification, of a first-order gravitational
+carrier in P-space and a distinct theory of registration in $A(R)$-space.
+\end{definition}
+
+\begin{theorem}[Second-order inverse-gravity result]
+\label{thm:secondorder}
+\Thm{} For every admissible finite datum $\mathbf p$ and declared total bridge
+$\Bridge_R$, the object in Equation~\eqref{eq:second-order-object} has the
+following properties.
+\begin{enumerate}
+\item The P-space carrier determines a regular attractive response on
+$\Branch_+$ and a positive inverse response on $\Branch_-$, by
+Proposition~\ref{prop:response}.
+\item The branch condition is physically typed by the intrinsic pair-resolution
+law, not by the observer's detector budget.
+\item The A(R)-space component decides the inverse target exactly when the
+factorization condition in Equation~\eqref{eq:factorization} holds.
+\item Where the fiber condition of Theorem~\ref{thm:fiber} holds, the theory
+proves a target-relative material observability blind spot without treating the
+physical branch as absent.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Items 1 and 2 are respectively Proposition~\ref{prop:response} and
+Hypothesis~\ref{hyp:pair-resolution}.  Item 3 is Definition~\ref{def:target}.
+Item 4 is Theorem~\ref{thm:fiber}.  Each inference uses a named object within
+one space or an explicit bridge between the spaces.
+\end{proof}
+
+
+% =================================================================
+% Operand-level fitness self-selection insertion (v1)
+% =================================================================
+
+% ============================================================================
+% INSERT FOR SUPPLEMENTARY MATERIALS
+% Suggested placement: after Section~\ref{sec:secondorder} and before the
+% implementation-schedule section.  This insert assumes the theorem
+% environments and the macros \Pspace, \ARspace, \Bridge, \Status, \Defn,
+% \Hyp, \Thm, and \Cnd already defined in the supplement preamble.
+% ============================================================================
+
+% ============================================================================
+% INSERT FOR SUPPLEMENTARY MATERIALS (v5)
+% Replace the prior operand-level self-selection insert with this section.
+% Suggested placement: after Section~\ref{sec:secondorder} and before
+% \section{Schedules are implementation conditions}.
+%
+% This insert assumes the supplement preamble already defines \Pspace,
+% \ARspace, \Bridge, \Defn, \Hyp, \Thm, \Cnd, and theorem environments.
+% ============================================================================
+
+\section{Operand-level viability closure and physical self-selection}
+\label{sec:operand-self-selection-v5}
+
+First-order physics normally seeks a law that explains the matter we observe.
+The proposed inversion in second-order physics is that energy functionals and
+matter mutually select one another: a fluctuation can become physically
+consequential only when what it produces creates the conditions required for
+that same physical process to continue.
+
+This section states that inversion in a typed form.  It does not treat fitness
+as an additive physical-energy contribution, and it does not make a claim about
+theories proposed by human observers.  The relevant candidate class is instead
+the declared class of fluctuation-induced physical or registration-capable
+executions.  The finite fixed-point construction is performed on a lattice of
+fitness/viability certificates, not on the continuous P-space carrier.  It therefore
+proves certificate closure once a candidate execution is supplied; the claim
+that physical operativity itself obeys this closure is stated separately as a
+physical hypothesis.
+
+\begin{definition}[Operative fluctuation candidate and realization map]
+\label{def:ossv5-operative-candidate}
+\Defn{} Fix a target $T$ and resolution $\delta$.  Let
+\begin{equation}
+\mathcal Q_{\mathrm{op};T,\delta}
+\label{eq:ossv5-qop}
+\end{equation}
+be a declared class of fluctuation-induced candidates capable, in the declared
+model domain, of producing a matter-bearing P-space continuation, an $A(R)$-space
+registration, or both.  This is not a space of human-authored theories.
+
+A realization map is a typed, model-dependent relation
+\begin{equation}
+\mathfrak I_{T,\delta}:
+\mathcal Q_{\mathrm{op};T,\delta}
+\longrightarrow
+\bigsqcup_{h\in\mathcal H_{T,\delta}}
+\bigl(\{h\}\times\mathcal X_{T,\delta}\bigr),
+\qquad
+q\longmapsto(h_q,x_q),
+\label{eq:ossv5-realization-map}
+\end{equation}
+where $h_q$ is the candidate energy-functional execution induced by $q$ and
+$x_q$ is its typed matter--registration base record.  Equation~
+\eqref{eq:ossv5-realization-map} does not identify a fluctuation with a
+Hamiltonian; it records the candidate functional execution and operand induced
+by that fluctuation in the declared model.
+\end{definition}
+
+\begin{hypothesis}[Physical operativity through endogenous closure]
+\label{hyp:ossv5-physical-operativity}
+\Hyp{} A candidate $q\in\mathcal Q_{\mathrm{op};T,\delta}$ becomes physically
+or registrationally consequential only if, for
+$\mathfrak I_{T,\delta}(q)=(h_q,x_q)$, the candidate execution is admitted on
+its closed viability-bearing operand:
+\begin{equation}
+\mathsf{Adm}_{h_q,T,\delta}\!\left(\Xi_{h_q}^{\star}(x_q)\right)=1.
+\label{eq:ossv5-operativity-condition}
+\end{equation}
+This is an ontic hypothesis of the proposed second-order physical theory.  It
+is not a consequence of the fixed-point theorem below, and it does not assert
+that every fluctuation is realized or that the admitted functional class is
+universally unique.
+\end{hypothesis}
+
+\begin{definition}[Typed base record and viability-bearing operand]
+\label{def:ossv5-operand}
+\Defn{} Let
+\begin{equation}
+\mathcal X_{T,\delta}
+:=
+\Pspace_{T,\delta}
+\times
+\left(\ARspace\right)_{T,\delta}
+\times
+\mathcal B_{T,\delta}
+\times
+\mathcal K_{T,\delta}
+\label{eq:ossv5-base-record}
+\end{equation}
+be a typed record product.  Its coordinates respectively retain a physical
+state/path, a registration state/path, a declared bridge record, and a
+history--regime--support record.  Equation~\eqref{eq:ossv5-base-record} is a
+record constructor; it is not an identification of the spaces named by its
+coordinates.
+
+Let $\mathcal V_{T,\delta}$ be a finite complete lattice of fitness/viability
+certificates, ordered by declared certificate inclusion $\preceq$, with least
+element $\bot$.  A certificate $\phi\in\mathcal V_{T,\delta}$ may retain
+only the finite predicates required by the declared model class---for example,
+continuation, balance, support, bridge definition, regime preservation,
+distinguishability, recovery, and retention.  It is not a physical field, a
+force, an additive term in the energy, or an external selector.
+
+For a candidate energy functional $h\in\mathcal H_{T,\delta}$, a
+viability-bearing operand is
+\begin{equation}
+\Xi^h_{T,\delta}=(x,\phi)
+\in
+\mathcal X_{T,\delta}\times\mathcal V_{T,\delta}.
+\label{eq:ossv5-operand}
+\end{equation}
+\end{definition}
+
+\begin{hypothesis}[Endogenous certificate update]
+\label{hyp:ossv5-certificate-update}
+\Hyp{} For every $h\in\mathcal H_{T,\delta}$ and every declared base record
+$x\in\mathcal X_{T,\delta}$, the coupled P-space update, $A(R)$-space update,
+and typed bridge consequences of $h$ induce a map
+\begin{equation}
+\Phi_{h,x}:\mathcal V_{T,\delta}\longrightarrow\mathcal V_{T,\delta}.
+\label{eq:ossv5-certificate-update}
+\end{equation}
+The map is monotone:
+\begin{equation}
+\phi\preceq\psi
+\quad\Longrightarrow\quad
+\Phi_{h,x}(\phi)\preceq\Phi_{h,x}(\psi).
+\label{eq:ossv5-monotonicity}
+\end{equation}
+The map records viability consequences generated under $h$ itself.  It
+introduces no fitness judge external to the candidate functional and its typed
+physical--registration execution.
+\end{hypothesis}
+
+\begin{definition}[Closed certificate, full admissibility, and surviving class]
+\label{def:ossv5-admissibility}
+\Defn{} Under Hypothesis~\ref{hyp:ossv5-certificate-update}, define the
+Kleene certificate sequence
+\begin{equation}
+\phi^{(0)}_{h,x}:=\bot,
+\qquad
+\phi^{(n+1)}_{h,x}:=\Phi_{h,x}\!\left(\phi^{(n)}_{h,x}\right).
+\label{eq:ossv5-kleene-sequence}
+\end{equation}
+Whenever this sequence stabilizes, write its stable value as
+$\phi_h^\star(x)$ and define the closed operand
+\begin{equation}
+\Xi_h^\star(x):=\bigl(x,\phi_h^\star(x)\bigr).
+\label{eq:ossv5-closed-operand}
+\end{equation}
+
+For each $h$, let
+\begin{equation}
+\mathsf{Adm}^{\mathrm{viab}}_{h,T,\delta}:
+\mathcal X_{T,\delta}\times\mathcal V_{T,\delta}
+\longrightarrow\{0,1\}
+\label{eq:ossv5-viability-admissibility}
+\end{equation}
+be the viability component of admissibility.  Its arguments include the
+certificate generated under that same candidate $h$.
+
+For a gravitational candidate $h$ and an edge $e$ on its regular aligned
+branch, write the radial response as
+\begin{equation}
+f^+_{h,e}(r):=
+\frac{2\alpha_e^h-\gamma_e^h r}{r^3},
+\qquad r>0.
+\label{eq:ossv5-regular-response}
+\end{equation}
+The carrier-regularity predicate is
+\begin{equation}
+\mathsf{Reg}_{h,T,\delta}(x)=1
+\quad\Longleftrightarrow\quad
+\forall e\in E^+\;\exists r^\star_{h,e}>0:\
+ f^+_{h,e}(r^\star_{h,e})=0
+\ \wedge\
+ \bigl(f^+_{h,e}\bigr)'(r^\star_{h,e})<0.
+\label{eq:ossv5-carrier-regularity}
+\end{equation}
+Thus regularity requires a positive locally stable equilibrium on the regular
+branch.  It contains no inverse-branch response-sign condition.
+
+The full admissibility predicate is the conjunction
+\begin{equation}
+\mathsf{Adm}^{\mathrm{full}}_{h,T,\delta}(x,\phi)=1
+\quad\Longleftrightarrow\quad
+\mathsf{Reg}_{h,T,\delta}(x)=1
+\ \wedge\
+\mathsf{Adm}^{\mathrm{viab}}_{h,T,\delta}(x,\phi)=1.
+\label{eq:ossv5-full-admissibility}
+\end{equation}
+An evaluation is admitted precisely when
+\begin{equation}
+H_h\!\left[\Xi_h^\star(x)\right]
+\quad\text{is evaluated only if}\quad
+\mathsf{Adm}^{\mathrm{full}}_{h,T,\delta}\!\left(\Xi_h^\star(x)\right)=1.
+\label{eq:ossv5-admitted-evaluation}
+\end{equation}
+
+The surviving functional class at $x$ is
+\begin{equation}
+\mathcal H_{\mathrm{adm}}(x):=
+\left\{
+ h\in\mathcal H_{T,\delta}:
+ \mathsf{Adm}^{\mathrm{full}}_{h,T,\delta}\!\left(\Xi_h^\star(x)\right)=1
+\right\}.
+\label{eq:ossv5-surviving-class}
+\end{equation}
+\end{definition}
+
+\begin{theorem}[Finite endogenous certificate closure]
+\label{thm:ossv5-finite-closure}
+\Thm{} Under Hypothesis~\ref{hyp:ossv5-certificate-update}, for every
+$h\in\mathcal H_{T,\delta}$ and $x\in\mathcal X_{T,\delta}$, the sequence in
+Equation~\eqref{eq:ossv5-kleene-sequence} is ascending and stabilizes after at
+most $|\mathcal V_{T,\delta}|-1$ strict increases.  Its stable value
+$\phi_h^\star(x)$ is the least fixed point of $\Phi_{h,x}$.  Therefore the
+closed operand in Equation~\eqref{eq:ossv5-closed-operand} exists for every
+candidate and base record on the declared finite certificate domain.
+\end{theorem}
+
+\begin{proof}
+Because $\bot$ is the least element of $\mathcal V_{T,\delta}$,
+$\phi^{(0)}_{h,x}\preceq\phi^{(1)}_{h,x}$.  If
+$\phi^{(n)}_{h,x}\preceq\phi^{(n+1)}_{h,x}$, monotonicity
+(Equation~\eqref{eq:ossv5-monotonicity}) gives
+\begin{equation}
+\phi^{(n+1)}_{h,x}
+=
+\Phi_{h,x}\!\left(\phi^{(n)}_{h,x}\right)
+\preceq
+\Phi_{h,x}\!\left(\phi^{(n+1)}_{h,x}\right)
+=
+\phi^{(n+2)}_{h,x}.
+\end{equation}
+Induction proves that the sequence is ascending.  A strictly ascending chain in
+the finite set $\mathcal V_{T,\delta}$ has at most
+$|\mathcal V_{T,\delta}|-1$ strict increases.  Hence there is an index $N$ with
+$\phi^{(N)}_{h,x}=\phi^{(N+1)}_{h,x}$, so
+$\phi^{(N)}_{h,x}$ is a fixed point.
+
+Let $\psi$ be any fixed point of $\Phi_{h,x}$.  Since $\bot\preceq\psi$,
+monotonicity yields, by induction,
+$\phi^{(n)}_{h,x}\preceq\psi$ for all $n$.  In particular,
+$\phi^{(N)}_{h,x}\preceq\psi$.  Thus the stable value is below every fixed
+point and is the least fixed point.  Equation~\eqref{eq:ossv5-closed-operand}
+then defines a closed operand for every $h$ and $x$.
+\end{proof}
+
+\begin{theorem}[Endogenous admissibility is operand-level, not an energy term]
+\label{thm:ossv5-endogenous-admissibility}
+\Thm{} For every $h$ and $x$, membership
+$h\in\mathcal H_{\mathrm{adm}}(x)$ holds if and only if the candidate's own
+coupled consequences generate the certificate $\phi_h^\star(x)$ and its
+admissibility predicate accepts the resulting operand.  Consequently, the
+construction retains a candidate functional only through the viability-bearing
+operand generated under that candidate: it does not introduce a fitness-energy
+term or an external functional selector.  It returns a unique selected
+functional exactly when
+\begin{equation}
+\left|\mathcal H_{\mathrm{adm}}(x)\right|=1;
+\label{eq:ossv5-uniqueness}
+\end{equation}
+otherwise it returns the surviving class.
+\end{theorem}
+
+\begin{proof}
+By Definition~\ref{def:ossv5-admissibility}, the certificate
+$\phi_h^\star(x)$ is generated by iterating the $h$-induced map
+$\Phi_{h,x}$, and membership in Equation~\eqref{eq:ossv5-surviving-class} is
+exactly the truth of
+$\mathsf{Adm}^{\mathrm{full}}_{h,T,\delta}(x,\phi_h^\star(x))=1$.
+The viability component is evaluated on the certificate generated by $h$'s own
+coupled consequences, while the regularity component is evaluated on $h$'s own
+regular-branch response.  Neither operation adds a fitness term to $H_h$ or
+introduces a selector external to the candidate functional and its typed
+execution.  The last statement follows directly from the cardinality of the
+surviving class.
+\end{proof}
+
+\begin{theorem}[Regular-branch admissibility forces coefficient positivity]
+\label{lem:ossv5-regularity-positivity}
+\Thm{} Let $h\in\mathcal H_{\mathrm{adm}}(x)$ and let $e\in E^+$.
+Then the carrier coefficients on the corresponding regular branch satisfy
+\begin{equation}
+\alpha_e^h>0,
+\qquad
+\gamma_e^h>0.
+\label{eq:ossv5-coefficient-positivity}
+\end{equation}
+The conclusion follows from the carrier-regularity component of full
+admissibility; it does not use an inverse-branch response sign.
+\end{theorem}
+
+\begin{proof}
+Since $h\in\mathcal H_{\mathrm{adm}}(x)$,
+Equation~\eqref{eq:ossv5-full-admissibility} gives
+$\mathsf{Reg}_{h,T,\delta}(x)=1$.  Thus there is an
+$r^\star_{h,e}>0$ such that
+\begin{equation}
+0=f^+_{h,e}(r^\star_{h,e})
+=
+\frac{2\alpha_e^h-\gamma_e^h r^\star_{h,e}}
+{(r^\star_{h,e})^3},
+\end{equation}
+so
+\begin{equation}
+\gamma_e^h=\frac{2\alpha_e^h}{r^\star_{h,e}}.
+\label{eq:ossv5-gamma-from-alpha}
+\end{equation}
+Differentiating Equation~\eqref{eq:ossv5-regular-response} gives
+\begin{equation}
+\bigl(f^+_{h,e}\bigr)'(r)
+=-\frac{6\alpha_e^h}{r^4}+\frac{2\gamma_e^h}{r^3}.
+\end{equation}
+Substituting Equation~\eqref{eq:ossv5-gamma-from-alpha} at
+$r=r^\star_{h,e}$ yields
+\begin{equation}
+\bigl(f^+_{h,e}\bigr)'(r^\star_{h,e})
+=-\frac{2\alpha_e^h}{(r^\star_{h,e})^4}.
+\end{equation}
+Carrier regularity makes the left-hand side strictly negative.  Because
+$r^\star_{h,e}>0$, this implies $\alpha_e^h>0$.  Equation~\eqref{eq:ossv5-gamma-from-alpha}
+then gives $\gamma_e^h>0$.
+\end{proof}
+
+\begin{remark}[Logical role of the regularity condition]
+\label{rem:ossv5-regularity-role}
+\Cnd{} In the finite carrier developed earlier in this supplement, positivity
+of the coefficients is part of the declared carrier data.  The present
+formulation makes explicit a stronger candidate-class criterion: when full
+admissibility requires a positive locally stable regular-branch equilibrium,
+coefficient positivity follows algebraically from that criterion.  This is a
+reorganization of the candidate-class assumption, not an empirical derivation
+of coefficient signs from the inverse branch.
+\end{remark}
+
+\begin{definition}[Viability-distinguishing fiber]
+\label{def:ossv5-fitness-fiber}
+\Defn{} Let
+\begin{equation}
+\pi_{\mathcal X}:
+\mathcal X_{T,\delta}\times\mathcal V_{T,\delta}
+\longrightarrow
+\mathcal X_{T,\delta},
+\qquad
+\pi_{\mathcal X}(x,\phi)=x
+\label{eq:ossv5-fitness-erasure}
+\end{equation}
+be the certificate-erasing projection.  The admissibility family is
+\emph{viability-sensitive} when there are $h$, $x$, and
+$\phi_0,\phi_1\in\mathcal V_{T,\delta}$ such that
+\begin{equation}
+\mathsf{Adm}^{\mathrm{full}}_{h,T,\delta}(x,\phi_0)
+\neq
+\mathsf{Adm}^{\mathrm{full}}_{h,T,\delta}(x,\phi_1).
+\label{eq:ossv5-viability-fiber}
+\end{equation}
+\end{definition}
+
+\begin{theorem}[Necessity of viability-bearing information]
+\label{thm:ossv5-nonreducibility}
+\Thm{} If the viability-distinguishing fiber condition in
+Equation~\eqref{eq:ossv5-viability-fiber} holds, then
+$\mathsf{Adm}^{\mathrm{full}}_{h,T,\delta}$ does not factor through
+$\pi_{\mathcal X}$.  Hence no exact endogenous admissibility decision retaining
+only the fitness-erased base record can implement the declared viability-sensitive
+selection.
+
+More generally, a retained representation
+$\rho:\mathcal X_{T,\delta}\times\mathcal V_{T,\delta}\to Y$ supports exact
+admissibility selection if and only if, for every $h$, there is a map
+$d_h:Y\to\{0,1\}$ satisfying
+\begin{equation}
+\mathsf{Adm}^{\mathrm{full}}_{h,T,\delta}=d_h\circ\rho
+\quad\text{on the declared admissibility domain.}
+\label{eq:ossv5-exact-factorization}
+\end{equation}
+Thus an explicit certificate coordinate may be replaced only by a faithful
+sufficient statistic for every admissibility-relevant viability distinction.
+\end{theorem}
+
+\begin{proof}
+Suppose, to the contrary, that
+$\mathsf{Adm}^{\mathrm{full}}_{h,T,\delta}=\bar d_h\circ\pi_{\mathcal X}$ for some
+$\bar d_h:\mathcal X_{T,\delta}\to\{0,1\}$.  Applying this equality to the
+two operands in Equation~\eqref{eq:ossv5-viability-fiber} gives
+\begin{equation}
+\mathsf{Adm}^{\mathrm{full}}_{h,T,\delta}(x,\phi_0)
+=
+\bar d_h(x)
+=
+\mathsf{Adm}^{\mathrm{full}}_{h,T,\delta}(x,\phi_1),
+\end{equation}
+contradicting Equation~\eqref{eq:ossv5-viability-fiber}.  Therefore no such
+factorization exists.
+
+For the general statement, if Equation~\eqref{eq:ossv5-exact-factorization}
+holds, evaluation of $d_h(\rho(x,\phi))$ reproduces the declared admissibility
+value exactly.  Conversely, suppose that $\rho$ supports exact selection.  For
+each $y$ in the image of the declared domain, choose any operand
+$(x,\phi)$ with $\rho(x,\phi)=y$ and define
+$d_h(y):=\mathsf{Adm}^{\mathrm{full}}_{h,T,\delta}(x,\phi)$.  Exactness ensures that this is
+independent of the chosen representative: otherwise one $\rho$-fiber would
+contain both an admitted and a rejected operand and no decision based only on
+$y$ could be exact.  Hence $d_h$ is well defined and satisfies
+Equation~\eqref{eq:ossv5-exact-factorization}.
+\end{proof}
+
+\begin{hypothesis}[Inverse branch and sign-blind viability admission]
+\label{hyp:ossv5-sign-neutrality}
+\Hyp{} For every $h\in\mathcal H_{\mathrm{adm}}(x)$ on an inverse branch,
+the carrier branch relations give
+\begin{equation}
+\dot r_e^h=
+\frac{2\alpha_e^h+\gamma_e^h r_e}{r_e^3},
+\qquad r_e>0.
+\label{eq:ossv5-inverse-response}
+\end{equation}
+The viability component
+$\mathsf{Adm}^{\mathrm{viab}}_{h,T,\delta}$ contains no inverse-response-sign
+predicate and does not retain or reject a candidate by requiring
+$\mathsf{sgn}(\dot r_e^h)=+1$.  By Definition~\ref{def:ossv5-admissibility},
+the regularity component tests only the regular branch in
+Equation~\eqref{eq:ossv5-regular-response}; it likewise contains no
+inverse-response-sign criterion.
+\end{hypothesis}
+
+\begin{theorem}[Sign invariance over the surviving functional class]
+\label{thm:ossv5-sign-invariance}
+\Thm{} Under Hypothesis~\ref{hyp:ossv5-sign-neutrality}, every admitted
+candidate has the same positive inverse-branch response sign:
+\begin{equation}
+\forall h\in\mathcal H_{\mathrm{adm}}(x),
+\qquad
+\mathsf{sgn}(\dot r_e^h)=+1.
+\label{eq:ossv5-sign-invariance}
+\end{equation}
+Thus the response sign is invariant over the surviving class.  Its positivity
+is derived from the carrier-regularity component of full admissibility, not
+stipulated as an inverse-sign selection rule.
+\end{theorem}
+
+\begin{proof}
+Let $h\in\mathcal H_{\mathrm{adm}}(x)$.  By
+Lemma~\ref{lem:ossv5-regularity-positivity},
+$\alpha_e^h>0$ and $\gamma_e^h>0$.  Hypothesis~\ref{hyp:ossv5-sign-neutrality}
+gives $r_e>0$.  Hence the denominator in
+Equation~\eqref{eq:ossv5-inverse-response} is positive and its numerator
+$2\alpha_e^h+\gamma_e^h r_e$ is strictly positive.  Therefore
+$\dot r_e^h>0$, proving Equation~\eqref{eq:ossv5-sign-invariance}.  Since the
+argument applies to every admitted $h$, the sign is constant on the surviving
+class.
+
+Neither component of full admissibility contains the conclusion
+$\mathsf{sgn}(\dot r_e^h)=+1$: the viability component is sign-blind by
+Hypothesis~\ref{hyp:ossv5-sign-neutrality}, and the regularity component is
+stated entirely on the regular branch.  The inverse response sign is therefore
+an algebraic consequence after admission, not a premise used to obtain
+admission.  Hypothesis~\ref{hyp:ossv5-physical-operativity} is not used in this
+proof.
+\end{proof}
+
+\begin{remark}[Status and scope]
+\label{rem:ossv5-status}
+\Cnd{} The formal results in this section establish finite certificate closure,
+operand-level endogenous admissibility, the necessity of preserving
+admissibility-relevant viability information, and sign invariance over the
+surviving class under the stated carrier and branch hypotheses.  In particular,
+full admissibility requires a positive locally stable regular-branch equilibrium;
+Lemma~\ref{lem:ossv5-regularity-positivity} then derives the coefficient
+positivity used by the inverse-response theorem.  The derivation is
+model-internal and does not use the physical-operativity hypothesis.
+
+The physical-operativity hypothesis is distinct.  It proposes that the relevant
+candidate class consists of fluctuation-induced physical or registration-capable
+executions, and that only those whose own products preserve the conditions
+required for continuation become consequential.  That is an ontic hypothesis of
+the proposed second-order theory, not a consequence of certificate closure and
+not a claim that all human-proposed theories converge to one formula.  The
+construction also does not prove that every fluctuation is realized or that the
+surviving class is universally unique.
+\end{remark}
+
+\section{Schedules are implementation conditions}
+\label{sec:schedules}
+
+\begin{definition}[Target-conditioned inverse schedule]
+\label{def:schedule}
+\Defn{} Fix an inverse target state $x_\star\in\Branch_-(\mathbf p)$, an
+admissible operation family $\mathcal O_P$, and a bridge/registration discipline
+$B$.  A target-conditioned inverse schedule is a finite ordered record
+\begin{equation}
+\Sched_{\mathcal E,B}(x_\star)=
+\left\langle
+(u_k,\Delta t_k,\mathcal B_k,\mathcal R_k,S_k,B_k)
+\right\rangle_{k=1}^n,
+\label{eq:schedule}
+\end{equation}
+where $u_k\in\mathcal O_P$ is an ordinary forward-time admissible physical
+operation, $\Delta t_k$ is its duration, $\mathcal B_k$ is its active boundary or
+interface condition, $\mathcal R_k$ is its regime record, $S_k$ is its support,
+and $B_k$ is its P-space-to-registration bridge.  The schedule is admissible only
+when every transition composes, stays inside the declared carrier/regime corridor,
+and terminates at or within a stated approximation of $x_\star$.
+\end{definition}
+
+\begin{proposition}[Schedule status]
+\label{prop:schedule}
+\Cnd{} A schedule in Definition~\ref{def:schedule} is a realization witness only
+when it exists and satisfies its declared corridor.  It neither defines the
+inverse branch nor changes its physical membership predicate.  Inverse membership
+is fixed first by Equations~\eqref{eq:pair-resolution} and~\eqref{eq:bminus}; the
+schedule is a separate conditional object for reaching a state in that branch.
+\end{proposition}
+
+\section{Observable consequences and falsification route}
+\label{sec:falsification}
+
+The theory already contains a configuration-level determination.  For every edge
+on a declared branch, the response sign is fixed:
+\begin{equation}
+\mathsf{sgn}(\dot r_e)=
+\begin{cases}
+\mathsf{sgn}(2\alpha_e-\gamma_er_e),&z\in\Branch_+(\mathbf p),\\
++1,&z\in\Branch_-(\mathbf p).
+\end{cases}
+\label{eq:sign-prediction}
+\end{equation}
+This is not yet a claim about a continuum metric, astronomical body, or laboratory
+apparatus.  It is a prediction within the finite carrier.  Any continuum or
+experimental claim must supply a reconstruction map and an observable bridge.
+
+\begin{definition}[Effective-regime reconstruction obligation]
+\label{def:reconstruction}
+\Open{} A continuum or other effective rendering requires a declared target
+state space $X_\delta$, a dynamics $U_\delta(t)$ on that space, and a map
+\begin{equation}
+\mathsf S_{\mathbf p,\delta}:\State_{\mathbf p}\longrightarrow X_\delta
+\label{eq:reconstruction}
+\end{equation}
+with a stated norm, metric, probability law, or retained quotient for which
+\begin{equation}
+\mathsf S_{\mathbf p,\delta}\circ\Flow_{\mathbf p,t}
+\approx_{\varepsilon_{\mathrm{dyn}}(\delta)}
+U_\delta(t)\circ\mathsf S_{\mathbf p,\delta}
+\label{eq:effective-recovery}
+\end{equation}
+holds on a declared domain and interval.  A physical detector claim additionally
+requires a bridge from the reconstructed observable to a registration record.
+\end{definition}
+
+\begin{obligation}[Branch-sensitive falsification]
+\label{obl:falsification}
+\Open{} A candidate physical realization of the finite carrier is falsified on a
+declared inverse configuration if it simultaneously establishes: (i) the
+P-space branch conditions in Equation~\eqref{eq:bminus}; (ii) the applicable
+stability condition in Equation~\eqref{eq:inverse-stability}; and (iii) a valid
+reconstruction/observable bridge for which the corresponding response has
+$\dot r_e\le0$.  Conversely, a claimed observation of inverse gravity is not
+licensed merely by a registration label: the branch and bridge records must be
+shown.
+\end{obligation}
+
+\section{Claim boundary and conclusion}
+\label{sec:conclusion}
+
+The supplement establishes the following finite theory statement:
+\begin{quote}
+\emph{At a declared primitive scale, a counterposed gravitational interaction
+pair is physically co-registered below an intrinsic synchronization threshold and
+physically resolved above it.  The co-registered and resolved conditions select,
+respectively, regular attractive and inverse-response sectors of one finite
+clock-orientation gravity dynamics.  The latter has a forced positive separation
+response under its stated stability condition.  A distinct P-space-to-A(R)-space
+bridge determines whether a material record retains the branch distinction; when
+the observation quotient identifies an attractive state with an inverse state,
+the inverse target cannot be decided from that record.}
+\end{quote}
+
+The finite P-space carrier, its energy, its branch predicates, and its response
+law are fully specified in this supplement.  The P-space/A(R)-space bridge and
+factorization criterion make the second-order content explicit.  Physical
+realization, continuum recovery, and empirical selection are not imported into
+the theorem; they are the next typed obligations of the theory object.
+
+\end{document}
