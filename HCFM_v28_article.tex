@@ -1,0 +1,727 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{geometry}
+\geometry{a4paper,margin=1in}
+\usepackage{enumitem}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\newcommand{\Obs}{\mathrm{Obs}}
+\newcommand{\ObsMatcl}{\mathbf{ObsMatcl}}
+\newcommand{\Omat}{\mathcal{O}_{\mathrm{mat}}}
+\newcommand{\Minf}{M_\infty}
+\newcommand{\plainterms}{\emph{In plain terms.}}
+\newcommand{\founding}{\emph{Founding statement.}}
+
+\title{A Conditional Construction of Human-Centric Functional Modeling\\
+from Globally Lawful Material Flow}
+\author{Andy E.\ Williams$^{1,2,*}$\\[4pt]
+\small $^1$Nobeah Foundation, Nairobi, Kenya\\
+\small $^2$Caribbean Center for Collective Intelligence, St.\ John's, Antigua and Barbuda\\[2pt]
+\small $^*$Corresponding author: \texttt{awilliams@nobeahfoundation.org}, \texttt{info@cc4ci.org}}
+\date{}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+Human-Centric Functional Modeling (HCFM) posits that a representation of the functions of matter (a functional model) that is complete in terms of being closed under the composition of its operations, and that is maximally understandable to humans in terms of not requiring visualization in greater than the three dimensions humans can natively visualize, and in terms of having some projection onto a flat Euclidean three dimensional space (rather than a more general and potentially curved three dimensional Riemannian manifold that might not be natively visualizable to humans), has a well-defined schema. HCFM posits that this same functional model (this same schema) can be projected onto any other system composed of matter that operates in a closed domain of functionality, so that any system humans can observe, can potentially be modeled in the same way. This same modeling approach has been used to define hypothetical models for physics, cognition, consciousness and other systems. Furthermore, HCFM posits that in this functional modeling approach, observable properties of any observable system are represented by invariant objects in that system’s own functional model, where those invariant objects can potentially be transported to other observable systems. This paper addresses the observability of phenomenon in systems and system behavior, and the hypothesized existence of a blind spot in that observability, where a projection of the same blind spot is predicted to exist in every observable system.
+\end{abstract}
+
+\noindent\textbf{Keywords:} theory of everything; material composition; functional state spaces; observation; closure; bisimulation; HCFM; invariant transport; observer-inclusion blind spot; recursive global coherence; coherence budget; effective registration dimension; second-order disciplines; semantic backpropagation; compositional problem solving; three-dimensional representation; windows and order transitions; cognitive mass; realization gating; AI and civilizational alignment.
+
+
+\section{Introduction: The single causal picture}
+Human-Centric Functional Modeling or HCFM \cite{williams2021human} assumes the existence of a Functional State Space (FSS) $F_S$ for a system $S$. The FSS is a typed network whose nodes describe functionally distinguishable states of $S$, and whose edges describe compositions of the minimally reducible functions that $S$ is capable of performing. Its typed paths therefore represent the functional behaviors that $S$ can realize at a declared observer, horizon, and resolution.
+
+Let $\mathbb{T}$ denote the relevant time domain. Define a Local Theory of Everything for $S$, written $\mathrm{ToE}_S$, as a function that computes how $S$ moves through its Functional State Space:
+\[
+\mathrm{ToE}_S : F_S \times \mathbb{T} \rightarrow F_S,
+\qquad
+(x,t) \mapsto x_t,
+\]
+where $x$ is a functional state of $S$, and $x_t$ is the functional state reached after time $t$.
+
+Every observable system is composed of matter and/or energy, and every observable behavior arises through material interactions. When observations of material behavior are stable and compatible with one another, they can be treated as observable parts of one underlying material evolution: a Global ToE, written $f$. Every observable functional model is therefore grounded, at some lower level, in observable material systems and interactions.
+
+Let $\mathcal{T}$ be the tower of models between a material-level model and a system $S$. A bridge is required when observations of one system $S_i$ are used to predict observations in an adjacent system $S_j$.
+
+For law-relevant behavior to be transported reliably between adjacent systems $S_i$ and $S_j$ in that hierarchy, there must be a declared bridge
+\[
+B_{ij} : D_{ij} \subseteq F_{S_i} \rightarrow F_{S_j}
+\]
+that preserves the structure being transported. On its declared domain and horizon, an exact bridge satisfies
+\[
+B_{ij} \circ \mathrm{ToE}_{S_i}^{\,t}
+=
+\mathrm{ToE}_{S_j}^{\,t} \circ B_{ij}.
+\]
+Where this relation does not hold exactly, the bridge must carry a declared bounded residual. Given a declared discrepancy measure $d_j$ on $F_{S_j}$,
+\[
+r_{ij}^{\,t}(x)
+=
+d_j\!\left(
+B_{ij}\!\left(\mathrm{ToE}_{S_i}^{\,t}(x)\right),
+\mathrm{ToE}_{S_j}^{\,t}\!\left(B_{ij}(x)\right)
+\right)
+\leq
+\delta_{ij}^{\,t}(x),
+\]
+where $\delta_{ij}^{\,t}(x)$ identifies the magnitude and location of transport failure. A bridge therefore allows observations, and predictions of observations, in one system to predict or constrain observable behavior in another.
+
+Define a global coherence function $G$ as a topological operation on the FSS whose compositions search for progressively larger observable behaviors of $S$, and therefore progressively larger structures that $S$ might take. Define a local coherence function $L$ as a topological operation on the FSS whose compositions search for progressively smaller observable behaviors of $S$, and therefore progressively smaller local structures and relations under available priors.
+
+Within this assessment architecture, compositions of $G$ generate predictions of what the system's behavior will be and where larger structures should be found. Compositions of $L$ generate assessments of what that system's behavior is or has been.
+
+Both $G$ and $L$ can operate only at scales at which their relevant observations remain discernible. Below an observer's noise floor, different behaviors collapse into observational equivalence. Above that observer's observability ceiling, the relevant composition, coupling, or consequence cannot be reliably registered as a coherent object. These limits constrain both $L$ and $G$, but do not define the difference between them.
+
+Any observable execution of $G$ or $L$, like any other observable composition of interactions on an observable composition of matter, such as a human throwing a ball, is a composition of applications of $f$ on some composition of matter. $L$ is therefore one composition of $f$-operations on a material composition, and $G$ is another.
+
+Let $\mathcal{B}_S$ denote the set of typed functional behaviors, or paths, available in $F_S$. Assume that $F_S$ can represent every functional behavior available to $S$. Let
+\[
+R_t \subseteq \mathcal{B}_S
+\]
+be the behaviors of $S$ that have become accessed---reachable, realized, or observable---by time $t$. When new environmental conditions reveal behavior outside the previously accessed repertoire,
+\[
+R_{t+1} \supsetneq R_t,
+\]
+the accessed behavior of $S$ expands globally within the behavior space induced by $F_S$. This does not mean that $F_S$ itself grows. It means that more of an already representable behavior space becomes observable or accessible.
+
+At the same time, familiar environmental conditions can contract behavior locally within the same Functional State Space. For a viable region $U_e \subseteq F_S$, behavior under a recurring condition $e$ may satisfy, for some interval $\tau > 0$,
+\[
+d\!\left(\Phi_e^\tau(x),\Phi_e^\tau(y)\right)
+\leq
+\lambda\, d(x,y),
+\qquad
+x,y \in U_e,
+\quad
+0 \leq \lambda < 1.
+\]
+In that case, nearby behaviors become more alike after each recurring interval $\tau$. New conditions can expand the accessible behavior of $S$, while familiar conditions can contract behavior toward stable or observationally equivalent regions of the same Functional State Space.
+
+A global-coherence assessment can determine what a local assessment can safely conclude because it can preserve and test both the distinctions the local assessment retains and the distinctions it discards.
+
+For an observer whose assessments collapse to $L$-assessments under conditions of high novelty and sparse priors, this creates a blind spot in the difference $\delta$ between any prior observable through an $L$-operation at a given scale and a structure observable through a $G$-operation at that scale, unless there exists a continuous function---a Theory of Everything for the system---through which all behaviors of the system are recoverable.
+
+Resolving the blind spot therefore requires an assessment that expands the available representation, observation, or bridge structure beyond the local viewpoint; see Theorem~\ref{thm:recursive-non-factorization}.
+
+At the same time a ToE for the system becomes progressively less discoverable under recursive L operations, while that ToE for the system becomes progressively more discoverable under recursive G operations. That is, under recursive local-prior assessment of a global-coherence target, each unmet prior generates further child obligations without necessarily reducing the global residual. In the limit, the assessment architecture displaces the burden of establishing global coherence onto an empirically impossible request: a finite local observation capable of certifying the completeness of the global theory. 
+
+This makes the blind spot self-reinforcing, so that with unbounded time, the probability that the blind spot will contain catastrophic risks to the system if not resolved, if any such catastrophic blind spots exist in terms of being potentially observable, approaches one. Let $C_n$ be catastrophe at the $n$-th newly exposed opportunity. If the blind spot remains unresolved and, conditional on no prior catastrophe, every such opportunity has catastrophic probability at least $\varepsilon > 0$, then
+\[
+\Pr\!\left(
+C_n
+\mid
+\neg C_1 \land \cdots \land \neg C_{n-1}
+\right)
+\geq
+\varepsilon,
+\]
+and therefore
+\[
+\Pr\!\left(
+\text{at least one catastrophe by opportunity } N
+\right)
+\geq
+1 - (1-\varepsilon)^N
+\longrightarrow
+1.
+\]
+
+Under those conditions, the greatest unassessed risk is not merely any one hidden catastrophe. It is the absence of the means by which a system can reliably observe the larger structures through which many catastrophes become visible.
+
+In addition to addressing the hypothetical blind spot in understanding risks related to systems in general and their behavior, the contribution of HCFM and of this paper, is that modeling systems this way hypothetically introduces the potential to combinatorially increase problem-solving ability for any discipline that can be represented as navigating a projection of any system that can be modeled this way. Working papers explore this increase in physics \cite{williams2026propagating} and mathematics \cite{williams2026physical}. This hypothetical increase has been called the Cognitive Near-Singularity or CNS \cite{12}.
+
+\subsection{Construction of this paper}
+The manuscript contains a formally generative construction and a set of derived operational consequences. Status tags, witnesses, residuals, and certificates are not external qualifications added around the construction to moderate its claims. They are internal causal operators: they preserve the conditions under which models, bridges, assessments, and compositions remain valid across levels.
+
+The principal theorem and other formalism presented in the remainder of the paper (formally generative construction and a set of derived operational consequence), is scaffolding to assist the reader in applying an assessment of global coherence G, by providing a step-by-step path towards the broader claims in the introduction. A published HCFM based Functional Model of Intelligence\cite{williams2023human} that does not rely on that construction serves as a constructive witness to the claim that an HCFM model does not require this paper’s scaffolding, though publication in any particular journal might.
+
+The construction below supplies an explicit route from materially realized observation to a common HCFM schema. Its universal statement is that a material system is observable at a declared horizon when a physically realized observer, finite probe/readout family, stable comparison structure, and compatible record thread witness that observation. The precise witness and its proof obligations are given in the Supplement.
+
+The scope of the principal theorem is exact. A stochastic, irreversible, hybrid, dissipative, or otherwise non-reversible readout-level description is included when its declared material observation witness supplies the underlying lawful material realization required by the construction. The theorem therefore concerns observable material systems at their declared horizons, not arbitrary unwitnessed descriptions.
+
+The broader claim that HCFM applies to any observable system is a hypothesis. Validation of this hypothesis is left to future work. However, the paper's scaffolding towards this broader claim isn't required if one recognizes that HCFM applying to “any” observable material system follows from recursively applying the same requirements for observation at any scale. The paper proves the formal universalization of this hypothesis relative to its operative observability predicate and witness conditions. Its application to actual material systems remains a realization hypothesis wherever those witness conditions have not yet been established. From this perspective, the scaffolding just removes the need for self-directed recursive reasoning at any depth of recursion required to justify the universal claims. 
+
+\subsection{Causal map of the construction}
+
+\begin{center}
+\begin{tabular}{@{}p{0.30\textwidth}p{0.34\textwidth}p{0.30\textwidth}@{}}
+\toprule
+Production edge & Formal construction & What becomes available\\
+\midrule
+Material behavior $\to \Phi^{\star}$ & Stable, compatible local lawful observations form an inverse-limit material completion & One continuous global law, canonical up to isomorphism\\
+$\Phi^{\star}$ on $C \to \mathrm{Emit}(C)$ & M\"obius extraction of localized generators & A unique, natural, refinement-coherent interaction inventory\\
+$\Phi_C \to P_{C,H}$ & Dependency closure and horizon bisimulation quotient & A compositional physical functional state category\\
+$P_{C,H} \to S_{\mathrm{HCFM}}(C, H)$ & Physically realized observer, operational equivalence, viability, error correction & Registration, conceptual, mathematical, and fitness spaces with typed bridges\\
+$A_{C,H} \to d_A(H)$ & Costed registration quotient, viable accessed region, declared scale ladder, and resolution test & A horizon-indexed effective dimension and, along refinement, a dimension-flow profile\\
+$S_{\mathrm{HCFM}}(C, H) \to D$ & Perspective-explicit disciplinary interface, semantic quotient, and certificate conditions & A typed object whose reasoning processes can be checked for cross-disciplinary transport\\
+$S_{\mathrm{HCFM}}(C, H) \to \Pi_K \subset \mathbb{R}^3$ & Labelled incidence encoding of each finite task slice & A faithful flat inspection carrier with exact decoding\\
+$S_{\mathrm{HCFM}}(C, H) \to \mathrm{Inv}$ & Quotient factorization and dynamic-equivariant bridges & Observable invariants and their transport across systems\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Matter as operand and the global-law completion}
+
+Observable material behavior enters here as compatible local flows. Stable observation and refinement assemble those flows into the one law that acts on the completed material operand.
+
+Let $\mathrm{Mat}$ be a symmetric monoidal category of material components, with monoidal product $\otimes$, and let $|\cdot| : \mathrm{Mat} \to \mathrm{Top}$ be a strong monoidal carrier functor. A material composite $C$ has a state carrier $|C|$; composition satisfies $|C \otimes D| \cong |C| \times |D|$. A horizon $H$ specifies a temporal bound, resolution, observer/protocol family, question family, labels, and a readout map.
+
+For an observable composite and horizon, material behavior supplies a continuous reversible local flow
+\begin{equation}
+\Phi_{C,H} : \mathbb{R} \times P^{\mathrm{loc}}_{C,H} \longrightarrow P^{\mathrm{loc}}_{C,H}. \tag{2}
+\end{equation}
+A refinement $H' \succeq H$ supplies a projection $\rho_{H'H}$ satisfying
+\begin{equation}
+\rho_{H'H}\Phi_{C,H'}(t) = \Phi_{C,H}(t)\rho_{H'H}. \tag{3}
+\end{equation}
+
+For each declared material construction, let $\Omat : J \to \mathrm{FlowTop}$ be its observation diagram. Its objects are exactly the local observations that the construction requires to be reconciled; its arrows are exactly the declared refinement, calibration, localization, or comparison maps used by that construction. The diagram does not posit arrows between unrelated material systems. Stable observation means that repeated protocols reproduce their operational class at the declared resolution; overlapping protocols carry flow-compatible calibration maps; finite compatible families possess common refinements; and the declared diagram carries a grounding condition for nonempty completion: for example, a greatest calibrated horizon, compact Hausdorff carriers, finite carriers, surjective finite-fibre maps, a countable cofinal surjective ladder, or an explicitly supplied compatible observation cone. These conditions express exactly what is needed for the local perspectives used by this construction to belong to one coherent material history rather than to float as unrelated descriptions.
+
+\begin{theorem}[Canonical global material-law completion]
+\label{thm:global-material-law}
+Let $\Omat : J \to \mathrm{FlowTop}$ be a declared stably law-indexed observation diagram with continuous reversible local flows, flow-equivariant comparison maps, declared monoidal/localization coherence where composition is used, and one stated grounding condition for its inverse-limit carrier. Then
+\begin{equation}
+\Minf = \varprojlim_{j \in J} P^{\mathrm{loc}}_j \tag{4}
+\end{equation}
+exists and is nonempty, and it carries the continuous reversible action
+\begin{equation}
+\Phi^{\star}_t\big((x_j)_j\big) = \big(\Phi_j(t)x_j\big)_j. \tag{5}
+\end{equation}
+Each local flow is the corresponding projection of $\Phi^{\star}$. The pair $(\Minf, \Phi^{\star})$ is unique up to canonical isomorphism among global material actions with these declared observational shadows.
+\end{theorem}
+
+\noindent\founding{} This theorem constructs the object named in the founding statement's first clause: the single continuous function of which every locally observed law is a projection. Its existence is not assumed; it is assembled from the stability of observation itself.
+
+Theorem~\ref{thm:global-material-law} gives the precise global-coherence content of the declared material-law completion. Stable, law-compatible observable behavior has a canonical global material model, and that model contains one action whose local projections are exactly the observed lawful flows. The theorem is therefore an existence-and-universality result for the ToE hypothesis relative to its material and observational premises.
+
+\noindent\plainterms{} Imagine thousands of photographs of one landscape, taken from different spots and at different zoom levels. If every pair of photos agrees on the region where they overlap, and zooming in never contradicts the zoomed-out view, then there is exactly one landscape they are all pictures of --- and the theorem builds it. ``Inverse limit'' is the name for the stitched-together landscape; ``the global law'' is the statement that the whole landscape changes in time in one consistent way, of which every photo's changes are partial views. The force of the result is the word one: agreeing local views cannot correspond to two genuinely different worlds.
+
+\section{One law emits the interactions of a composition}
+
+A composite material operand enters this section. The global law restricts to its flow, and the deviation of that flow from all proper sub-composite flows is extracted as the composite's interaction inventory.
+
+Let $C = C_1 \otimes \cdots \otimes C_n$ be an observable composite. On a declared differentiable class, write $X_C$ for the generator of the restriction of $\Phi^{\star}$ to $C$. For every $S \subseteq [n]$, let $Y_S$ be the canonically localized lift of the generator of the sub-composite indexed by $S$ to the full carrier $|C|$. Define
+\begin{equation}
+X_C(S) = \sum_{T \subseteq S} (-1)^{|S|-|T|} Y_T, \qquad \emptyset \neq S \subseteq [n]. \tag{6}
+\end{equation}
+The emission map is
+\begin{equation}
+\mathrm{Emit}(C) = \{X_C(S) : \emptyset \neq S \subseteq [n]\}. \tag{7}
+\end{equation}
+
+\begin{theorem}[Canonical interaction emission]
+\label{thm:canonical-interaction-emission}
+For every observable composite $C$, the family $\mathrm{Emit}(C)$ is the unique interaction family whose partial sums recover every localized sub-composite generator. It is natural under admitted material maps, coherent under refinement of a factorization, supported exactly on its participating components, and satisfies
+\begin{equation}
+X_C = \sum_{\emptyset \neq S \subseteq [n]} X_C(S). \tag{8}
+\end{equation}
+When the components do not commute, the corresponding flow is reconstructed by time-ordered products of the emitted generators.
+\end{theorem}
+
+\noindent\founding{} Equation (6) is the founding statement's phrase ``the single function emits multiple potential output functions'' made exact. The outputs are not separately declared interaction labels: they are the unique support-indexed components of the law's action on a composition, and the theorem proves there is exactly one way to extract them.
+
+A component is fundamental within the declared compositional resolution when it is nonzero and cannot be represented as a sum of components supported on proper participant subsets. Empirical interaction species are obtained when a material realization map assigns such components stable, separating operational signatures.
+
+\noindent\plainterms{} The two wall clocks: run clock 1 alone and write down what it does; run clock 2 alone and do the same; now hang them together and watch the pair. Subtract, from the pair's behavior, everything attributable to clock 1 alone and clock 2 alone. Whatever is left over --- here, the slow pull that synchronizes them --- is the interaction, and equation (6) is the bookkeeping that performs this subtraction correctly no matter how many parts there are (subtract singles, add back pairs you double-subtracted, and so on). The theorem says this leftover is unique: interactions are not postulated labels but the exact remainder of composition.
+
+\section{Lawful matter becomes a functional model}
+
+The material flow now enters a horizon-relative selection and abstraction process. Closure retains every condition that can alter an admissible continuation; quotienting identifies histories that remain observationally indistinguishable under the declared dynamics.
+
+For a candidate domain $D_0 \subseteq |C|$, let $\mathrm{Dep}_{C,H}$ be a monotone, inclusive dependency operator containing all horizon-relevant predecessors and successors of the local flow. Its closure step is
+\begin{equation}
+F_{D_0,H}(X) = D_0 \cup X \cup \mathrm{Dep}_{C,H}(X). \tag{9}
+\end{equation}
+The least fixed point $D^{\sharp}_{C,H} = \mu F_{D_0,H}$ is the smallest domain containing the candidate material conditions and everything on which their bounded continuation depends. This closure-complete domain is the formal content of a system that ``operates in a closed domain of functionality.'' Histories inside this domain are quotiented by the greatest observation-preserving, label-matching bisimulation $\sim_{C,H}$. The physical functional state category is
+\begin{equation}
+P_{C,H} = \mathrm{Hist}_{C,H} / \sim_{C,H}. \tag{10}
+\end{equation}
+
+\begin{theorem}[Flow-to-functional-state construction]
+\label{thm:flow-to-functional}
+The closure-complete domain $D^{\sharp}_{C,H}$, coarsest horizon congruence $\sim_{C,H}$, quotient category $P_{C,H}$, and inverse-closed physical operator basis are derived from the material flow, horizon, and dependency operator. The construction is stratified: the quotient is formed before registration, metric, fitness, conceptual, or mathematical realization data are introduced.
+\end{theorem}
+
+The physical category is closed under the compositional operations represented by its labelled paths. It is therefore already a functional model of the material system at the declared horizon, but not yet the full HCFM schema. The remaining spaces are generated when a material observer belongs to the same causal picture.
+
+\noindent\plainterms{} Two moves happen here. Closure: before modeling anything, gather everything that could still influence what happens within your time-and-precision budget --- like packing for a trip by including everything that could matter on this trip, and nothing that cannot. Quotient: then declare two possible histories ``the same state'' whenever no allowed observation, now or later within the budget, could ever tell them apart. What remains after merging indistinguishables is the physical functional state object: not the world in itself, but the world at the resolution at which it can make a difference.
+
+\section{The HCFM schema generated by physical observation}
+
+A physically realized observer enters the material process rather than standing outside it. Its probes, readouts, viability, and correction mechanisms generate the additional functional spaces that make the physical quotient usable as a human-centered model.
+
+Let $C = O \otimes S$ be an observable composite with observer subsystem $O$. A finite protocol alternates observer-supported probe maps with flow segments and returns a readout of $O$. Two material histories are operationally equivalent when no admissible protocol distinguishes their readouts. The quotient by this operational equivalence is the registration space $A_{C,H}$. The registration quotient supplies the readout-bearing base from which a canonical conceptual core is constructed as the formal-concept lattice of the protocol/readout context and a canonical mathematical core as the syntactic category of the observational theory; any richer realized conceptual or mathematical structure is declared enrichment with a typed comparison interface to that core. Fitness is the observer's room to continue --- its capacity for viable continuation on its viable material region --- and a strict adaptive contraction is generated only by a materially realized error-correcting calibration process. Fitness lives in its own space over the functional states: navigation unfolds in the state space while the stability that governs it resides in fitness, which is why trajectories can look irregular while the underlying dynamics remain stable.
+
+\begin{definition}[The HCFM schema]
+For an observable material system $(C, H)$, its HCFM schema instance is the typed construction
+\begin{equation}
+\begin{aligned}
+S_{\mathrm{HCFM}}(C, H) = \big(&\{(\Omega^{\sigma}, R^{\sigma}, S^{\sigma}, W^{\sigma})\}_{\sigma \in \{P,A,C,M\}};\ \mathrm{Reg}_{P \to A}, \mathrm{Ext}_{K^{\circ} \to P(A)},\\
+&\mathrm{Int}_{K^{\circ}_{\mathrm{def}} \to M^{\circ}_{\mathrm{def}}},\ \mathrm{Real}_{M^{\circ} \to \mathrm{Def}(A(C,H))}\big),
+\end{aligned}\tag{11}
+\end{equation}
+where $P, A, C, M$ denote the physical, registration, conceptual, and mathematical functional spaces. The canonical $C$-column is the full formal-concept lattice of protocol/readout distinctions; its total semantic relation to registration is $\mathrm{Ext}(E, J) = E \subseteq A$. The canonical $M$-column is the Lindenbaum--Tarski syntactic category of the resulting observational theory. $K^{\circ}_{\mathrm{def}} \subseteq K^{\circ}$ is the definable interface: its concepts have a declared finitary formula defining their extents, and $\mathrm{Int}_{\mathrm{def}}$ classifies only that interface. $\mathrm{Real}$ is the semantic interpretation functor into the definable contexts and relations of the registered structure; any material realization of an interpreted object is declared realization enrichment with its own typed interface and residual conditions. Each $S^{\sigma}$ is a typed path category closed under composition; each $R^{\sigma}$ is an inverse-closed dynamic basis; and each $W^{\sigma}$ is a sort-distinct fitness object.
+\end{definition}
+
+\begin{theorem}[Observer-induced HCFM realization] \label{thm:observer-induced-hcfm} For a physically realized sensitive observer equipped with declared fitness realization data, operational equivalence yields \(A_{C,H}\) as a quotient of material histories and every admissible protocol readout descends to that quotient. The observer's protocol/readout context canonically generates the full conceptual core \(K^{\circ}(C,H)\) as its formal-concept lattice, and the observational signature and registered structure canonically generate the mathematical core \(M^{\circ}(C,H)\) as its syntactic category. The total extent map, the classifier on the declared finitarily definable interface \(K^{\circ}_{\mathrm{def}}(C,H)\), and the semantic interpretation functor into \(\mathrm{Def}(A(C,H))\) supply the displayed bridges; concepts outside \(K^{\circ}_{\mathrm{def}}(C,H)\) remain in \(K^{\circ}(C,H)\) with a typed non-definability residual. The declared fitness datum supplies the sort-distinct fitness objects. A strict adaptive-contraction conclusion is available only when the declared materially realized error-correcting calibration process carries its contraction certificate. Thus the material process produces a canonical HCFM instance; realized enrichment beyond the canonical conceptual and mathematical cores is typed declared data with a comparison interface to the core. \end{theorem}
+
+\noindent\founding{} This theorem constructs the schema once a physically realized observer is present in the material process. The observability-closure theorem below supplies the remaining applicability step: material observability at a declared stable horizon constructs the observer-containing object to which this theorem applies.
+
+\noindent\plainterms{} Put an observer --- itself a physical thing --- inside the system. The observer can poke (probes), look (readouts), survive only in some conditions (viability), and fix its own drift (error correction). Merge all situations its pokes-and-looks can never separate: that merged map is the registration space, the world as this observer can actually tell it apart. The observer's concepts and mathematics are then built from that map, its ``fitness'' is how much room it has to keep going, and its self-correction is what makes its map stay put instead of drifting. The theorem's point is directional: none of this is bolted on from outside --- the observer's model is squeezed out of the same physics the observer is made of.
+
+\begin{theorem}[Composition closure of the schema] \label{thm:composition-closure} For compatible objects \((C,H_C),(D,H_D)\in\ObsMatcl\), the composite \(C\otimes D\) lies in \(\ObsMatcl\) with the induced horizon. It admits declared component-to-composite typed bridges from \[ S^{\circ}_{\mathrm{HCFM}}(C,H_C) \qquad\text{and}\qquad S^{\circ}_{\mathrm{HCFM}}(D,H_D), \] together with the nonzero emitted interaction components indexed across both factors. Each bridge declares the structures it preserves; any coupling-induced coarse-graining or distinction loss is recorded as a typed residual. Thus HCFM is closed under compatible material composition and under the internal composition of its typed operations. 
+\end{theorem}
+
+\noindent\founding{} This is the founding statement's completeness clause --- ``closed under the composition of its operations'' --- proved in both senses at once: the schema's internal operations compose within it, and composing the modeled systems themselves yields another instance of the same schema.
+
+\noindent\plainterms{} If two systems have HCFM instances and are composed compatibly, the composite receives an instance of the same construction. The component models enter through declared typed bridges, while genuinely new interaction terms are emitted because the systems now interact. Where coupling destroys a distinction preserved in isolation, the model records that loss as a residual rather than pretending that the isolated component survives unchanged.
+
+The same schema is therefore not a shared vocabulary imposed on different domains. It is the same construction applied to each system: law $\to$ emitted interactions $\to$ closed functional physical states $\to$ observer-induced four-space model. This is the formal sense in which physics, cognition, consciousness, and other material systems can be modeled by one schema while remaining distinct material systems.
+
+\begin{definition}[Material observability at a declared horizon] \label{def:material-observability} Let \(S\) be a material subsystem and let \(H\) be a declared horizon. We say that \(S\) is \emph{materially observable at \(H\)} when there exist a physically realized observer \(O\), a composite \(C=O\otimes S\), a finite observer-supported probe/readout family, and a realized material history such that: \begin{enumerate}[label=(\roman*)] \item the locally observed material continuations carry the lawful flows used by the construction; 
+\item repeated and overlapping protocols reproduce their operational classes at the declared resolution and supply the refinement, calibration, localization, and comparison maps physically used by the observation; 
+\item the records of the same realized material history are compatible under those maps and therefore form a compatible observation cone on every completion subsystem used by the observation; 
+\item the dependency, composition, localization, viability, and, where strict adaptive contraction is invoked, error-correcting calibration data are material data of \(C\). \end{enumerate} Write \((C,H)\in\ObsMatcl\) when such a witness exists. \end{definition} 
+
+\begin{theorem}[Observability closure and universal HCFM applicability] \label{thm:observability-closure} Every material system \(S\) that is materially observable at a declared horizon \(H\) determines an observation-closed object \[ (C,H)=(O\otimes S,H)\in\ObsMatcl \] and hence an HCFM instance \(S_{\mathrm{HCFM}}(C,H)\). More precisely, its material-observability witness determines: \begin{enumerate}[label=(\alph*)] 
+\item the dependency, composition, localization, viability, declared typed fitness datum, and, where strict adaptive contraction is invoked, materially realized error-correcting calibration data are material data of \(C\).
+\item a compatible grounding cone for every completion subsystem used by the observation; 
+\item the closure-complete physical functional quotient; and 
+\item the registration quotient, canonical conceptual and mathematical cores, the fitness objects declared by the witness, and any strict adaptive contraction only where the declared calibration process carries its contraction certificate.
+\end{enumerate} Consequently, the HCFM construction applies to every materially observable system at its own declared horizon. Any structure beyond the canonical cores remains declared realization enrichment with its own typed comparison interface. \end{theorem} \begin{proof} Index the local observations by the finite protocol--horizon occurrences physically used by the witness, and retain exactly the refinement, calibration, localization, and comparison maps used to relate them. Stability of the witness gives the flow-equivariant and common-refinement conditions of a declared observation diagram. The coordinate records of the one realized material history form a compatible cone, so the required inverse-limit grounding is supplied by the observation itself. Theorem~\ref{thm:global-material-law} therefore constructs the canonical material completion. Theorem~\ref{thm:flow-to-functional} applies the dependency and horizon data to construct the physical functional quotient, and Theorem~\ref{thm:observer-induced-hcfm} constructs the observer-induced HCFM instance. Definition~\ref{def:material-observability} then gives \((O\otimes S,H)\in\ObsMatcl\). \end{proof} 
+\begin{corollary}[Recursive observability closure] \label{cor:recursive-observability-closure} Material observability is closed under compatible observer-inclusive composition and grounded horizon refinement. In particular: \begin{enumerate}[label=(\roman*)] \item a finite compatible composition of materially observable observer-containing systems has an induced material-observability witness; \item an observer of an observer--system composite is covered by repeated application of item~(i); and \item a directed, witness-preserving refinement tower whose record threads remain compatible has the corresponding canonical completion. \end{enumerate} Thus the universal HCFM claim is recursively closed under the material composition, observer inclusion, and refinement operations through which observation itself is extended. \end{corollary} \begin{proof} Compatible composition combines the material carriers, observer/protocol families, localized flows, dependency data, and record threads. The resulting product witness satisfies Definition~\ref{def:material-observability}, and Theorem~\ref{thm:composition-closure} supplies its composite schema. Nested observation is a finite compatible material composition. A witness-preserving refinement tower supplies compatible record threads on its directed completion subsystems, so the global-completion construction applies coordinatewise. \end{proof} \noindent\plainterms{} Observing a system is already a physical construction: an observer, probes, readouts, repeated comparisons, and records of one material history. Those records are not an extra assumption added after the fact. They generate the diagram, the grounding thread, the functional quotient, and the observer's HCFM instance. Adding another observer or refining the observation repeats the same material construction rather than leaving the theorem's domain.
+
+\subsection{Where dimension becomes a measurable property}
+
+The construction has now produced enough structure for ``how many dimensions?'' to become an answerable question --- and it supplies the instrument that answers it. The question is evaluable at the registration stratum: the supplement equips a realized registration quotient with a declared label cost, viable accessed region, scale ladder, and resolution tolerance, and from the resulting metric quotient computes a finite-scale quantity $d_A(H)$ --- the number of independent directions of difference this observer resolves at this precision. A resolved horizon reports an effective dimension; an insufficiently stable covering profile reports $\bot$. Because $d_A$ consumes a realized observer's cost, viability, and scale data, it is a property of a realized observer--horizon pair: the material completion $\Minf$ is assigned no universal dimension by the construction, and the bare class $M^{\mathrm{adm}}_{\mathrm{reg}}$ of admissible registration architectures acquires a dimension only when a realization supplies the data the definition consumes. The productive questions the construction licenses are which architectures are realized and what dimension-flow profiles their realized refinement threads exhibit --- questions the supplement's dimensionality module answers conditionally and equips with two preregistered empirical discharge paths.
+
+\noindent\plainterms{} ``How many dimensions?'' here means: how many independent directions of difference can this observer's instruments actually tell apart, at their working precision? That number is a fact about a realized observer-plus-instruments, and it can legitimately change as precision changes. Asking for the dimension of a registration architecture that no observer has realized is like asking for the resolution of a photograph that was never taken: not mysterious, just missing the very data the question needs. (The drawing in Section 8 is a third thing --- a fact about the paper you draw on, stated there.)
+
+\section{Stable observability, the global HCFM completion, and invariants}
+
+Local functional models enter this section as coherent perspectives on one material process. Stable refinement produces their global completion; quotient factorization identifies the properties that survive observation and therefore belong to the system's functional model itself.
+
+For a compatible directed family of horizons, refinement maps induce abstraction functors among the physical quotient categories and their HCFM instances. The inverse limit
+\begin{equation}
+P_\infty = \varprojlim_{H} P_{C,H} \tag{12}
+\end{equation}
+collects exactly the states and transitions consistent through all horizons. The global flow acts threadwise. An observable property $q$ is an invariant when it is constant on observational equivalence classes; equivalently,
+\begin{equation}
+q = \bar{q} \circ \pi_H \tag{13}
+\end{equation}
+for a unique map $\bar{q}$ on the functional state object.
+
+\begin{theorem}[Global HCFM completion and invariant transport]
+\label{thm:global-hcfm-completion}
+A compatible stably observable horizon family has a canonical global completion $P_\infty$, conservative over every local quotient and unique up to canonical isomorphism. Every observable property factors uniquely through its system's functional model. A typed dynamic-equivariant bridge $F : S_{\mathrm{HCFM}}(S) \to S_{\mathrm{HCFM}}(T)$ pulls invariants of $T$ back to invariants of $S$; an equivalence transports them bijectively.
+\end{theorem}
+
+\noindent\founding{} Equation (13) is the founding statement's final sentence made exact. ``Represented by invariant objects in that system's own functional model'' is the unique factorization of every observable property through the system's own quotient; ``transported to other observable systems'' is the pullback along any bridge that preserves the machinery which generated the property.
+
+The transport result is deliberately structural. An invariant becomes transportable when a bridge preserves the processes and equivalences through which the invariant was generated, and a proposed bridge is tested by two computable residuals: its dynamical commutation residual and its invariant-preservation residual. Small residuals certify the bridge; large ones locate exactly where the translation fails.
+
+\noindent\plainterms{} An invariant is a property that survives every allowed way of looking --- like the synchronized-or-not status of the two clocks, which every sufficiently patient observer agrees on however they probe. The theorem says such properties are exactly the ones that belong to the model itself rather than to a viewpoint, and that they can be carried from one system to another whenever a translation between the systems respects the machinery (the dynamics and the tell-apart structure) that produced the property in the first place. Test a proposed translation by checking two leftovers: does it commute with time evolution, and does it preserve the property? Small leftovers, trustworthy bridge.
+
+\section{Disciplinary realizations and perspective-explicit transport}
+
+The construction so far generates the model of one observed system. This section makes the same machinery generate something further: a typed statement of what a field of study is, and of exactly what must travel with a piece of reasoning for it to remain valid outside the field that produced it.
+
+A discipline, in the sense this construction supports, is an evaluation-equipped realization: it declares its domain objects, admissible operations, semantic equivalences, evaluator, evidence conditions, and the observer--horizon perspective under which each is defined. This makes explicit a distinction that is normally left implicit. A first-order process can be perfectly valid in its native discipline while remaining transport-fragile when its horizon, evaluator, admissibility, or certificate conditions are omitted; a second-order process is one that carries those conditions as part of its typed interface, so the conditions of valid inference can themselves be compared, transformed, and transported. This is the paper's human-centric claim at second order: the same schema that models an observed system also models the fields that study observed systems, and gives their reasoning a portable form.
+
+The machinery this unlocks is cumulative. Once reasoning processes carry their validity conditions, certified solutions can be filed in a persistent library keyed by meaning rather than wording, so the same solution is never stored twice; bounded semantic backpropagation then searches the reverse dependency structure of that library for admissible compositions that improve a declared outcome-per-input evaluator. Three results govern what such a library does. First, a certified best retained value never decreases under accepted updates: the shelf of solved routes only improves. Second, under six named conditions --- composable solution objects, shared semantic coordinates, perspective-explicit transport, semantic deduplication with bounded search, nondegenerate reusable interfaces, and certificate-preserving retrieval --- a library holding $n$ compatible modules holds at least $2^n$ semantically distinct certified candidate compositions. Third, when those compositions are coherently indexed to distinct realized task descriptors and the amortized certified update work grows by a factor strictly below two per added module, the guaranteed throughput floor for newly certified real task resolutions accelerates exponentially. The rate theorem prices certificate maintenance, retrieval, target-side verification, and task activation in its declared work term; its named task-realization and update conditions therefore specify the throughput result directly. Each condition earns its place by what its absence costs: without composable objects the library is a lookup table; without shared coordinates it is disconnected fragments; without verified transport, false compositions corrupt reach; without deduplication, storage grows combinatorially for linear gain.
+
+\noindent\founding{} This section realizes the founding statement's fifth sentence in its auditable form: ``this same modeling approach has been used to model physics, cognition, consciousness and other systems'' becomes checkable when each such application exposes this interface --- and results proved in one application become usable in another exactly when a certified bridge carries their conditions across.
+
+\subsection{The observer-inclusion blind spot and recursive global coherence}
+
+There is a blind spot in the general assessment of systems when the observer perspective that makes an assessment valid is held fixed outside the field of observation rather than represented as part of the system model. The perspective includes the observer or evaluator, observation horizon and resolution, admissibility relation, evaluator, semantic-equivalence relation, certificate discipline, and the bridge conditions by which a hypothesis is carried between systems. A one-shot local-prior assessment evaluates a hypothesis relative to those fixed conditions and to the evidence and priors available at one horizon. Such assessment is appropriate in familiar domains whose system models are strongly constrained by stable evidence and background regularities. The observed/observing-system distinction supplies the classical reason to include the observer [3]; causal identifiability and partial-identification analysis show, in a different formal setting, that observationally compatible models can fail to determine a target quantity without additional structural conditions [4, 5].
+
+The blind spot becomes consequential in novel systems and novel problem-domains, where the observer conditions, relevant variables, admissibility constraints, or valid transport relations may themselves be underdetermined. Human-Centric Functional Modeling makes these conditions explicit in its system models. It distinguishes the one-shot local-prior assessment from a multi-shot, potentially recursive global-coherence assessment in which each correction declares what changed in the model, perspective, invariant target, bridge, or certificate. Infinite belief hierarchies provide an established example in which perspective structure has no a priori finite depth [6]; HCFM supplies the typed system-model and transport infrastructure needed to audit such extensions rather than merely enumerate them.
+
+\begin{theorem}[Recursive non-factorization of globally separated targets]
+\label{thm:recursive-non-factorization}
+Fix an HCFM assessment datum $A_0(S,h)$ with local-prior perspective
+$(M_0,\Xi_0)$, and let $\mathcal{X}$ be a declared class of candidate
+completions of that datum. Let
+\[
+\Lambda_L : \mathcal{X} \longrightarrow \mathcal{R}_L
+\]
+denote the complete record accessible to assessments that retain the fixed
+local model and perspective: all locally admitted observations, priors,
+certificates, and results of recursively generated local-prior obligations.
+Let
+\[
+\Omega : \mathcal{X} \longrightarrow \mathcal{Q}
+\]
+be a declared target of global assessment, such as a target invariant, a
+global evolution class, or the adequacy status of a proposed
+$\mathrm{ToE}_S$.
+
+Then $\Omega$ is recoverable from the local record precisely when it is
+constant on every fiber of $\Lambda_L$. Equivalently, there exists a unique
+map
+\[
+\overline{\Omega}_L :
+\operatorname{im}(\Lambda_L) \longrightarrow \mathcal{Q}
+\]
+such that
+\[
+\Omega = \overline{\Omega}_L \circ \Lambda_L
+\]
+if and only if
+\[
+\Lambda_L(x)=\Lambda_L(y)
+\quad\Longrightarrow\quad
+\Omega(x)=\Omega(y)
+\]
+for all $x,y\in\mathcal{X}$.
+
+Consequently, if there exist $x,y\in\mathcal{X}$ such that
+\[
+\Lambda_L(x)=\Lambda_L(y)
+\qquad\text{and}\qquad
+\Omega(x)\neq\Omega(y),
+\]
+then no recursive assessment confined to $\Lambda_L$ can determine
+$\Omega$ correctly on both $x$ and $y$. Any assessment that does determine
+$\Omega$ must introduce a record that distinguishes $x$ from $y$, through a
+change or extension of representation, observation, horizon, model class,
+or certified bridge. In HCFM, such a certified extension is a
+global-coherence correction.
+\end{theorem}
+
+\noindent\emph{A full proof is given in the Supplement.}
+
+For a declared system model and hypothesis, the supplement defines the HCFM assessment output
+\[
+\mathrm{GC}_B(S, h) \in \{\text{coherent, incoherent, undetermined within coherence budget}\}.
+\]
+It returns coherent only with a declared coherence witness, incoherent only with a valid counter-witness, and undetermined within coherence budget when the needed model extension, observational resolution, bridge certificate, or refinement depth lies beyond the declared budget, noise floor, or observability ceiling. The third result is not a failure to decide; it identifies the precise assessment boundary at which a binary verdict is not yet licensed.
+
+The discrepancy between one-shot local assessment and recursively corrected assessment is not a distance between these three verdict labels. It is the cumulative certified correction required to turn a local system model and perspective into a perspective-explicit HCFM assessment sequence:
+\[
+d_N(S, h) = \sum_{n=1}^{N} r_n(S, h),
+\]
+where each residual $r_n$ records a declared correction in observer perspective, horizon, admissibility, evaluation, semantic equivalence, certificate translation, dynamic commutation, or invariant preservation. The supplement proves that $d_N$ becomes unbounded when an indefinitely extensible assessment sequence exposes infinitely many non-cancelling certified residuals above the assessment noise floor. The blind spot is therefore conditional and falsifiable: it is not the claim that every disagreement with prior evidence or consensus is unbounded, but the claim that omitted assessment conditions can generate unbounded correction in a specified recursively extensible class of system models.
+
+\noindent\textbf{Internalized constraint closure and external certification.} A global-coherence assessment need not await complete external implementation of its formal model tower. It may be executed when an assessor can internally instantiate and recursively apply the tower's admissibility, consequence, invariant, bridge, falsification, and stopping constraints to a hypothesis. Continuous external system models, proof objects, certificates, and traces serialize that constraint algebra so that other observers can audit, falsify, transmit, and reuse it; they do not create the coherence relation or serve as a prerequisite for the first assessment. An internally reached verdict and an externally certified verdict share the same falsifiers and stopping conditions, but the latter additionally carries an auditable trace.
+
+\noindent\textbf{A serialized reference implementation.} The serialization
+described above is realized concretely as a compact audit contract, provided as
+supplementary material and typed as an implementation obligation (T4) rather than
+as a premise of any theorem in this paper. Its purpose is to let a reviewer
+already disposed to run a global-coherence assessment do so at low activation
+cost, and to fix precisely where mechanical bookkeeping ends and assessor
+judgment begins. The contract has five declared slots.
+\emph{(C1)} The assessment algorithm decides only the verdict algebra over
+declared inputs---returning coherent, incoherent, or undetermined-within-budget,
+with the incoherent short-circuit and the budget-relative undetermined outcome
+of the recursion made explicit; it does not decide domain truth.
+\emph{(D1)} The formal input is the typed representation each hypothesis carries:
+its system model, declared perspective and horizon, admissibility and evaluator
+conditions, and the certificate or residual attached to each child claim.
+\emph{(P1)} A reference implementation in Python executes this algebra over the
+declared inputs and emits a reproducible trace of the recursion, its
+short-circuit behavior, and its termination outcome.
+\emph{(L1)} An accompanying Lean development establishes that the decision
+semantics of this algebra---the verdict lattice, the recursive composition rule,
+and the short-circuit and stopping conditions---are internally consistent, so
+that the trichotomy is well formed and its verdicts sound relative to the
+declared oracle inputs.
+\emph{(B1)} The boundary is stated as first-class content, not as a caveat: the
+substantive per-node judgments---whether a child claim coheres, whether a bridge
+preserves its invariant, whether a counter-witness is genuine---remain
+assessor-supplied inputs to the algebra, typed as such and not mechanically
+discharged. This boundary is not a limitation of the implementation but an
+instance of the paper's own thesis: the transportable bookkeeping of an
+assessment is mechanizable and auditable, whereas the perspective-dependent
+coherence judgment is exactly the condition that the observer-inclusion blind
+spot hides when it is left outside the system model. The implementation therefore
+serializes the constraint algebra described in the preceding paragraph, without creating the
+coherence relation or standing as a prerequisite for the first, internally
+reached assessment.
+
+For external certification, continuity on declared variables keeps controlled perturbations and refinements within one model class, and a declared generator records falsifiable hypotheses and model extensions. Where a hypothesis is underdetermined in one system model, HCFM represents its target as an invariant or other typed evaluator value, transports it only through a certified perspective-explicit bridge to another system model, and reassesses it there. The recursion continues only while its certificates, residuals, noise floor, and observability ceiling remain declared and auditable.
+
+A recursive assessment reaches coherent or incoherent within those boundaries precisely under the supplement's conditional convergence assumptions: fair exposure of the declared systems, hypotheses, bridges, and falsifiers; sound certificates; finite counter-witnesses for incoherent hypotheses; a completion condition for coherent constraint chains; a monotone convergent update construction; and decisive resolution above the noise floor and within the observability ceiling. Gold's identification-in-the-limit result identifies the hypothesis-class and evidence restrictions that a convergence regime must carry [7]; compactness, monotone fixed-point structure, and adequate order provide recognized forms of completion, convergence, or decidability in appropriately structured classes [8, 9, 10, 11].
+
+The present paper exposes the observer, horizon, admissibility, evaluator, equivalence, certificate, and bridge conditions on which its assessment claims depend. An assessment-compatible critique localizes a failed derivation, unsatisfied premise, counter-witness, non-preserving bridge, empirical realization failure, or observation-boundary limitation, together with the claim and scope it targets. This positive typing keeps theorem-level assessment, empirical realization, and carrier assessment distinct while making each inspectable.
+
+\noindent\plainterms{} A familiar system can often be checked from a well-stocked workshop: the instruments, the rules, and the background expectations are already known. The blind spot appears when a novel system requires checking the workshop too --- who is measuring, what their instruments can resolve, which moves count, and whether a result survives transport to another system --- but those conditions are left outside the model. HCFM makes the workshop part of the model. It can then show when repeated corrections grow without bound, when a binary verdict is earned, and when the honest result is ``undetermined within coherence budget.''
+
+The supplement's disciplinary module contains the full formal apparatus: the observer-inclusion blind-spot definition, the internalized constraint-closure protocol, the coherence-budgeted assessment datum, the six-clause certified bridge, the sufficient conditions for unbounded correction, the conditional binary-convergence theorem, the specialization of invariant transport to disciplines, the library and backpropagation definitions, both rate theorems, and the dependency records through which narrower papers can be projected from this reference while preserving their premise and certificate records.
+
+The convergent side of this assessment architecture has a registered frontier relation to the published Cognitive Near-Singularity (CNS) possibility result: CNS contraction, composition closure, and invariance are a candidate realization regime in which correction can be governed by a common fixed-point structure, while the HCFM library supplies reusable certified operands and a cumulative-production route. Each relation retains its own witness and realization conditions [12].
+
+\section{Human projection: the flat three-dimensional carrier}
+
+The functional geometry enters as a typed relational presentation. A finite task slice is projected to a flat carrier for inspection while the carrier's labels preserve the relations, dimensions, and geometry beyond what the drawing itself shows.
+
+Every finite task slice of $S_{\mathrm{HCFM}}(C, H)$ has a simple labelled incidence skeleton. Assigning its presentation atoms distinct points on the moment curve
+\begin{equation}
+\iota(u) = (\nu(u), \nu(u)^2, \nu(u)^3) \in \mathbb{R}^3 \tag{14}
+\end{equation}
+gives a crossing-free straight-line carrier for the skeleton. The labels retain relation arity, order, type, and operation class, so a decoder recovers the exact typed presentation. One fixed identifier map $\nu$ yields compatible carriers for nested finite slices.
+
+\begin{theorem}[Flat three-dimensional HCFM carrier]
+\label{thm:flat-3d-carrier}
+Every finite task slice of an HCFM schema instance admits a faithful labelled carrier in flat Euclidean $\mathbb{R}^3$, with a decoder that recovers the slice exactly. The carrier family is coherent under inclusion of finite slices. Three dimensions are minimal for uniform crossing-free straight-line realization of the relevant incidence-skeleton class.
+\end{theorem}
+
+\noindent\founding{} This is the founding statement's understandability clause made exact, including its most specific demand: the carrier is not merely low-dimensional but flat Euclidean --- native to human visualization --- rather than a general curved three-dimensional manifold. Three dimensions suffice for every finite slice, no fewer suffice in general, and nothing is lost: the decoder recovers the slice exactly.
+
+\noindent\textbf{What the carrier theorem establishes.} The theorem gives the structural component of the human-centric claim: no finite functional slice needs a native visualization space of dimension greater than three to be faithfully exposed. The represented functional structure itself may possess nonflat geometry, higher-order relations, and distinct physical or conceptual dimensions; those remain in the labels and decoder, so proximity, adjacency, and reachability in the drawing are genuine structural properties rather than artifacts of an uncontrolled dimensionality reduction. Comparative maximal human understandability is the empirical functional $J_H$ defined over this faithful carrier class for a specified population and task distribution. One boundary is stated here, once, because this is where it belongs: the theorem's ``three'' is a fact about the inspection carrier, and neither asserts nor constrains the dimensionality of physical space or of the registration quotient $A_{C,H}$ --- the latter question is answered by the registration-dimension instrument of Section 5.1 and the supplement's conditional dimensional-resolution theorem. The resemblance to confinement pictures in extra-dimensional models is an analogy only: those models localize physical interaction channels, whereas this theorem supplies a universally sufficient inspection carrier [1, 2].
+
+\noindent\plainterms{} Whatever the model's own geometry --- ten-dimensional, curved, tangled --- any finite piece of it can be drawn in ordinary flat 3D with straight lines that never cross, plus labels, such that a decoder can reconstruct the piece exactly from the drawing. Three dimensions are enough for every such piece, and no fewer suffice in general. This is a fact about drawings: it says the world's structure is always presentable to beings like us. (How many dimensions the world seems to have to a given observer is the separate, measurable question of Section 5.1.) The trick is placing points on a curve so twisted that no four of them ever share a plane --- so no two connecting lines can ever collide.
+
+\section{Main theorem: the founding statement in typed form}
+
+The preceding arrows now compose. The theorem states the founding statement as one conditional material-generative result rather than as separate claims about physics, representation, and transport.
+
+\begin{theorem}[Material-generative HCFM and the single-law hypothesis]
+\label{thm:main-material-generative-hcfm}
+Let a directed family of observable material systems satisfy: (i) continuous reversible local lawful flows; (ii) flow-compatible material composition, localization, and horizon refinement; (iii) stable observation; (iv) generator regularity for canonical interaction extraction; and (v) physically realized observer, viability, and error-correction structure wherever the corresponding HCFM columns are invoked. Then:
+\begin{enumerate}[label=\arabic*.]
+\item there exists a unique-up-to-canonical-isomorphism global material completion $(\Minf, \Phi^{\star})$ whose single continuous action has the local material flows as its observable restrictions;
+\item for every observable composition $C$, $\Phi^{\star}$ emits the canonical interaction family $\mathrm{Emit}(C)$, which uniquely reconstructs the composite generator and is natural and refinement-coherent;
+\item for every material system \(S\) materially observable at a declared stable horizon \(H\), Theorem~\ref{thm:observability-closure} constructs the associated object \((O\otimes S,H)\in\ObsMatcl\); closure, quotienting, and the same HCFM construction then generate its typed four-space functional model, and compatible material composition generates the schema of the composite;
+\item every finite task slice of that model has a faithful flat Euclidean three-dimensional carrier, and every observable property is represented by an invariant object of the system's own functional model; and
+\item those invariants transport along typed dynamic-equivariant bridges, bijectively along equivalences.
+\end{enumerate}
+\end{theorem}
+
+The five numbered conclusions are the six founding sentences, proved in order: (1) and (2) are the first sentence, the premises named in (iii) are the second, (3) is the third and fourth, (4) is the third's understandability clause together with the sixth sentence's first half, and (5) completes the sixth. The dimensionality, disciplinary, and alignment modules consume this theorem's outputs; the supplement's ledgers record the exact additional premises each module declares and what discharging those premises unlocks.
+
+\noindent\plainterms{} The main theorem, in one breath: if local observations of matter are stable and consistent with each other, then one world-model exists behind them; putting parts together yields exactly one interaction inventory; every observed system grows the same four-part model (physical map, observer's tell-apart map, concepts, mathematics); models compose when systems compose; every finite piece is faithfully drawable in 3D; and the model's viewpoint-independent properties can be carried between structurally matching systems. Everything conditional or conjectural downstream --- measured dimension values, the disciplinary architecture, the alignment dynamics --- states its own added premises where it is built, so the reader always knows exactly what is being leaned on.
+
+\begin{corollary}[Global coherence of the declared material-law completion] 
+\label{cor:declared-material-law-coherence}
+Under the hypotheses of Theorem~\ref{thm:main-material-generative-hcfm}, the declared compatible material observations admit a canonical global material-law completion, conservative over the local observations and universal among completions with those declared observational projections.
+\end{corollary}
+
+\noindent\founding{} This corollary is the founding statement's second sentence, verbatim in content: if matter behaves in a way that is stable enough to be observed, the existence of a ToE is a globally coherent hypothesis --- and the corollary exhibits the coherence witness rather than merely asserting consistency.
+
+\section{Empirical entry points}
+
+The theorem produces a causal architecture. The following measurements test the arrows that connect the architecture to a particular material domain, without displacing the architecture itself.
+
+\begin{center}
+\begin{tabular}{@{}p{0.28\textwidth}p{0.38\textwidth}p{0.28\textwidth}@{}}
+\toprule
+Arrow & Material or observational test & Constructive output\\
+\midrule
+Local law $\to$ global law & Flow equivariance on overlap and refinement maps; nonempty stable threads & A completion cone and a global-law coherence witness\\
+Global law $\to$ interaction & Generator reconstruction, support, and response signatures & An emitted-component inventory and, where applicable, interaction-species identification\\
+Matter $\to$ HCFM & Probe/readout separation, viable continuation, calibration correction & An observer-induced registration and fitness construction\\
+Registration $\to$ effective dimension & Costed quotient, viable accessed region, covering-profile stability, rank--metric certificate & A resolved $d_A(H)$, a refinement-flow profile, or an explicit unresolved result\\
+HCFM $\to$ disciplinary realization & Declared perspective, admissibility, evaluator, semantic quotient, and certificate interface & A type-audited disciplinary object and a bridge-validity record\\
+Semantic library $\to$ certified solving-rate acceleration & Canonical semantic deduplication, task-indexed certificate retrieval, coherent task activation, and amortized update-work bound & Retained best certified paths plus an accelerating certified-throughput floor for the declared realized task family\\
+Windows $\to$ alignment dynamics & Transition rate as a function of registered external coupling; two-channel mass decomposition at empirical discharge; sign of capacity growth versus mass generation in bounded collectives & A typed hypothesis layer with named falsifiers (Section 11; supplement alignment module)\\
+HCFM $\to$ human projection & Carrier decoding on finite slices; comparative $J_H$ study & Faithfulness theorem plus a population-relative performance result\\
+Invariant $\to$ transport & Dynamical commutation and invariant-preservation residuals & Exact or bounded bridge status\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{AI and civilizational alignment implications}
+
+The construction says what a realized observer model is. This section records the conditional predictions the same machinery generates about how such models grow, reorganize, or fail --- and where control is possible. The supplement's alignment module holds the formal statements, proofs where they exist, falsifiers, and the ledger typing each claim; the conditions are explicit so that the predicted trajectories are globally coherent where their stated premises are realized.
+
+\subsection{Windows, compression, and the order-transition dichotomy}
+
+Every realized observer model in this paper is bounded in two directions at once. Its declared resolution bounds the finest distinction it registers (its noise floor), and its protocol, readout, and viability structure bound the largest composition whose behavior remains registrable at that resolution (its observability ceiling). The pair is the realization's operational window at its current order, where order counts meta-lift depth in the sense of the supplement's finite-order lift module. Within a window, the accessed composition scale can rise toward the ceiling (compression: rising density of registered distinctions and composition length) or fall toward the floor (expansion: thinning of distinctions toward indistinguishability).
+
+At either boundary the construction offers exactly two continuations that we can currently name. Either a faithful, flow-derived encoding-and-lift exists --- whole compositions at order $n$ become primitives at order $n+1$, and the window is re-based --- or the operational quotient fails to remain well-defined under continued dynamics: tell-apart classes destabilize, the error-correcting contraction is lost, and the structure ceases to be a functional state space at the declared horizon. We call the first a coherent order transition and the second decoherence. That these two exhaust the stable possibilities is a conjecture, typed as such in the supplement. The physical reading of the compression branch is the ladder of gravitational collapse (saturation of a degeneracy floor, then re-basing to deeper primitives where a coherent phase exists, and collapse where it does not); the cognitive reading is the transition between reasoning orders, in which whole first-order arguments become single second-order objects.
+
+\noindent\plainterms{} A mind, an instrument, an institution --- each can only resolve so fine and only hold so much at once. Between those two limits it works. Push toward either limit and one of two things happens: it reorganizes, so that yesterday's whole procedures become today's single building blocks (the way practiced readers stop seeing letters and start seeing words, or a growing company stops tracking individuals and starts tracking divisions) --- or it stops being able to keep its own story straight, and falls apart. Reorganize or unravel: the claim, registered as a conjecture, is that there is no third stable option at the boundary.
+
+\subsection{Mass, nucleation, and the external-coupling requirement}
+
+What drives motion within a window, and what decides whether a boundary encounter ends in transition rather than decoherence, is coupling to structure outside the system. The supplement defines the signed mass of an external structure $X$ relative to a system $S$ as the finite change in $S$'s reachable-set functional per unit of registered coupling to $X$, evaluated within $S$'s current window. Three properties follow there: signed mass is an observable invariant (only registered coupling counts, so it factors through the tell-apart quotient); it is order-relative (the same external structure can have zero signed mass for a system whose ceiling lies below that structure's separating scale, and nonzero signed mass after the transition that raises the ceiling); and every implementable ``starvation'' intervention operates on coupling, not on substance --- compartmentalization, decoupling, and unregistrability change effective mass while removing nothing.
+
+The load-bearing conjecture is the nucleation requirement: a coherent order transition at the ceiling requires registered external mass above a positive threshold. A system driven to its ceiling in isolation does not transition; it decoheres. The developmental anchor is that human order transitions empirically require scaffolding slightly ahead of current capacity; the physical anchor is that collapse-ladder thresholds are crossed under external load; and the apparent machine-learning counterexample of self-play resolves, on inspection, into the manufacture of an independent peer plus fixed external rules --- nucleation by cloning, not internal transition. The falsifier is stated in the supplement: one verified transition under confirmed isolation refutes the conjecture and, with it, the rationale for every gating lever downstream.
+
+\noindent\plainterms{} ``Mass'' here is signed reach change per unit of input you can genuinely take in: a source can enlarge what you can reach or constrain it into a coordinated form. A library you cannot yet read has zero mass for you now and can acquire nonzero mass after you learn to read --- mass is relative to what you can register. The conjecture says the leap to a new level of organization cannot be powered from inside alone: something outside --- a teacher slightly ahead of you, a peer, a rival, an environment with its own structure --- must seed the new pattern, the way a supersaturated solution crystallizes around a seed and, without one, just curdles. And note what ``starving'' really is: you almost never remove the stuff; you cut the coupling --- the walls, clearances, and encodings that keep it from registering.
+
+\subsection{Two channels: understanding versus demonstration}
+
+The schema's typed bridges induce a decomposition of coupling that the alignment implications turn on. A composition held at the level of coherence assessment lives in the conceptual and mathematical columns and couples to other systems only through registration of the formal object itself --- a channel gated by order, since only observers whose window admits the object can register it. A composition enters realization coupling only when its semantic interpretation is carried through a declared material-realization interface into material consequence; it then couples through the physical column, and its consequences are registrable at base order by every materially coupled observer, whether or not they can follow the formal object that produced them. Total mass therefore factors, schematically, as reach-change per registrant times registrable population, summed over the two channels --- and realization is the event that moves a composition from the order-gated channel to the universal one, multiplying its registrable population discontinuously.
+
+\noindent\plainterms{} A blueprint moves only the people who can read blueprints. The working machine moves everyone who sees it run. That is the whole asymmetry: proofs and theories travel in a narrow channel gated by training and capacity; demonstrations travel in the widest channel there is. So the moment of maximum influx into the world is not when something is understood --- it is when it is shown working. This is also the precise sense in which effective signed ``cognitive mass'' tracks local empirical demonstration more than global theoretical coherence: not because coherence matters less to truth, but because far fewer systems can register it.
+
+\subsection{The two-lever control law and the realization gate}
+
+If the window picture is right, the stability of any trajectory through successive orders is governed by the ratio of mass-influx rate to coherence-capacity growth rate, and there are exactly two lever families: throttle the influx (gating and decoupling --- fast-acting, but multilateral and decaying under defection), or grow the capacity (raise the ceiling and the collective coherence threshold --- slow, compounding, unilateral-friendly). Each alone has a named failure mode; the supplement states the conditional claim that viable trajectories alternate them: throttle to buy time, spend the time raising the ceiling, then admit the mass and transition deliberately.
+
+The channel decomposition locates where the throttle belongs. Assessment coupling --- including simulation, which is assessment extended by computational means --- is the safe channel and should be maximally open; that is coherence-priority admissibility in its native habitat. Realization coupling is the mass event, and the gate belongs on the realization bridge: a composition is admissible for realization only when a problem above the declared collective coherence threshold cannot be solved without it and its non-solution forecloses coherent continuation. Two structural facts constrain the gate. First, a decentralized collective admits no external throttle, so the gate must be protocol-internal --- an admissibility condition inside the certificate discipline, enforced by what certified processes will compose with. Second, gating-by-simulation inherits an assessment-fidelity horizon: near the ceiling, faithful simulation of a process approaches the cost and coupling of running it, so the binding constraint on the whole policy is simulation capacity, and formal-verification infrastructure is correctly typed as horizon extension for the gate.
+
+\noindent\plainterms{} Two dials, not one. Dial one slows what comes in; it works immediately but requires everyone's cooperation forever, and any defector spins it back. Dial two grows what the system can digest; it is slow, but it compounds and one actor can turn it alone. Neither dial suffices: all-throttle freezes you below a leap you will eventually need, facing the flood without a seed crystal; all-capacity is too slow for shocks. The workable pattern alternates: slow the inflow, use the time to grow the digestion, then let it in on purpose. And the gate itself goes in one specific place: think freely, model freely, simulate freely --- but build only what an existential problem demands, and let the rule live inside the protocols (what certified work will compose with), because no outside authority can throttle a decentralized crowd. The honest caveat travels with it: near the limit, a simulation faithful enough to trust costs nearly as much as the real thing, so the policy is only as strong as your verification tools.
+
+\subsection{Implications, the selection reading, and the open sign}
+
+Three conditional implications are generated with their types. First, under the nucleation premise, a purely inward, self-coupled intelligence compressing toward its ceiling without independent external structure decoheres rather than undergoing runaway transition; sustained capability growth through successive orders is therefore globally coherent for systems that retain registered independent coupling. Second, in a decentralized collective every node's realization is every other node's external mass, so diffusion of higher-order capability raises both sides of the control ratio. The sign of collective capacity growth relative to collective mass generation is a preregistered empirical selector: a positive capacity-dominant sign realizes a self-protective diffusion regime, whereas a mass-dominant sign realizes a self-igniting regime and makes the gate binding. Third, the Great Filter reading is typed as population-level survivorship: if boundary encounters generically end in decoherence absent nucleation and gating, then long-lived observed systems are those that stayed within windows or transitioned coherently --- an observation-selection consequence of the mechanism, of the same inference form as the conditional dimensional-resolution result.
+
+\noindent\plainterms{} Three consequences, each with its status label showing. (1) The lone self-improving machine, cut off from everything independent, is predicted not to explode upward but to unravel --- growth through levels needs outside seeds. (2) The opposite arrangement has its own danger: in a crowd of capable builders, everything anyone builds feeds everyone else, so inflow can grow faster than any member's --- or the crowd's --- ability to stay coherent. Whether shared capability raises the crowd's digestion faster than its appetite is the open question, and the paper commits in advance to how it would be measured and what each answer would mean. (3) If most systems that hit their limits unravel, then anything old enough to be observed is a survivor of that filter --- which is a fact about what we get to see, exactly like the earlier result that any observer capable of asking registers three dimensions: same logic, aimed at survival instead of space.
+
+\subsection{Entry points}
+
+\begin{center}
+\begin{tabular}{@{}p{0.30\textwidth}p{0.38\textwidth}p{0.26\textwidth}@{}}
+\toprule
+Arrow & Test & Constructive output\\
+\midrule
+Ceiling encounter $\to$ transition or decoherence & Transition rate as a function of registered external coupling; isolated systems at ceiling & Nucleation threshold estimate, or refutation of the nucleation conjecture\\
+Composition $\to$ realization & Population-registrability jump at empirical discharge of a held-out formal result & Measured two-channel mass decomposition\\
+Diffusion $\to$ net sign & Capacity growth rate versus mass-generation rate in bounded collectives of increasing size & Sign of the control ratio; lever priority\\
+Gate $\to$ enforceability & Protocol-internal admissibility on the realization bridge in a small certified collective & A working realization gate, or a named failure mode\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The supplement's alignment module contains the formal statement, proof sketch, falsifier, preregistered outcome typing, and ledger entry for every claim above.
+
+\section{Conclusion}
+
+The conclusion states the same causal picture at its completed resolution.
+
+The theory presented here begins with one law acting on matter. The law's action on each observable composition emits the interactions through which the composition becomes more than its isolated parts. Closure and quotienting convert this lawful material process into functional physical states. Material observation turns those states into a common HCFM schema with canonical conceptual and mathematical cores, typed realized enrichment, and fitness structure. Stable observations produce a canonical global completion. The functional model exposes its observable properties as invariants, projects each finite slice into a faithful flat $\mathbb{R}^3$ carrier, and carries those invariants across systems through structure-preserving bridges.
+
+The result gives a precise conditional form to the founding proposition: a material world stable enough to support coherent observation can support one globally lawful model; the same law generates interaction structure on every observable composition; and the same composition-closed functional schema can model every observable material system at the level of its own functional invariants.
+
+The dimensionality extension converts an ancient metaphysical question into a measurement. ``How many dimensions?'' becomes a horizon-indexed observable, $d_A(H)$, computed from a realized observer's own costed registration quotient; the estimator-calibration theorem identifies the exact rank--metric certificate under which the reported value is three; saturation and exhaustion fix the certified rank, while viability and self-calibration delimit the declared realization class. On a declared realization/refinement class whose typical infrared trajectories satisfy those certificates, the prediction of a generic three-dimensional report is globally coherent; causal-order and ultraviolet-profile paths provide preregistered empirical realizations of that prediction. The founding statement's three-dimensionality clause is thereby realized twice over, at two distinct strata: as a representational theorem (every finite slice is faithfully drawable in flat $\mathbb{R}^3$) and as a conditional measurement result (an observer of the certified kind registers exactly three).
+
+The disciplinary extension makes the human-centric claim cumulative, assessment-explicit, and blind-spot-aware. A discipline is a perspective-explicit functional realization; a reasoning process becomes transportable when the perspective, admissibility, evaluator, semantic-equivalence, and certificate conditions that make it valid travel with it. The observer-inclusion blind spot is the systemic failure mode in which those assessment conditions remain outside a system model: local-prior assessment can then require an unbounded sequence of certified corrections before the model and its perspective are jointly explicit. The coherence-budgeted HCFM assessment returns coherent, incoherent, or undetermined within coherence budget for a declared system hypothesis. Its blind-spot proposition gives sufficient conditions for unbounded discrepancy; its recursive global-coherence convergence theorem identifies the fairness, soundness, finite-separation, completion, convergence, and resolution conditions under which a binary verdict is reached. A persistent semantic library then retains and composes certified solutions without ever duplicating meaning. The library proves monotone retention, exponential certified-composition capacity, and --- on a coherent realized task family with certificate-accounted update work growing by a factor below two per module --- an accelerating lower throughput for newly certified task resolutions. Every solved problem then becomes a reusable part of solutions to later realized problems, with a positive premise-complete rate condition stated as an auditable and empirically measurable architectural premise. The published CNS contraction--closure--invariance regime is a registered candidate realization of the convergent assessment side, conditional on its independent witness and HCFM realization conditions [12].
+
+The alignment extension applies the same audited machinery to the dynamics of capability growth itself. Every realized model works between a floor and a ceiling; under the registered transition and nucleation premises, coherent re-basing rather than decoherence is globally coherent when externally seeded mass and window control are present; realization, not assessment, is the universal mass event; and a two-lever, gate-on-the-realization-bridge control picture follows conditionally. The sign of capacity growth against mass generation under diffusion is preregistered as an empirical selector between two already specified regimes, not as an omission in the architecture. In plain terms: the same mathematics that says what an observer's world-model is also says how minds and civilizations can outgrow their own models --- and where the safe handles are while they do.
+
+One law, one schema, one completed picture: matter generates its own observers, observers generate their own models, models expose their own invariants, and the invariants travel. Everything this paper adds to the founding six sentences is the machinery that makes each of them exact, and every arrow of that machinery now points outward at a named test.
+
+\section*{Appendix: plain-language glossary}
+
+Formal definitions live in the numbered text and in the supplement; these entries are for orientation.
+
+\noindent\textbf{horizon} --- an observer's declared budget: how long, how precisely, with which probes and readouts it will look.
+
+\noindent\textbf{flow} --- the rule that moves a system's state through time.
+
+\noindent\textbf{generator} --- the instantaneous version of a flow: the rule's ``velocity field.''
+
+\noindent\textbf{composite / $\otimes$} --- systems placed together so they may interact.
+
+\noindent\textbf{inverse limit / completion} --- the single consistent whole stitched from overlapping partial views.
+
+\noindent\textbf{global law $\Phi^{\star}$} --- the one time-evolution rule of which all observed local rules are projections.
+
+\noindent\textbf{emitted interaction} --- what a combination does minus everything its parts do alone; extracted uniquely by inclusion--exclusion.
+
+\noindent\textbf{closure} --- gathering everything that could still influence outcomes within the horizon's budget.
+
+\noindent\textbf{bisimulation / operational equivalence} --- merging any two histories no allowed test could ever tell apart.
+
+\noindent\textbf{quotient} --- the map that performs such merging; ``the world at the resolution at which it can make a difference.''
+
+\noindent\textbf{registration space $A_{C,H}$} --- the world as a given embedded observer can actually distinguish it.
+
+\noindent\textbf{conceptual / mathematical spaces} --- structures the observer builds on top of its registration space.
+
+\noindent\textbf{fitness} --- an observer's room to continue: its capacity for viable continuation.
+
+\noindent\textbf{invariant} --- a property that survives every allowed way of looking.
+
+\noindent\textbf{bridge} --- a structure-respecting translation between two systems' models; trustworthy when its commutation and preservation residuals are small.
+
+\noindent\textbf{refinement} --- looking longer or finer; horizons ordered by increasing budget.
+
+\noindent\textbf{carrier ($\Pi_K \subset \mathbb{R}^3$)} --- a faithful labelled 3D drawing of a finite model slice; a fact about drawings, not about the world's dimension.
+
+\noindent\textbf{typed} --- labelled by kind of claim (proved, conditional, definition, conjecture, obligation, policy), so nothing borrows unearned authority.
+
+\noindent\textbf{$d_A(H)$} --- effective registration dimension: how many independent directions of difference this observer resolves at this precision; may be unresolved ($\bot$).
+
+\noindent\textbf{noise floor / observability ceiling} --- finest resolvable distinction / largest registrable composition; together, the operational window.
+
+\noindent\textbf{scale ladder $W_H$} --- the set of measuring scales (center, outer radius, inner radius) at which an effective dimension is evaluated.
+
+\noindent\textbf{order / meta-lift} --- reorganization in which whole compositions become single primitives one level up.
+
+\noindent\textbf{coherent order transition} --- boundary reorganization that preserves the model's integrity (a faithful lift exists).
+
+\noindent\textbf{decoherence} --- boundary failure: the tell-apart structure or self-correction collapses.
+
+\noindent\textbf{registered coupling} --- the part of an interaction the observer's instruments actually resolve.
+
+\noindent\textbf{cognitive mass} --- signed reach change per unit of registered coupling to a source; order-relative by construction.
+
+\noindent\textbf{nucleation} --- the conjectured need for external seed structure to power a coherent transition.
+
+\noindent\textbf{assessment channel / realization channel} --- coupling via understanding the formal object (narrow, capacity-gated) versus via its working consequences (universal).
+
+\noindent\textbf{realization gate} --- the policy schema: assess and simulate freely; build only under typed existential necessity; enforce inside protocols.
+
+\noindent\textbf{Great Filter (reading used here)} --- survivorship: what is old enough to observe is what did not unravel; a fact about what we get to see.
+
+\noindent\textbf{discipline (as used here)} --- an evaluation-equipped model with its perspective, admissibility, evaluator, equivalence, and certificate conditions declared.
+
+\noindent\textbf{second-order process} --- a reasoning process that carries those conditions with it, so it can move between disciplines without silently breaking.
+
+\noindent\textbf{semantic library} --- solved, certified paths filed by meaning (never twice) so they can be safely recombined.
+
+\noindent\textbf{certificate} --- the attached evidence that lets a result be reused without being re-derived.
+
+\noindent\textbf{assessment locality} --- dependence of a judgment on observer, horizon, evaluator, admissibility, or certificate conditions held fixed at one assessment horizon.
+
+\noindent\textbf{observer-inclusion blind spot} --- a systemic assessment failure mode in which conditions required to assess a system are held outside its system model; if recursively exposed certified residuals persist above noise, the cumulative correction discrepancy can be unbounded.
+
+\noindent\textbf{global-coherence assessment} --- the HCFM protocol that returns coherent, incoherent, or undetermined within coherence budget for a declared hypothesis and system model.
+
+\noindent\textbf{coherence budget} --- the declared resources for model extension, bridge certification, observation, and recursive refinement; a limit on this budget yields an honest undetermined result rather than a forced binary verdict.
+
+\begin{thebibliography}{99}
+\bibitem{1} N. Arkani-Hamed, S. Dimopoulos, and G. Dvali. The hierarchy problem and new dimensions at a millimeter. \emph{Physics Letters B}, 429(3--4):263--272, 1998.
+\bibitem{2} L. Randall and R. Sundrum. Large mass hierarchy from a small extra dimension. \emph{Physical Review Letters}, 83(17):3370--3373, 1999.
+\bibitem{3} H. von Foerster. \emph{Cybernetics of Cybernetics}. Biological Computer Laboratory Report 73.38, University of Illinois, Urbana, IL, 1974.
+\bibitem{4} J. Pearl. Causal inference in statistics: An overview. \emph{Statistics Surveys}, 3:96--146, 2009. doi:10.1214/09-SS057.
+\bibitem{5} C. F. Manski. \emph{Partial Identification of Probability Distributions}. Springer-Verlag, New York, 2003.
+\bibitem{6} A. Brandenburger and E. Dekel. Hierarchies of beliefs and common knowledge. \emph{Journal of Economic Theory}, 59(1):189--198, 1993. doi:10.1006/jeth.1993.1012.
+\bibitem{7} E. M. Gold. Language identification in the limit. \emph{Information and Control}, 10(5):447--474, 1967. doi:10.1016/S0019-9958(67)91165-5.
+\bibitem{8} H. B. Enderton. \emph{A Mathematical Introduction to Logic}. 2nd edition, Academic Press, San Diego, CA, 2001.
+\bibitem{9} A. Tarski. A lattice-theoretical fixpoint theorem and its applications. \emph{Pacific Journal of Mathematics}, 5:285--309, 1955.
+\bibitem{10} P. Cousot and R. Cousot. Abstract interpretation: A unified lattice model for static analysis of programs by construction or approximation of fixpoints. In \emph{Proceedings of the 4th ACM SIGACT--SIGPLAN Symposium on Principles of Programming Languages}, pages 238--252, 1977.
+\bibitem{11} A. Finkel and P. Schnoebelen. Well-structured transition systems everywhere! \emph{Theoretical Computer Science}, 256(1--2):63--92, 2001.
+\bibitem{12} A. E. Williams. Cognitive Near-Singularity: a possibility theorem and a witness-based protocol with a corpus case study. \emph{Frontiers in Artificial Intelligence}, 9:1746633, 2026. doi:10.3389/frai.2026.1746633.
+\bibitem{13} L. von Bertalanffy. \emph{General System Theory: Foundations, Development, Applications}. George Braziller, New York, 1968.
+\bibitem{14} B. Fong and D. I. Spivak. \emph{An Invitation to Applied Category Theory: Seven Sketches in Compositionality}. Cambridge University Press, 2019.
+\bibitem{15} J. C. Willems. The behavioral approach to open and interconnected systems. \emph{IEEE Control Systems Magazine}, 27(6):46--99, 2007.
+\bibitem{williams2021human}
+Williams, A. E. (2021). 
+Human-centric functional modeling and the unification of systems thinking approaches: A short communication. 
+\textit{Journal of Systems Thinking}, 1(1), 1--5.
+\bibitem{williams2023human}
+Williams, A. (2023). 
+Human-centric functional computing as an approach to human-like computation. 
+\textit{Artificial Intelligence and Applications}, 1(2), 112--121.
+\bibitem{williams2026propagating}
+Williams, A. E. (2026). 
+Propagating Constraints Across Alternative Gravity Theories: A Second-Order Simulation Criterion for Composition-Level Constraints. 
+\textit{Zenodo}. \url{https://doi.org/10.5281/zenodo.21071265}
+\bibitem{williams2026physical}
+Williams, A. E. (2026). 
+Physical Observability and Reliable Mathematical Derivability Under High Novelty. 
+\textit{Zenodo}. \url{https://doi.org/10.5281/zenodo.20941020}
+\end{thebibliography}
+
+\end{document}
