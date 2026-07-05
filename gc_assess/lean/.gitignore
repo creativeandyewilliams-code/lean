@@ -1,0 +1,9 @@
+# Lake build artifacts
+/.lake/
+/build/
+/lakefile.olean
+# temporary axioms probe emitted by build.sh
+/_Axioms.lean
+# Python caches
+__pycache__/
+*.pyc

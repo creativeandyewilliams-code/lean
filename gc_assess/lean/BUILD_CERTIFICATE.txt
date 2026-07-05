@@ -1,0 +1,230 @@
+GC_ASSESS L1 — LEAN DEVELOPMENT BUILD CERTIFICATE
+=================================================
+
+Artifact (library module): GCAssess.lean
+Package:                    gc_assess (supplementary material for HCFM v28)
+Certificate date:          2026-07-05
+Lean target version:       leanprover/lean4:v4.9.0 (pinned in lean-toolchain)
+Dependencies:              none (pure Lean 4 core; no Mathlib required)
+
+SCOPE
+-----
+This certificate concerns slot L1 of the audit contract: the DECISION
+SEMANTICS of the verdict algebra (the verdict lattice `Verdict`; the
+composition rule `combine`; the fold `foldVerdicts`; the tree evaluator
+`evalTree`/`evalForest`). It attests that these are internally consistent —
+`combine` is a monoid with an absorbing element, the coherent and incoherent
+fold conditions are exactly characterised, and the tree evaluator computes the
+algebra's fold.
+
+It does NOT certify the paper's substantive results (the global material-law
+completion / observability blind spot), and it does NOT decide any per-node
+coherence judgment. Leaf verdicts are INPUTS to `evalTree` (slot B1), exactly
+as they are oracle inputs to the Python reference implementation. See
+PACKAGE_README.md ("What this package is not").
+
+
+1. VERIFICATION STATUS IN THIS ENVIRONMENT
+------------------------------------------
+Two verifications are distinguished:
+
+  (a) KERNEL-INDEPENDENT structural + semantic verification — EXECUTED HERE,
+      2026-07-05, and PASSED (44/44 checks). Tool: verify_structure.py, run
+      under Python 3.11.15 on Linux x86_64. This performs:
+
+        * source-structural checks on GCAssess.lean (namespace balance; no
+          `sorry`/`admit`/`axiom`/`native_decide` in proof position; the two
+          textual "sorry" occurrences confined to comments; the declared
+          inductives, defs, and all 11 load-bearing theorems present; each
+          theorem body closed by a kernel-checkable terminal tactic; the four
+          `#print axioms` hooks present);
+
+        * an INDEPENDENT executable model of the Lean `combine` / `foldVerdicts`
+          / `evalForest` definitions, used to verify the mathematical content of
+          every load-bearing theorem by enumeration:
+            - combine_wellformed / identity / absorbing : all 3x3 pairs;
+            - combine_assoc                              : all 3x3x3 triples;
+            - fold_coherent_iff / fold_incoherent_iff    : all verdict lists
+                                                           of length <= 6;
+            - evalForest_eq_fold : exhaustive on tiny forests + 200,000 random
+                                   trees of depth <= 6;
+
+        * Python <-> Lean agreement: the Lean model and the Python reference
+          implementation (gc_assess.py, run under ample budget so no
+          budget-driven UNDETERMINED can arise) return the SAME verdict on every
+          small determinate tree checked (exhaustive tiny trees + 5,000 random
+          trees, restricted to the domain both artifacts represent — see the
+          note on empty-children nodes below).
+
+      A theorem the Lean kernel accepts must have TRUE mathematical content;
+      check (a) confirms that content by direct computation, and confirms the
+      source that expresses it is free of proof holes and added axioms. This is
+      necessary for kernel acceptance but is NOT a substitute for it.
+
+  (b) LEAN KERNEL BUILD (`lake build`) — NOT EXECUTED HERE. No Lean toolchain
+      is installed in this environment, and the pinned release archive could
+      not be fetched: GitHub release assets for leanprover/lean4 are outside
+      this session's repository access scope (the download returns HTTP 403
+      with "GitHub access to this repository is not enabled for this session").
+      The kernel build must therefore be run on a machine with access to the
+      Lean release infrastructure — see Section 2.
+
+Honest status line for the manuscript: describe this artifact as a
+"Lean development (source provided), structurally and semantically
+cross-checked", and upgrade the wording to "machine-checked" only after
+attaching the `lake build` / `#print axioms` output produced by Section 2.
+
+
+2. EXTERNAL REPRODUCTION (how to obtain the kernel certificate)
+---------------------------------------------------------------
+On any machine with network access to the Lean release infrastructure:
+
+  # 1. install the pinned toolchain (elan reads lean-toolchain)
+  curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh
+  source "$HOME/.elan/env"
+
+  # 2. from this directory
+  ./build.sh
+  #   -> runs verify_structure.py            (structural + semantic pre-check)
+  #   -> runs `lake build`                    (kernel type-checks every theorem)
+  #   -> prints `#print axioms` for the four load-bearing theorems
+
+A clean `lake build` (exit code 0, no diagnostics) is the kernel-level build
+certificate: every theorem type-checks under the Lean 4 kernel with no `sorry`,
+no `admit`, and no added axiom. Because the source uses only structural tactics
+(`rfl`, `simp`, `cases`, `induction`, `rcases`, `refine`; no `native_decide`,
+no `axiom`), the proofs are checked entirely by the trusted kernel.
+
+Expected `#print axioms` output for each of combine_assoc, fold_coherent_iff,
+fold_incoherent_iff, and evalForest_eq_fold:
+
+  'GCAssess.<thm>' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+i.e. only Lean's three core axioms, and in particular NO `sorryAx`. (If a
+theorem depends on `sorryAx`, the certificate is void.) Attach the captured
+console output of `./build.sh` to the manuscript as the machine-checked record.
+
+
+3. THEOREM INVENTORY (11)
+-------------------------
+Monoid structure of `combine`:
+  combine_wellformed            (result is always one of the three verdicts)
+  coherent_left_id              (coherent is a left identity)
+  coherent_right_id             (coherent is a right identity)
+  incoherent_absorbing_left     (incoherent short-circuit, left form)
+  incoherent_absorbing_right    (incoherent short-circuit, right form)
+  combine_assoc                 (associativity => folded verdict well-defined)
+
+Fold characterisations:
+  fold_coherent_iff             (fold = coherent  iff  EVERY child coherent)
+  fold_incoherent_iff           (fold = incoherent iff SOME child incoherent)
+
+Lattice / evaluator:
+  verdicts_distinct             (the trichotomy is genuinely three-valued)
+  evalForest_eq_fold            (the tree evaluator computes the algebra's fold)
+  evalTree_total                (evaluating a tree yields exactly one verdict)
+
+
+4. FILE HASHES (SHA-256)
+------------------------
+GCAssess.lean          90918339ceeb9d75e6ee5be0b8b92c9ce3a7fe6ae550eb5b9ae0e408e209c30c
+lakefile.lean          1a4f4c03af111f72183541c2f53756617ef59bf0efcc938f1cc86fa6aa320aad
+lean-toolchain         780c5b3424b12629ebe77451eda1ac2a2079bc7b81b6fa37969892afb8d32c0e
+verify_structure.py    9875efea33bc4b32658da95543b0dbd8e4017a25fb1285e7044a114a1c2f9359
+build.sh               7252f3c52d863981d777e7d90f007788dcccd9206169bd9bdf84b640bdada44f
+
+
+5. VERIFICATION LOG (2026-07-05, kernel-independent pre-check)
+--------------------------------------------------------------
+  $ python3 --version
+  Python 3.11.15
+
+  $ python3 verify_structure.py GCAssess.lean
+  FILE: GCAssess.lean
+  SHA256: 90918339ceeb9d75e6ee5be0b8b92c9ce3a7fe6ae550eb5b9ae0e408e209c30c
+  VERDICT_CTORS: 3  THEOREMS: 11
+  --------------------------------------------------------------------
+  [PASS] namespace_balanced                 namespace GCAssess: open=1 close=1
+  [PASS] namespace_name_matches_end         GCAssess opened and closed once
+  [PASS] no_sorry                           sorry
+  [PASS] no_admit                           admit
+  [PASS] no_axiom_decl                      axiom
+  [PASS] no_native_decide                   native_decide
+  [PASS] sorry_only_in_comments             total_occurrences=2 in_code=False
+  [PASS] inductive_Verdict                  ctors=['coherent', 'incoherent', 'undetermined']
+  [PASS] verdict_three_valued               n=3
+  [PASS] verdict_deriving_decidableeq       deriving DecidableEq
+  [PASS] inductive_HTree                    ctors=['leaf', 'node']
+  [PASS] def_combine                        combine
+  [PASS] def_foldVerdicts                   foldVerdicts
+  [PASS] def_evalTree                       evalTree
+  [PASS] def_evalForest                     evalForest
+  [PASS] has_combine_wellformed             combine_wellformed
+  [PASS] has_coherent_left_id               coherent_left_id
+  [PASS] has_coherent_right_id              coherent_right_id
+  [PASS] has_incoherent_absorbing_left      incoherent_absorbing_left
+  [PASS] has_incoherent_absorbing_right     incoherent_absorbing_right
+  [PASS] has_combine_assoc                  combine_assoc
+  [PASS] has_fold_coherent_iff              fold_coherent_iff
+  [PASS] has_fold_incoherent_iff            fold_incoherent_iff
+  [PASS] has_verdicts_distinct              verdicts_distinct
+  [PASS] has_evalForest_eq_fold             evalForest_eq_fold
+  [PASS] has_evalTree_total                 evalTree_total
+  [PASS] theorems_present                   count=11
+  [PASS] theorems_have_terminal_tactic      rfl/simp/cases/induction/... in each body
+  [PASS] axioms_hook_combine_assoc          combine_assoc
+  [PASS] axioms_hook_fold_coherent_iff      fold_coherent_iff
+  [PASS] axioms_hook_fold_incoherent_iff    fold_incoherent_iff
+  [PASS] axioms_hook_evalForest_eq_fold     evalForest_eq_fold
+  [PASS] angle_brackets_balanced            ⟨=6 ⟩=6
+  [PASS] sem_combine_wellformed             3x3 exhaustive
+  [PASS] sem_coherent_left_id
+  [PASS] sem_coherent_right_id
+  [PASS] sem_incoherent_absorbing_left
+  [PASS] sem_incoherent_absorbing_right
+  [PASS] sem_combine_assoc                  3x3x3 exhaustive
+  [PASS] sem_fold_coherent_iff              all lists len<= 6
+  [PASS] sem_fold_incoherent_iff            all lists len<= 6
+  [PASS] sem_verdicts_distinct
+  [PASS] sem_evalForest_eq_fold             exhaustive len<=2 depth<=2 + 200000 random depth<=6
+  [PASS] py_lean_agreement                  determinate trees, ample budget
+  --------------------------------------------------------------------
+  RESULT: 44/44 checks passed
+  $ echo $?
+  0
+
+
+6. NOTE — Python/Lean representational scope (disclosed)
+--------------------------------------------------------
+The two artifacts verify overlapping but not identical objects:
+
+  * In the PYTHON reference, UNDETERMINED arises ONLY from budget exhaustion;
+    budget accounting is exercised by the conformance tests (tests/), not by
+    Lean.
+  * In LEAN, `undetermined` is a leaf value supplied as INPUT and budget is not
+    modelled at all; `node []` (an internal node with no children) folds to the
+    empty-fold value `coherent`, a case the Python `Hypothesis` does not
+    represent (a childless node there is a leaf awaiting an oracle verdict).
+
+The Python <-> Lean agreement check in Section 1 is therefore run under ample
+budget and restricted to trees both artifacts represent. The Lean development
+certifies the verdict MONOID and the fold characterisations; the BUDGET
+DYNAMICS that generate UNDETERMINED in the reference implementation are verified
+on the Python side only. Slot L1 in the manuscript should state this.
+
+
+7. ATTESTATION
+--------------
+Certified here (2026-07-05): GCAssess.lean is structurally well-formed and free
+of `sorry`/`admit`/`axiom`/`native_decide` in proof position; all 11
+load-bearing theorems are present and closed by kernel-checkable tactics; and
+the full mathematical content of the monoid laws, the two fold
+characterisations, and evalForest_eq_fold is confirmed TRUE by exhaustive /
+large-sample enumeration of an independent model that agrees with the Python
+reference on the shared representable domain.
+
+NOT certified here: the Lean KERNEL's acceptance of the proofs. That requires
+running `lake build` under the pinned toolchain (Section 2); no Lean toolchain
+was obtainable in the environment that produced this certificate. Until that
+kernel run is attached, the paper must say "Lean development (source provided)",
+not "machine-checked".

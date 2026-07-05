@@ -1,0 +1,37 @@
+gc_assess L1 Lean Build / Source Report
+=======================================
+
+Artifact: GCAssess.lean
+Lean scope: decision semantics of the HCFM global-coherence verdict algebra
+(verdict lattice, `combine` monoid, fold characterisations, tree evaluator).
+Slot L1 of the audit contract. Does NOT decide domain truth or any per-node
+coherence judgment (slot B1: leaf verdicts are inputs).
+
+Build status (2026-07-05):
+  * Kernel-independent structural + semantic verification: EXECUTED, 44/44
+    checks PASSED (verify_structure.py, Python 3.11.15). See BUILD_CERTIFICATE.txt
+    Sections 1 and 5.
+  * Lean kernel build (`lake build`): NOT executed here. No Lean toolchain was
+    installable — the pinned leanprover/lean4:v4.9.0 release archive is outside
+    this session's GitHub access scope (HTTP 403). Run it externally per
+    BUILD_CERTIFICATE.txt Section 2.
+
+The structural + semantic check is necessary but not sufficient for kernel
+acceptance: it confirms the source contains no proof holes or added axioms and
+that every load-bearing theorem's mathematical content is TRUE (by exhaustive /
+large-sample enumeration of an independent model that agrees with the Python
+reference), but only `lake build` exercises the Lean 4 kernel itself.
+
+Intended external command:
+
+  ./build.sh            # structural + semantic pre-check, then lake build,
+                        # then #print axioms for the four load-bearing theorems
+
+A clean `lake build` (exit 0, no diagnostics) plus `#print axioms` reporting
+only [propext, Classical.choice, Quot.sound] constitutes the kernel-level build
+certificate: all 11 theorems type-check with no sorry/admit/axiom under
+leanprover/lean4:v4.9.0.
+
+Theorem count: 11 (see BUILD_CERTIFICATE.txt Section 3).
+
+90918339ceeb9d75e6ee5be0b8b92c9ce3a7fe6ae550eb5b9ae0e408e209c30c  GCAssess.lean

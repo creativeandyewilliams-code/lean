@@ -441,7 +441,20 @@ short-circuit behavior, and its termination outcome.
 semantics of this algebra---the verdict lattice, the recursive composition rule,
 and the short-circuit and stopping conditions---are internally consistent, so
 that the trichotomy is well formed and its verdicts sound relative to the
-declared oracle inputs.
+declared oracle inputs. It is supplied as a self-contained Lean build package
+with a build certificate (a pinned toolchain, a structural and semantic
+verifier, and reproduction instructions), so that a reviewer can obtain the
+kernel-level check by running \texttt{lake build}; pending that external run the
+artifact is described here as a Lean development (source provided), not as
+machine-checked. Its scope is the verdict monoid and the fold characterisations:
+the composition rule is associative with \emph{coherent} as identity and
+\emph{incoherent} absorbing, and a node's folded verdict is \emph{coherent} iff
+every child is and \emph{incoherent} iff some child is. The budget dynamics that
+generate the undetermined-within-budget outcome are exercised by the Python
+reference implementation and its conformance tests rather than in Lean, where
+each leaf verdict enters as a declared oracle input; the correspondence between
+the two artifacts is therefore over determinate verdicts, with budget accounting
+verified on the implementation side.
 \emph{(B1)} The boundary is stated as first-class content, not as a caveat: the
 substantive per-node judgments---whether a child claim coheres, whether a bridge
 preserves its invariant, whether a counter-witness is genuine---remain
