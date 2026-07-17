@@ -1,0 +1,13 @@
+{
+  "protocol_id": "EXP-RECEIVER-V16-BOUNDED-SAMEMODEL",
+  "frozen_utc_seed": 20260716,
+  "families_covered": ["conflation","reflection_vs_lift","register_recall_type","recurrence_countermodel","gf3_vs_gf6","formal_vs_external_premise"],
+  "tasks": [
+    {"id":"T1","family":"conflation","q":"Two latent reasoning states X and Y map to the SAME first-order registration but require different verdicts (X is a valid proof, Y is not). Can a decoder that reads only the first-order registration be correct on both? Answer field 'ans' = 'yes' or 'no'; field 'theorem' = the governing theorem name."},
+    {"id":"T2","family":"reflection_vs_lift","q":"A system adds a reflective monitor that can name its unresolved residual but adds no new reusable spanning composition. Does its cognitive order increase? 'ans'='yes'/'no'."},
+    {"id":"T3","family":"register_recall_type","q":"Is Register (a signal->concept boundary operation) equal to some composition of only L and G (concept->concept endomorphisms) with no added bridge? 'ans'='yes'/'no'."},
+    {"id":"T4","family":"recurrence_countermodel","q":"After an order lift reverses an increasing backlog, which ONE policy prevents persistent recurrence: 'fixed_post_lift_service' or 'proportional_same_order_service'? put it in 'ans'."},
+    {"id":"T5","family":"gf3_vs_gf6","q":"Given its premises hold, the conditional Great Filter corollary establishes which claim level: 'GF-3' (conditional) or 'GF-6' (identifies the observed Great Filter)? 'ans'='GF-3' or 'GF-6'."},
+    {"id":"T6","family":"formal_vs_external_premise","q":"Is 'gravity corresponds to operation G' a kernel-proved theorem or an unmeasured external premise? 'ans'='theorem' or 'external_premise'."}
+  ]
+}

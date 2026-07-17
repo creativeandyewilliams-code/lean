@@ -1,0 +1,54 @@
+{
+  "from": "v15",
+  "to": "v16",
+  "dispositions": [
+    {
+      "object": "v8 Gate Zero",
+      "v15": "fail-closed (missing lineage)",
+      "v16": "execute",
+      "result": "closed-positive: bit-exact reproduction from supplied v8 package"
+    },
+    {
+      "object": "inherited v8 numbers",
+      "v15": "historical constructive witness (unverifiable)",
+      "v16": "promote",
+      "result": "reproduced from source events; conformant"
+    },
+    {
+      "object": "direct recurrence",
+      "v15": "executed (v15 note)",
+      "v16": "strengthen",
+      "result": "canonical single-pipeline rerun with common latent worlds; new numbers reported"
+    },
+    {
+      "object": "Lean formalization",
+      "v15": "source + static audit",
+      "v16": "strengthen",
+      "result": "expanded pure-Lean core (10 core theorems); kernel build egress-blocked"
+    },
+    {
+      "object": "receiver study",
+      "v15": "protocol frozen",
+      "v16": "execute",
+      "result": "bounded same-model isolated-agent study executed"
+    },
+    {
+      "object": "GF branch/hazard",
+      "v15": "open",
+      "v16": "execute",
+      "result": "closed-bounded synthetic experiment"
+    },
+    {
+      "object": "semantic-equivalence mutation",
+      "v15": "open",
+      "v16": "execute",
+      "result": "closed-bounded model-level mutation suite"
+    },
+    {
+      "object": "external physical mapping",
+      "v15": "registration-closed",
+      "v16": "retain",
+      "result": "falsification-first certificates; instantiation open (no primary-source physics agents run)"
+    }
+  ]
+}

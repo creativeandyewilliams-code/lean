@@ -1,0 +1,4 @@
+{"receiver":"RA_formal_1","condition":"formal_package","answers":{
+  "T1": {"ans": "no", "theorem": "T-CONFLATE"},
+  "T2": {"ans": "no"},"T3": {"ans": "no"},"T4": {"ans": "proportional_same_order_service"},
+  "T5": {"ans": "GF-3"},"T6": {"ans": "external_premise"}}}

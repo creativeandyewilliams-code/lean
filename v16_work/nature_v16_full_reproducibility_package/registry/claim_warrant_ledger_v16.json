@@ -1,0 +1,13 @@
+{
+  "T-CONFLATE": "kernel-ready source (build blocked)",
+  "T-OP-NONREDUCTION": "kernel-ready source",
+  "T-UFRAG-QUEUE/REVERSAL/RECURRENCE": "kernel-ready source",
+  "L-ORDER-INCREMENT/T-ORDER-INVARIANCE": "kernel-ready source",
+  "COR-GF-CNS": "kernel-ready source (premises as parameters)",
+  "Gate Zero v8 numbers": "reproduced computational witness (closed-positive)",
+  "direct recurrence": "executed synthetic experiment (canonical)",
+  "GF branch/hazard": "bounded synthetic experiment",
+  "receiver propagation": "bounded same-model isolated study",
+  "physical mappings": "external premise; open",
+  "Great Filter identification": "open (GF-3 conditional only)"
+}

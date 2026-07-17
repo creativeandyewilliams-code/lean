@@ -1,0 +1,14 @@
+# transient / large working artifacts — not part of the deliverable source
+.venv_v8/
+.elan/
+v8_extract/
+review/
+experiments/
+elan-init.sh
+*.pyc
+__pycache__/
+# large binary inputs/outputs (v8 zip lives on main; v16 zip is delivered via link)
+nature_v8_full_reproducibility_package.zip
+nature_v16_full_reproducibility_package.zip
+# but DO keep the self-contained package tree (incl. its own original_inputs)
+!nature_v16_full_reproducibility_package/

@@ -1,0 +1,16 @@
+FMI-CNS v16 Lean static source audit
+=====================================
+Scanned: FmiCns.lean + FmiCns/*.lean (8 modules)
+
+Forbidden token counts (declaration-level):
+  sorry (declaration/term)   : 0
+  sorryAx                    : 0
+  admit                      : 0
+  axiom (declaration)        : 0   [one lexical 'axiom' occurs in a comment in
+                                     GreatFilter.lean and is whitelisted]
+  opaque                     : 0
+
+NOTE: a lexical scan is NOT a kernel proof. It establishes only that the source
+contains no placeholder tokens. Kernel acceptance requires 'lake build' plus a
+'#print axioms' report, which could not be run in this environment (see
+lean_formal_closure.md).

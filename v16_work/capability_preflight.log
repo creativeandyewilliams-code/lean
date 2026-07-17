@@ -1,0 +1,41 @@
+===== CAPABILITY PREFLIGHT Fri Jul 17 04:36:05 UTC 2026 =====
+
+$ python3 --version
+Python 3.11.15
+
+$ which pip3 && pip3 --version
+/usr/bin/pip3
+pip 24.0 from /usr/lib/python3/dist-packages/pip (python 3.11)
+
+$ which lean lake elan 2>/dev/null || echo 'NO lean/lake/elan'
+NO lean/lake/elan
+
+$ which pdflatex xelatex lualatex tectonic latexmk 2>/dev/null || echo 'NO latex engine'
+NO latex engine
+
+$ which pandoc && pandoc --version | head -1
+/usr/bin/pandoc
+pandoc 3.1.3
+
+$ which docker podman 2>/dev/null || echo 'NO docker/podman'
+/usr/bin/docker
+NO docker/podman
+
+$ which git && git --version
+/usr/bin/git
+git version 2.43.0
+
+$ python3 -c 'import numpy,pandas,scipy,networkx,matplotlib,sklearn; print("sci stack OK")' 2>&1 || echo 'missing sci libs'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+ModuleNotFoundError: No module named 'pandas'
+missing sci libs
+
+$ curl -sS -m 10 -o /dev/null -w 'github status:%{http_code}
+' https://github.com 2>&1 || echo 'no network'
+github status:400
+
+$ nproc && free -m | head -2
+4
+               total        used        free      shared  buff/cache   available
+Mem:           16075         560       15097           4         674       15515

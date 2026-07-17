@@ -1,0 +1,30 @@
+{
+  "package": "nature_v16_full_reproducibility_package",
+  "generated_utc": "2026-07-17T05:06:48.852249Z",
+  "gates": {
+    "v8_gate_zero": "closed-positive",
+    "lean_bounded_core_build": "partially closed (source-complete, static-audit clean; toolchain download egress-blocked HTTP 403)",
+    "lean_full_retained_theorem_coverage": "partially closed (10/33 source-realized; remainder manuscript-level)",
+    "formalization_fidelity": "partially closed (bounded receiver/fidelity agents run; full independent registrar audit pending)",
+    "semantic_equivalence_mutation": "closed-bounded",
+    "order_fragmentation_mathematics": "closed (kernel-ready source; prose proofs)",
+    "direct_recurrence": "closed",
+    "same_model_multi_agent_receiver_propagation": "closed-bounded",
+    "cross_family_receiver_propagation": "open (only same-model instances available)",
+    "cst_comparative_utility": "partially closed (registry/formal condition beat prose control on identity recovery; full matched-resource study pending)",
+    "physical_force_mapping": "open (falsification-first certificates registered; no primary-source physics agents run; egress-limited)",
+    "external_ai_traces": "open (no version-locked external model APIs available)",
+    "historical_classification": "open (not executed this pass)",
+    "great_filter_branch_experiment": "closed-bounded (synthetic)",
+    "great_filter_hazard_timescale_residue": "closed-bounded (synthetic hazard non-summability); real-instantiation open",
+    "repository_rebuild": "closed (verify_package + fresh-extraction rebuild)",
+    "journal_carrier": "partially closed (manuscripts built in md/pdf/tex/docx; .tex not compiled here, no LaTeX engine)"
+  },
+  "manuscript_consequences": {
+    "lean_kernel": "Article/Supplement report a bounded source-complete Lean core, not full kernel-checked global coherence.",
+    "receiver": "Claim regenerative propagation across isolated same-model instances only; not cross-model or human.",
+    "physical_mapping": "Kept as external premises; conceptual theorems do not depend on them.",
+    "great_filter": "GF-3 conditional corollary only; synthetic branch/hazard experiments are not real extinction estimates.",
+    "v8_numbers": "Reported as reproduced constructive witness (Gate Zero closed-positive)."
+  }
+}

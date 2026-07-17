@@ -1,0 +1,839 @@
+{
+  "package": "nature_v16_full_reproducibility_package",
+  "file_count": 119,
+  "files": [
+    {
+      "path": ".github/workflows/reproducibility.yml",
+      "size": 417,
+      "sha256": "07905c1dc042e566cbbbe08b693b0b3d754389e69a34046eb335a201148cb8df",
+      "mime": "application/yaml",
+      "kind": "generated"
+    },
+    {
+      "path": "CHANGELOG_v16.md",
+      "size": 1255,
+      "sha256": "6e3993ffae3d4bf5087794d2b0902e30b21fb383d1dc092e75b1eb5444a6aaee",
+      "mime": "text/markdown",
+      "kind": "generated"
+    },
+    {
+      "path": "CITATION.cff",
+      "size": 323,
+      "sha256": "c0b5c9de148e905b7e1520a69cdba7fc64364ecb38bf3494e9d21fbc28bf8bca",
+      "mime": "application/octet-stream",
+      "kind": "generated"
+    },
+    {
+      "path": "LICENSE-or-NO-LICENSE-NOTICE.md",
+      "size": 243,
+      "sha256": "74915b0107ccdefc8fc079cde22f6327a16274f98c925e1a545cea757137c052",
+      "mime": "text/markdown",
+      "kind": "generated"
+    },
+    {
+      "path": "Makefile",
+      "size": 343,
+      "sha256": "3daa4586944b58c938be6e5ecaef139e35a58f0136c509824cae9beb10f49363",
+      "mime": "application/octet-stream",
+      "kind": "generated"
+    },
+    {
+      "path": "README.md",
+      "size": 2915,
+      "sha256": "77894bebb3eb355ed8fe485b952622b22af0207d611307681c5a6c64a7b16d69",
+      "mime": "text/markdown",
+      "kind": "generated"
+    },
+    {
+      "path": "experiments/direct_recurrence/code/run_recurrence.py",
+      "size": 14329,
+      "sha256": "61f44817f3dd07edbd8fef49818de4888dab68a7a2bdb8cffb4c5dc068fe3610",
+      "mime": "text/x-python",
+      "kind": "generated"
+    },
+    {
+      "path": "experiments/direct_recurrence/derived/recurrence_table.csv",
+      "size": 439,
+      "sha256": "ef4e5d5db5727c4b2d7d93fb0013d4aa018126b87689fc2ddafbdd8849e9ca2b",
+      "mime": "text/csv",
+      "kind": "generated"
+    },
+    {
+      "path": "experiments/direct_recurrence/derived/recurrence_table.tex",
+      "size": 546,
+      "sha256": "465604d61a0f6f3cfc62785269dca93cbc001936e7898ea84a971ef165f8f714",
+      "mime": "text/x-tex",
+      "kind": "generated"
+    },
+    {
+      "path": "experiments/direct_recurrence/derived/summary.json",
+      "size": 3154,
+      "sha256": "aa3d9029cd6bf81110c8394c1d1332b00eaf7a0f8f26ce3536ae866e65705f24",
+      "mime": "application/json",
+      "kind": "generated"
+    },
+    {
+      "path": "experiments/direct_recurrence/derived/timeseries_summary.json",
+      "size": 95539,
+      "sha256": "f25fb9c280f6330d352bc970750970a1b6639b75a109b1f6ef6977dda3f2de79",
+      "mime": "application/json",
+      "kind": "generated"
+    },
+    {
+      "path": "experiments/direct_recurrence/figures/recurrence_backlog.png",
+      "size": 165040,
+      "sha256": "8f48630982bdc418587c1bb5f10ed17668eb8f8170b121322866844c594be1ba",
+      "mime": "image/png",
+      "kind": "generated"
+    },
+    {
+      "path": "experiments/direct_recurrence/figures/recurrence_regions.png",
+      "size": 112397,
+      "sha256": "5c909a96c145124f11cc130ee1ea543a80e243c3e59cb29d7b4b085199f79366",
+      "mime": "image/png",
+      "kind": "generated"
+    },
+    {
+      "path": "experiments/direct_recurrence/protocol.json",
+      "size": 789,
+      "sha256": "0d930f0c15d15f5ddd3361daf00dcd2575177d4aab6a1e33bb99082e54f9ba2a",
+      "mime": "application/json",
+      "kind": "generated"
+    },
+    {
+      "path": "experiments/direct_recurrence/raw/common_world_Z_arr_first50.npy",
+      "size": 1440128,
+      "sha256": "81a873d56354eb4f3a1da15796ca13bb83c82e64696f2a0b8528a90451c0719e",
+      "mime": "application/octet-stream",
+      "kind": "generated"
+    },
+    {
+      "path": "experiments/direct_recurrence/raw/common_world_Z_svc_first50.npy",
+      "size": 1440128,
+      "sha256": "2da552c0a1160adb6a8d664054f9fecb895ce3bff56f16565f9999a0eadf420c",
+      "mime": "application/octet-stream",
+      "kind": "generated"
+    },
+    {
+      "path": "experiments/direct_recurrence/raw/per_replicate_metrics.csv",
+      "size": 381037,
+      "sha256": "dcd31232f03fb488fbe5f6571333853fc98b9af60a4cc62cc54f39fd01353617",
+      "mime": "text/csv",
+      "kind": "generated"
+    },
+    {
+      "path": "experiments/direct_recurrence/reports/derived_fingerprint.txt",
+      "size": 65,
+      "sha256": "800a989f8022e271e7fcee412eea56132b36fb06a1cca44094a9326fe2ae6237",
+      "mime": "text/plain",
+      "kind": "generated"
+    },
+    {
+      "path": "experiments/direct_recurrence/reports/recurrence_reproduction.md",
+      "size": 940,
+      "sha256": "38f0163782572181c2fe8257c92cbb8e4ff3849a488c9718cea2acbfa2175727",
+      "mime": "text/markdown",
+      "kind": "generated"
+    },
+    {
+      "path": "experiments/gate_zero_v16/data/key_results.json",
+      "size": 2518,
+      "sha256": "c005db0ca0ab0635a7b9dcf22685248c58438fea3f77cc953cd36ae663116f53",
+      "mime": "application/json",
+      "kind": "generated"
+    },
+    {
+      "path": "experiments/gate_zero_v16/logs/conformance_exit.txt",
+      "size": 19,
+      "sha256": "7beaf693cfc5f89d35501d68364c726f042833b4c909e250855eab6b7e3d5ac3",
+      "mime": "text/plain",
+      "kind": "generated"
+    },
+    {
+      "path": "experiments/gate_zero_v16/logs/conformance_stdout.txt",
+      "size": 1912,
+      "sha256": "f9328c4b5f7082775a17bf68af1763bf00205c7b69871637ae6ed6a915b0c6e2",
+      "mime": "text/plain",
+      "kind": "generated"
+    },
+    {
+      "path": "experiments/gate_zero_v16/logs/env_notes.txt",
+      "size": 17,
+      "sha256": "10e2c207afee9946ad28dd9253cec1353d7b815cde432c5bd500c21bd23b9424",
+      "mime": "text/plain",
+      "kind": "generated"
+    },
+    {
+      "path": "experiments/gate_zero_v16/logs/env_preflight.txt",
+      "size": 102,
+      "sha256": "0e126ae12f6a79de5e20cc515ebc860b242d6cd1290e48fbc96fd4c9ef79ec74",
+      "mime": "text/plain",
+      "kind": "generated"
+    },
+    {
+      "path": "experiments/gate_zero_v16/logs/pip_freeze.txt",
+      "size": 316,
+      "sha256": "0f09f5eb34ae35e9d73574feed94ba7569057b4372b83b1453e7f6985daceb00",
+      "mime": "text/plain",
+      "kind": "generated"
+    },
+    {
+      "path": "experiments/gate_zero_v16/logs/run_experiment_exit.txt",
+      "size": 34,
+      "sha256": "47a8b84936e2fd16b7ae4a5e39aa664e7257dc583493690b3d1af72b501b4999",
+      "mime": "text/plain",
+      "kind": "generated"
+    },
+    {
+      "path": "experiments/gate_zero_v16/logs/run_experiment_stderr.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mime": "application/octet-stream",
+      "kind": "generated"
+    },
+    {
+      "path": "experiments/gate_zero_v16/logs/run_experiment_stdout.json",
+      "size": 2519,
+      "sha256": "a00498e193c99a9fb34a74bdbb98b6965e18a5a45510813d8009e3c6f8ef92fb",
+      "mime": "application/json",
+      "kind": "generated"
+    },
+    {
+      "path": "experiments/gate_zero_v16/logs/run_experiment_time.log",
+      "size": 61,
+      "sha256": "7658b231ab56ede3ba80136da22becb5f1e78048303d5c78cbe29d7059dbca01",
+      "mime": "application/octet-stream",
+      "kind": "generated"
+    },
+    {
+      "path": "experiments/gate_zero_v16/reports/gate_zero_v16.json",
+      "size": 1240,
+      "sha256": "0516fd7949531728209d41bf7d647771436070c2d812961e3d8200aba8a7ed36",
+      "mime": "application/json",
+      "kind": "generated"
+    },
+    {
+      "path": "experiments/gate_zero_v16/reports/reproduction_differences.csv",
+      "size": 41,
+      "sha256": "41c3fc10c9b12472fd0cb9023921d3a68f9e06346b1fe604f0ef5a4253bcec4c",
+      "mime": "text/csv",
+      "kind": "generated"
+    },
+    {
+      "path": "experiments/gate_zero_v16/reports/result_crosswalk.csv",
+      "size": 860,
+      "sha256": "411a46d4473f48544fb3394093450ad17e7c2b2e4bcce2936563192430a2556c",
+      "mime": "text/csv",
+      "kind": "generated"
+    },
+    {
+      "path": "experiments/gate_zero_v16/reports/v8_execution_report.md",
+      "size": 3597,
+      "sha256": "22929b0dee5aa0b8f9965238da650ffb5c6af1e983b96a796fb62c7353a07756",
+      "mime": "text/markdown",
+      "kind": "generated"
+    },
+    {
+      "path": "experiments/gf_branch_closure/code/branch_hazard.py",
+      "size": 4198,
+      "sha256": "2bf7f0a3fa3e0c7a5b4e942390dde10952031e96300da9529e0cf7da8d9de829",
+      "mime": "text/x-python",
+      "kind": "generated"
+    },
+    {
+      "path": "experiments/gf_branch_closure/reports/branch_hazard_results.json",
+      "size": 1441,
+      "sha256": "b1f5e430fe4daadde4c3f0cded9041ec11bb37d5216c1192e3d9d3341d5e4fd8",
+      "mime": "application/json",
+      "kind": "generated"
+    },
+    {
+      "path": "experiments/semantic_equivalence/code/semantic_equivalence.py",
+      "size": 3968,
+      "sha256": "5599c31474dd05b97fbf4d51dcebdfa5902b9c1b0eac23392848d0d9ef2802e4",
+      "mime": "text/x-python",
+      "kind": "generated"
+    },
+    {
+      "path": "experiments/semantic_equivalence/reports/semantic_equivalence_results.json",
+      "size": 1275,
+      "sha256": "83a6c60b74a41aebac743b188e43c65d8a98cb569e1acc47650f96497522578b",
+      "mime": "application/json",
+      "kind": "generated"
+    },
+    {
+      "path": "figures/generated/recurrence_backlog.png",
+      "size": 165040,
+      "sha256": "8f48630982bdc418587c1bb5f10ed17668eb8f8170b121322866844c594be1ba",
+      "mime": "image/png",
+      "kind": "generated"
+    },
+    {
+      "path": "figures/generated/recurrence_regions.png",
+      "size": 112397,
+      "sha256": "5c909a96c145124f11cc130ee1ea543a80e243c3e59cb29d7b4b085199f79366",
+      "mime": "image/png",
+      "kind": "generated"
+    },
+    {
+      "path": "lean/FmiCns.lean",
+      "size": 260,
+      "sha256": "05c369a577b47adcc3f67c46f269f3993c93043dd28232a89848a2bd3a26c92e",
+      "mime": "application/octet-stream",
+      "kind": "generated"
+    },
+    {
+      "path": "lean/FmiCns/Backlog.lean",
+      "size": 1609,
+      "sha256": "4b6d8b66fca6a7926d810602cc6f24f69cab6257d0bebf7850bf7ed0147be45b",
+      "mime": "application/octet-stream",
+      "kind": "generated"
+    },
+    {
+      "path": "lean/FmiCns/Core.lean",
+      "size": 1039,
+      "sha256": "be68ab64fdebd2fd8fefb2547367d68f301aff1e6b8a5cfbf107c84939fe271e",
+      "mime": "application/octet-stream",
+      "kind": "generated"
+    },
+    {
+      "path": "lean/FmiCns/GreatFilter.lean",
+      "size": 1406,
+      "sha256": "9ddfe07756c829e5df3a2819aec4b306748f0f4aa2fd79f92aecbda1992da9be",
+      "mime": "application/octet-stream",
+      "kind": "generated"
+    },
+    {
+      "path": "lean/FmiCns/Operations.lean",
+      "size": 1221,
+      "sha256": "16e51535559b023e541c71072b92a1a3eb789c18dbe570a91f0046264a99d09b",
+      "mime": "application/octet-stream",
+      "kind": "generated"
+    },
+    {
+      "path": "lean/FmiCns/Order.lean",
+      "size": 938,
+      "sha256": "a5311d9aae35b3ccce30ab633b0611fd34c5ba8122da9624e03ec6005854585e",
+      "mime": "application/octet-stream",
+      "kind": "generated"
+    },
+    {
+      "path": "lean/FmiCns/Projection.lean",
+      "size": 974,
+      "sha256": "0d5f87ace1f761f6dd77db379daf6a0e8117f076fb937e1221665690a61f3c8e",
+      "mime": "application/octet-stream",
+      "kind": "generated"
+    },
+    {
+      "path": "lean/FmiCns/TopLevel.lean",
+      "size": 1627,
+      "sha256": "0d0becd913298f6d75e012f54038e3f71f82a03de2b3303e5df9f936bec39dc6",
+      "mime": "application/octet-stream",
+      "kind": "generated"
+    },
+    {
+      "path": "lean/lake-manifest.json",
+      "size": 288,
+      "sha256": "f3e715dc5b2cdaf14a3859ca1f0aa07708072fc080fda85ea89bae0c2580b339",
+      "mime": "application/json",
+      "kind": "generated"
+    },
+    {
+      "path": "lean/lakefile.toml",
+      "size": 74,
+      "sha256": "e90041dcf476c93cf2342a5d10769c73d1be6209728ae926a1a1a77ba3e219dc",
+      "mime": "application/octet-stream",
+      "kind": "generated"
+    },
+    {
+      "path": "lean/lean-toolchain",
+      "size": 25,
+      "sha256": "2773c517aa90b66ea8a2c52bddddf84393157797f8341be0df45294fff7fd32e",
+      "mime": "application/octet-stream",
+      "kind": "generated"
+    },
+    {
+      "path": "lean/reports/build.log",
+      "size": 521,
+      "sha256": "5442f8d5a48091f46171af9c162f15cdcc17b6a875a186c14f57f9213d6c1384",
+      "mime": "application/octet-stream",
+      "kind": "generated"
+    },
+    {
+      "path": "lean/reports/dependency_report.json",
+      "size": 259,
+      "sha256": "0a6e30070aef1b22c45e302bf834f52380b08f73d3f3a607ae3bfbfb6bcd5697",
+      "mime": "application/json",
+      "kind": "generated"
+    },
+    {
+      "path": "lean/reports/static_audit.txt",
+      "size": 711,
+      "sha256": "bcde500575bc1b82646e327898653a821857fcc1b8c9afc7d544d14852c7cdd7",
+      "mime": "text/plain",
+      "kind": "generated"
+    },
+    {
+      "path": "lean/reports/theorem_coverage.json",
+      "size": 4153,
+      "sha256": "c35420d7673870951b5ec07f9630cd09bd44ff32e73d0830e31b30895a58af89",
+      "mime": "application/json",
+      "kind": "generated"
+    },
+    {
+      "path": "lean/reports/toolchain_block_evidence.txt",
+      "size": 296,
+      "sha256": "431a7daf8341368e0c547a9158e22b47f57e1a4d32ec6079c3dc1e6162ac6966",
+      "mime": "text/plain",
+      "kind": "generated"
+    },
+    {
+      "path": "manuscript/article/nature_article_v16.docx",
+      "size": 31169,
+      "sha256": "a3c1073849d70454e1ed4a2970aec46c30ddb8c414c7353b0a3a7d38a4f6b72a",
+      "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "kind": "generated"
+    },
+    {
+      "path": "manuscript/article/nature_article_v16.md",
+      "size": 50459,
+      "sha256": "a9b7e7ac3f921236de105de6d311ba04691681e13e099b18a936d16b07ca5d35",
+      "mime": "text/markdown",
+      "kind": "generated"
+    },
+    {
+      "path": "manuscript/article/nature_article_v16.mns",
+      "size": 52868,
+      "sha256": "fb3a84f86ac5a9215f5b23fbe47c57cba7aea8614231665ee55b6713fc8d4975",
+      "mime": "application/octet-stream",
+      "kind": "generated"
+    },
+    {
+      "path": "manuscript/article/nature_article_v16.pdf",
+      "size": 132541,
+      "sha256": "aa5b0e868306cb724a79a1a5888cefcdf8a65dcca96819c8aff89afdab6bd006",
+      "mime": "application/pdf",
+      "kind": "generated"
+    },
+    {
+      "path": "manuscript/article/nature_article_v16.tex",
+      "size": 55947,
+      "sha256": "cb8af8ea94eb2ef377e1b036e6ae592ddc24eb3d4d9868c0488bc4d4cd62abf9",
+      "mime": "text/x-tex",
+      "kind": "generated"
+    },
+    {
+      "path": "manuscript/source_figures/recurrence_backlog.png",
+      "size": 165040,
+      "sha256": "8f48630982bdc418587c1bb5f10ed17668eb8f8170b121322866844c594be1ba",
+      "mime": "image/png",
+      "kind": "generated"
+    },
+    {
+      "path": "manuscript/source_figures/recurrence_regions.png",
+      "size": 112397,
+      "sha256": "5c909a96c145124f11cc130ee1ea543a80e243c3e59cb29d7b4b085199f79366",
+      "mime": "image/png",
+      "kind": "generated"
+    },
+    {
+      "path": "manuscript/supplement/nature_supplement_v16.docx",
+      "size": 302027,
+      "sha256": "a2cfe50b45a0b6a92de74dbd3bd397a888a5ffe9f22903fae736936885e9af76",
+      "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "kind": "generated"
+    },
+    {
+      "path": "manuscript/supplement/nature_supplement_v16.md",
+      "size": 68312,
+      "sha256": "c83e6217bcd1265e679d879ed2dc61a675d2ed3ff93bb9d58626b97a4963847b",
+      "mime": "text/markdown",
+      "kind": "generated"
+    },
+    {
+      "path": "manuscript/supplement/nature_supplement_v16.mns",
+      "size": 72211,
+      "sha256": "5c098a68c73c339b0a08cc83b456705c9264f40b44bdbb3aad2fcf4f7ae43d1b",
+      "mime": "application/octet-stream",
+      "kind": "generated"
+    },
+    {
+      "path": "manuscript/supplement/nature_supplement_v16.pdf",
+      "size": 437528,
+      "sha256": "a77ed28c7e1bae7bab519bdb18c473d7da534ec3faedc1c163105aab20f80276",
+      "mime": "application/pdf",
+      "kind": "generated"
+    },
+    {
+      "path": "manuscript/supplement/nature_supplement_v16.tex",
+      "size": 91353,
+      "sha256": "d53efe90c6a02b6ed54cfe0b5e0ac24eaa2907a7c25733321870d0d3c4c6d22a",
+      "mime": "text/x-tex",
+      "kind": "generated"
+    },
+    {
+      "path": "original_inputs/claude_code_nature_v16_full_reproducibility_instructions.md",
+      "size": 50219,
+      "sha256": "15f8c43125140ab32d2d016f6d2cc5e0c637b15c3af4edfea93551f768cb812b",
+      "mime": "text/markdown",
+      "kind": "input"
+    },
+    {
+      "path": "original_inputs/input_hashes.json",
+      "size": 331,
+      "sha256": "bb1c1f7a10363f3c6545fad8389447c087dd1b348dd38206bea8c65fe713321d",
+      "mime": "application/json",
+      "kind": "input"
+    },
+    {
+      "path": "original_inputs/input_hashes.sha256",
+      "size": 235,
+      "sha256": "29f4cd573235e9468eaf4845a99845677ea9c74b5d1301f989e4cf84f9d1a8ad",
+      "mime": "application/octet-stream",
+      "kind": "input"
+    },
+    {
+      "path": "original_inputs/input_manifest.json",
+      "size": 602,
+      "sha256": "11cd083d6b6b6f4b5f17632a0bac47350fea15883b03a8a76b33bb1d7ade3835",
+      "mime": "application/json",
+      "kind": "input"
+    },
+    {
+      "path": "original_inputs/nature_v8_full_reproducibility_package.zip",
+      "size": 8806453,
+      "sha256": "f21b7ba677c32140710092405a37de460f81a77fe8f6c459a965266eb8842a72",
+      "mime": "application/zip",
+      "kind": "input"
+    },
+    {
+      "path": "original_inputs/v15_sources/nature_article_v15.pdf",
+      "size": 130897,
+      "sha256": "52e41638303c938f249d0d6d20599a5a121ddf7d6e94f2553cac4a23495a2f41",
+      "mime": "application/pdf",
+      "kind": "input"
+    },
+    {
+      "path": "original_inputs/v15_sources/nature_supplement_v15.pdf",
+      "size": 429442,
+      "sha256": "34341fe797de6eea21125aef701d5646505a836e6328bd3ceed2d908699cb40a",
+      "mime": "application/pdf",
+      "kind": "input"
+    },
+    {
+      "path": "original_inputs/v15_sources/nature_v15_revision_experiment_plan.md",
+      "size": 130858,
+      "sha256": "c8adc03794952eea02fad5a0c9a173fa828feb33cdc70a3ea81163902d1af500",
+      "mime": "text/markdown",
+      "kind": "input"
+    },
+    {
+      "path": "receiver/administration/hidden_tasks.json",
+      "size": 1723,
+      "sha256": "62e3b4d73965dab3bb63e981ec2f6e1e17917402a6888e92288e28d49619be66",
+      "mime": "application/json",
+      "kind": "generated"
+    },
+    {
+      "path": "receiver/administration/prompt_formal_package.txt",
+      "size": 3357,
+      "sha256": "fe2910cec580cea7b6c41f0dc5fe1923b779a9ef634d091f37191a5e4e37d3bd",
+      "mime": "text/plain",
+      "kind": "generated"
+    },
+    {
+      "path": "receiver/administration/prompt_prose_only.txt",
+      "size": 2763,
+      "sha256": "a84b96d439126e8baee41481fce99c2b444a243086fccee455274f0981aa3526",
+      "mime": "text/plain",
+      "kind": "generated"
+    },
+    {
+      "path": "receiver/administration/receiver_A_instructions.md",
+      "size": 603,
+      "sha256": "9b5f9eb289fba76575279207e874d44bfeee3c90ab9897cb66e06246c94e7008",
+      "mime": "text/markdown",
+      "kind": "generated"
+    },
+    {
+      "path": "receiver/blinded_packets/condition_formal_package.md",
+      "size": 1536,
+      "sha256": "05f3faa4f7aed30a6fd6704f798e670896ffef9515e43eeecf0bbc398513d4eb",
+      "mime": "text/markdown",
+      "kind": "generated"
+    },
+    {
+      "path": "receiver/blinded_packets/condition_prose_only.md",
+      "size": 942,
+      "sha256": "25a1c870d5309c484f74b13c4260a6a1f450bfe480d11111bb0fb8fa80efb974",
+      "mime": "text/markdown",
+      "kind": "generated"
+    },
+    {
+      "path": "receiver/contamination_audit/contamination_audit.md",
+      "size": 1041,
+      "sha256": "5878abfcdba363a0c0c0e2cce767a6bf1c2c838cdc564edb9bc266e7cf1a91c8",
+      "mime": "text/markdown",
+      "kind": "generated"
+    },
+    {
+      "path": "receiver/generation_A/RA_formal_1.json",
+      "size": 267,
+      "sha256": "3fb090899f0e27b5d03c35b4f0429dd97c44e948e41f167b02f5843e4da9907a",
+      "mime": "application/json",
+      "kind": "generated"
+    },
+    {
+      "path": "receiver/generation_A/RA_formal_2.json",
+      "size": 267,
+      "sha256": "f65eb77ecda83c2d39eeca6dd2e66c2fb1dd2cd2aa808bc079afaeaf4e6b859c",
+      "mime": "application/json",
+      "kind": "generated"
+    },
+    {
+      "path": "receiver/generation_A/RA_prose_1.json",
+      "size": 316,
+      "sha256": "847a0a763a09a60edfa661b802c9ad1d64b47ac651c39340bc92ea656e3e0cac",
+      "mime": "application/json",
+      "kind": "generated"
+    },
+    {
+      "path": "receiver/generation_A/RA_prose_2.json",
+      "size": 326,
+      "sha256": "4a802152be7688dbefd9eb65100fe7fcd3d073e705b7782651356ee0079299d3",
+      "mime": "application/json",
+      "kind": "generated"
+    },
+    {
+      "path": "receiver/generation_B/RB_from_formal_1.json",
+      "size": 265,
+      "sha256": "371ed7fa6cc5033f376893952be21a803c056c94b8e46d19b1cc72cb0cc949f1",
+      "mime": "application/json",
+      "kind": "generated"
+    },
+    {
+      "path": "receiver/scoring/receiver_scores.json",
+      "size": 1844,
+      "sha256": "24560e1786c03e24359745b5cf4c6105235a5e9f59e044f052f47b937ee500d4",
+      "mime": "application/json",
+      "kind": "generated"
+    },
+    {
+      "path": "receiver/scoring/score.py",
+      "size": 2442,
+      "sha256": "4992fa188f2b167ad5c253e3d19cbee2b00d075cdac8ecc10a6fb78e4088083d",
+      "mime": "text/x-python",
+      "kind": "generated"
+    },
+    {
+      "path": "receiver/sealed_ground_truth/answer_key.json",
+      "size": 203,
+      "sha256": "4f2db626b3c9e71603fd0d80f9ad1a184e76a06946e562f354c5213d646c4c9b",
+      "mime": "application/json",
+      "kind": "generated"
+    },
+    {
+      "path": "receiver/sealed_ground_truth/answer_key.sha256",
+      "size": 102,
+      "sha256": "25b185bef6d1beb81325d5cf665017849f6644d5ac05474d63048071c234648f",
+      "mime": "application/octet-stream",
+      "kind": "generated"
+    },
+    {
+      "path": "receiver/transmissions/RA_formal_1_transmission.md",
+      "size": 823,
+      "sha256": "7f6d4fa95f3abc6775c483a261513300061e53a15905dcef99b0b044ce14abea",
+      "mime": "text/markdown",
+      "kind": "generated"
+    },
+    {
+      "path": "registry/claim_warrant_ledger_v16.json",
+      "size": 673,
+      "sha256": "7dc4bc5d964c797d4ba8b0e8870e7a5a22452b47dd258f36414593a2a15b2f00",
+      "mime": "application/json",
+      "kind": "generated"
+    },
+    {
+      "path": "registry/cns_bridge_v16.json",
+      "size": 100,
+      "sha256": "2e55db95cd900d31ad71bcc9bbff5b27be60ac1ab61c398ec8d861dfce7c7b7c",
+      "mime": "application/json",
+      "kind": "generated"
+    },
+    {
+      "path": "registry/cognitive_order_v16.json",
+      "size": 100,
+      "sha256": "2e55db95cd900d31ad71bcc9bbff5b27be60ac1ab61c398ec8d861dfce7c7b7c",
+      "mime": "application/json",
+      "kind": "generated"
+    },
+    {
+      "path": "registry/experiment_registry_v16.json",
+      "size": 898,
+      "sha256": "61f523834726e697a21de65cf2a01cae5c67b7ff7122a6e4245418dc2136da93",
+      "mime": "application/json",
+      "kind": "generated"
+    },
+    {
+      "path": "registry/external_premises_v16.json",
+      "size": 1266,
+      "sha256": "fd06b0266bf0eafc7e1844399d90bc7c794762dcac71bcf1922c570712844962",
+      "mime": "application/json",
+      "kind": "generated"
+    },
+    {
+      "path": "registry/fmi_cns_cst_registry_v16.json",
+      "size": 460,
+      "sha256": "2d7118fc95d4a94da3a0f218dec96710cccb2d2e50b1797e7c6baff97a7ec740",
+      "mime": "application/json",
+      "kind": "generated"
+    },
+    {
+      "path": "registry/fragmentation_dynamics_v16.json",
+      "size": 100,
+      "sha256": "2e55db95cd900d31ad71bcc9bbff5b27be60ac1ab61c398ec8d861dfce7c7b7c",
+      "mime": "application/json",
+      "kind": "generated"
+    },
+    {
+      "path": "registry/fss_semantics_v16.json",
+      "size": 100,
+      "sha256": "2e55db95cd900d31ad71bcc9bbff5b27be60ac1ab61c398ec8d861dfce7c7b7c",
+      "mime": "application/json",
+      "kind": "generated"
+    },
+    {
+      "path": "registry/great_filter_claim_ladder_v16.json",
+      "size": 100,
+      "sha256": "2e55db95cd900d31ad71bcc9bbff5b27be60ac1ab61c398ec8d861dfce7c7b7c",
+      "mime": "application/json",
+      "kind": "generated"
+    },
+    {
+      "path": "registry/manuscript_coverage_v16.json",
+      "size": 100,
+      "sha256": "2e55db95cd900d31ad71bcc9bbff5b27be60ac1ab61c398ec8d861dfce7c7b7c",
+      "mime": "application/json",
+      "kind": "generated"
+    },
+    {
+      "path": "registry/operation_topology_v16.json",
+      "size": 100,
+      "sha256": "2e55db95cd900d31ad71bcc9bbff5b27be60ac1ab61c398ec8d861dfce7c7b7c",
+      "mime": "application/json",
+      "kind": "generated"
+    },
+    {
+      "path": "registry/theorem_manifest_v16.json",
+      "size": 4153,
+      "sha256": "c35420d7673870951b5ec07f9630cd09bd44ff32e73d0830e31b30895a58af89",
+      "mime": "application/json",
+      "kind": "generated"
+    },
+    {
+      "path": "registry/version_diff_v15_to_v16.json",
+      "size": 1585,
+      "sha256": "4feda426bd5fb33c1a3450dfa26e77d492486fd04c0431df00966d136204caad",
+      "mime": "application/json",
+      "kind": "generated"
+    },
+    {
+      "path": "release_metadata.json",
+      "size": 536,
+      "sha256": "a273fabc1ea303872cbdff7319a17b82b78c090181afab19890adc046e9e6361",
+      "mime": "application/json",
+      "kind": "generated"
+    },
+    {
+      "path": "reports/capability_matrix.json",
+      "size": 1595,
+      "sha256": "50fd3a7c50348d4a702c94f39270d0eab3e2cd35e9b471f083cac234432e4d2e",
+      "mime": "application/json",
+      "kind": "generated"
+    },
+    {
+      "path": "reports/executive_gate_report.md",
+      "size": 1954,
+      "sha256": "f4982a1af20fb8901cb185d37940803a47e1cf269d2c5e0e283f28b366efef35",
+      "mime": "text/markdown",
+      "kind": "generated"
+    },
+    {
+      "path": "reports/final_status_vector.json",
+      "size": 2311,
+      "sha256": "e360858f4de4df52a38dcdc7ebea0f0a7ca17934e5bb7bd59daf3121f0c73cd3",
+      "mime": "application/json",
+      "kind": "generated"
+    },
+    {
+      "path": "reports/gate_zero_v16.md",
+      "size": 3145,
+      "sha256": "2fb830d1cd59034164f494aabde7eb855de924899c11d1f40235d1c901b3c898",
+      "mime": "text/markdown",
+      "kind": "generated"
+    },
+    {
+      "path": "reports/git_state.json",
+      "size": 382,
+      "sha256": "58b39a290179751a0e3b938d2389f6dcc1b12119778f3abd7f642ba58f0ceec2",
+      "mime": "application/json",
+      "kind": "generated"
+    },
+    {
+      "path": "reports/lean_formal_closure.md",
+      "size": 2239,
+      "sha256": "6bcffc6393aff4da6b322bba67b778d6c4e42897df239c2b05fc5baddde16f2e",
+      "mime": "text/markdown",
+      "kind": "generated"
+    },
+    {
+      "path": "reports/receiver_propagation.md",
+      "size": 1561,
+      "sha256": "f6e7eb55d4e1078ba5f8c7a3014eb23d1c0cefb14e657a126dc98fc90de8b4e6",
+      "mime": "text/markdown",
+      "kind": "generated"
+    },
+    {
+      "path": "requirements.in",
+      "size": 128,
+      "sha256": "afc04616e9546809e2b6ac22cde5937f0ffbad84fd80d53ab0c95352bf7c1c86",
+      "mime": "application/octet-stream",
+      "kind": "generated"
+    },
+    {
+      "path": "requirements.lock",
+      "size": 333,
+      "sha256": "a45543f6017ec1b013ebf516869a7e82a91d9872ed1bc90c0f7fdf1e013c2d5a",
+      "mime": "application/octet-stream",
+      "kind": "generated"
+    },
+    {
+      "path": "run_all.sh",
+      "size": 2741,
+      "sha256": "ccf51149adcb224cf6a0ac2ebac802bf559c3bd4e1b4c3ac8fa3029647b0b967",
+      "mime": "text/x-sh",
+      "kind": "generated"
+    },
+    {
+      "path": "tools/mns_to_md.py",
+      "size": 3152,
+      "sha256": "8e700f406a8f0d49820a13e853730daf4a0b91cd18e75ff9c3e1ecab597168a4",
+      "mime": "text/x-python",
+      "kind": "generated"
+    },
+    {
+      "path": "tools/render_manuscript.py",
+      "size": 11794,
+      "sha256": "41e192adcd9b2eaf76cde8fea3ae61c5fb8ebe8a7781e877768c436c590d1698",
+      "mime": "text/x-python",
+      "kind": "generated"
+    },
+    {
+      "path": "verify_package.py",
+      "size": 6640,
+      "sha256": "48a71a6ee3338f8a07b9e3c4ff68c2ac24299f4566dc06a0e1b26f24d7462989",
+      "mime": "text/x-python",
+      "kind": "generated"
+    }
+  ]
+}

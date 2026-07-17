@@ -1,0 +1,41 @@
+{
+  "note": "Every external premise is a theorem parameter, never a global axiom.",
+  "premises": [
+    {
+      "id": "gravity_G",
+      "statement": "gravity corresponds to operation G",
+      "status": "unmeasured external premise",
+      "claim_level": "candidate physical realization"
+    },
+    {
+      "id": "strong_Register",
+      "statement": "strong interaction corresponds to Register",
+      "status": "unmeasured external premise",
+      "claim_level": "candidate physical realization"
+    },
+    {
+      "id": "weak_Recall",
+      "statement": "weak interaction corresponds to Recall",
+      "status": "unmeasured external premise",
+      "claim_level": "candidate physical realization"
+    },
+    {
+      "id": "em_L",
+      "statement": "electromagnetism corresponds to L",
+      "status": "unmeasured external premise",
+      "claim_level": "candidate physical realization"
+    },
+    {
+      "id": "branch_closure",
+      "statement": "real branches share correlated vulnerability",
+      "status": "open",
+      "claim_level": "conditional branch premise"
+    },
+    {
+      "id": "hazard_nonsummable",
+      "statement": "real hazard sequence is non-summable",
+      "status": "open",
+      "claim_level": "conditional hazard premise"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "operations": [
+    "Register",
+    "Express",
+    "Store",
+    "Recall",
+    "L",
+    "G",
+    "CreatePromotion",
+    "Choice",
+    "Certificate",
+    "Governance"
+  ],
+  "operation_types": {
+    "Register": "signal->concept",
+    "Express": "concept->signal",
+    "Recall": "memory->concept",
+    "L": "concept->concept",
+    "G": "concept->concept"
+  },
+  "order_definition": "count of registered, reusable, nonredundant, spanning composition classes"
+}

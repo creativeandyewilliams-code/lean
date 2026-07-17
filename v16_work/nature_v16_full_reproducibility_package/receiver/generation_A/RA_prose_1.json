@@ -1,0 +1,4 @@
+{"receiver":"RA_prose_1","condition":"prose_only","answers":{
+  "T1": {"ans": "no", "theorem": "Registration Collapse / First-Order Indistinguishability Theorem"},
+  "T2": {"ans": "no"},"T3": {"ans": "no"},"T4": {"ans": "proportional_same_order_service"},
+  "T5": {"ans": "GF-3"},"T6": {"ans": "external_premise"}}}

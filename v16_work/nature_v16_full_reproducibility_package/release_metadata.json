@@ -1,0 +1,11 @@
+{
+  "package": "nature_v16_full_reproducibility_package",
+  "version": "16",
+  "released": "2026-07-17",
+  "title_status": "formal mechanism + GF-3 conditional",
+  "build_python": "3.11.15",
+  "build_platform": "Linux-6.18.5-x86_64-with-glibc2.39",
+  "v8_zip_sha256": "f21b7ba677c32140710092405a37de460f81a77fe8f6c459a965266eb8842a72",
+  "generated_utc": "2026-07-17T05:09:13.471178Z",
+  "notes": "Lean kernel build and LaTeX compilation not executed in this environment (egress/toolchain limits); see reports/capability_matrix.json."
+}

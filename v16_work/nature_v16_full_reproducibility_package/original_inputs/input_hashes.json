@@ -1,0 +1,10 @@
+{
+  "nature_v8_full_reproducibility_package.zip": {
+    "sha256": "f21b7ba677c32140710092405a37de460f81a77fe8f6c459a965266eb8842a72",
+    "size": 8806453
+  },
+  "claude_code_nature_v16_full_reproducibility_instructions.md": {
+    "sha256": "15f8c43125140ab32d2d016f6d2cc5e0c637b15c3af4edfea93551f768cb812b",
+    "size": 50219
+  }
+}

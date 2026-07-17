@@ -1,0 +1,10 @@
+lake_build_exit=1
+
+--- build environment note ---
+lake/lean not on PATH. Lean toolchain install via elan failed: the toolchain
+binary download from github.com/leanprover/elan/releases returned HTTP 403
+(organization egress policy; PyPI is allowlisted but GitHub release binaries are
+not). Per the agent-proxy README, policy denials must not be retried. The Lean
+kernel build is therefore not executable in this environment. Source is
+complete and kernel-ready; run `lake build` where the pinned toolchain is
+installable.

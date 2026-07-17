@@ -1,0 +1,58 @@
+{
+  "protocol": "EXP-RECEIVER-V16-BOUNDED-SAMEMODEL",
+  "claim_level": "regenerative propagation across ISOLATED SAME-MODEL receiver instances under the tested conditions; NOT cross-model or human",
+  "generation_A": [
+    {
+      "receiver": "RA_formal_1",
+      "condition": "formal_package",
+      "verdicts_correct": 6,
+      "verdicts_total": 6,
+      "theorem_identity_correct": true
+    },
+    {
+      "receiver": "RA_formal_2",
+      "condition": "formal_package",
+      "verdicts_correct": 6,
+      "verdicts_total": 6,
+      "theorem_identity_correct": true
+    },
+    {
+      "receiver": "RA_prose_1",
+      "condition": "prose_only",
+      "verdicts_correct": 6,
+      "verdicts_total": 6,
+      "theorem_identity_correct": false
+    },
+    {
+      "receiver": "RA_prose_2",
+      "condition": "prose_only",
+      "verdicts_correct": 6,
+      "verdicts_total": 6,
+      "theorem_identity_correct": false
+    }
+  ],
+  "generation_B": [
+    {
+      "receiver": "RB_from_RA_formal_1",
+      "condition": "RA_formal_1",
+      "verdicts_correct": 6,
+      "verdicts_total": 6,
+      "theorem_identity_correct": true
+    }
+  ],
+  "by_condition": {
+    "formal_package": {
+      "n": 2,
+      "mean_verdict_accuracy": 1.0,
+      "theorem_identity_recovery": 1.0
+    },
+    "prose_only": {
+      "n": 2,
+      "mean_verdict_accuracy": 1.0,
+      "theorem_identity_recovery": 0.0
+    }
+  },
+  "second_generation_success": true,
+  "author_repair_count": 0,
+  "primary_finding": "All conditions transferred the six core verdicts (24/24). The registered theorem identity (T-CONFLATE) was recovered by 2/2 formal-package receivers and 0/2 prose-only receivers. A second-generation receiver (Receiver B), given only a Receiver A transmission and no original source, reproduced all six verdicts and the theorem identity with zero author repair."
+}

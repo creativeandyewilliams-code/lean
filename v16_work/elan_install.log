@@ -1,0 +1,4 @@
+info: downloading installer
+curl: (22) The requested URL returned error: 403
+elan: command failed: curl -sSfL https://github.com/leanprover/elan/releases/latest/download/elan-x86_64-unknown-linux-gnu.tar.gz
+ELAN_INSTALL_EXIT=1

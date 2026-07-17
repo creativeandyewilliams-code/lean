@@ -1,0 +1,8 @@
+{
+  "version": "1.1.0",
+  "packagesDir": ".lake/packages",
+  "packages": [],
+  "name": "FmiCns",
+  "lakeDir": ".lake",
+  "note": "No external dependencies. Pure Lean 4 core (no Mathlib) so the project is self-contained and does not require network fetches beyond the pinned toolchain."
+}

@@ -1,0 +1,26 @@
+{
+  "EXP-GATE-ZERO-V16": {
+    "disposition": "closed-positive",
+    "report": "reports/gate_zero_v16.md"
+  },
+  "EXP-DIRECT-RECURRENCE-V16": {
+    "disposition": "closed",
+    "report": "experiments/direct_recurrence/reports/recurrence_reproduction.md"
+  },
+  "EXP-SEMANTIC-EQUIVALENCE-V16": {
+    "disposition": "closed-bounded",
+    "report": "experiments/semantic_equivalence/reports/semantic_equivalence_results.json"
+  },
+  "EXP-GF-BRANCH-HAZARD-V16": {
+    "disposition": "closed-bounded",
+    "report": "experiments/gf_branch_closure/reports/branch_hazard_results.json"
+  },
+  "EXP-RECEIVER-V16": {
+    "disposition": "closed-bounded (same-model isolated instances)",
+    "report": "reports/receiver_propagation.md"
+  },
+  "EXP-LEAN-KERNEL-V16": {
+    "disposition": "partially closed (source+static audit; kernel build egress-blocked)",
+    "report": "reports/lean_formal_closure.md"
+  }
+}

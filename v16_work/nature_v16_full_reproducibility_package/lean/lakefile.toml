@@ -1,0 +1,5 @@
+name = "FmiCns"
+defaultTargets = ["FmiCns"]
+
+[[lean_lib]]
+name = "FmiCns"

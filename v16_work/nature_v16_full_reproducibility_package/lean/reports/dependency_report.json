@@ -1,0 +1,12 @@
+{
+  "note": "Dependencies are internal to FmiCns (no external libs). Per-theorem axiom reports require a kernel run (blocked).",
+  "modules": [
+    "Core",
+    "Projection",
+    "Operations",
+    "Backlog",
+    "Order",
+    "GreatFilter",
+    "TopLevel"
+  ]
+}

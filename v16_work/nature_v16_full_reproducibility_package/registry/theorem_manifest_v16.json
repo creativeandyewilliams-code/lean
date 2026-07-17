@@ -1,0 +1,149 @@
+{
+  "toolchain": "leanprover/lean4:v4.32.0 (pinned)",
+  "mathlib": "not used (pure core)",
+  "static_audit": {
+    "sorry": 0,
+    "sorryAx": 0,
+    "admit": 0,
+    "axiom_decl": 0,
+    "opaque": 0
+  },
+  "kernel_build": "NOT EXECUTED \u2014 Lean toolchain binary blocked by org egress policy (HTTP 403 on github releases); see lean/reports/toolchain_block_evidence.txt",
+  "theorems": [
+    {
+      "id": "T-CONFLATE",
+      "lean": "FmiCns.firstOrderConflation",
+      "status": "source-realized (kernel-ready)"
+    },
+    {
+      "id": "COR-LOCAL-STABILITY",
+      "lean": "FmiCns.localStability",
+      "status": "source-realized"
+    },
+    {
+      "id": "T-OP-NONREDUCTION",
+      "lean": "FmiCns.register_not_generated / recall_not_generated",
+      "status": "source-realized"
+    },
+    {
+      "id": "L-ORDER-INCREMENT",
+      "lean": "FmiCns.order_increment",
+      "status": "source-realized"
+    },
+    {
+      "id": "T-ORDER-INVARIANCE",
+      "lean": "FmiCns.order_invariance",
+      "status": "source-realized (finite list witness)"
+    },
+    {
+      "id": "T-UFRAG-QUEUE",
+      "lean": "FmiCns.backlog_growth",
+      "status": "source-realized (unit-gap form)"
+    },
+    {
+      "id": "T-REVERSAL",
+      "lean": "FmiCns.backlog_reversal",
+      "status": "source-realized (bounded-residual form)"
+    },
+    {
+      "id": "T-RECURRENCE",
+      "lean": "FmiCns.backlog_recurrence",
+      "status": "source-realized (shifted form)"
+    },
+    {
+      "id": "COR-GF-CNS",
+      "lean": "FmiCns.conditionalGreatFilter",
+      "status": "source-realized (external premises as parameters)"
+    },
+    {
+      "id": "FORMAL-MECHANISM-CHAIN",
+      "lean": "FmiCns.formal_mechanism_chain",
+      "status": "source-realized (bundled top-level)"
+    },
+    {
+      "id": "T-RSUB",
+      "lean": null,
+      "status": "manuscript-level (prose proof; not in bounded Lean core)"
+    },
+    {
+      "id": "T-SEM-EQUIV",
+      "lean": null,
+      "status": "manuscript-level (structural induction on registered language)"
+    },
+    {
+      "id": "T-REFLECTIVE-NECESSITY",
+      "lean": null,
+      "status": "manuscript-level (corollary of T-CONFLATE)"
+    },
+    {
+      "id": "T-SPAN-DECIDABLE-FINITE",
+      "lean": null,
+      "status": "manuscript-level (finite enumeration)"
+    },
+    {
+      "id": "T-REGIONAL-FRAG",
+      "lean": null,
+      "status": "manuscript-level (restricted regional theorem)"
+    },
+    {
+      "id": "T-SEM-FRAG",
+      "lean": null,
+      "status": "manuscript-level"
+    },
+    {
+      "id": "T-CNS-LIFT",
+      "lean": null,
+      "status": "manuscript-level (composed from increment+reversal+nonfactorization)"
+    },
+    {
+      "id": "T-SING-CONTENT",
+      "lean": null,
+      "status": "manuscript-level (comparator/coupling premises explicit)"
+    },
+    {
+      "id": "T-OM",
+      "lean": null,
+      "status": "manuscript-level (option monotonicity)"
+    },
+    {
+      "id": "T-PROJECTION-ADEQUACY",
+      "lean": null,
+      "status": "manuscript-level"
+    },
+    {
+      "id": "T-REGENERATIVE-THRESHOLD",
+      "lean": null,
+      "status": "definition + empirical hypothesis (no nontrivial theorem claimed)"
+    },
+    {
+      "id": "L-GF-UPPER-TAIL..L-GF-OUTCOME",
+      "lean": null,
+      "status": "manuscript-level (decomposed lemma family S13-S19)"
+    },
+    {
+      "id": "T-GF-CONSTRAINT",
+      "lean": null,
+      "status": "manuscript-level (conjunction of lemmas)"
+    },
+    {
+      "id": "T-CNS-ADMISSIBILITY",
+      "lean": null,
+      "status": "manuscript-level (GF-2)"
+    },
+    {
+      "id": "T-BRIDGE-LIFT-TO-DYN / DYN-TO-LIFT",
+      "lean": null,
+      "status": "manuscript-level (conditional bridges)"
+    },
+    {
+      "id": "T-HOL-INVARIANCE / T-HOL-DRIFT",
+      "lean": null,
+      "status": "manuscript-level (discrete transport)"
+    }
+  ],
+  "summary": {
+    "source_realized": 10,
+    "manuscript_level": "remainder",
+    "note": "10 core logical shapes are kernel-ready in pure Lean 4; the remaining retained theorems are carried as manuscript-level proofs/definitions. Full kernel coverage requires the pinned toolchain, which is egress-blocked here."
+  }
+}

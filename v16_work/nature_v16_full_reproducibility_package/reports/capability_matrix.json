@@ -1,0 +1,41 @@
+{
+  "python": {
+    "available": true,
+    "version": "3.11.15"
+  },
+  "pinned_scientific_stack": {
+    "available": true,
+    "note": "numpy2.3.5/pandas2.2.3/scipy1.17.0/networkx3.6.1/matplotlib3.10.8/scikit-learn1.7.2 installed in venv; tabulate added (unpinned optional dep required by report step)"
+  },
+  "lean_lake_elan": {
+    "available": false,
+    "reason": "elan-init fetched, but toolchain binary download from github.com/leanprover/elan/releases returned HTTP 403 (organization egress policy). Per proxy README, policy denials are not retried. Lean kernel build not executable in this environment."
+  },
+  "latex_engine": {
+    "available": false,
+    "reason": "no pdflatex/xelatex/lualatex/tectonic/latexmk; full texlive not installed to conserve environment. PDFs rendered via reportlab; .tex emitted as canonical source; .docx/.md via pandoc."
+  },
+  "pandoc": {
+    "available": true,
+    "version": "3.1.3"
+  },
+  "docker": {
+    "available": false,
+    "reason": "docker binary present but daemon unavailable (docker info failed) in sandbox."
+  },
+  "git": {
+    "available": true
+  },
+  "network": {
+    "available": "proxied",
+    "note": "PyPI allowlisted (pip works); github.com release downloads blocked by egress policy (403)."
+  },
+  "agent_spawning": {
+    "available": true,
+    "note": "Agent tool available for isolated fresh-context subagents (used for receiver study / fidelity audit)."
+  },
+  "web_research": {
+    "available": "limited",
+    "note": "WebSearch/WebFetch subject to same egress policy; primary-source physics retrieval may be constrained."
+  }
+}
