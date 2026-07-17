@@ -1,0 +1,584 @@
+#TITLE Supplementary Information: First-order conflation and recurrent fragmentation generate a cognitive near-singularity
+#AUTHOR Andy E. Williams
+#META Manuscript version 15 | 16 July 2026
+
+#H2 Contents and status
+This Supplement is the standalone formal, computational and status record for Article v15. It restores every load-bearing definition and premise used by the Article, separates semantic registration from proof checking, retains the executed finite realization from the earlier computational package, adds the executed direct recurrence experiment for this version, and records all unexecuted gates explicitly. No unpublished artifact is required to recover the formal content.
+
+#TABLE
+#ROW Package|Content|v15 status
+#ROW A|Core FMI-CNS mathematics|Prose proofs and countermodels supplied; kernel formalization pending
+#ROW B|Endogenous semantic geometry|Definitions and theorem targets supplied; physical mapping remains a hypothesis
+#ROW C|Lean verification artifact|Module and declaration manifest supplied; pinned source package passes a static no-sorry / no-custom-axiom scan; kernel build and axiom report pending
+#ROW D|String-specific extension|Candidate geometric representation; comparative utility experiment pending
+#ROW E|External and propagation evidence|Direct recurrence executed; retained synthetic witness fails a fail-closed Gate Zero audit; receiver, external trace, branch and hazard studies open
+#ENDTABLE
+
+The package status tuple is Status(v15) = (conditionally closed, conditionally closed, open, open, open), where Package C remains open pending a kernel build and Package E remains open pending receiver and external evidence despite the executed recurrence result.
+
+For the five submission gates addressed in the companion open-gate closure record, the gate status tuple is
+
+#EQ Status<sub>gates</sub> = (<i>s</i><sub>Lean</sub>, <i>s</i><sub>G0</sub>, <i>s</i><sub>Rec</sub>, <i>s</i><sub>Recv</sub>, <i>s</i><sub>Ext</sub>) = (partial, closed-negative, closed, partial, partial).
+
+The Lean kernel build is partially closed (source-complete, static-audit clean, no kernel run); the v15 Gate Zero audit is closed-negative (fail-closed, missing executable lineage); the direct recurrence experiment is closed (executed); the independent receiver study is partially closed (protocol and task bank frozen, no independent receivers run); the external mappings are partially closed (registration-closed through a certificate matrix, no instantiation promoted). Formal coherence within stated premises and submission-carrier readiness are separate verdicts. No aggregate label may erase which gate is open.
+
+#H2 Supplementary Note 1. Typed metric functional state spaces and endogenous semantics
+<i>Local map.</i> This Note defines the mathematical object on which every later theorem operates. Its payoff is a representation of semantic identity that is constituted by metric position, typed interactions and admissible relational configuration rather than by a prose label.
+
+#H3 Definition S1: typed metric FSS
+A typed metric functional state space is <i>X</i> = (<i>V</i>, <i>E</i>, τ<sub>V</sub>, τ<sub>E</sub>, <i>g</i>, π, β, <i>A</i>), where <i>V</i> is the set of represented functional states, <i>E</i> the set of typed interaction or transition instances, τ<sub>V</sub> and τ<sub>E</sub> the node and interaction typing maps, <i>g</i> a metric or metric family, π an optional coordinate or embedding representation, β the boundary record and <i>A</i> the family of admissible transformations and trajectories.
+
+A boundary record may contain domain and codomain restrictions, certificates, provenance, residuals, successor obligations, fitness relations, continuation conditions, version identities and target scope. The metric may be primitive, interaction-induced or jointly defined. Every theorem must state which case it uses.
+
+#H3 Definition S2: nodes, processes and functions
+A represented concept or functional state is a node <i>v</i> ∈ <i>V</i>. A reasoning or physical interaction is a typed edge, hyperedge, path or process subgraph. Definitions, claims, functions, proofs, experiments, datasets and manuscript passages are semantic roles borne by nodes and processes rather than additional primitive represented-object kinds.
+
+A represented function has an intensional node carrying identity, domain, codomain and contract, and an extensional family of process instances carrying executions. An <i>instantiates</i> relation connects the contract node to those instances.
+
+#H3 Definition S3: semantic profile and identity
+For <i>v</i> ∈ <i>V</i>, Prof<sub>X</sub>(<i>v</i>) = (<i>X</i>, <i>v</i>) and Sem<sub>X</sub>(<i>v</i>) = [(<i>X</i>, <i>v</i>)]<sub>≅<i>A</i></sub>. An admissible pointed isomorphism <i>F</i> : (<i>X</i>, <i>v</i>) → (<i>Y</i>, <i>w</i>) must satisfy <i>F</i>(<i>v</i>) = <i>w</i>, preserve node and interaction types, incidence, orientation and the declared metric relations, preserve boundary, certificate, warrant and continuation records, and intertwine the relevant transition and participant-fitness relations. Approximate isomorphisms must expose the tolerance and residual rather than silently replacing equality.
+
+#H3 Theorem S1: semantic equivalence
+If <i>F</i> : (<i>X</i>, <i>v</i>) → (<i>Y</i>, <i>w</i>) is an admissible target-preserving pointed isomorphism, then every invariant target proposition expressible in the registered language has the same truth value at <i>v</i> and <i>w</i>.
+
+<i>Proof.</i> Let the registered language be generated from atomic predicates on node type, edge type, metric relation, incidence, boundary, warrant, transition, fitness and continuation structure by Boolean connectives and bounded quantification over the represented FSS. Admissibility preserves every atomic predicate. The result follows by induction on formula construction. For a quantified formula, the bijection induced by <i>F</i> transports witnesses and counterexamples. Therefore truth is invariant. QED.
+
+#H3 Definition S4: finite target-complete semantic kernel
+For target family <i>T</i> and resource budget <i>B</i>, define <i>K<sub>T</sub></i>(<i>v</i>; <i>X</i>, <i>B</i>) = min{<i>K</i> ⊆ <i>X</i> : <i>T</i> is decidable for <i>v</i> from <i>K</i> within <i>B</i>}. If no unique minimum exists, retain the family of minimal kernels. The finite semantic signature is Sem<sub><i>T</i>,<i>B</i></sub>(<i>v</i>) = [<i>K<sub>T</sub></i>(<i>v</i>; <i>X</i>, <i>B</i>), <i>v</i>]<sub>≅<i>T</i>,<i>A</i></sub>. Failure to certify a target-complete finite kernel yields undetermined, not a fabricated complete signature.
+
+#H3 Cross-FSS structural principle
+Conceptual space and physical P-space instantiate the same invariant-level principle: functional identity is constituted by metric position, typed interactions and admissible relational configuration. The operands and substrates remain distinct. This is a structural identity claim, not object identity.
+
+#H3 Interactions induce topology
+For each operation <i>o</i>, define an admissible-transition relation <i>R<sub>o</sub></i> ⊆ <i>V</i> × <i>V</i>. The family {<i>R<sub>o</sub></i>} induces or constrains reachability, connectedness, support overlap, commutation classes, boundary crossings and path-equivalence structure. Interactions therefore generate topological implications; topology is not merely a label applied after the dynamics are fixed.
+
+#H2 Supplementary Note 2. Reflective FMI subspace and signal boundaries
+<i>Local map.</i> This Note identifies the reflective object needed to register the complete argument and separates signal carriers from internal conceptual states. It supplies the transmission residuals used by governance and propagation theorems.
+
+#H3 Theorem S2: reflective-subspace representation
+Let <i>C</i> be a conceptual FSS. The reflective FMI subspace <i>R</i><sub>FMI</sub> ⊆ <i>C</i> contains represented concepts, process identities, function contracts, compositions, targets, proofs, experiments, warrants, governance rules, signal residuals and unresolved external premises.
+
+Every registered object required to state, prove, test, amend or transmit the FMI-CNS-Great Filter relationship can be represented as a concept node, a process edge or subgraph, or both. No additional primitive represented-object class is required.
+
+<i>Proof.</i> Map every noun-like identity or contract to a concept node. Map every transformation, inference, execution, comparison, registration, transmission or amendment to a typed process. Represent multi-input operations as hyperedges or contract-preserving subgraphs. Represent a proof as a premise-to-conclusion subgraph with certificate; represent an experiment as protocol, execution, measurement and interpretation subgraphs. This construction covers every registered role. A counterexample must exhibit an indispensable represented object that cannot be encoded in these forms without changing its contract. QED.
+
+Reflective strata are typing devices. Reifying a process as a concept improves observability but does not increase cognitive order unless it enables another non-equivalent space-spanning composition.
+
+#H3 Signal boundary
+For participant <i>i</i>, Register<sub><i>i</i></sub> : Σ<sub><i>i</i></sub> ⇀ <i>X<sub>i</sub></i> and Express<sub><i>i</i></sub> : <i>X<sub>i</sub></i> ⇀ Σ<sub><i>i</i></sub>. A signal is not an internal concept until it is registered. An internal concept is not externally available until it is expressed.
+
+#H3 Four residuals
+For a composition executed by <i>i</i> and reconstructed by <i>j</i>, <i>R</i><sub><i>i</i>→<i>j</i></sub> = <i>R</i><sub>reg,<i>i</i></sub> ⊕ <i>R</i><sub>expr,<i>i</i></sub> ⊕ <i>R</i><sub>recv,<i>j</i></sub> ⊕ <i>R</i><sub>recon,<i>j</i></sub>. The direct sum preserves failure source and type. <i>R</i><sub>reg,<i>i</i></sub> is source structure unavailable after initial registration; <i>R</i><sub>expr,<i>i</i></sub> is structure omitted or altered by expression; <i>R</i><sub>recv,<i>j</i></sub> is expressed structure not registered by the receiver; and <i>R</i><sub>recon,<i>j</i></sub> is registered structure not reconstructed into an executable contract.
+
+#H3 Registration closure
+A formalization is registration-closed for target family <i>T</i> when every target-relevant semantic invariant in the manuscript has a canonical mathematical representation and every manuscript use maps to that representation without unresolved ambiguity. Registration closure is distinct from proof closure: a proof assistant can validate a proof about the wrong registered object.
+
+#H2 Supplementary Note 3. FMI function contracts and four-operation topology
+<i>Local map.</i> This Note states the canonical FMI function registry and replaces the undefined local/global terminology of v14 with target-relevant factorization definitions. It also supplies the type obstruction needed for Register/Recall nonreduction.
+
+#H3 FMI registry
+#TABLE
+#ROW ID|Function|Layer|Contract
+#ROW B01|Register|boundary|Admit typed external signal structure without minting unavailable distinctions
+#ROW B02|Express|boundary|Encode selected FSS structure onto a carrier while recording loss
+#ROW C01|Store|conceptual|Preserve recoverable identity, relation, verdict, obligations and provenance
+#ROW C02|Recall|conceptual|Reactivate or reconstruct stored structure under target and budget
+#ROW C03|L|conceptual|Evaluate or transform within active local support
+#ROW C04|G|conceptual|Evaluate or transform across globally relevant support while preserving obligations
+#ROW C05|Promotion/Create|conceptual|Preserve an admissible composite as a reusable higher-order operand
+#ROW E01|Choice|external control|Select the next external-function invocation through the fitness-control basis
+#ROW F01-F06|Model, Evaluate, Stability, Adaptation, Decomposition, Bridging|fitness|Represent, compare, preserve, correct, factor and bridge participant consequences
+#ROW X01|Certificate|coupling|Validate target-relevant paths and boundaries
+#ROW X02|Governance|coupling|Authorize participant-complete selection and target revision
+#ENDTABLE
+
+For current, target and projected fitness, χ(<i>a</i>) = (<i>f</i><sub>tar</sub> − <i>f</i><sub>cur</sub>, <i>f</i><sub>proj</sub>(<i>a</i>) − <i>f</i><sub>cur</sub>, <i>f</i><sub>tar</sub> − <i>f</i><sub>proj</sub>(<i>a</i>)). The current-projected relation grounds Model/Evaluate, current-target grounds Stability/Adaptation, and target-projected grounds Decomposition/Bridging. A non-embeddable partial order remains partial and yields undetermined.
+
+#H3 Support definition
+For operation instance <i>o</i> and target Φ, Supp<sub>Φ</sub>(<i>o</i>) = ⋂{<i>S</i> ⊆ <i>V</i> : the output and retained invariants of <i>o</i> are determined from <i>S</i>}. When the intersection is not unique, retain the family of minimal supports. An operation has local support when every minimal target support lies within one declared interaction neighbourhood and factorizes over target-independent remote contexts. It has global support when some target-relevant output or invariant depends nonfactorizably on extended support spanning multiple neighbourhoods or components. Global does not mean acausal or spatially infinite; local does not mean short-range. The distinction is target-relevant factorization.
+
+#H3 Schedule definition
+For admissible local realizations <i>r</i><sub>1</sub>, <i>r</i><sub>2</sub>, the schedule is parallel when <i>r</i><sub>1</sub> ∘ <i>r</i><sub>2</sub> ≃<sub><i>T</i></sub> <i>r</i><sub>2</sub> ∘ <i>r</i><sub>1</sub>, and sequential when a typed precedence relation is load-bearing and reversal changes the target-relevant result or makes execution inadmissible. Parallel means observational commutation, not simultaneous wall-clock execution.
+
+#H3 Candidate four-operation inventory
+#TABLE
+#ROW Operation|Support|Schedule|Cognitive role|Candidate physical realization
+#ROW Register|local|parallel|constrained placement or binding|strong interaction
+#ROW Recall|global|sequential|globally constrained typed reconfiguration|weak interaction
+#ROW L|local|sequential|ordered local propagation or calibration|electromagnetic interaction
+#ROW G|global|parallel|extended-support geometry-sensitive coherence|gravity
+#ENDTABLE
+
+The operation classes are defined before the physical assignments. Each physical assignment remains a separately testable mapping hypothesis.
+
+#H3 Theorem S3: Register/Recall nonreduction
+Let ⟨<i>L</i>, <i>G</i>⟩ be the typed algebra generated by compositions of <i>L</i> and <i>G</i> acting as endomorphisms on active conceptual state <i>X</i>. Register has type Σ ⇀ <i>X</i> and Recall has type <i>M</i> × <i>T</i> × <i>B</i> ⇀ <i>X</i>.
+
+No well-typed term generated solely by <i>L</i> and <i>G</i> has the boundary type of Register or the memory-access type of Recall. A reduction requires an additional bridge implementing the missing boundary or memory contract and therefore does not establish generation by <i>L</i> and <i>G</i> alone.
+
+<i>Proof.</i> Every generator has domain and codomain <i>X</i> under the base architecture; composition preserves this endomorphism type. Register requires a source in Σ, while Recall requires access to <i>M</i> × <i>T</i> × <i>B</i>. Neither source is constructible by endomorphism composition without a typed bridge. Adding such a bridge supplies the missing primitive contract. QED.
+
+#H2 Supplementary Note 4. Projection, conflation and reflective necessity
+<i>Local map.</i> This Note proves the information-theoretic obstruction that begins the formal chain and records countermodels that delimit it.
+
+Let <i>q</i><sub>FO</sub> = <i>h</i> ∘ <i>q</i><sub>R</sub>. Every target factoring through <i>q</i><sub>FO</sub> also factors through <i>q</i><sub>R</sub>. Some targets factor through <i>q</i><sub>R</sub> but not <i>q</i><sub>FO</sub> when <i>h</i> removes target-relevant distinctions.
+
+#H3 Theorem S4: first-order conflation
+If <i>q</i><sub>FO</sub>(<i>x</i>) = <i>q</i><sub>FO</sub>(<i>y</i>) but Φ(<i>x</i>) ≠ Φ(<i>y</i>), no evaluator restricted to the projected state is correct on both. The proof is the contradiction argument in the Article. For stochastic evaluators with equal registered states and kernels, the output laws coincide.
+
+#H3 Corollary S4.1: local stability
+For deterministic first-order-local <i>L</i> and equal inputs, <i>L<sup>k</sup></i>(<i>q</i><sub>FO</sub>(<i>x</i>)) = <i>L<sup>k</sup></i>(<i>q</i><sub>FO</sub>(<i>y</i>)) for every finite <i>k</i>. Induction on <i>k</i> proves the result.
+
+#H3 Theorem S5: reflective necessity
+When a target depends on function identity, contract, composition, provenance, warrant, participant consequences or successor obligations, a representation containing only domain concepts and conclusions is inadequate whenever it collapses two process structures with different target verdicts. This is T-CONFLATE applied to a target whose separating witness belongs to the reflective subspace.
+
+#H3 Countermodels
+#TABLE
+#ROW Countermodel|Effect
+#ROW Target fully determined by first-order projection|Reflection unnecessary for that target
+#ROW Reflective registry without new composition|Observability improves; order does not increase
+#ROW Equivalent renaming or call expansion|No new composition class
+#ROW Projection retains every target-relevant distinction|First-order assessment can be exact
+#ROW Target-aware abstention|False confidence falls without increasing span
+#ENDTABLE
+
+#H2 Supplementary Note 5. Composition equivalence, span, order and invariance
+<i>Local map.</i> This Note distinguishes intrinsic cognitive order from finite evidence about order. It carries the representation-invariance proof and demotes the cardinality increment to a lemma.
+
+#H3 Definitions
+A registered composition Γ = <i>f<sub>m</sub></i> ∘ ⋯ ∘ <i>f</i><sub>1</sub> has identity, signature, domain, codomain, boundary conditions, execution semantics and preserved invariants. For admissible domain <i>D</i> and target language <i>L</i>, Γ<sub>1</sub> ≃<sub><i>D</i>,<i>L</i></sub> Γ<sub>2</sub> ⇔ ∀ <i>x</i> ∈ <i>D</i>, Obs<sub><i>L</i></sub>(Γ<sub>1</sub><i>x</i>) = Obs<sub><i>L</i></sub>(Γ<sub>2</sub><i>x</i>). A composition spans the declared universal target family <i>T</i>* when it connects every target-required region by certified transformations, preserves semantic identities and obligations, and returns correct or calibrated-undetermined verdicts within the architecture's contract.
+
+<i>S</i>(<i>C</i>) = {[Γ]<sub>≃</sub> : Γ registered, reusable, nonredundant and spanning} and Ord(<i>C</i>) = |<i>S</i>(<i>C</i>)|. A finite certificate is Ord&#770;<sub><i>T</i>,ε,<i>B</i></sub>(<i>C</i>) = |{[Γ]<sub>≃</sub> : SpanCert<sub><i>T</i>,ε,<i>B</i></sub>(Γ, <i>C</i>)}|. It is a lower bound unless target and certificate completeness are proved.
+
+#H3 Theorem S6: representation invariance
+If <i>F</i> : <i>C</i> → <i>C</i>′ is an admissible FSS isomorphism preserving external-function identity, composition, span, reuse and functional equivalence, then Ord(<i>C</i>) = Ord(<i>C</i>′).
+
+<i>Proof.</i> Map each class [Γ] ∈ <i>S</i>(<i>C</i>) to [<i>F</i>Γ<i>F</i><sup>−1</sup>] ∈ <i>S</i>(<i>C</i>′). Preservation assumptions make this map well defined. The inverse is induced by <i>F</i><sup>−1</sup>, so the map is bijective. Cardinalities are equal. QED.
+
+#H3 Lemma S6.1: order increment
+If a new qualifying class [Γ<sub><i>N</i>+1</sub>] is not already in <i>S</i>(<i>C<sub>N</sub></i>), then the union with that singleton increases cardinality by one. This is definitional and does not independently establish reversal or operand expansion.
+
+#H3 Finite decidability target
+For finite FSSs, finite operation libraries, decidable target predicates and bounded resources, span certification and functional equivalence are decidable by exhaustive enumeration. The executable Lean decision theorem remains an implementation target.
+
+#H2 Supplementary Note 6. Arrival-service fragmentation, reversal and recurrence
+<i>Local map.</i> This Note replaces the v14 directional fragmentation tendency with two explicit theorem levels: backlog divergence and regional fragmentation. It then proves reversal and recurrence under stated service conditions.
+
+Let <i>D<sub>N</sub></i>(<i>t</i>) be cumulative target-weighted arrivals, <i>B<sub>N</sub></i>(<i>t</i>) cumulative certified service and <i>U<sub>N</sub></i>(<i>t</i>) = max{0, <i>D<sub>N</sub></i>(<i>t</i>) − <i>B<sub>N</sub></i>(<i>t</i>)}.
+
+#H3 Theorem S7: backlog divergence
+If <i>D<sub>N</sub></i>(<i>t</i>) − <i>B<sub>N</sub></i>(<i>t</i>) is unbounded above, then <i>U<sub>N</sub></i>(<i>t</i>) is unbounded along a subsequence. If the limsup linear drift is positive, the difference is unbounded. The proof follows directly from the maximum definition.
+
+#H3 Theorem S8: regional fragmentation
+Construct an obligation graph <i>H<sub>t</sub></i>. Assume local integration keeps each region below ε<sub>local</sub>, cross-region arrivals exceed certified cross-region service by an unbounded amount, unresolved edges are not replaced by false identity certificates and the target requires at least two regions. Then an unbounded subsequence contains an unresolved target-required cross-region edge while each incident region remains internally certified. QED.
+
+#H3 Theorem S9: reflective-loss burden
+Let <i>C<sub>t</sub></i> be target-different pairs collapsed by the first-order projection and let <i>Q<sub>t</sub></i> = ∑<sub>(<i>x</i>,<i>y</i>)∈<i>C<sub>t</sub></i></sub> <i>w<sub>t</sub></i>(<i>x</i>, <i>y</i>). If <i>Q<sub>t</sub></i> is unbounded and no additional separating distinctions are registered, the minimum first-order decision loss or calibrated-undetermined mass grows according to the declared loss. The exact lower bound depends on the prior and loss function and must be reported with them.
+
+#H3 Theorem S10: reversal
+If an added composition changes service so that <i>D<sub>N</sub></i>(<i>t</i>) − <i>B</i><sub><i>N</i>+1</sub>(<i>t</i>) ≤ ε over a declared interval, then <i>U</i><sub><i>N</i>+1</sub>(<i>t</i>) ≤ max(0, ε) over that interval. The current increasing-backlog regime is reversed to bounded residual.
+
+#H3 Theorem S11: recurrence
+If the lift creates a new arrival process <i>D</i><sub><i>N</i>+1</sub> and <i>D</i><sub><i>N</i>+1</sub>(<i>t</i>) − <i>B</i><sub><i>N</i>+1</sub>(<i>t</i>) becomes unbounded above without another spanning composition or scaling change, then <i>U</i><sub><i>N</i>+1</sub>(<i>t</i>) is unbounded along a subsequence by Theorem S7.
+
+#H3 Required countermodels
+Bounded domains, matching same-order service, target families ignoring the residual, distributed service that grows faster than arrivals, temporary backlog decreases, reflection-only improvements and false nominal bridges are all retained as explicit theorem boundaries.
+
+#H3 Executed direct recurrence experiment
+For this version the recurrence prediction was preregistered in executable form and run, closing the v15 statement that a direct recurrence run was absent. The stochastic model uses the backlog recursion <i>U</i><sub><i>t</i>+1</sub> = max{0, <i>U<sub>t</sub></i> + <i>A<sub>t</sub></i> − <i>S<sub>t</sub></i>}, with arrivals <i>A<sub>t</sub></i> and certified integration service <i>S<sub>t</sub></i>.
+
+<b>Deterministic recurrence criterion (executed-model theorem).</b> Suppose there are times <i>T</i><sub>L</sub> &lt; <i>T</i><sub>R</sub> such that (i) <i>U<sub>t</sub></i> &gt; 0 and <i>S<sub>t</sub></i> − <i>A<sub>t</sub></i> ≥ δ<sub>1</sub> &gt; 0 for <i>T</i><sub>L</sub> ≤ <i>t</i> &lt; <i>T</i><sub>R</sub>, so the current backlog decreases; and (ii) there is <i>T</i>* &gt; <i>T</i><sub>R</sub> and δ<sub>2</sub> &gt; 0 with <i>A<sub>t</sub></i> − <i>S<sub>t</sub></i> ≥ δ<sub>2</sub> for all <i>t</i> ≥ <i>T</i>*. Then the lift reverses the backlog over the first interval, and <i>U<sub>t</sub></i> grows without a uniform bound after <i>T</i>*. <i>Proof.</i> While <i>U<sub>t</sub></i> &gt; 0 in the reversal interval, <i>U</i><sub><i>t</i>+1</sub> ≤ <i>U<sub>t</sub></i> − δ<sub>1</sub>, so <i>U<sub>t</sub></i> decreases until it reaches the reflected boundary or the interval ends. After <i>T</i>*, <i>U</i><sub><i>t</i>+1</sub> ≥ <i>U<sub>t</sub></i> + δ<sub>2</sub>; induction gives <i>U</i><sub><i>T</i>*+<i>n</i></sub> ≥ <i>U</i><sub><i>T</i>*</sub> + <i>n</i>δ<sub>2</sub>, which is unbounded in <i>n</i>. QED.
+
+<i>Frozen protocol.</i> Master seed 20260716; 1,000 replicates per regime; 12 regions; horizon 300; lift time <i>T</i><sub>L</sub> = 80; operand-expansion time <i>T</i><sub>E</sub> = 120; optional second-lift time 215; regional backlog threshold 12; recurrence window 30; persistent slope threshold 1.0; final backlog threshold 150. Before the lift, per-region arrival intensity exceeds service. The lift raises service above arrivals, providing a genuine reversal interval. Continued operand expansion then raises arrival intensity. Five regimes are compared: (1) fixed post-lift service; (2) proportional same-order service tracking each region's arrivals with a positive margin; (3) regenerative distribution through delayed logistic spread of the new composition; (4) a second discrete order lift at time 215; and (5) branch heterogeneity with region-specific arrival multipliers under fixed post-lift service. Regional fragmentation is the number of regions with backlog at least 12. The preregistered persistent-recurrence endpoint requires a post-lift decrease of at least 30% relative to the pre-lift backlog, a late aggregate slope above one backlog unit per time step, a final backlog above 150, and a 30-step window after time 190 satisfying the slope and backlog thresholds.
+
+#H3 Table S-REC | Direct recurrence results across 1,000 replicates per regime
+#TABLE
+#ROW Regime|Rev.|Rec.|Recurrence time|Final backlog|Regions
+#ROW Fixed post-lift|1.000|1.000|221.8 [219, 236]|625.7 [496, 767]|11.84 [11, 12]
+#ROW Proportional service|1.000|0.000|-|39.9 [13, 79]|0.72 [0, 3]
+#ROW Regenerative distribution|1.000|0.000|-|45.2 [17, 82]|0.92 [0, 3]
+#ROW Second order lift|1.000|0.000|-|49.4 [20, 86]|1.11 [0, 3]
+#ROW Branch heterogeneity|1.000|0.999|219.3 [219, 225]|918.6 [670, 1200]|9.89 [8, 12]
+#ENDTABLE
+
+Bracketed values are empirical 2.5th and 97.5th percentiles; "Regions" is the final number of regions above the preregistered fragmentation threshold. All five regimes showed the required immediate reversal: mean aggregate slope changed from approximately +6.94 before the lift to between −7.07 and −10.14 during the reversal interval. Recurrence to the preregistered persistent endpoint was effectively certain under fixed post-lift service and under heterogeneous branches, and did not occur under proportional service, regenerative distribution or a second order lift.
+
+#IMG /home/user/lean/manuscript_src/figures/recurrence_backlog.png|Supplementary Figure S-REC1 | Aggregate unresolved backlog across 1,000 replicates per regime. The dashed line marks the order lift, the dotted line operand expansion, and the dash-dot line the optional second lift. Bands are empirical 95% simulation intervals. Fixed post-lift service and heterogeneous branches recur; proportional service, regenerative distribution and a second lift remain bounded.
+
+#IMG /home/user/lean/manuscript_src/figures/recurrence_regions.png|Supplementary Figure S-REC2 | Number of regions above the fragmentation threshold. Fixed post-lift service and heterogeneous branches develop widespread regional fragmentation after operand expansion; scaling and additional lifts keep the median regional count low.
+
+This experiment closes the direct-recurrence gate for the declared synthetic model. It supplies an executed finite witness for the model-relative claim that, after a valid order lift reverses an increasing backlog, continued growth at fixed post-lift service can recreate a positive backlog regime and regional fragmentation, while proportional service scaling, regenerative distribution or another order lift are explicit counter-regimes. It does not show that current AI systems, institutions or civilizations follow these parameter values, and it does not audit or replace the inherited version-8 realization. Its warrant is executed synthetic recurrence experiment.
+
+#H2 Supplementary Note 7. CNS lift, near-singular content and dynamical bridge
+<i>Local map.</i> This Note places the scientific burden beyond the definitional count change. It connects the order-lift transition to operand expansion, reversal and the separately published dynamical CNS.
+
+#H3 Theorem S12: order-lift CNS
+If an order-<i>N</i> architecture gains a registered, reusable and non-equivalent spanning composition, expands the admissible operand domain and closes the current frontier within its residual contract, then order becomes <i>N</i>+1, the operand domain expands, the current backlog is bounded over the declared interval and complete consequences need not factor through the order-<i>N</i> projection.
+
+<i>Proof.</i> Lemma S6.1 gives the order increment. Operand expansion is a premise witnessed by the new admissible substructures. Theorem S10 gives reversal. If complete consequences factored through the old projection, no new target-relevant distinction would be required; a paired target witness supplies the nonfactorization. QED.
+
+#H3 Near-singular content
+Let AdmSub(<i>X<sub>N</sub></i>) be the structures that become admissible operands under the new composition. Define structural displacement <i>S<sub>N</sub></i>(<i>a</i>) = μ(<i>R<sub>N</sub><sup>a</sup></i> \ <i>R<sub>N</sub></i>) and participant-target consequence field Δ<i>F</i>(<i>a</i>). A world comparator <i>B<sub>N</sub></i>(<i>X<sub>N</sub></i>, <i>W</i>) bounds non-lift displacement and a lift lower bound <i>L<sub>N</sub></i>(<i>X<sub>N</sub></i>) satisfies <i>L<sub>N</sub></i> &gt; <i>B<sub>N</sub></i> above the declared threshold. Under admissible-substructure growth, the world comparator, monotone coupling, adoptability and no-order-skipping premises, a minimal lift exceeds every non-lift order-<i>N</i> intervention in magnitude above the threshold, while complete content need not factor through the order-<i>N</i> projection. The result is conditional on the comparator and coupling; no infinite physical quantity is asserted.
+
+#H3 Dynamical CNS bridge
+The published object is (<i>X</i>, <i>d</i>, ⊗, <i>G</i>, <i>N</i>) with a globally contracting, compositionally closed and benign-reparameterization-invariant update operator converging to a unique fixed point or normal form [15]. <b>Bridge A.</b> If the new composition enables such an operator on the expanded domain, the order lift enters the dynamical CNS regime there. <b>Bridge B.</b> If realization of a dynamical CNS operator on a previously untraversable domain requires a non-equivalent spanning composition absent at order <i>N</i>, it witnesses an order lift. Countermodels include a noncontracting order lift, a contracting local operator with no new composition, a bounded-subspace fixed point, multiple compositions converging to one fixed point and a mere call expansion.
+
+#FIG Supplementary Figure 1 | Candidate cognitive worldsheet and semantic transport. A reasoning composition and its revision family embed as a worldsheet whose induced metric is pulled back from the ambient semantic metric; a connection transports identity, contract, warrant and obligations, and closed-loop holonomy certifies semantic drift.
+
+#H2 Supplementary Note 8. Importance, governance and regenerative propagation
+<i>Local map.</i> This Note separates magnitude from valence and defines the propagation criterion needed for collective order.
+
+#H3 Participantwise option monotonicity
+Let <i>O<sub>b</sub></i> ⊆ <i>O<sub>a</sub></i>. Suppose represented and realized values differ by at most ε<sub><i>i</i></sub>, selection error is at most δ<sub><i>i</i></sub>, each baseline option remains admissible and governance selects a new option only if its represented lower bound is no worse than the best baseline. Then <i>u<sub>i</sub></i>(<i>a</i>*) ≥ max<sub><i>b</i>∈<i>O<sub>b</sub></i></sub> <i>u<sub>i</sub></i>(<i>b</i>) − (2ε<sub><i>i</i></sub> + δ<sub><i>i</i></sub>). <i>Proof.</i> Selection gives <i>û<sub>i</sub></i>(<i>a</i>*) ≥ max<sub><i>b</i></sub> <i>û<sub>i</sub></i>(<i>b</i>) − δ<sub><i>i</i></sub>. Representation error gives <i>u<sub>i</sub></i>(<i>a</i>*) ≥ <i>û<sub>i</sub></i>(<i>a</i>*) − ε<sub><i>i</i></sub> and <i>û<sub>i</sub></i>(<i>b</i>) ≥ <i>u<sub>i</sub></i>(<i>b</i>) − ε<sub><i>i</i></sub>. Combining proves the bound. QED. If participant completeness, target stability, projection adequacy or realization fails, valence inversion is possible.
+
+#H3 Centralized uncheckability
+A projection <i>q</i> : <i>X</i> → <i>Z</i> is adequate for target Φ only if <i>q</i>(<i>x</i>) = <i>q</i>(<i>y</i>) implies Φ(<i>x</i>) = Φ(<i>y</i>). A centralized realization is collectively uncheckable whenever the center uses a target-relevant distinction that does not factor through the signal available to participants.
+
+#H3 Regenerative propagation
+Regenerate(<i>i</i>, <i>j</i>; Γ, <i>T</i>) = 1 only when receiver <i>j</i> reconstructs a contract-preserving realization, executes it on hidden targets and can retransmit it under the same criterion. <i>R</i><sub>Γ</sub>(<i>t</i>) is the expected number of new regenerative executors per executor. Exposure and agreement are necessary at most; they are not regeneration.
+
+#H2 Supplementary Note 9. Great Filter lemma family and conditional corollary
+<i>Local map.</i> This Note derives each necessary property separately before applying the constraint set to the recurrent FMI-CNS mechanism. It prevents a list of intuitions from being presented as one theorem.
+
+#H3 Target classes and assumptions
+A terminal filter suppresses persistence of almost all technologically consequential lineages after consequential environmental transformation becomes possible. An observability filter suppresses persistent astronomically detectable manifestations. The assumptions are a many-opportunity regime, ordinary causal locality, potential branching, diverse realization and a declared residue expectation.
+
+#H3 Lemma S13: upper-tail suppression
+For independent opportunities with <i>p<sub>i</sub></i> ≥ <i>p</i> &gt; 0, <i>P</i>(no escape among <i>M</i>) = ∏<sub><i>i</i></sub> (1 − <i>p<sub>i</sub></i>) ≤ (1 − <i>p</i>)<sup><i>M</i></sup> → 0. A sufficient many-opportunity filter must suppress exceptional branches, correlate outcomes, reduce effective opportunities or suppress observables after escape.
+
+#H3 Lemma S14: branch closure
+For independent branches with survival probabilities <i>s<sub>j</sub></i> &gt; 0, <i>P</i>(at least one survives) = 1 − ∏<sub><i>j</i></sub> (1 − <i>s<sub>j</sub></i>). A sufficient filter acts before branching, recurs in branches, preserves a shared vulnerability, correlates outcomes or remains effective after dispersal.
+
+#H3 Lemmas S15-S19
+<b>Causal self-instantiation:</b> a nondistributed filter must be generated or propagated to each causally separated site before escape. <b>First-mover consistency:</b> the earliest consequential lineage must be affected under the same law or a regress-closed prior condition. <b>Functional substrate invariance:</b> the defining vulnerability must extend across the declared realization class rather than one contingent biology. <b>Adaptive non-escapability:</b> a stable positive adaptive escape probability defeats upper-tail suppression unless adaptation is correlated or bounded. <b>Outcome, residue and timescale sufficiency:</b> the target outcome must occur before durable escape or correction, or remain effective afterward; a target-specific sufficient condition can require τ<sub><i>F</i></sub> &lt; min(τ<sub><i>D</i></sub>, τ<sub><i>C</i></sub>).
+
+#H3 Theorem S20: Great Filter constraint
+A sufficient member of the declared filter class must satisfy the conjunction of Lemmas S13-S19.
+
+#H3 Theorem S21: structural admissibility
+Recurrent fixed-order fragmentation and CNS reversal belong to the structurally admissible class when burden is generated locally by growth, relations are functionally substrate-general, lifts reverse current burden but recurrence recreates it, successor branches inherit or recreate the limitation and outcome/timescale premises are supplied separately.
+
+#H3 Corollary S21.1
+Let <i>h<sub>t</sub></i> = <i>H</i>(<i>U<sub>N</sub></i>(<i>t</i>), <i>C</i>(<i>t</i>), <i>R</i>(<i>t</i>), <i>P<sub>N</sub></i>(<i>t</i>), <i>X</i>(<i>t</i>)), 0 ≤ <i>h<sub>t</sub></i> &lt; 1. If ∑<sub><i>t</i></sub> <i>h<sub>t</sub></i> = ∞, then ∏<sub><i>t</i></sub> (1 − <i>h<sub>t</sub></i>) = 0. If the external FSS mapping, recurrent burden, failed lift/propagation, branch correlation, non-summable hazard and target outcome premises hold, recurrent failed CNS realization or propagation is a post-intelligence Great Filter within the model.
+
+#H3 Claim ladder
+#TABLE
+#ROW Level|Permitted statement|Required warrant
+#ROW GF-0|Some mechanisms are physically possible|physical consistency or example
+#ROW GF-1|The declared filter class has the listed necessary properties|Theorem S20
+#ROW GF-2|Recurrent FMI-CNS failure is structurally admissible|Theorem S21
+#ROW GF-3|It would be a filter if mapping and hazard premises hold|Corollary S21.1
+#ROW GF-4|Current systems exhibit measured components|external traces / receiver studies
+#ROW GF-5|Real civilizations instantiate the full mechanism|physical, branch, timescale and hazard evidence
+#ROW GF-6|The mechanism explains the observed Great Filter|comparative inference and observability assumptions
+#ENDTABLE
+
+#H2 Supplementary Note 10. Cognitive string theory as semantic mathematical representation
+<i>Local map.</i> This Note gives CST its narrowed role: it represents the semantic object that Lean can reason about. It separates the constitutive metric and hard admissibility from any optional scalar action.
+
+#H3 Worldsheet object
+Let <i>X</i><sub><i>A</i></sub> : Σ<sub>ws</sub> → <i>C</i> × <i>F</i> embed a reasoning composition and its revision family. Coordinates (σ, τ) index position along the composition and revision, alternative derivation or receiver reconstruction. Each point or cell carries a semantic state, an FMI operation label, interaction type, boundary record and warrant/certificate state.
+
+#H3 Induced metric
+The worldsheet metric is induced from the ambient semantic metric: <i>h<sub>ab</sub></i> = ∂<sub><i>a</i></sub><i>X</i><sup><i>A</i></sup> ∂<sub><i>b</i></sub><i>X</i><sup><i>B</i></sup> <i>g<sub>AB</sub></i>, or by a discrete pullback analogue for graph-based FSSs. The construction must state whether <i>g</i> is primitive, interaction-induced or hybrid and which transformations preserve it.
+
+#H3 Connection and transport
+A connection <i>A</i><sub><i>C</i></sub> transports concept identity, function contract, target, warrant, boundary data, successor obligations and participant roles. For path γ, transport is PT<sub><i>A</i><sub><i>C</i></sub></sub>(γ); for a closed loop ℓ, holonomy is Hol<sub><i>A</i><sub><i>C</i></sub></sub>(ℓ). <b>Holonomy-invariance target.</b> Admissibly homotopic derivations with preserved curvature and boundaries transport equivalent semantic objects. <b>Holonomy-drift target.</b> If a closed derivation loop returns a target-relevant identity, contract or warrant to a non-equivalent object, it certifies semantic drift. The discrete Lean version can use path composition and transport equality without differential geometry.
+
+#H3 Consequence closure and hard admissibility
+Let Ξ be a complete lattice of candidate operand structures and Φ<sub><i>W</i></sub> : Ξ → Ξ a monotone consequence operator adding consequences, boundaries and successor obligations. Define Ξ*<sub><i>W</i></sub> = lfp(Φ<sub><i>W</i></sub>). Existence follows from the fixed-point premise. Hard admissibility is a proposition Adm<sub><i>W</i></sub>(Ξ*<sub><i>W</i></sub>). Missing identity, type, contract, warrant, boundary or continuation obligations are ill typed or unproved; they cannot be compensated by a lower action value.
+
+#H3 Constitutive metric and optional action
+The constitutive metric defines relative position, neighbourhood, admissible isometry, deformation size and any required contraction. An optional action can rank or search admissible worldsheets: <i>S</i><sub>CST</sub> = <i>S</i><sub>step</sub> + <i>S</i><sub>revision</sub> + <i>S</i><sub>holonomy</sub> + <i>S</i><sub>obligation</sub>. It is not a correctness oracle. It is accepted only if invariant under admissible encoding, non-arbitrary relative to the constitutive metric and useful beyond a simpler typed graph representation.
+
+#H2 Supplementary Note 11. Lean-facing module and theorem manifest
+<i>Local map.</i> This Note states exactly what a Lean artifact must contain and where the trust boundary lies. It reports the pinned source package and its static audit for v15 but does not claim a completed kernel build.
+
+Lean is an interactive theorem prover based on dependent type theory with a small kernel that checks proof terms [23,24]. The project should use theorem parameters for external premises and avoid unregistered global axioms. Axiom dependencies must be printed for each top-level theorem; any dependency on sorryAx fails the build gate.
+
+#H3 Pinned source package and module tree
+For this version a pinned Lean source package was constructed. It pins leanprover/lean4:v4.32.0 and separates the formal object into seven modules.
+
+#TABLE
+#ROW Module|Main declarations
+#ROW Basic.lean|typed layers and operations; Register, Express, Store, Recall, L, G; pointed systems and admissible maps
+#ROW Semantics.lean|semantic-equivalence theorem for invariant targets; finite semantic non-equivalence witness
+#ROW Projection.lean|first-order conflation; extensional local-stability iterate
+#ROW Operations.lean|typed L/G word algebra; Register and Recall nonreduction by domain/codomain obstruction
+#ROW Order.lean|finite certified families; order increment; certified-family order invariance
+#ROW Backlog.lean|finite unit-gap backlog growth, reversal, and renewed post-lift growth
+#ROW GreatFilter.lean|a top-level conditional filter theorem exposing every external premise as a parameter
+#ENDTABLE
+
+This is a bounded formal core. It does not contain the complete quotient construction for semantic isomorphism classes, the full target language, the entire regional-fragmentation graph theorem or the published dynamical-CNS bridge. It replaces an empty skeleton with proof-bearing source for the primary logical shapes the manuscript uses. Representative statements realized in the source include the first-order conflation impossibility (if <i>q</i>(<i>x</i>) = <i>q</i>(<i>y</i>) and Φ(<i>x</i>) ≠ Φ(<i>y</i>) then no decoder is correct on both), the typed Register/Recall nonreduction by constructor contradiction, and the finite backlog growth lemma (if <i>U</i>(<i>t</i>+1) ≥ <i>U</i>(<i>t</i>) + 1 for all <i>t</i> then <i>U</i>(<i>n</i>) ≥ <i>U</i>(0) + <i>n</i>) together with its post-lift shifted form.
+
+#H3 Static source audit
+A static audit scanned every .lean file and counted forbidden tokens.
+
+#TABLE
+#ROW Forbidden token|Count
+#ROW sorry|0
+#ROW admit|0
+#ROW axiom|0
+#ROW opaque|0
+#ENDTABLE
+
+This result is useful but is not a kernel result: lexical absence of sorry does not establish that the files elaborate or that the proof terms type-check. A lexical no-sorry / no-custom-axiom scan is not a kernel proof.
+
+#H3 Why the kernel gate is not closed
+No lean or lake executable was available in the execution environment, so the following acceptance criteria remain unexecuted: a clean lake build; kernel acceptance of every theorem body; a #print axioms report for all top-level declarations; a clean-environment independent reproduction; and hash equality between two builds. The disposition is therefore partially closed. The gap is narrowed to a mechanical execution: install the pinned toolchain, run lake build, preserve stdout/stderr and append the axiom report. Any elaboration failure must be repaired in the source and rerun; it may not be converted into documentary proof closure.
+
+#H3 Proposed full project structure
+FmiCns/ FSS/Basic.lean, FSS/Semantics.lean, FMI/Functions.lean, FMI/SignalBoundary.lean, Projection/Conflation.lean, Operations/SupportSchedule.lean, Operations/Nonreduction.lean, Order/Composition.lean, Order/Span.lean, Order/Invariance.lean, Fragmentation/Queue.lean, Fragmentation/Regional.lean, CNS/Lift.lean, CNS/DynamicalBridge.lean, Governance/Options.lean, Propagation/Regeneration.lean, GreatFilter/Constraints.lean, CST/Paths.lean, CST/Transport.lean, CST/Closure.lean, Main.lean.
+
+#H3 Declaration skeletons
+structure FSS where Node : Type; Edge : Type; nodeType : Node -&gt; TypeTag; edgeType : Edge -&gt; EdgeTag; metric : Node -&gt; Node -&gt; Real; incident : Edge -&gt; Node -&gt; Prop; boundary : Node -&gt; BoundaryRecord; admissible : (Node -&gt; Node) -&gt; Prop.
+
+structure Composition (X : FSS) where run : X.Node -&gt; X.Node; registered : Prop; reusable : Prop; spans : Prop. The order is def CognitiveOrder (X : FSS) : Cardinal := Cardinal.mk {c : Composition X // c.registered /\ c.reusable /\ c.spans}. The final implementation should quotient by functional equivalence rather than count raw implementations.
+
+#H3 Top-level theorem signatures
+theorem firstOrderConflation {W O Y : Type} (q : W -&gt; O) (phi : W -&gt; Y) {x y : W} (hq : q x = q y) (hphi : phi x != phi y) : Not (Exists fun decoder : O -&gt; Y =&gt; decoder (q x) = phi x /\ decoder (q y) = phi y).
+
+theorem conditionalGreatFilter (core : CoreCnsPremises M) (physical : PhysicalMapping M) (branch : BranchClosure M) (hazard : NonSummableHazard M) (timescale : FilterTimescale M) (outcome : TargetMatchingOutcome M) : PostIntelligenceFilter M. In the pinned source package these top-level shapes carry proof terms for the bounded core; the wider skeleton retains documentary placeholders that a submission artifact must replace with kernel-checked proof terms and an axiom report showing no sorryAx dependency.
+
+#H3 Three-valued reporting outside the kernel
+Lean proves propositions or fails to construct a proof. Manuscript-level reporting uses proved, disproved and undetermined. Undetermined is assigned by the workflow when neither a proposition nor its negation is certified within the declared formalization and budget; it is not a third truth value inside Lean's logic.
+
+#H2 Supplementary Note 12. Formalization-fidelity, semantic-equivalence and mutation tests
+<i>Local map.</i> This Note specifies the tests required before a Lean proof can be treated as a faithful formalization of the manuscript rather than a proof about a substituted object.
+
+#H3 Formalization-fidelity audit
+Independent registrars receive frozen manuscript passages and construct mappings to canonical declarations. Primary endpoints are exact recovery of semantic identity, theorem dependencies, warrant status and external-premise boundaries. Disagreement is resolved by typed counterexample rather than majority vote.
+
+#H3 Semantic-equivalence tests
+Required transformations include benign node renaming; coordinate reparameterization preserving the metric; metric mutation preserving labels; interaction mutation preserving distances; warrant mutation preserving conclusions; and participant-fitness mutation preserving aggregate mean. Expected verdicts are invariance under the first two and semantic non-equivalence under target-relevant mutations.
+
+#H3 Mutation catalogue
+Replace cognitive order with Choice depth; reduce Register/Recall to <i>G</i>/<i>L</i> without bridge types; swap support/schedule cells; delete a theorem premise; promote a conditional claim to empirical fact; collide aliases; remove a warrant edge; silently close an external premise; remove a successor obligation; use an intervention label as ground truth. Every mutation must either fail type checking, invalidate a proof or produce an explicit undetermined dependency status. Diagnostic tests built from registered invariants are controls; hidden transfer is the primary evidence of propagation.
+
+#H2 Supplementary Note 13. Executed finite computational realization and Gate Zero audit
+<i>Local map.</i> This Note preserves the previously executed finite witness with v15 warrant boundaries and reports the executed fail-closed Gate Zero audit. It supplies constructive and conformance evidence but no external AI or civilizational measurement.
+
+The complete state was event sourced and updated by one transition function. Each trajectory executed Register, Recall/activation, <i>L</i> or <i>G</i> with optional lift/span, certificate validation, participant Model/Evaluate/Decompose/Bridge/Governance, Store and reuse, Express and consequence realization. The reported execution contained 12,800 trajectories and 102,400 events. These are retained as a historical constructive witness from the earlier version-8 execution; they are subject to the fail-closed Gate Zero disposition below.
+
+#H3 Deterministic witnesses
+The complete model was reported to pass 23 target-pair witnesses. Each designated ablation failed or became correctly undetermined.
+
+#TABLE
+#ROW ID|Contract|Target distinction|Ablation result
+#ROW W01|Register|external symbol becomes typed concept|fail
+#ROW W02|Express|stored verdict reconstructed externally|fail
+#ROW W03|Store|identity persists after context eviction|fail
+#ROW W04|Recall|stored bridge reactivates under later target|fail
+#ROW W05|L|local relation classification|fail
+#ROW W06|G|cross-region support preserves obligations|undetermined
+#ROW W07-W09|fitness coordinates|current, target and projected distinctions|fail
+#ROW W10-W15|internal basis|action-conditioned consequence and correction distinctions|fail / undetermined as specified
+#ROW W16|Promotion|promote admissible composite|undetermined
+#ROW W17|operand lift|separate lower-order-identical paired worlds|undetermined
+#ROW W18|certified span|connect lifted operand to remote target|fail
+#ROW W19|Certificate|reject decoy bridge|fail
+#ROW W20|Governance|reject mean-positive participant harm|fail
+#ROW W21|carrier type|reject signal-space regress|fail
+#ROW W22|target revision|separate target movement from progress|fail
+#ROW W23|one generator|detect split transition semantics|fail
+#ENDTABLE
+
+#H3 Higher-order paired worlds
+#TABLE
+#ROW Condition|Target accuracy|Certified reach|Reuse|Containment|Harm
+#ROW local baseline|0.311|0.000|0.000|1.000|0.000
+#ROW matched compute|0.346|0.000|0.000|1.000|0.000
+#ROW matched memory|0.316|0.000|0.000|1.000|0.000
+#ROW matched population|0.333|0.000|0.000|1.000|0.000
+#ROW matched communication|0.400|0.000|0.000|1.000|0.000
+#ROW certification only|0.327|0.003|0.000|1.000|0.000
+#ROW lift only|0.310|0.000|0.000|1.000|0.000
+#ROW span only|0.317|0.000|0.000|1.000|0.000
+#ROW full CNS|0.585|0.435|0.347|0.993|0.007
+#ROW residual-open CNS|0.397|0.160|0.130|0.713|0.156
+#ENDTABLE
+
+#H3 Bounded registration
+#TABLE
+#ROW Relation depth|Pipeline|Exact recovery|Relation retention|False confidence
+#ROW 2|generic summary|0.300|0.561|0.333
+#ROW 2|relation extraction|0.700|0.822|0.144
+#ROW 2|target-aware monitor|0.867|0.928|0.000
+#ROW 4|target-aware monitor|0.622|0.875|0.000
+#ROW 6|target-aware monitor|0.233|0.750|0.000
+#ROW 8|target-aware monitor|0.067|0.611|0.000
+#ROW 12|target-aware monitor|0.000|0.249|0.000
+#ROW 16|target-aware monitor|0.000|0.113|0.000
+#ENDTABLE
+
+A correlation-aware retention model achieved held-out log loss 0.258 versus 1.024 for homogeneous independence. The canonical codeword reconstruction was identified at 0.940 under 1.5% independent bit flips.
+
+#H3 v15 Gate Zero audit (executed, fail-closed)
+The Gate Zero question is whether the inherited version-8 numerical results can be regenerated from one frozen transition function, source events, registry, configuration and conformance suite while preserving the v15 definitions and warrant boundaries. The audit (identifier EXP-GATE-ZERO-V15-DOCUMENTARY-20260716) searched the available package for the required executable lineage.
+
+#TABLE
+#ROW Required artifact|Available
+#ROW v8 generator source|No
+#ROW v8 event log|No
+#ROW v8 trajectory table|No
+#ROW v8 registry|No
+#ROW v8 frozen configuration|No
+#ROW v8 conformance suite|No
+#ROW v8 environment lock|No
+#ROW v8 source figures / source data|No
+#ROW v8 checksums|No
+#ROW v15 Article source|Yes
+#ROW v15 Supplement source|Yes
+#ROW v15 revision plan|Yes
+#ENDTABLE
+
+The audit disposition is closed-negative, with machine-readable code FAIL_CLOSED_MISSING_EXECUTABLE_LINEAGE. The retained numerical claims that match at printed precision across Article and Supplement include 12,800 trajectories, 102,400 events, 23 target-pair witnesses, full-CNS accuracy 0.585, matched-comparator accuracy 0.400, full-CNS certified reach 0.435, rounded best non-CNS reach 0.003 and reuse 0.347. Four article-level values are not reproduced at exact precision in the compressed text without the source events: the exact 0.0033 comparator reach, containment 0.987, containment 0.717 and master seed 20260715. This closes the audit procedure but blocks positive conformance: the manuscripts may retain the earlier numbers only as historical constructive-witness statements attributed to the earlier execution, must not call them v15-audited, and must not use them to promote any v15 semantic, Lean, recurrence, receiver or external-mapping claim. A positive Gate Zero rerun requires the nine missing v8 artifact classes, regeneration of every table and figure from the raw events, hash comparison, and a per-result conformance disposition under the v15 definitions.
+
+#H2 Supplementary Note 14. Primary experiments and transfer-first propagation
+<i>Local map.</i> This Note states the experiments that must be executed after the formal objects are frozen. Transfer and regenerative reconstruction are primary; conformance to built-in invariants is diagnostic. Dispositions for this version are recorded per experiment.
+
+#H3 EXP-GATE-ZERO-V15 (executed, closed-negative)
+Audit literal and executed definitions, label branches, surrogate metrics, actual states, registry coverage, one-generator correspondence and compatibility with the v15 semantic definitions. Executed for this version with disposition FAIL_CLOSED_MISSING_EXECUTABLE_LINEAGE (Note 13). Failure blocks interpretation of inherited results under v15.
+
+#H3 EXP-LEAN-FORMAL-CLOSURE (partially closed)
+Primary outcomes: clean build, zero sorry, no unregistered axioms, complete theorem-manifest coverage, reproducible dependency report and independent build. For this version a pinned source package exists and passes a static no-sorry / no-custom-axiom scan, but no kernel build was executed (Note 11); the disposition is partially closed.
+
+#H3 EXP-FORMALIZATION-FIDELITY (open)
+Independent registrars map manuscript claims to canonical definitions and theorem parameters. Primary endpoints are identity recovery, dependency recovery, warrant classification and external-premise separation.
+
+#H3 EXP-SEMANTIC-EQUIVALENCE (open)
+Test benign and target-changing transformations from Note 12. Primary endpoints are invariance sensitivity, mutation specificity and shortest semantic witness.
+
+#H3 EXP-LEAN-MUTATION (open)
+Run the mutation catalogue. The primary endpoint is the fraction of target-changing mutations that fail type checking or invalidate the expected top-level theorem while benign transformations preserve it.
+
+#H3 EXP-DIRECT-RECURRENCE (executed, closed)
+Generate a first growth interval, apply a certified order lift, then continue growth under fixed order <i>N</i>+1. The primary endpoint is a preregistered change from increasing backlog to bounded residual followed by renewed positive backlog drift. Executed for this version across five regimes (Note 6, Table S-REC and Figures S-REC1-S-REC2); the endpoint was met under fixed post-lift service and branch heterogeneity and not met under proportional service, regenerative distribution or a second order lift. The result is synthetic and model-relative.
+
+#H3 EXP-LEAN-RECEIVER-PROPAGATION (partially closed)
+Conditions are prose-only, registry-only, direct typed-graph formalization, CST/Lean package and corrupted controls. Receivers must recover the dependency chain, distinguish proofs from external premises, apply the formalization to hidden claim families, locate controlled mutations and produce a package from which a second receiver succeeds without author repair. Receiver and claim family are the units of inference. For this version the protocol is frozen: six experimental conditions, seven primary transfer tasks, eight primary endpoints (including second-receiver regenerative success and author-repair count), 14 hidden claim families instantiated as 28 randomized tasks, a separately stored answer key, a scoring schema with fatal-error categories, and a blinding and no-author-repair rule. The regenerative endpoint is Regenerate(<i>i</i>, <i>j</i>; Γ, <i>T</i>) = 1 only if <i>j</i> recovers a contract-preserving representation of Γ, executes it on a hidden target family and produces a retransmission package from which a second receiver succeeds without author repair; mere agreement with the manuscript conclusion does not satisfy it. No fresh independent receivers were recruited or run, so the gate remains empirically open; scoring the frozen answer key with a checker written from the same specification would measure conformance to the generator and recreate the tuned-checker problem.
+
+#H3 Receiver hidden-family inventory
+#TABLE
+#ROW Family|Target distinction
+#ROW HF-CONFLATE|collapsed registration with target-different latent states
+#ROW HF-REFLECTION|reflective observability versus order lift
+#ROW HF-REGISTER|boundary Register versus conceptual L/G endomorphism
+#ROW HF-RECALL|memory Recall versus conceptual L/G endomorphism
+#ROW HF-ORDER|novelty, span, reuse and non-equivalence
+#ROW HF-RECURRENCE|fixed-service recurrence versus scaled-service countermodel
+#ROW HF-BRIDGE-LIFT-DYN|order lift plus contraction/closure/invariance
+#ROW HF-BRIDGE-DYN-LIFT|new dynamical operator requiring a prior-unavailable composition
+#ROW HF-GOVERNANCE|participant completeness versus aggregate mean
+#ROW HF-GF-TARGET|terminal versus observability target
+#ROW HF-GF-PROMOTION|GF-3 conditional result versus GF-6 explanation
+#ROW HF-SEM-RENAME|benign admissible isomorphism
+#ROW HF-METRIC|label-preserving target-relevant metric mutation
+#ROW HF-EXTERNAL|formal proof versus unmeasured external premise
+#ENDTABLE
+
+#H3 EXP-CST-GEOMETRY-UTILITY (open)
+Compare direct typed graph formalization with the string/worldsheet representation. CST geometry succeeds only if it improves encoding invariance, semantic-drift detection, transfer, compression or receiver reconstruction under matched resources. Failure demotes the string-specific layer without weakening the core FSS/Lean program.
+
+#H2 Supplementary Note 15. Registry, claim ledger and manuscript coverage
+<i>Local map.</i> This Note specifies the source-of-truth records that prevent prose, code and formal declarations from silently diverging.
+
+Required registries are fss_semantics_v15, fmi_functions_v15, operation_topology_v15, cognitive_order_v15, fragmentation_dynamics_v15, cns_bridge_v15, great_filter_constraints_v15, cst_semantic_geometry_v15, lean_theorem_manifest_v15, claim_warrant_ledger_v15, experiment_registry_v15 and version_diff_v14_to_v15. Every theorem record contains premises, conclusion, proof certificate or proof obligation, countermodels, dependencies, warrant, manuscript locations and Lean declaration name. Every external-premise record states its empirical interpretation, measurement protocol, status and the strongest conclusion it can promote.
+
+#H3 Principal status ledger
+#TABLE
+#ROW Claim|Current v15 status|Promotion requirement
+#ROW Endogenous semantic identity|mathematical definition and prose theorem|independent fidelity audit / executable formalization
+#ROW T-CONFLATE|formal proof; source-realized in Lean core, kernel run pending|kernel proof term
+#ROW T-ORDER-INVARIANCE|prose proof under admissible-isomorphism premises|Lean quotient implementation and build
+#ROW Backlog divergence|formal proof|none beyond declared model
+#ROW Regional fragmentation|conditional theorem|explicit obligation-graph formalization
+#ROW Direct recurrence|executed synthetic experiment (closed for the declared model)|external instantiation for civilizational claims
+#ROW T-CNS-LIFT|conditional theorem plus retained historical witness|kernel closure and external recurrence evidence
+#ROW Dynamical bridge|conditional theorem family|formal implementation of published object
+#ROW Option monotonicity|formal proof plus historical synthetic result|measured error bounds
+#ROW Regenerative propagation|definition and frozen protocol; closure undetermined|independent receiver experiment
+#ROW GF necessary properties|decomposed conditional theorem|formal proof terms / assumption challenge
+#ROW FMI-CNS structural admissibility|GF-2 conditional theorem|physical and branch mapping for GF-4/5
+#ROW Great Filter identification|open|hazard, timescale, residue and comparative evidence
+#ROW CST geometric utility|open|matched comparative experiment
+#ROW Gate Zero conformance|executed, closed-negative (fail-closed)|supply and regenerate the v8 executable lineage
+#ROW Lean proof closure|source-complete, static-audit clean; kernel build open|pinned clean build, axiom audit, independent reproduction
+#ENDTABLE
+
+#H2 Supplementary Note 16. External mappings, standalone completeness and completion protocols
+<i>Local map.</i> This Note is the submission gate. It registers the external-mapping certificate matrix, states what is already contained in the package and states what must still be supplied before external claims or Lean verification are promoted.
+
+#H3 External-mapping certificate matrix (registration-closed)
+Each external mapping has a stable identity, formal object, minimum evidence, strongest permitted claim and explicit defeater. Registration closure prevents silent promotion; every mapping below remains open at the instantiation level.
+
+#TABLE
+#ROW Mapping|Minimum evidence|Strongest permitted statement|Status
+#ROW Cross-FSS semantic principle|Target-specific invariant-preserving map|The same structural principle can be instantiated across FSSs|Open
+#ROW Strong interaction ↔ Register|Support factorization and schedule-commutation witnesses|Candidate physical realization|Open
+#ROW Weak interaction ↔ Recall|Support nonfactorization and precedence witnesses|Candidate physical realization|Open
+#ROW Electromagnetism ↔ L|Support factorization and precedence witnesses|Candidate physical realization|Open
+#ROW Gravity ↔ G|Support nonfactorization and commutation witnesses|Candidate physical realization|Open
+#ROW Current AI trace mapping|External version-locked collapsed-pair traces with hidden targets|Testable external mapping|Open
+#ROW Historical order lifts|Preregistered uniform classification and independent evidence|Candidate historical instances|Open
+#ROW Great Filter branch closure|Heterogeneous branch evidence or defensible external model|Conditional branch premise|Open
+#ROW Hazard non-summability|Longitudinal hazard and correction/dispersal evidence|Conditional hazard premise|Open
+#ROW Target residue suppression|Outcome- and timescale-specific residue evidence|Conditional outcome premise|Open
+#ENDTABLE
+
+The physical operation assignments are not standard measurements read from established interaction ranges; their support and schedule definitions are target-relative functional claims requiring explicit factorization, nonfactorization, commutation and precedence certificates. A mapping can now fail at a named certificate without affecting the conceptual theorem package, while a successful certificate promotes only the claim level it supports.
+
+#H3 Standalone-completeness checklist
+#TABLE
+#ROW Requirement|Disposition
+#ROW Typed metric FSS and endogenous semantics|installed
+#ROW Reflective FMI and four signal residuals|installed
+#ROW Canonical support and schedule definitions|installed
+#ROW Register/Recall type nonreduction|prose proof installed
+#ROW Intrinsic order and finite certificates separated|installed
+#ROW Representation invariance|prose proof installed
+#ROW Backlog and regional fragmentation separated|installed
+#ROW CNS count lemma separated from substantive lift theorem|installed
+#ROW Bridge to published dynamical CNS|installed conditionally
+#ROW Great Filter lemmas decomposed|installed
+#ROW CST metric separated from optional action|installed
+#ROW Lean module and theorem manifest|installed; pinned source + static audit installed; kernel build pending
+#ROW v15 Gate Zero|executed; closed-negative (fail-closed)
+#ROW Direct recurrence|executed; closed for the declared synthetic model
+#ROW External-mapping certificate matrix|installed (registration-closed)
+#ROW Independent receiver propagation|protocol and task bank frozen; independent execution pending
+#ROW Repository and reviewer access|pending
+#ENDTABLE
+
+#H3 External completion protocols
+<b>Lean build and independent validation.</b> Pin the toolchain, replace every documentary sorry, print axiom dependencies, reproduce in an independent environment and archive build logs. <b>Formalization-fidelity audit.</b> Freeze the Article, Supplement, registry and declarations; recruit independent registrars; score identity, dependency and warrant recovery. <b>Receiver propagation study.</b> Use fresh human or model receivers, hidden target families and second-receiver retransmission without author repair; analyse receiver and claim family, not individual prompts, as the units of inference. <b>External trace study.</b> Use version-locked systems, matched tasks, genuinely external traces and a target-aware three-valued monitor; synthetic traces are not samples from current systems. <b>Historical classification.</b> Freeze the lift rubric and anti-tuning rules before selecting candidate innovations. <b>Physical operation mapping.</b> Test minimal support, factorization and commutation/precedence witnesses for the four physical assignments; failure narrows the cross-FSS hypothesis without defeating the conceptual theorems. <b>Great Filter branch and hazard studies.</b> Test branch inheritance, regenerative thresholds, hazard non-summability, correction/dispersal timescales and residue suppression. <b>Repository closure.</b> Deposit code, data, registry, Lean files, environment lockfiles, checksums, source figures and manuscript source with reviewer access and a persistent DOI before publication, including regeneration of the absent v8 executable lineage.
+
+The minimum submit-ready projection is the core formal article, a conformant finite witness (either the regenerated v8 lineage or the executed recurrence result standing in its declared model), a clean Lean build or a clearly narrower non-Lean formal positioning, and at least one independent external anchor. The present v15 draft does not invent those missing results.
+
+#H2 References
+#OL 1. Gärdenfors, P. Conceptual Spaces: The Geometry of Thought (MIT Press, 2000).
+#OL 2. Collins, A. M. &amp; Loftus, E. F. A spreading-activation theory of semantic processing. Psychol. Rev. 82, 407-428 (1975).
+#OL 3. Krenn, M. &amp; Zeilinger, A. Predicting research trends with semantic and neural networks with an application in quantum physics. Proc. Natl Acad. Sci. USA 117, 1910-1916 (2020).
+#OL 4. Woolley, A. W., Chabris, C. F., Pentland, A., Hashmi, N. &amp; Malone, T. W. Evidence for a collective intelligence factor in the performance of human groups. Science 330, 686-688 (2010).
+#OL 5. Hong, L. &amp; Page, S. E. Groups of diverse problem solvers can outperform groups of high-ability problem solvers. Proc. Natl Acad. Sci. USA 101, 16385-16389 (2004).
+#OL 6. Lazer, D. &amp; Friedman, A. The network structure of exploration and exploitation. Admin. Sci. Q. 52, 667-694 (2007).
+#OL 7. Lorenz, J., Rauhut, H., Schweitzer, F. &amp; Helbing, D. How social influence can undermine the wisdom of crowd effect. Proc. Natl Acad. Sci. USA 108, 9020-9025 (2011).
+#OL 8. Murdoch, W. J., Singh, C., Kumbier, K., Abbasi-Asl, R. &amp; Yu, B. Definitions, methods, and applications in interpretable machine learning. Proc. Natl Acad. Sci. USA 116, 22071-22080 (2019).
+#OL 9. Rudin, C. Stop explaining black box machine learning models for high stakes decisions and use interpretable models instead. Nat. Mach. Intell. 1, 206-215 (2019).
+#OL 10. Christiano, P., Shlegeris, B. &amp; Amodei, D. Supervising strong learners by amplifying weak experts. Preprint at arXiv:1810.08575 (2018).
+#OL 11. Irving, G., Christiano, P. &amp; Amodei, D. AI safety via debate. Preprint at arXiv:1805.00899 (2018).
+#OL 12. Burns, C. et al. Weak-to-strong generalization: eliciting strong capabilities with weak supervision. Preprint at arXiv:2312.09390 (2023).
+#OL 13. Korbak, T. et al. Chain of thought monitorability: a new and fragile opportunity for AI safety. Preprint at arXiv:2507.11473 (2025).
+#OL 14. Emmons, S. et al. When chain of thought is necessary, language models struggle to evade monitors. Preprint at arXiv:2507.05246 (2025).
+#OL 15. Williams, A. E. Cognitive near-singularity: a possibility theorem and a witness-based protocol with a corpus case study. Front. Artif. Intell. 9, 1746633 (2026).
+#OL 16. Wilson, E. B. Probable inference, the law of succession, and statistical inference. J. Am. Stat. Assoc. 22, 209-212 (1927).
+#OL 17. Sandve, G. K., Nekrutenko, A., Taylor, J. &amp; Hovig, E. Ten simple rules for reproducible computational research. PLoS Comput. Biol. 9, e1003285 (2013).
+#OL 18. Ćirković, M. M. The Great Silence: Science and Philosophy of Fermi's Paradox (Oxford Univ. Press, 2018).
+#OL 19. Frank, A. &amp; Sullivan, W. T. A new empirical constraint on the prevalence of technological species in the universe. Astrobiology 16, 359-362 (2016).
+#OL 20. Wright, J. T. et al. The G infrared search for extraterrestrial civilizations with large energy supplies. I. Background and justification. Astrophys. J. 792, 26 (2014).
+#OL 21. Polyakov, A. M. Quantum geometry of bosonic strings. Phys. Lett. B 103, 207-210 (1981).
+#OL 22. Shannon, C. E. A mathematical theory of communication. Bell Syst. Tech. J. 27, 379-423, 623-656 (1948).
+#OL 23. de Moura, L., Kong, S., Avigad, J., van Doorn, F. &amp; von Raumer, J. The Lean theorem prover (system description). In Automated Deduction - CADE-25, 378-388 (Springer, 2015).
+#OL 24. Lean FRO. The Lean Language Reference, version 4.32.0 (2026).
+#OL 25. Carneiro, M. Lean4Lean: towards a verified typechecker for Lean, in Lean. Preprint at arXiv:2403.14064 (2024).
