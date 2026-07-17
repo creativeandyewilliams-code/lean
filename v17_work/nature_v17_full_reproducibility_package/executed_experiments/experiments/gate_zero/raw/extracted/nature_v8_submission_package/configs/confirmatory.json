@@ -1,0 +1,22 @@
+{
+  "corner_regimes": 32,
+  "freeze_note": "Counts fixed after a runtime-only pilot; no outcome labels were inspected during pilot.",
+  "horizon": 8,
+  "interventions": [
+    "local_baseline",
+    "matched_compute",
+    "matched_memory",
+    "matched_population",
+    "matched_communication",
+    "certification_only",
+    "lift_only",
+    "span_only",
+    "full_cns",
+    "incoherent_cns"
+  ],
+  "master_seed": 20260715,
+  "model_hash": "797b16e309348bbabba0927c4639aae41a7209584d730505e4b451bdaf607bf3",
+  "participants": 16,
+  "replicates": 8,
+  "sobol_regimes": 128
+}

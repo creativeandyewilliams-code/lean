@@ -1,0 +1,16 @@
+{
+  "obligations": [
+    {
+      "closure": "canonical registry and all projections now include Store",
+      "id": "R1",
+      "status": "closed",
+      "text": "Store was omitted from an earlier inventory projection"
+    },
+    {
+      "closure": "excluded from the minimal basis pending a target-pair witness not reproducible by registered composites",
+      "id": "R2",
+      "status": "bounded-open",
+      "text": "Destroy may be primitive, composite, or outside the declared target family"
+    }
+  ]
+}

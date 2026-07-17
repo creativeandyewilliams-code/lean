@@ -1,0 +1,1707 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.82in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}
+\usepackage{booktabs,longtable,array,tabularx,multirow}
+\usepackage{enumitem,microtype,setspace}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\setstretch{1.02}
+\setlist[itemize]{leftmargin=1.55em,itemsep=0.22em,topsep=0.32em}
+\setlist[enumerate]{leftmargin=1.8em,itemsep=0.22em,topsep=0.32em}
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Nature Communications v8 revision plan}
+\rhead{\thepage}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{corollary}{Corollary}
+\newcommand{\C}{\mathcal{C}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\D}{\mathcal{D}}
+\newcommand{\Hh}{\mathcal{H}}
+\newcommand{\Oop}{\mathfrak{O}}
+\newcommand{\Real}{\operatorname{Real}}
+\newcommand{\AdmSub}{\operatorname{AdmSub}}
+\newcommand{\Reach}{\operatorname{Reach}}
+\newcommand{\Cert}{\operatorname{Cert}}
+\newcommand{\Imp}{\operatorname{Imp}}
+\newcommand{\GImp}{\operatorname{GImp}}
+\newcommand{\Contr}{\operatorname{Contr}}
+\newcommand{\Align}{\operatorname{Align}}
+\newcommand{\Ord}{\operatorname{Ord}}
+\newcommand{\Desc}{\operatorname{Desc}}
+\newcommand{\safe}{\textsc{safe}}
+\newcommand{\unsafe}{\textsc{unsafe}}
+\newcommand{\undetermined}{\textsc{undetermined}}
+\newcommand{\CNS}{\mathrm{CNS}}
+\newcommand{\base}{\mathrm{base}}
+\newcommand{\cert}{\mathrm{cert}}
+\newcommand{\hist}{\mathrm{hist}}
+\newcommand{\comp}{\mathrm{comp}}
+\newcommand{\dec}{\mathrm{dec}}
+\newcommand{\innov}{\mathrm{innov}}
+\newcommand{\civ}{\mathrm{civ}}
+\newcommand{\positive}{\textsc{positive}}
+\newcommand{\negative}{\textsc{negative}}
+\newcommand{\zero}{\textsc{zero}}
+\newcommand{\gc}{\mathrm{gc}}
+\newcommand{\gi}{\mathrm{gi}}
+\newcommand{\uu}{\mathrm{u}}
+\newcommand{\valid}{\textsc{valid}}
+\newcommand{\invalid}{\textsc{invalid}}
+\newcommand{\coherent}{\textsc{coherent}}
+\newcommand{\incoherent}{\textsc{incoherent}}
+\newcommand{\Model}{\operatorname{Model}}
+\newcommand{\Eval}{\operatorname{Eval}}
+\newcommand{\Stab}{\operatorname{Stab}}
+\newcommand{\Adapt}{\operatorname{Adapt}}
+\newcommand{\Decomp}{\operatorname{Decomp}}
+\newcommand{\Bridge}{\operatorname{Bridge}}
+\newcommand{\Pp}{\mathcal{P}}
+\newcommand{\Tt}{\mathcal{T}}
+\newcommand{\K}{\mathcal{K}}
+\newcommand{\Sig}{\Sigma}
+\newcommand{\InOp}{\operatorname{In}}
+\newcommand{\OutOp}{\operatorname{Out}}
+\newcommand{\Register}{\operatorname{Register}}
+\newcommand{\Express}{\operatorname{Express}}
+\newcommand{\Boundary}{\partial}
+\newcommand{\InvReg}{\Omega^{\ast}}
+\newcommand{\Mstar}{M^{\ast}}
+\newcommand{\Mhat}{\widehat M}
+\newcommand{\Pkg}{\mathcal A_{\rm pkg}}
+\newcommand{\PropRes}{\rho_{\rm prop}}
+\newcommand{\Pass}{\textsc{pass}}
+\newcommand{\Fail}{\textsc{fail}}
+\newcommand{\Codeword}{\mathbf y}
+
+\title{\textbf{Detailed Plan for Article and Supplement v8}\\
+\large One executable generator, propagation-closed model identification, three-dimensional fitness control,\\
+and a globally coherent cognitive near-singularity}
+\author{Planning document for Andy E. Williams}
+\date{15 July 2026}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+This document replaces the v7 strategy and changes the stopping criterion of the revision program. The plan is not complete merely when its formal surface is internally consistent, when implementation appears more valuable than another revision, or when remaining edits are small. The required terminal property is \emph{propagation closure}: the Article, Supplement, canonical registry, implementation, tests, and experimental result signature must allow independent receivers to reconstruct and extend the same executable model without author repair. Formal closure, execution closure, and propagation closure are treated as distinct theorem and experiment targets.
+
+The scientific object remains one paper and one coupled model. A single event-sourced generator acts on a stratified self-typing conceptual Functional State Space (FSS), participant-indexed three-dimensional fitness FSSs, typed signal carriers, bidirectional input/output transducers, active context, recoverable identities, inter-FSS couplings, certificates, governance rules, and one provenance-preserving residual ledger. Signal spaces are explicitly typed as carriers rather than FSSs, terminating the boundary construction. The conceptual internal basis spans transformations within the node domain maintained by Register and admissible composite promotion; it does not silently mint grounded identities. Create and composite promotion are one cross-linked candidate family until an experiment separates them. The canonical registry begins with the already discovered Store-omission and Destroy-status residuals instead of presenting reconciliation as complete.
+
+The principal v8 addition is an integrated computer experiment designed to serve simultaneously as a scientific test, an implementation-conformance test, and an error-correcting transmission code for the model. Every result is generated by one executable transition engine. Experimental modules are read-only views over a common event log rather than locally reimplemented simulations. A preregistered library of plausible misreconstructions---including missing signal boundaries, collapsed Store/Recall, verdict-only $L/G$, connectivity-only $G$, primitive promotion, two-dimensional fitness, omitted governance, uncertified spanning, recursive signal-carrier regress, and split local generators---is assigned a predicted joint result signature. Test instances are selected to maximize the minimum distance between these signatures. The canonical model is supported only if one generator reproduces the full joint signature and the signature identifies it against both preregistered and held-out adversarial reconstructions.
+
+The confirmatory spine has five linked results. First, boundary and internal function necessity are tested through target-pair nonfactorization witnesses with hidden-resource prohibitions. Second, paired lower-order-indistinguishable worlds test the phase transition produced only by recursive operand lift plus certified spanning and target-adequate Store/Recall. Third, participant-indexed three-dimensional fitness worlds test coherence-conditioned option monotonicity, governance-sensitive displacement containment, and preregistered valence inversion. Fourth, a correlation-aware real-trace experiment measures whether bounded projections preserve target-critical relations and whether the same bounded-registration law applies at trace, oversight, and signal interfaces. Fifth, blinded independent machine receivers reconstruct the model from nested artifact packages and execute held-out tasks. Propagation closure is a vector verdict over function inventory, layer structure, generator, interfaces, predictions, and novel extension, not a summary score that can hide a fatal contract inversion.
+
+The plan specifies repository structure, state and event schemas, canonical function registry, deterministic replay, synthetic world generation, comparator and ablation library, candidate-model codebook, experimental phases, default sample sizes, randomization, primary estimands, statistical models, multiplicity control, robustness regimes, failure branches, historical comparison, Article and Supplement architecture, release gates, and the co-contraction loop between specification and implementation. It preserves the one participant-indexed fitness-displacement object, separates achieved-fitness movement from target revision, gives the path-fitness scalar an explicit defeat condition, retains structural reach separately from occupation, and precommits status-conditioned Article titles so historical uncertainty cannot contradict the title page.
+
+The result sought is stronger than an interesting simulation. It is an exhibited invariant: one self-contained model, one implementation, one joint experimental signature, and a reconstruction package that independent receivers can regenerate, execute, and extend. The specification remains open only to revisions that reduce a demonstrated propagation-critical residual; additional surface that does not constrain operational reconstruction is not itself progress.
+\end{abstract}
+
+\tableofcontents
+\newpage
+\section{Executive recommendation}
+
+\subsection{Scientific center of v8}
+
+The scientific center is the joint claim
+\begin{equation}
+\boxed{\begin{aligned}
+&\text{one coupled functional model}\\
+&\rightarrow\text{one executable generator and canonical registry}\\
+&\rightarrow\text{recursive operand lift, certified spanning, and global coherence}\\
+&\rightarrow\text{participant-indexed importance, valence, survival, and historical rank}\\
+&\rightarrow\text{independent reconstruction and extension of the same model.}
+\end{aligned}}
+\end{equation}
+The computer experiment is part of the transmission object. It must not merely show that the author's implementation can produce favorable outputs; it must make target-different reconstructions empirically distinguishable and allow independent receivers to recover the invariant that generated the results.
+
+\subsection{Success criterion}
+
+The plan distinguishes three closures:
+\begin{enumerate}
+\item \textbf{Formal closure}: all declared spaces, functions, interfaces, theorem relations, residuals, and projections compose without an untyped gap or contradiction.
+\item \textbf{Execution closure}: the canonical implementation produces every primary result through one generator without hidden preprocessing, local substitute simulators, or unregistered state.
+\item \textbf{Propagation closure}: independent competent receivers reconstruct an operationally equivalent model from the transmitted package and use it to predict and implement held-out targets without author repair.
+\end{enumerate}
+The plan may be frozen only when all three receive a coherent verdict within declared budgets. Small remaining ambiguities are not small if they permit a non-isomorphic operational reconstruction.
+
+\subsection{One-paper decision}
+
+The submission remains one Article plus one self-contained Supplement. Mechanism, coherent and incoherent realization, importance, survival, historical comparison, and propagation closure are one theorem and experiment path. The experiment may be staged operationally, but the final scientific argument is not split.
+
+\subsection{Primary experimental claim}
+
+\begin{quote}
+\textbf{Primary experimental claim.} A single canonical generator, operating on the declared signal, conceptual, and three-dimensional fitness architecture, produces a joint result signature that cannot be reproduced by matched capacity, communication, population, certification-only, lower-order, or structurally distorted reconstructions. Recursive operand lift plus certified spanning produces the predicted nonfactorizing transition; global coherence licenses participantwise displacement containment while preregistered residual violations produce valence inversion; bounded projections produce the predicted observability losses; and the complete transmitted package causes independent receivers to reconstruct and extend the canonical model more reliably than text-only or structurally ablated packages.
+\end{quote}
+
+\subsection{Status-conditioned Article titles}
+
+The title is selected from a preregistered ladder after the historical audit, without changing the model, comparison rubric, or experiment:
+\begin{longtable}{p{0.16\textwidth}p{0.72\textwidth}}
+\toprule
+\textbf{Historical status} & \textbf{Precommitted title}\\
+\midrule\endhead
+Status 1: strongest rank supported & \emph{A cognitive near-singularity is predicted to be civilization's highest-importance innovation}\\
+Status 2: maximal-class rank supported & \emph{Recursive operand closure and global coherence define a maximal innovation class}\\
+Status 3: historical rank undetermined & \emph{Recursive operand closure and certified spanning generate a cognitive near-singularity}\\
+\bottomrule
+\end{longtable}
+This removes the contradiction between a frozen unqualified title and a result branch that requires its removal.
+
+\section{Audit of post-v7 suggestions and v8 disposition}
+
+\begin{longtable}{p{0.21\textwidth}p{0.29\textwidth}p{0.39\textwidth}}
+\toprule
+\textbf{Post-v7 issue} & \textbf{v8 verdict} & \textbf{Independent implementation}\\
+\midrule\endhead
+Marginal value used as a stopping rule & Rejected & The stopping rule is propagation closure: reconstruct, execute, and extend without author repair.\\
+Internal basis factorization overclaimed & Repaired & The conceptual internal basis spans transitions within the node domain maintained by Register and promotion; boundary grounding and unitization remain separately typed.\\
+Signal-space regress & Repaired & Signal spaces are typed carriers, not FSSs; they carry no internal basis and no boundary pair of their own.\\
+Create and promotion listed separately & Cross-linked & Endomorphic Create and composite promotion are one candidate family until a matched-budget test separates them; grounded Register remains distinct.\\
+Previously found registry residuals omitted & Repaired & R1 Store omission and R2 Destroy status are the first stored obligations in the canonical registry.\\
+Title contradicted historical failure branch & Repaired & Three status-conditioned titles are preregistered.\\
+Path-fitness scalar lacked a falsifier & Repaired & $u_\tau$ requires an explicit order embedding; non-embeddable target orders defeat scalarization and remain partial orders.\\
+Target shift counted as ordinary displacement & Repaired & Achieved-fitness movement at fixed target is separated from target revision, which requires a governance bridge before it can carry valence.\\
+Positioning infrastructure absent & Repaired & A self-contained graph, transducer, control, type, communication, model-identification, and bounded-observation positioning table is restored.\\
+Experiment modules risked becoming separate models & Repaired & One event-sourced generator produces all transitions; modules are read-only views over a shared log and registry.\\
+Computer experiment supported but did not force model identity & Repaired & Candidate reconstructions receive codewords; discriminating tests maximize minimum signature distance; held-out variants test generalization.\\
+Propagation treated as exposure or comprehension & Strengthened & Propagation closure requires structural reconstruction, executable prediction, and novel extension.\\
+No independent receiver test & Added & A blinded machine-receiver reconstruction study compares nested artifact packages under fixed budgets and no author repair.\\
+Revision and implementation treated as alternatives & Repaired & They co-contract: implementation exposes propagation residuals; only propagation-critical residuals license specification changes.\\
+Overextended primary results & Focused & Five linked confirmatory results form the Article spine; remaining modules are diagnostics, robustness, or theorem witnesses.\\
+One-paper architecture & Retained & The full importance and historical result remain in the same Article.\\
+\bottomrule
+\end{longtable}
+
+\section{Propagation closure and the experiment as a transmission code}
+
+\subsection{Artifact package and reconstruction}
+
+Let the transmitted package be
+\begin{equation}
+\Pkg=(A,S,\InvReg,C,D,T,\Codeword^{\ast}),
+\end{equation}
+where $A$ is the Article, $S$ the Supplement, $\InvReg$ the canonical registry and admissible projection table, $C$ the source code, $D$ data and event logs, $T$ the executable conformance and witness suite, and $\Codeword^{\ast}$ the observed joint result signature. A receiver $r$ under budget $B_r$ produces
+\begin{equation}
+\Mhat_r=\operatorname{Reconstruct}_r(\Pkg;B_r).
+\end{equation}
+The receiver has no author interaction, private chat history, or unstated definitions.
+
+\subsection{Operational equivalence}
+
+A reconstruction is equivalent to the canonical model $\Mstar$ when there exists an admissible renaming or presentation map that preserves: layer types; function contracts; signal/FSS domains and codomains; the coupled generator transition relation; three-dimensional fitness geometry; theorem dependencies; primary predictions; and held-out target behavior. Linguistic similarity is neither necessary nor sufficient.
+
+\subsection{Propagation residual}
+
+Define the typed propagation residual
+\begin{equation}
+\PropRes(r)=\left(\rho_{\Omega},\rho_{X},\rho_f,\rho_{I},\rho_{P},\rho_{E},\rho_{\rm fatal}\right),
+\end{equation}
+where the coordinates measure function-inventory/contract mismatch, space and layer mismatch, generator mismatch, interface mismatch, primary-prediction mismatch, held-out extension mismatch, and fatal contract inversions. A fatal inversion includes, for example, treating a signal carrier as an FSS, reversing Register and Express, collapsing Store into Recall, replacing global coherence with local validation, removing the target coordinate from fitness, or counting target revision as achieved improvement without governance.
+
+The propagation verdict is a conjunction, not an average:
+\begin{equation}
+\operatorname{PropVerdict}(r)=\Pass
+\end{equation}
+only when every mandatory structural coordinate is exact up to admissible projection, $\rho_{\rm fatal}=0$, held-out deterministic prediction accuracy exceeds the preregistered threshold, and the receiver successfully implements the unseen extension target. A high mean score cannot compensate for a fatal type error.
+
+\subsection{Joint experimental signature as an error-correcting code}
+
+Let $\mathfrak M=\{M^{\ast},M_1,\ldots,M_J\}$ be the preregistered candidate reconstruction library. For a test suite $Q=\{q_1,\ldots,q_K\}$, each model predicts a ternary or quantitative codeword
+\begin{equation}
+\Codeword(M_j)=\bigl(q_1(M_j),\ldots,q_K(M_j)\bigr).
+\end{equation}
+The design algorithm selects tests to maximize the minimum pairwise distance
+\begin{equation}
+d_{\min}(Q)=\min_{j\ne k}d\bigl(\Codeword(M_j),\Codeword(M_k)\bigr),
+\end{equation}
+subject to compute and target-coverage budgets. The observed signature is decoded by likelihood under the measured stochastic error model. The experiment functions as a transmission code when the canonical codeword has positive separation from every target-different reconstruction and remains identifiable under the declared noise budget.
+
+This is not evidence by definition. The candidate library is frozen before the confirmatory run; held-out adversarial variants are generated after test selection; the real-trace module supplies an external measured boundary; and a model that only fits the hand-selected candidates but fails held-out variants does not receive propagation closure.
+
+\subsection{Freeze and revision rule}
+
+The specification and implementation co-contract. An implementation failure may reveal a formal gap; a receiver reconstruction may reveal a propagation ambiguity; either can reopen the plan. A change is licensed only when it closes a typed formal, execution, or propagation residual. Additional theorem surface, examples, or modules that do not distinguish operational reconstructions do not count as closure.
+\section{Complete coupled object and self-typing}
+
+\subsection{Coupled generator}
+
+Let $\mathfrak X=\{\C\}\cup\{\F_i:i\in I\}$ be the FSS instances inside the modeled FMI object. Each $X\in\mathfrak X$ has a signal space $\Sig_X$, an input transducer $\InOp_X$, an output transducer $\OutOp_X$, and an internal state. The complete state is
+\begin{equation}
+Z_t=\left(
+\{X_t,\Sig_{X,t},\InOp_{X,t},\OutOp_{X,t}\}_{X\in\mathfrak X},
+\Gamma_t,o_t,M_t,
+\{\mathbf f_{i,t},\widehat{\mathbf f}_{i,t}\}_{i\in I},
+\Lambda_t,e_t
+\right),
+\end{equation}
+where $\Gamma_t$ is active context, $o_t$ the focal operand, $M_t$ the recoverable registry, $\mathbf f_{i,t}$ participant $i$'s realized three-dimensional fitness state, $\widehat{\mathbf f}_{i,t}$ its represented state, $\Lambda_t$ the typed coupling and residual ledger, and $e_t$ admitted environment state. The single generator is
+\begin{equation}
+\boxed{f:Z_t\rightarrow Z_{t+\Delta t}.}
+\end{equation}
+The universal boundary and domain-internal bases classify target-distinguishable contracts instantiated by transitions of this same generator. No external labeler supplies function type: function contracts, types, targets, budgets, and residuals are represented in the self-typing graph and tested by $L/G$.
+
+\subsection{Strict stratified self-typing}
+
+For order $n$ let $X_1=V^{(1)}$ and
+\begin{equation}
+X_{n+1}=\AdmSub_n(X_{\le n}).
+\end{equation}
+Type and boundary maps are strictly level-raising:
+\begin{equation}
+\tau_n:X_n\sqcup E(X_n)\rightarrow X_{n+1},\qquad
+\beta_n:E(X_n)\rightarrow X_{n+1}.
+\end{equation}
+Level-$(n+1)$ objects may reference embedded lower-level objects, but impredicative self-application is inadmissible. The benchmark rejects any construction whose typing requires quantification over a universe containing the type object itself.
+
+\subsection{Default admissibility predicate}
+
+A finite conceptual composition $A$ belongs to $\AdmSub_n$ when: (i) target-relevant endpoints, types, and boundaries are contained or linked through typed interfaces; (ii) internal compositions are well-typed; (iii) $A$ preserves a declared target distinction; (iv) it is Store-feasible within budget with an explicit residual; (v) its local obligations can be submitted to $L$ and global obligations to $G$; and (vi) no stored decisive incoherence witness defeats it. The author may strengthen this predicate, but every replacement must itself be stored and assessed by $L/G$.
+
+\subsection{Budgeted active context}
+
+\begin{equation}
+\Gamma_t=\{(c,a_t(c),r_t(c)):c\in M_t\},\qquad
+\sum_c\kappa_t(c)r_t(c)\le C_t.
+\end{equation}
+Activation, represented resolution, complexity density, and budget are distinct. $C_t$, allocation policy, and compression schedule are typed control conditions unless an explicit submodel derives them. Residence time is derived conditional on these controls rather than assigned by a free decay coefficient.
+
+\section{Universal signal space and bidirectional FSS transduction}
+
+\subsection{Signal space}
+
+For an FSS $X$, its signal space $\Sig_X$ is the typed carrier of functionally distinguishable boundary states and transitions through which $X$ can receive perturbations, observations, requests, or constraints and through which states of $X$ can become available to another FSS or environment. A signal is not an externally interpreted token by definition. Its admissible type, source, target, resolution, provenance, and relation to an FSS state are represented by the receiving or emitting FSS and by the boundary contract.
+
+A signal carrier is structured but is not itself an FSS. It has no independent Store--Recall--$L$--$G$ basis, fitness controller, or signal boundary of its own. Signal-type objects occupy the boundary level immediately above the FSS states they encode. This type discipline terminates the boundary construction and prevents an infinite regress of signal spaces requiring further signal spaces. The carrier may be lossy, many-to-one, delayed, noisy, or budgeted. It is not identified with the target FSS; the relation is supplied only by explicit partial graph transformations.
+
+\subsection{Universal boundary duality}
+
+\begin{definition}[Input and output transduction]
+For every observable interacting FSS $X$, define
+\begin{equation}
+\InOp_X:\D_{X}^{\rm in}\subseteq\Sig_X\rightharpoonup X,
+\qquad
+\OutOp_X:\D_{X}^{\rm out}\subseteq X\rightharpoonup\Sig_X.
+\end{equation}
+$\InOp_X$ accepts an admissible signal object or composition and emits an FSS state, relation, or update. $\OutOp_X$ accepts an admissible FSS state or composition and emits a signal object or composition. Both are typed graph operations generated by $f$.
+\end{definition}
+
+For conceptual space, use the names
+\begin{equation}
+\Register:=\InOp_{\C}:\Sig_{\C}\rightharpoonup\C,
+\qquad
+\Express:=\OutOp_{\C}:\C\rightharpoonup\Sig_{\C}.
+\end{equation}
+Register converts signal structure into concepts, relations, context updates, evidence, or obligations. Express converts concepts, relations, verdicts, plans, or other conceptual compositions into signal structure.
+
+\subsection{Boundary contracts and residuals}
+
+The duality is target-relative, not assumed lossless or exactly invertible. For an internal target $\Phi_X$ and signal target $\Psi_X$, define
+\begin{align}
+r_{\rm in}^{X}(s)&=d_X\!\left(\InOp_X(s),x_{\Phi}(s)\right),\\
+r_{\rm out}^{X}(x)&=d_{\Sig_X}\!\left(\OutOp_X(x),s_{\Psi}(x)\right),\\
+r_{\rm rt,X}(x)&=d_{\Phi_X}\!\left(\InOp_X(\OutOp_X(x)),x\right),\\
+r_{\rm rt,\Sig}(s)&=d_{\Psi_X}\!\left(\OutOp_X(\InOp_X(s)),s\right),
+\end{align}
+where the comparison objects are supplied by a declared witness or decoder. A target-adequate round trip satisfies
+\begin{equation}
+\InOp_X\circ\OutOp_X\sim_{\Phi_X}\operatorname{id}
+\end{equation}
+on the expressible/recoverable class, and analogously in signal space where the signal target requires it. The two round trips need not have the same residual or domain.
+
+\subsection{Necessity for observable interaction}
+
+\begin{theorem}[Bidirectional signal-interface necessity]
+Let $X$ be an FSS whose state can be changed by externally distinguishable conditions and whose state can produce externally distinguishable consequences. If no input transducer exists, there are signal states $s_1,s_2$ requiring distinct internal continuations that cannot be distinguished inside $X$. If no output transducer exists, there are internal states $x_1,x_2$ requiring distinct external consequences that cannot be distinguished in $\Sig_X$. Therefore both $\InOp_X$ and $\OutOp_X$ are necessary for the declared observable interacting target class.
+\end{theorem}
+
+The theorem is defeated by a two-way interaction target that is fully realized by one direction without hidden access to the other. A causally isolated object may omit the pair, but it is outside the declared class of observable interacting FSSs.
+
+\subsection{Boundary and internal functions are distinct}
+
+For every FSS:
+\begin{equation}
+\boxed{\Omega_X^{\partial}=\{\InOp_X,\OutOp_X\}.}
+\end{equation}
+For conceptual space:
+\begin{equation}
+\Omega_{\C}^{\rm int}=\{S,R,L,G\},\qquad
+\Omega_{\C}^{\rm tot}=\Omega_{\C}^{\partial}\cup\Omega_{\C}^{\rm int}.
+\end{equation}
+For each participant fitness space:
+\begin{equation}
+\Omega_{\F_i}^{\rm int}=\{\Model,\Eval,\Stab,\Adapt,\Decomp,\Bridge\},\qquad
+\Omega_{\F_i}^{\rm tot}=\Omega_{\F_i}^{\partial}\cup\Omega_{\F_i}^{\rm int}.
+\end{equation}
+The abstract FMI core therefore contains two universal boundary contracts, four conceptual internal contracts, and six fitness internal contracts. The same boundary types are realized separately at each FSS.
+
+Store/Recall do not reduce the boundary pair. Store preserves an identity already inside $X$; Recall reactivates it. $\InOp_X$ creates or updates an internal state from a signal; $\OutOp_X$ makes an internal state available as a signal. A registered signal may subsequently be Stored, and a Recalled object may subsequently be Expressed, but these are compositions of distinct functions.
+
+\subsection{Refinements and non-load-bearing naming questions}
+
+An implementation may refine $\InOp_X$ into detect--discriminate--decode--register stages and $\OutOp_X$ into select--encode--emit stages. Such refinements become separate functions only if a matched-budget necessity witness shows that they are irreducible at the declared resolution. Create and Destroy are assessed independently: Create may be an internal graph expansion or part of transduction; Destroy may be deletion, contraction, suppression, or channel erasure. Neither is required to prove the bidirectional boundary theorem.
+
+\subsection{Inter-FSS communication}
+
+Communication from FSS $X$ to FSS $Y$ factors as
+\begin{equation}
+X\xrightarrow{\OutOp_X}\Sig_X\xrightarrow{T_{XY}}\Sig_Y\xrightarrow{\InOp_Y}Y,
+\end{equation}
+where $T_{XY}$ is a typed channel transformation carrying delay, corruption, budget, and provenance residuals. Regenerative transmission requires target-adequate output, channel preservation, and target-adequate input reconstruction. Exposure alone establishes none of these three.
+
+\section{Typed functional dualities and conceptual basis}
+
+\begin{definition}[Typed functional duality]
+A typed functional duality for interface $\mathcal I$ is a pair $(u_{\mathcal I},v_{\mathcal I})$ whose domains, targets, budgets, evidence, residuals, and verdicts are internally represented; together the pair closes complementary obligations of the interface; neither can be replaced by the remaining basis under matched budget without merging a target-distinct witness pair; and their composition obeys a recovery, preservation, or correction contract. The pair need not consist of inverses or signed directions.
+\end{definition}
+
+\subsection{Registration--recovery duality}
+
+Store registers an active concept or composition as one internally recoverable graph object:
+\begin{equation}
+S_\Phi:A_t\rightarrow M_{t+\Delta t},\qquad S_\Phi(x)=\widehat x.
+\end{equation}
+The stored object includes constituent relations, level-raised type bindings, boundaries, provenance, verdicts, and unresolved obligations required for valid reuse. Recall returns a stored identity to active contextual or focal status:
+\begin{equation}
+R_\Phi:M_t\rightharpoonup A_{t+\Delta t},\qquad R_\Phi(\widehat x)=x',\quad x'\sim_\Phi x.
+\end{equation}
+The target-relative recovery contract is
+\begin{equation}
+R_\Phi\circ S_\Phi\sim_\Phi\operatorname{id}.
+\end{equation}
+Store and Recall are write--recovery graph operations, not opposite signs on one coordinate.
+
+\subsection{Local--global assessment duality}
+
+For an assessable conceptual object $x$ with target $\Phi$, validation budget $B_L$, and coherence budget $B_G$:
+\begin{equation}
+L(x;\Phi,B_L)\in\{\valid,\invalid,\undetermined_{B_L}\},
+\end{equation}
+\begin{equation}
+G(x;\Phi,B_G)\in\{\coherent,\incoherent,\undetermined_{B_G}\}.
+\end{equation}
+$L$ evaluates finite local proofs, reductions, certificates, and task executions. As a graph transformation it may contract an evidence subgraph to a locally valid object, attach an invalidity witness, or preserve an unresolved obligation. $G$ forms and traverses the target-relevant recursively composed support, restores omitted relations where admissible, preserves inherited obligations, and tests global coherence. As a graph transformation it emits a coherence verdict together with the support, defeating witness, or residual path that produced it. Both return stored verdict vertices linked to evidence, budget, provenance, residuals, and successor obligations; neither is merely an external label.
+
+\subsection{Conceptual basis theorem target}
+
+\begin{theorem}[Conceptual internal-duality basis]
+If the self-typing conceptual object must preserve recoverable identity, reactivate registered identity, issue bounded local-validity verdicts, and issue recursive global-coherence verdicts; if the four necessity witnesses hold under matched budgets; and if all declared \emph{internal} conceptual transitions over the node domain maintained by Register and admissible composite promotion factor into finite compositions over the two dualities, then
+\begin{equation}
+\boxed{\Omega_{\C}=\{S,R,L,G\}}
+\end{equation}
+is the minimal conceptual internal basis within the declared target family and resolution. Together with $\Omega_{\C}^{\partial}=\{\Register,\Express\}$ it yields the total conceptual function family.
+\end{theorem}
+
+The theorem does not claim that the internal basis alone grounds new boundary identities or unitizes arbitrary distributed compositions. Register supplies grounded nodes from signal structure; the promotion construction supplies admitted composite operands; $G$ may form and restore internal support and relations among available objects. Necessity witnesses separate: recoverability without Store; active re-entry without Recall; bounded local validity without $L$; and target relations identical under every local quotient but distinct under recursive composition without $G$.
+
+\subsection{Conditional interface-duality count}
+
+If a functional object commits exactly $m$ target-irreducible binary interfaces, each requires one non-substitutable dual pair, every target-relevant transition factors over those pairs, and no additional interface survives internal completeness assessment, then the minimal basis has $2m$ functions. This conditional theorem replaces the v5 universal axis-count law.
+
+\section{Three-dimensional fitness space and internal basis}
+
+\subsection{Path-relative fitness}
+
+For conceptual state $x$, target $\tau$, and budget $B$, let $\Pp_t(x,\tau)$ be the available reasoning paths. Fitness is the relative ability to traverse these paths and attain the same target. The primary object is the target-relative preorder $\succeq_{\tau,B}$ on path-equivalence classes. A scalar path-fitness coordinate $u_\tau$ is licensed only when an explicit order embedding exists at the declared resolution:
+\begin{equation}
+p_1\succeq_{\tau,B}p_2\Longleftrightarrow u_\tau(p_1)\ge u_\tau(p_2).
+\end{equation}
+The scalarization is defeated by a target family whose admissible path order contains unresolved cycles, incomparable classes that matter to the control verdict, or context dependence that cannot factor through one scalar without losing a target distinction. In that regime the fitness relation remains a partial order and the experiment reports vector or lattice verdicts; it does not force an artificial scalar. Synthetic primary worlds are generated with a known order embedding so the three-dimensional theorem can be tested exactly, while adversarial non-embeddable worlds are retained as a preregistered defeat regime.
+
+\subsection{The fitness carrier}
+
+For participant or fitness-bearing system $i$ and candidate next action $a$:
+\begin{equation}
+\boxed{\mathbf f_{i,t}(a)=\left(f^{\rm cur}_{i,t},f^{\rm tar}_{i,t},f^{\rm proj}_{i,t+\Delta t\mid a}\right)\in\F_i\subseteq\mathbb R^3.}
+\end{equation}
+The coordinates are current path-traversal fitness, target fitness, and projected fitness after action $a$. They use the same target-relative fitness unit; empirical axes are normalized in units of declared distinguishability, preserving a flat Euclidean carrier without free weights.
+
+\subsection{Three-dimensional minimality and sufficiency}
+
+Every two-coordinate projection merges a control-distinct pair. Omitting current fitness merges states requiring preservation versus repair; omitting target fitness merges adequate versus inadequate outcomes; omitting projected fitness merges actions with different next-step consequences. The full point determines
+\begin{align}
+e^{\rm cur}&=f^{\rm tar}-f^{\rm cur},\\
+\Delta\widehat f(a)&=f^{\rm proj}(a)-f^{\rm cur},\\
+e^{\rm proj}(a)&=f^{\rm tar}-f^{\rm proj}(a),
+\end{align}
+which are sufficient for the declared minimal next-action controller subject to viability and coherence constraints. Recursive planning creates trajectories in the same $\mathbb R^3$; candidate actions are multiple points, uncertainty is a distribution over points, and multiple participants form a network of three-dimensional spaces rather than a participant-collapsed opaque carrier.
+
+The planes $f^{\rm cur}=f^{\rm tar}$, $f^{\rm proj}=f^{\rm tar}$, and $f^{\rm proj}=f^{\rm cur}$ partition visually interpretable stability, adaptation, success, insufficiency, improvement, and harm regimes.
+
+\subsection{Internal dualities from the three pairwise relations}
+
+The current--projected relation generates Modeling/Evaluation: Modeling predicts the projected coordinate; Evaluation compares candidate projections with target and realized successor. The current--target relation generates Stability/Adaptation: Stability preserves adequate traversal capacity under perturbation; Adaptation reconfigures when unchanged continuation is inadequate. The projected--target relation generates Decomposition/Bridging: Decomposition factors the projected target gap into typed obligations; Bridging constructs a correction path across those obligations.
+
+\begin{theorem}[Three-dimensional fitness duality basis]
+If the three coordinates are independently necessary and jointly sufficient for the declared minimal controller, the three pairwise relations require the complementary contracts above, the six necessity witnesses hold under matched budget, and every target-relevant internal transition factors over them, then
+\begin{equation}
+\boxed{\Omega_{\F}=\{\Model,\Eval,\Stab,\Adapt,\Decomp,\Bridge\}}
+\end{equation}
+is the minimal internal fitness basis within scope.
+\end{theorem}
+
+A stable fourth coordinate or irreducible function reopens the model rather than being suppressed.
+
+
+\subsection{Constructive necessity proof for the three coordinates}
+
+The minimum-dimension claim is a non-factorization claim. Let the next-action target be the correct control verdict for every admissible tuple $(f^{\rm cur},f^{\rm tar},f^{\rm proj})$. For each coordinate projection, construct two states that agree on the retained coordinates and differ on the omitted coordinate while requiring different verdicts.
+
+\begin{enumerate}
+\item \textbf{Omit current fitness.} Fix $f^{\rm tar}=0.6$ and $f^{\rm proj}=0.6$. Let one state have $f^{\rm cur}=0.7$ and another $f^{\rm cur}=0.2$. The first calls for preservation of an already adequate trajectory; the second calls for repair of a large current deficit. The target verdict does not factor through $(f^{\rm tar},f^{\rm proj})$.
+\item \textbf{Omit target fitness.} Fix $f^{\rm cur}=0.4$ and $f^{\rm proj}=0.6$. Let one target be $0.5$ and another $0.8$. The same action is sufficient in the first state and insufficient in the second. The target verdict does not factor through $(f^{\rm cur},f^{\rm proj})$.
+\item \textbf{Omit projected fitness.} Fix $f^{\rm cur}=0.4$ and $f^{\rm tar}=0.7$. Let two actions project to $0.8$ and $0.3$. One closes the target gap and the other increases it. The action-selection verdict does not factor through $(f^{\rm cur},f^{\rm tar})$.
+\end{enumerate}
+
+These witnesses are schematic values on an order-preserving normalized scale. The benchmark generates continuous and discrete families of the same form and enforces a hidden-access prohibition: a two-coordinate model may not receive the omitted coordinate through labels, indices, target-specific preprocessing, or evaluator metadata.
+
+\subsection{Constructive sufficiency for the minimal next-action controller}
+
+For each candidate action $a$, the three-dimensional point determines the complete one-step control signature
+\begin{equation}
+\chi_t(a)=\left(e_t^{\rm cur},\Delta\widehat f_t(a),e_t^{\rm proj}(a)\right)
+=\left(f^{\rm tar}-f^{\rm cur},f^{\rm proj}(a)-f^{\rm cur},f^{\rm tar}-f^{\rm proj}(a)\right).
+\end{equation}
+Given a stored admissibility rule and tie rule, a minimal controller can (i) determine whether current fitness is adequate; (ii) determine whether the action improves, preserves, or worsens traversal capacity; and (iii) determine whether the projected successor reaches the target. Thus the control verdict factors through the full triple. A fourth coordinate is admitted only when a declared target cannot be recovered from this signature and survives the completeness protocol without hidden duplication of context, uncertainty, participant index, or horizon. Those objects are represented as typed indices, distributions, or separate participant spaces unless a necessity witness shows that they are a new fitness coordinate.
+
+\subsection{Human-inspectable Euclidean geometry}
+
+The three equality planes
+\begin{equation}
+f^{\rm cur}=f^{\rm tar},\qquad
+f^{\rm proj}=f^{\rm tar},\qquad
+f^{\rm proj}=f^{\rm cur}
+\end{equation}
+partition the carrier into control regimes. Current inadequacy is $f^{\rm cur}<f^{\rm tar}$; projected target attainment is $f^{\rm proj}\ge f^{\rm tar}$; projected improvement is $f^{\rm proj}>f^{\rm cur}$; and projected harm is $f^{\rm proj}<f^{\rm cur}$. Recursive planning is a trajectory through this fixed carrier: realized projected fitness becomes the next current coordinate, a new projection is generated, and the target is retained or explicitly revised. Multiple candidate actions are multiple points in the same space. Uncertainty is a distribution over those points. A collective is a typed network of participant-specific three-dimensional spaces.
+
+\subsection{Contracts of the three internal dualities}
+
+The current--projected relation closes when Modeling produces an action-conditioned projection and Evaluation measures both pre-action target adequacy and post-action prediction error:
+\begin{equation}
+\Model:(f^{\rm cur},a,e,\widehat\Gamma)\mapsto f^{\rm proj}(a),\qquad
+r_{CP}=d\left(f^{\rm real}_{t+\Delta t},f^{\rm proj}_{t+\Delta t\mid a}\right).
+\end{equation}
+The current--target relation closes when Stability preserves an adequate trajectory under admitted perturbation and Adaptation reduces a declared current-target residual when preservation is insufficient:
+\begin{equation}
+\Stab:f^{\rm cur}\in A^{\rm tar}\mapsto f'\in A^{\rm tar},\qquad
+\Adapt:r_{CT}>0\mapsto r'_{CT}<r_{CT}
+\end{equation}
+within the declared contraction regime. The projected--target relation closes when Decomposition exposes target-relevant residual obligations and Bridging constructs a typed path whose certified recomposition closes them:
+\begin{equation}
+\Decomp:r_{PT}\mapsto\{\rho_j,J_j\}_{j=1}^{m},\qquad
+\Bridge:\{\rho_j,J_j\}_{j=1}^{m}\mapsto p_{\rm corr},
+\end{equation}
+with $\Bridge\circ\Decomp\sim_\Phi\operatorname{id}$ on the admitted correction class.
+
+\subsection{Internal necessity witness registry}
+
+\begin{longtable}{p{0.17\textwidth}p{0.36\textwidth}p{0.37\textwidth}}
+\toprule
+\textbf{Removed function} & \textbf{Matched-budget witness} & \textbf{Target distinction lost}\\
+\midrule\endhead
+Modeling & The realized action consequence changes while the represented projection remains fixed. & The controller cannot update projected fitness from current state and action.\\
+Evaluation & Candidate projections exist but no internally generated admissibility or prediction-error verdict is available. & Represented possibilities cannot be ranked or checked against realization.\\
+Stability & A fast bounded perturbation must be absorbed without changing target-relative identity. & Adaptation occurs too late or changes an object that should have been preserved.\\
+Adaptation & The target or viable region moves so that the prior trajectory is no longer adequate. & Stability preserves an increasingly unfit trajectory.\\
+Decomposition & A composite projection hides one load-bearing unmet target obligation while aggregate projection appears adequate. & The target residual cannot be localized or certified constituent by constituent.\\
+Bridging & All obligations are exposed but remain disconnected from a correction path or participant fitness consequence. & Analysis cannot reconstruct a target-preserving continuation.\\
+\bottomrule
+\end{longtable}
+Every witness is paired with a full-basis control, matched resources, and a prohibition on a removed function being supplied through preprocessing or evaluator labels.
+
+\section{Function-inventory invariance and projection conformance}
+
+\subsection{Canonical registry}
+
+The plan fixes one canonical versioned registry $\InvReg$. Each entry contains: stable identifier; display name; layer (universal boundary, conceptual internal, fitness internal, macro, interface refinement); domain and codomain; target contract; budget and resolution; necessity witness; admissible compositions and refinements; residuals; verdict status; and provenance. The minimum registry is:
+
+\begin{longtable}{p{0.15\textwidth}p{0.17\textwidth}p{0.22\textwidth}p{0.33\textwidth}}
+\toprule
+\textbf{Layer} & \textbf{Function} & \textbf{Signature} & \textbf{Invariant contract}\\
+\midrule\endhead
+Universal boundary & $\InOp_X$ & $\Sig_X\rightharpoonup X$ & Emit a target-adequate FSS state or update from admissible signal structure.\\
+Universal boundary & $\OutOp_X$ & $X\rightharpoonup\Sig_X$ & Emit target-adequate signal structure from an admissible FSS state.\\
+Conceptual internal & Store & active $\C\rightarrow$ recoverable $\C$ & Preserve internally recoverable target-relative identity.\\
+Conceptual internal & Recall & recoverable $\C\rightharpoonup$ active $\C$ & Reactivate the same target-relative identity.\\
+Conceptual internal & $L$ & object/evidence $\rightarrow$ local verdict graph & Return valid, invalid, or budget-undetermined with witness/provenance.\\
+Conceptual internal & $G$ & recursive support $\rightarrow$ coherence verdict graph & Return coherent, incoherent, or budget-undetermined with support/residuals.\\
+Fitness internal & Modeling & current, action, context $\rightarrow$ projected fitness & Generate action-conditioned projected fitness.\\
+Fitness internal & Evaluation & projected, realized, target fitness $\rightarrow$ verdict & Compare options, targets, and realized prediction error.\\
+Fitness internal & Stability & adequate trajectory/perturbation $\rightarrow$ viable trajectory & Preserve target-relative viable continuation.\\
+Fitness internal & Adaptation & inadequate trajectory/change $\rightarrow$ revised trajectory & Reconfigure to reduce the declared control residual.\\
+Fitness internal & Decomposition & composite residual $\rightarrow$ typed obligations & Factor target-relevant residuals without losing recomposition data.\\
+Fitness internal & Bridging & typed obligations $\rightarrow$ correction coupling/path & Construct a target-adequate connection and preserve participant relations.\\
+\bottomrule
+\end{longtable}
+
+\subsection{Presentation maps}
+
+Every abbreviated inventory in an Article section, figure, table, protocol, code module, or public description is represented as
+\begin{equation}
+\Omega_d=\pi_d(\InvReg).
+\end{equation}
+The admissible map family $\Pi_{\rm adm}$ is fixed before reconciliation.
+
+\textbf{Admissible maps:} stable renaming; declared omission outside a local scope; contract-preserving grouping of a dual pair or macro; contract-preserving refinement into implementation stages; and order or numbering changes.
+
+\textbf{Inadmissible maps:} contract inversion; domain/codomain change; replacing one member by another while claiming identity; hiding an omitted load-bearing function while asserting total completeness; or expanding admissible simplification after observing a conflict.
+
+\subsection{Internal invariance verdict}
+
+A local $L$ assessment checks whether a presentation is a valid projection under one declared map. A global $G$ assessment asks whether there exists an exhibited $\InvReg$ and fixed family $\{\pi_d\}\subseteq\Pi_{\rm adm}$ reconciling all target-relevant presentations while preserving function contracts. Document or section disagreement is therefore a constraint set, not the truth standard.
+
+The verdict is:
+\begin{itemize}
+\item \textbf{coherent} when an explicit registry and admissible projection witness reconcile all load-bearing presentations;
+\item \textbf{incoherent} when at least one pair cannot be reconciled under the preregistered map family and no admissible correction exists;
+\item \textbf{undetermined} when evidence, source text, budget, or a required projection witness is missing.
+\end{itemize}
+The witness, not merely the verdict, is the propagating invariant. The registry and map table are Supplement and repository artifacts. Divergence between prose, theorem statements, diagrams, and implementation is a release blocker unless typed as an explicit local scope projection.
+
+\section{Completeness remains inside conceptual space}
+
+A completeness claim is a self-typed conceptual object
+\begin{equation}
+\kappa=\operatorname{Complete}(O,\Tt,\epsilon,B_L,B_G,\K,\Pi,\nu),
+\end{equation}
+containing the object, target family, resolution, budgets, candidate registry, protocol, provenance, and residual obligations. Expressive, mode, and task completeness are three target scopes of this one object, not three epistemic status systems.
+
+The assessment cycle is
+\begin{equation}
+\kappa_n\xrightarrow{S}\widehat\kappa_n\xrightarrow{R}\kappa_n^{\rm active}
+\xrightarrow{L/G}(\Sigma_n,\rho_n)\xrightarrow{S}\widehat{(\kappa_n,\Sigma_n,\rho_n)}.
+\end{equation}
+The derived verdict is complete within declared scope only when $L=\valid$ and $G=\coherent$; invalid or incoherent yields not complete; every other pair is undetermined.
+
+\subsection{Completeness protocol}
+
+Store the interface inventory, targets, budgets, resolutions, candidate registry, and hidden-resource prohibition. Recall all unresolved candidates. Use $L$ to validate reductions and matched-budget necessity witnesses. Use $G$ to search for omitted interfaces, target drift, recursive nonclosure, and hidden external resources. Store each candidate as reduced, admitted, below resolution, interface-not-function, or undetermined, with its defeat condition and successor obligation.
+
+\subsection{Preliminary candidate audit}
+
+\begin{longtable}{p{0.19\textwidth}p{0.47\textwidth}p{0.21\textwidth}}
+\toprule
+\textbf{Candidate} & \textbf{Current analysis} & \textbf{Status}\\
+\midrule\endhead
+Signal-to-FSS translation & Universal $\InOp_X$ contract; for concepts, Register. & Admitted boundary function\\
+FSS-to-signal translation & Universal $\OutOp_X$ contract; for concepts, Express. & Admitted boundary function\\
+Detector / discriminator & Candidate refinement of $\InOp_X$; separate only with a necessity witness at declared resolution. & Refinement under search\\
+Encoder / emitter & Candidate refinement of $\OutOp_X$; separate only with a necessity witness at declared resolution. & Refinement under search\\
+Create / composite promotion & The endomorphic creation of a concept from an existing admissible composition and $\rho_n^{\rm comp}$ are treated as one candidate family until a matched-budget witness separates them. Candidate reduction: $R\circ S\circ L\circ G$ on an active distributed composition; Register remains the distinct grounded-input route. & Cross-linked; undetermined pending matched-budget test\\
+Destroy & May be contraction, validated deletion, forgetting, or signal erasure; no role in the boundary-pair theorem. Its missing conceptual-side witness is stored as residual R2. & Undetermined candidate\\
+Forgetting & Store failure, budgeted compression, validated deletion, or channel loss; no new function yet shown. & Provisionally reduced\\
+Attention reallocation & Recall/reactivation plus local focusing and budgeted compression. & Provisionally reduced\\
+Typing edit & Store a strictly level-raised type binding, then validate locally and globally. & Provisionally reduced\\
+Environmental admission & An $\InOp_X$ execution from a typed environment signal source. & Boundary function application\\
+Certification & Stored $L/G$ verdict plus internal fitness diagnostics and boundary provenance. & Macro-operation\\
+Verdict revision & Recall prior object, update model, reassess with $L/G$, Store new verdict, optionally Express it. & Composite\\
+Governance application & Evaluation under a stored participant rule plus Bridging across participant spaces. & Composite\\
+Realization & $\OutOp_X$--channel--$\InOp_Y$ chain plus domain-specific causal interface. & Typed boundary chain\\
+Inter-participant bridging & Participant-indexed Bridging; may separate only at finer resolution. & Resolution-dependent\\
+\bottomrule
+\end{longtable}
+The registry begins with two inherited reconciliation obligations rather than pretending that the first audit was empty:
+\begin{itemize}
+\item \textbf{R1, Store omission in a spanning inventory.} A prior five-function spanning claim omitted Store. The release must either exhibit Store as a target-adequate composition within that exact scope or type the spanning claim as a document error. No silent omission is admissible.
+\item \textbf{R2, Destroy status.} Destroy lacks an independent conceptual necessity witness. It remains undetermined until a matched-budget witness, reduction, or explicit source contract closes it. R2 does not block the bidirectional Register/Express theorem.
+\end{itemize}
+This is an analytic first pass, not an executed protocol. Execution requires versioned registry, runnable reductions, witness generators, matched budgets, declared resolutions, boundary traces, and stored verdict paths.
+
+\subsection{Executable completeness artifacts}
+
+The plan fixes the minimum artifact set required before the phrase ``protocol executed'' is permitted:
+\begin{enumerate}
+\item a versioned JSON or equivalent registry containing candidate identifier, layer, signal/FSS domain and codomain where applicable, proposed interface, target, budget, resolution, provenance, and hidden-resource constraints;
+\item an executable reduction for every reduced candidate, with typed input/output and residual contract;
+\item a witness generator attempting to separate the candidate from every basis composition under matched budget;
+\item an $L$ trace containing proof checks, execution results, and the local verdict;
+\item a $G$ trace containing interface audit, recursive closure search, inherited obligations, global verdict, and budget-exhaustion status;
+\item a stored successor object recording reduced, admitted, below-resolution, boundary function, interface refinement, invalid, incoherent, or undetermined status and its defeat condition;
+\item a conformance check showing that every local inventory is an admissible projection of $\InvReg$ and that every signal-boundary implementation satisfies its typed signature.
+\end{enumerate}
+The executor performs the following loop:
+\begin{quote}
+Store the completeness claim and registry; Recall one unresolved candidate; enumerate typed basis compositions within budget; run reduction and separation searches; apply $L$ to the finite result; apply $G$ to the candidate, interface inventory, and recursive consequences; Store the paired verdict, residuals, and successor obligations; repeat until every candidate is closed or the declared budget is exhausted.
+\end{quote}
+Completeness is reported only as a stored result of this loop for a stated registry, target family, budget, and resolution. A later candidate reopens the same stored object rather than creating an external meta-status.
+
+
+\section{Recursive operand lift, promotion, and certified spanning}
+
+The v5 reduction $R\circ S_\tau\circ S(A)$ is circular when Store accepts only unit operands while $A$ is still a distributed composition. The revised architecture distinguishes an active distributed composition from a registered unit operand.
+
+For $A\in\AdmSub_n$ whose constituents are simultaneously active, define the candidate composite
+\begin{equation}
+\boxed{\rho_n^{\rm comp}(A)=R_{n+1}\circ S_{n+1}\circ L_n\circ G_n(A).}
+\end{equation}
+$G_n$ forms and globally assesses the target-relevant support without assuming unit operandhood; $L_n$ validates local constituent and typing obligations; $S_{n+1}$ registers the accepted composition and its level-raised type; $R_{n+1}$ returns it as a focal operand. This is a conditional reduction, defeated by any matched-budget target pair separable by primitive $\rho$ but not by the composite or by evidence that the first step already assumes promotion.
+
+Recursive operand closure requires every admitted $A\in\AdmSub_n$ to become a target-adequately recoverable operand at $n+1$. Lift and span remain independent: a lifted domain may be fragmented, while a globally connected lower-order graph may lack higher-order operands. A CNS therefore requires recursive operand lift plus certified spanning plus coupled residual closure.
+
+\section{Residual architecture and global coherence}
+
+\subsection{Signal-boundary residuals}
+
+For each FSS $X$, the residual ledger stores $r_{\rm in}^{X}$, $r_{\rm out}^{X}$, and target-relative round-trip residuals, with source, channel, budget, resolution, and provenance. An input residual records loss or mistyping when signal structure is converted to an FSS state. An output residual records loss or mistyping when an FSS state is converted to signal structure. A round-trip residual records whether the emitted signal can reconstruct the load-bearing internal object in a receiving instance.
+
+Boundary diagnostics are not automatically independent of conceptual or fitness residuals. A failed input translation may cause Modeling, Evaluation, Store, or $G$ failure; a failed output translation may cause realization, oversight, or propagation failure. The ledger records causal ancestry so one boundary defect is not counted multiple times as independent evidence or importance.
+
+\subsection{Primary interface residuals}
+
+The fitness-control triangle yields three primary residuals:
+\begin{align}
+r_{CP}(a)&=d\left(f^{\rm real}_{t+\Delta t},f^{\rm proj}_{t+\Delta t\mid a}\right),\\
+r_{CT}&=d\left(f^{\rm cur}_t,f^{\rm tar}_t\right),\\
+r_{PT}(a)&=d\left(f^{\rm proj}_{t+\Delta t\mid a},f^{\rm tar}_t\right),
+\end{align}
+with typed decomposition/recomposition obligations attached to $r_{PT}$. Conceptual residuals include Store--Recall recovery, unresolved local-validity obligations, and unresolved or defeating global-coherence obligations.
+
+The six internal functions retain directional diagnostics, but the plan does not claim independence. One Modeling error can induce Evaluation, Adaptation, and Bridging failures. Every diagnostic stores its primary interface, shared provenance, overlap/covariance, and whether it is a root witness or downstream consequence. No importance or coherence score sums them as independent value.
+
+\subsection{Global coherence verdict}
+
+Let $\mathscr R_t$ be the active residual ledger, including signal-boundary, conceptual, fitness-control, channel, realization, and participant obligations. $G(O)=\gc$ only when every target-relevant residual is resolved, certified irrelevant/blocked, safely rerouted, or belongs to a certified contraction sequence with a finite or convergent discharge path inside the horizon. $G(O)=\gi$ when a decisive typed witness establishes contradiction, target loss, nonclosure, or participant-viability violation not repairable by an admitted continuation. Otherwise $G(O)=\uu$. Permanent positive residuals that merely fail to increase do not qualify as coherent.
+
+The implementation uses one GCA-conformant verdict algebra $\{\gc,\gi,\uu\}$. Local $L$ verdicts and residual statuses are inputs to $G$, not a second global system. A conformance suite includes decisive short-circuit witnesses, unresolved obligations, safe blocks, reroutes, and contraction-to-closure cases.
+
+\section{Bounded registration, structural reach, and dynamics}
+
+A bounded-registration interface observes or carries one stage of the signal--FSS relation. It is
+\begin{equation}
+\mathcal B=(X,Y,q,B,\epsilon,\Phi),
+\end{equation}
+where a richer process is projected into a finite registration. It may constrain $\InOp_X$, $\OutOp_X$, or a channel $T_{XY}$, but is not identical to the universal transduction pair. Active-context budget $C_t$, oversight channel $K$, and temporal/trace projection $q_{\Delta t}$ instantiate this schema but retain distinct units and loss operators. Any conversion among them is a typed bridge with residual.
+
+Exact snapshot adequacy requires
+\begin{equation}
+q(x)=q(y)\Rightarrow\Phi(x)=\Phi(y).
+\end{equation}
+Approximate adequacy uses target risk or decoder error under a declared distribution.
+
+Structural certified reach is the set
+\begin{equation}
+\Reach_{\rm cert}^{(n)}(x,T)=\{y:\exists\text{ certified admissible path }x\rightsquigarrow y\text{ within }T\},
+\end{equation}
+measured by a declared structural measure $\nu_n$. Occupation is separately
+\begin{equation}
+\mu_{[0,T]}^{(n)}(A)=\frac1T\mathbb E\int_0^T\mathbf 1\{z_t^{(n)}\in A\}\,dt.
+\end{equation}
+A state may be reachable but unvisited. Intelligence rate is the derivative of structural reach when it exists. Signed cognitive mass is sensitivity of certified reach to registered couplings. A line-integral identity is asserted only when the sensitivity field is exact; otherwise path dependence is an outcome.
+\section{One fitness-displacement object and its projections}
+
+\subsection{Primitive importance object}
+
+For intervention $a$ relative to baseline $a_0$, horizon $T$, and typed network of participant-indexed fitness spaces, each $\F_i\subseteq\mathbb R^3$; the product is used only as a mathematical carrier, define the trajectory-distribution displacement
+\begin{equation}
+\Delta_{\F}^{T}[a:a_0]
+=
+\mathcal L\!\left(
+\Gamma_{\C\rightarrow\F}(\Real(\gamma_a))-
+\Gamma_{\C\rightarrow\F}(\Real(\gamma_{a_0}))
+\right).
+\end{equation}
+This is the primary importance object. It is distribution-valued and participant-indexed. It does not require free
+weights $\alpha,\beta,\gamma,\zeta$, an arbitrary norm, or an unspecified evaluator $\Psi_W$.
+
+\subsection{Concept importance}
+
+For concept or conceptual composition $c$, compare the closed process with and without its admissible availability:
+\begin{equation}
+\Delta_{\F}^{T}[+c:-c].
+\end{equation}
+Static reach, density, contractivity, and alignment terms are diagnostic projections of this intervention, not separate
+primitive values.
+
+\subsection{Innovation importance}
+
+For innovation intervention $a$,
+\begin{equation}
+\Imp(a;a_0)=\Delta_{\F}^{T}[a:a_0].
+\end{equation}
+The distinction from concept importance is the intervention index, not a different ontological functional.
+
+\subsection{Potential and realized importance}
+
+Potential importance is evaluated on certified conceptual continuations before full realization. Realized importance is the same displacement after target-adequate Expression, channel transmission, Register/translation into receiving FSSs, propagation, adoption, reconstruction, and consequence realization. Realization is a typed $\OutOp$--channel--$\InOp$ chain plus any declared domain-specific causal interface, and every incomplete stage carries a residual.
+
+\subsection{Magnitude, target revision, and valence}
+
+A change in target fitness is not automatically commensurate with movement toward or away from a fixed target. For participant $i$, decompose the displacement of the three-dimensional fitness state into
+\begin{equation}
+\Delta\mathbf f_i=(\Delta f_i^{\rm cur},\Delta f_i^{\rm tar},\Delta f_i^{\rm proj}).
+\end{equation}
+The primary achieved-fitness magnitude holds the admitted target fixed and measures movement of current and realized/projected traversal capacity:
+\begin{equation}
+M_i^{\rm pos}(a)=\left\|\left(\Delta f_i^{\rm cur},\Delta f_i^{\rm proj}\right)\right\|_2\quad\text{at fixed }f_i^{\rm tar}.
+\end{equation}
+Target revision is reported separately:
+\begin{equation}
+M_i^{\rm tar}(a)=|\Delta f_i^{\rm tar}|.
+\end{equation}
+A target revision contributes positive or negative importance only when a stored participant-complete governance rule validates the revision and supplies the comparison relation. Without that bridge it remains a target-change residual, not progress. Valence under a fixed or validly revised target is
+\begin{equation}
+\operatorname{Val}_i(a)=
+\begin{cases}
++,&f_i^a\succ_i f_i^{a_0},\\
+0,&f_i^a\sim_i f_i^{a_0},\\
+-,&f_i^a\prec_i f_i^{a_0}.
+\end{cases}
+\end{equation}
+Collective importance remains a vector or partial order unless a participant-complete aggregation rule is itself produced by the governance architecture.
+
+\subsection{Dominance without arbitrary weights}
+
+If
+\begin{equation}
+\Delta_{\F}^{T}[a:a_0]\succeq\Delta_{\F}^{T}[b:a_0]
+\end{equation}
+for all participant and consequence coordinates and is strict on at least one admitted coordinate, every strictly
+increasing scalar projection ranks $a$ above $b$. This is a monotonicity proposition, not the scientific theorem. The
+scientific content is whether the global-coherence construction entails the displacement relation.
+
+\subsection{Static and dynamic diagnostics}
+
+The following remain useful diagnostics:
+\begin{equation}
+\Delta p_{\mathrm{coh}},\quad
+\Delta[V_{\cert}\delta_{\cert}],\quad
+\Delta\Contr,\quad
+\Delta\Align,
+\end{equation}
+and
+\begin{equation}
+R_{\cert}(T),\quad I_{\cert}(T),\quad
+O_{\innov}(T),\quad V_{\dec}(T),\quad
+\Lambda(T).
+\end{equation}
+They must not be summed as if independent value components when one is a derivative, integral, probability mediator,
+or duplicated terminal consequence of another. Value is counted once at unique terminal fitness consequences; paths
+alter their probabilities and timing.
+
+\section{Temporal importance asymmetry as a derived decision view}
+
+\subsection{Do not create a fifth space}
+
+The dependency object must not be independently generated with assigned values and reliabilities. Define instead
+\begin{equation}
+\D=\operatorname{DecisionView}(\C,\Cert,\Gamma_{\C\rightarrow\F},E_{\mathrm{time}}).
+\end{equation}
+Its nodes are decision-typed conceptual states already in $\C$; its edges are certified derivational trajectories; edge
+reliability is induced by the certificate and reconstruction process; node or terminal value is induced by fitness
+displacement. Decision windows, validation delays, and reversibility are typed environmental annotations.
+
+\subsection{Unique-consequence accounting}
+
+Let $\Omega_T$ be the set of unique terminal consequences reachable within horizon $T$. Define
+\begin{equation}
+V(a;T)=\sum_{\omega\in\Omega_T}P_a(\omega;T)\,\Delta_{\F}(\omega).
+\end{equation}
+A consequence is counted once. Multiple paths alter $P_a(\omega;T)$ but do not create repeated copies of its value.
+Cycles are handled as absorbing or reach-once processes, or through an explicitly justified discounting rule.
+
+\subsection{Model possession and validation possession}
+
+Model possession changes the probability and timing of terminal consequences before their decision windows close.
+Empirical validation possession contributes only after the declared validation process completes. Their difference is
+therefore a projection of the same fitness-displacement distribution under different information-time filtrations, not
+a second importance ontology.
+
+\subsection{Branching and asymmetry}
+
+For a homogeneous acyclic approximation, the expected number of reliable descendants at depth $d$ may scale as
+$(b\ell)^d$. Exponential growth occurs only when $b\ell>1$ and terminal values do not decay fast enough to cancel it.
+Both $b$ and $\ell$ should be derived from the certified trajectory process where possible. They are not generator dials
+used to assign amplification.
+
+\subsection{Distributional reporting}
+
+Dependency outcomes are likely correlated and heavy-tailed. Report the full distribution, quantiles, positive-value
+probability, participant-viability violation probability, and tail loss. Means remain secondary summaries.
+
+\section{Primary comparison classes}
+
+\subsection{Capacity innovations}
+
+These increase compute, memory, bandwidth, participants, or search while preserving operand order.
+
+\subsection{Representation and certification innovations}
+
+These improve projection adequacy, mechanistic evidence, verification, or bridge reliability without creating a new
+operand order.
+
+\subsection{Governance innovations}
+
+These expand fitness support or reduce influence concentration without changing reasoning order.
+
+\subsection{Order-lifting innovation}
+
+The CNS changes the admissible operand and operator class and may recursively generate additional operators.
+
+\subsection{Composite innovations}
+
+Test combinations such as CNS plus participant-complete governance, CNS plus centralized governance, compute plus
+certification, and decentralization plus first-order reasoning. This reveals complementarity and sign inversion.
+
+\section{Fitness governance and the sign of importance}
+
+\subsection{Participant-indexed fitness}
+
+For participant $i$, let $\F_i\subseteq\mathbb R^3$ be the current--target--projected fitness space and $A_i\subseteq\F_i$ its continuation or
+viability region. The collective state evolves under
+\begin{equation}
+T_{\mathrm{col}}:\C_{\mathrm{col}}\times\prod_{i=1}^{N}\F_i\to\C_{\mathrm{col}}.
+\end{equation}
+
+\subsection{Exact support and influence concentration}
+
+For $S\subseteq\{1,\ldots,N\}$, let $q_S$ project onto fitness coordinates in $S$. Define
+\begin{equation}
+k_\ast
+=
+\min\left\{|S|:T_{\mathrm{col}}=\widehat T_S\circ(\operatorname{id},q_S)\right\}.
+\end{equation}
+
+If normalized counterfactual influence is $w_i$, define
+\begin{equation}
+N_{\mathrm{eff}}=\frac{1}{\sum_iw_i^2},
+\qquad
+D_{\mathrm{eff}}=\frac{N_{\mathrm{eff}}-1}{N-1}.
+\end{equation}
+
+\subsection{Participant-complete viability}
+
+The primary decentralized governance rule should be:
+\begin{equation}
+\gamma\text{ admissible}
+\Longleftrightarrow
+f_i(\Real(\gamma))\in A_i\quad\forall i.
+\end{equation}
+A scalar objective may rank trajectories only inside the jointly viable set. This prevents a high average score from
+masking terminal loss to one participant class.
+
+\subsection{Importance allocation}
+
+For each innovation $a$, report:
+\begin{itemize}
+\item total importance magnitude;
+\item participant-wise importance vector $\mathbf J_i(a)$;
+\item minimum participant importance;
+\item number/fraction of participants whose viability is reduced;
+\item governance support $k_\ast$ and $N_{\mathrm{eff}}$;
+\item whether high aggregate importance is produced by transferring loss to omitted participants.
+\end{itemize}
+
+This turns governance into the sign-allocation layer of the importance theorem.
+
+\section{Target adequacy, certified bridges, and residual gating}
+
+\subsection{Target adequacy}
+
+Let $\Phi:X\to\{\safe,\unsafe\}$ and $q:X\to Z$. Exact adequacy requires
+\begin{equation}
+q(x)=q(y)\Longrightarrow\Phi(x)=\Phi(y).
+\end{equation}
+For a stochastic channel, use $Q(z\mid x)$ and report Bayes decodability or a proper score.
+
+The evaluator must return
+\begin{equation}
+\{\safe,\unsafe,\undetermined\}.
+\end{equation}
+Missing information must not be converted into false safety.
+
+\subsection{Certified bridges}
+
+Each bridge object should include:
+\begin{equation}
+b=(s,t,\tau,\beta,\kappa,\epsilon,r),
+\end{equation}
+where $s,t$ are source and target objects, $\tau$ is transformation type, $\beta$ contains boundary/admissibility
+conditions, $\kappa$ is a certificate, $\epsilon$ is a semantic/evaluator equivalence object, and $r$ is a typed residual
+vector.
+
+\subsection{Reliable reach}
+
+Define reliable reach using only paths whose certificates and residuals satisfy declared thresholds:
+\begin{equation}
+R_{\cert}^{(n)}
+=
+\nu_n\left(\{y:\exists\text{ certified admissible path }x\rightsquigarrow y\}\right).
+\end{equation}
+Nominal reach should be reported only beside reliable reach.
+
+\subsection{Residual as a gate, not an arbitrary additive scalar}
+
+Residuals may be typed:
+\begin{equation}
+r=(r_{\mathrm{semantic}},r_{\mathrm{boundary}},r_{\mathrm{certificate}},r_{\mathrm{evaluator}},r_{\mathrm{dynamic}},r_{\mathrm{fitness}}).
+\end{equation}
+A path contributes to importance only when the relevant coordinates fall within declared tolerances or when a
+justified typed aggregation rule establishes admissibility. Do not sum heterogeneous residuals without a common
+ordered structure or justified scalarization.
+
+\section{Civilizational survival leverage}
+
+\subsection{Hazard intensity}
+
+Let $I_a(t)$ be conceptual/innovation trial intensity, $h_a(t)$ the density of paths entering a terminal-risk class,
+and $s_a(t)$ the probability that such a conceptual path is realized. Define
+\begin{equation}
+\lambda_a(t)=I_a(t)h_a(t)s_a(t),
+\qquad
+\Lambda_a(T)=\int_0^T\lambda_a(t)\,dt,
+\qquad
+S_a(T)=e^{-\Lambda_a(T)}.
+\end{equation}
+
+\subsection{CNS survival leverage}
+
+The survival component of importance is
+\begin{equation}
+\Delta\Lambda_{\CNS}(T)=\Lambda_{\base}(T)-\Lambda_{\CNS}(T).
+\end{equation}
+A positive value means the CNS reduces cumulative terminal hazard; a negative value means it increases it.
+
+Because a CNS can increase $I(t)$ while reducing $h(t)$ or $s(t)$ through better recognition and control, the sign is
+not predetermined. This interaction is scientifically central. A CNS can be both the greatest capability accelerator
+and the greatest safety intervention, or the greatest risk amplifier, depending on governance and certification.
+
+\subsection{Topological and measure-theoretic regimes}
+
+Retain two distinct Great Filter mechanisms:
+\begin{enumerate}
+\item \textbf{Topological cut-set regime}: every path to a capability region intersects a terminal-risk class.
+\item \textbf{Measure-theoretic regime}: cumulative hazard diverges because $\Lambda(\infty)=\infty$.
+\end{enumerate}
+Neither follows from conceptual-space existence alone. The benchmark supplies conditional synthetic realizations,
+not an empirical extinction estimate.
+
+
+
+\section{Coherent option selection and valence inversion}
+
+\subsection{Participantwise option-monotonicity lemma}
+
+Let $O_b\subseteq O_a$ be certified option sets, let $v_i(o)$ be participant $i$'s realized target-relative fitness value, and let $\widehat v_i(o)$ be the represented value used by the selector. Assume, on every option actually compared,
+\begin{equation}
+|\widehat v_i(o)-v_i(o)|\le\epsilon_i.
+\end{equation}
+Let the selector be $\delta_i$-approximate for the represented order:
+\begin{equation}
+\widehat v_i(\operatorname{Sel}(O))\ge \sup_{o\in O}\widehat v_i(o)-\delta_i,
+\end{equation}
+and let the admissibility gate preserve every option in the comparator set $O_b$. Then
+\begin{equation}
+\boxed{v_i(\operatorname{Sel}(O_a))\ge \sup_{o\in O_b}v_i(o)-(2\epsilon_i+\delta_i).}
+\end{equation}
+
+\textit{Proof.} The selected option is within $\delta_i$ of the best represented option in $O_a$, hence within $\delta_i$ of the represented value of the best realized comparator option in $O_b$. Converting the selected represented value to realized value loses at most $\epsilon_i$, and converting the comparator realized value to represented value loses at most another $\epsilon_i$. Combining the inequalities yields the bound.
+
+Strict improvement is licensed when an admitted new option has a realized margin above the best comparator exceeding $2\epsilon_i+\delta_i$ and is selected under the declared rule. For several participants, this statement is applied participantwise. A collective conclusion requires a stored governance rule defining admissibility, trade permissions, and selection. Pareto containment requires the participantwise inequalities; scalar aggregate containment is asserted only when governance generates the scalarization.
+
+\subsection{Distributional extension}
+
+The pointwise lemma does not by itself imply stochastic dominance. A stochastic claim requires an explicit common coupling or monotone transition-kernel condition, participantwise error bounds holding almost surely or with declared probability, and a stated dominance order. The benchmark therefore reports pointwise bounds, probability of participantwise violation, quantiles, tail loss, and stochastic-dominance tests separately.
+
+\subsection{Valence inversion outside the guarantee}
+
+Outside the lemma's premises, an option superset can be worse. A constructive witness adds an option with highest represented value and lowest realized value. Inversion can arise from bounded error when improvement margins lie inside the coherence budget, an unsound admissibility gate, Modeling error, Evaluation error, Bridging error, realization noise, participant conflict, or a governance rule that omits a participant. Unbounded Evaluation residual is one sufficient construction, not the exact or only failure regime. The positive and negative valence results are two regimes of the same capability-expansion object.
+
+\section{Self-contained theorem package v8}
+
+The theorem package is grouped by causal role rather than expanded one theorem per diagnostic. Every final theorem states domain, target, budget, resolution, exactness status, executable witness, and defeating counterexample.
+
+\begin{enumerate}
+\item \textbf{Signal-carrier and bidirectional-transduction theorem.} Signal spaces are typed non-FSS carriers; every observable interacting FSS requires target-distinguishable input and output transduction, with exact or bounded round-trip contracts.
+\item \textbf{Invariant registry theorem.} Every load-bearing presentation, diagram, code module, and experiment inventory is an admissible projection of one exhibited registry under a preregistered map family; unreconciled contract inversion is a global incoherence witness.
+\item \textbf{Conceptual internal-basis theorem.} Given a node domain maintained by Register and admissible promotion, the registration--recovery and local--global assessment dualities yield the minimal internal basis $\{S,R,L,G\}$ within scope.
+\item \textbf{Three-dimensional fitness-control theorem.} Current, target, and action-conditioned projected fitness are independently necessary and jointly sufficient for the declared minimal controller; their pairwise relations yield the six internal fitness functions under the stated factorization conditions.
+\item \textbf{Internal completeness theorem.} Basis completeness is a stored conceptual object assessed by Store, Recall, $L$, and $G$; it is complete only for a declared registry, target family, budget, and resolution.
+\item \textbf{Promotion, order-lift, and span theorem family.} Create/promotion is tested as one candidate family; lower-order projections can agree while lifted targets differ; lift and span are independent; their certified conjunction strictly increases reliable reach on at least one nonfactorizing family.
+\item \textbf{Residual and global-coherence theorem.} Signal, identity, assessment, fitness-control, channel, certificate, governance, and realization residuals are stored with provenance. Global coherence requires closure, safe discharge, or certified contraction to closure, not mere nonincrease.
+\item \textbf{Bounded-registration theorem.} Exact and approximate target recovery factor through a bounded projection only under the stated sufficiency condition; structural reach is distinct from occupation and available traces can be inadequate even when local verdicts remain accurate.
+\item \textbf{Coherent option and displacement theorem family.} Capability containment plus participantwise bounded model/selection error yields the $2\epsilon+\delta$ option bound and, with the required coupling assumptions, displacement containment. Outside the guarantee, explicit valence inversions exist.
+\item \textbf{Decision, propagation, and survival theorem family.} Decision asymmetry, regenerative signal transmission, and survival leverage are derived views of the same terminal consequence process and require measured or bounded branching, reliability, timing, realization, and hazard bridges.
+\item \textbf{Experimental model-identification theorem.} If the selected joint signature has minimum distance exceeding twice the declared observation-error radius, nearest-valid-codeword decoding uniquely identifies the canonical model within the preregistered candidate class.
+\item \textbf{Propagation-closure theorem target.} If the artifact package exhibits the registry, generator, codeword, conformance suite, and held-out extension contracts, and if competent receivers reconstruct models within the declared residual bounds without author repair, then the model is propagation-closed for that receiver class, package, budget, and resolution.
+\item \textbf{Conditional historical maximality theorem.} If the preregistered audit finds no prior innovation matching the full operand, span, recovery, certification, governance, signal-realization, and displacement profile, the first globally coherent CNS occupies the highest supported historical importance class.
+\end{enumerate}
+
+\section{Integrated Single-Generator Propagation Experiment}
+
+\subsection{Purpose}
+
+The Integrated Single-Generator Propagation Experiment (ISGPE) is the primary computational study. Its purpose is not to accumulate independent demonstrations. It asks whether one canonical model generates a linked set of predictions that jointly distinguish it from capacity-only comparators and from plausible partial or distorted reconstructions, and whether the resulting artifact package causes independent receivers to recover and extend that model.
+
+\subsection{Five-result confirmatory spine}
+
+The Article's confirmatory spine is limited to five linked results:
+\begin{enumerate}
+\item \textbf{Function and boundary necessity.} Proper subsets or type-inverted versions of the universal boundary pair, conceptual internal basis, and fitness internal basis fail designated target-pair witnesses under matched resources and no hidden oracle support.
+\item \textbf{CNS phase transition.} Recursive operand lift plus certified spanning, target-adequate Store/Recall, and grounded Register/Express produce a nonfactorizing increase in certified reach and recursive reuse that matched compute, population, communication, certification-only, lift-only, and span-only interventions do not reproduce.
+\item \textbf{Coherence-conditioned importance.} In the residual-closed, participant-complete regime, the larger certified option set yields participantwise displacement containment within the stated coherence budget; certificate, model, signal, or governance failures produce preregistered inversion witnesses.
+\item \textbf{Bounded observability.} Synthetic and real externally available reasoning records show when target-critical relations fail to factor through finite projections; correlation and redundancy modify the pure conjunction law but do not erase the bounded-registration target.
+\item \textbf{Propagation closure.} The full package identifies the canonical model against preregistered and held-out reconstructions and enables independent receivers to reconstruct, execute, and extend it more reliably than text-only and structurally ablated packages.
+\end{enumerate}
+All other results are mechanism diagnostics, robustness tests, historical localization, or derived consequences of this spine.
+
+\subsection{Non-negotiable single-model rules}
+
+\begin{enumerate}
+\item There is one transition function in the repository:
+\begin{equation}
+\operatorname{step}(Z_t,a_t,\xi_t)\mapsto (Z_{t+1},E_{t:t+1}),
+\end{equation}
+where $\xi_t$ is a seeded stochastic input and $E_{t:t+1}$ the event batch.
+\item Every module is a pure read-only query over the canonical state or event log. A module may not update state, invent a local operator, maintain an unregistered cache, or replace the generator with a fitted surrogate for primary results.
+\item Every event records registry version, operator identifier, typed inputs and outputs, pre/post state hashes, budget consumption, residuals, provenance, random seed, and target object.
+\item Every intervention differs from the baseline by a versioned patch to registry-enabled functions, boundary conditions, or resources. It does not fork the model definition.
+\item All paired comparisons use common random numbers and identical generated worlds. Resource matching is performed on executed operations, memory, communication, and validation work recorded by the log.
+\item Every result row carries the canonical model hash. A mixed-hash primary result is invalid.
+\item All local inventories, legends, and output schemas are generated from $\InvReg$. Hand-maintained duplicate function lists are forbidden.
+\end{enumerate}
+
+\subsection{Experiment phases}
+
+\begin{longtable}{p{0.12\textwidth}p{0.26\textwidth}p{0.51\textwidth}}
+\toprule
+\textbf{Phase} & \textbf{Object} & \textbf{Output}\\
+\midrule\endhead
+0 & Static executable conformance & Registry, schemas, type checks, deterministic necessity witnesses, residual provenance, model-variant codebook, and test-selection manifest.\\
+1 & Synthetic micro-witnesses & Exact nonfactorization, boundary necessity, Store/Recall recovery, local/global divergence, three-coordinate necessity, six-function necessity, and promotion/Create comparison.\\
+2 & Integrated stochastic CNS worlds & Certified reach, recursive reuse, residual closure, participant displacement, valence, decision timing, propagation, and survival across matched interventions.\\
+3 & Bounded-observation and real-trace anchor & Relation retention, graph reconstruction, three-valued verdicts, abstention, false confidence, and model fit for independent, correlated, and redundant projections.\\
+4 & Model identification and propagation & Candidate-model codewords, held-out adversarial identification, nested-package receiver reconstructions, executable replay, and unseen-target extension.\\
+5 & Historical localization & Full-profile mapping of prior innovations under criteria frozen before examining comparative scores.\\
+\bottomrule
+\end{longtable}
+
+\section{Executable implementation architecture}
+
+\subsection{Repository of record}
+
+The minimum repository is:
+\begin{verbatim}
+registry/functions.json
+registry/aliases.json
+registry/obligations.json
+schema/model.schema.json
+schema/event.schema.json
+src/core/state
+src/core/generator
+src/core/registry
+src/fss/signal_carrier
+src/fss/conceptual
+src/fss/fitness3d
+src/operators/boundary
+src/operators/conceptual
+src/operators/fitness
+src/certificates
+src/governance
+src/views/reach
+src/views/residuals
+src/views/displacement
+src/views/decision
+experiments/witnesses
+experiments/integrated
+experiments/real_trace
+experiments/model_identification
+experiments/propagation
+variants/candidate_models
+configs/confirmatory
+configs/robustness
+tests/unit
+tests/conformance
+tests/metamorphic
+tests/hidden_resource
+data/manifests
+reports/reproducible
+\end{verbatim}
+Names are illustrative; the typed separation is mandatory.
+
+\subsection{Canonical state schema}
+
+The serialized state contains:
+\begin{itemize}
+\item conceptual nodes, relations, levels, type bindings, active context, focal operand, recoverable registry, evidence, verdicts, and obligations;
+\item one signal carrier per modeled FSS, with source, destination, encoding, channel state, budget, delay, and provenance;
+\item one three-dimensional fitness point per participant and candidate action, represented and realized orders, viability regions, governance rules, and trade permissions;
+\item certificate objects and target-relative residuals;
+\item inter-FSS coupling maps and realization chains;
+\item structural resource counters, clock, horizon, and random state;
+\item one append-only event and residual ledger.
+\end{itemize}
+Signal carriers contain no internal operator basis and fail schema validation if recursively assigned a signal boundary.
+
+\subsection{Transition and event contract}
+
+Each generator step performs, in order, only the operations enabled by the registry and current typed state:
+\begin{enumerate}
+\item admit or reject external signal structure through $\InOp$;
+\item Recall or select active operands;
+\item execute $L$ or $G$ conceptual transformations and construct candidate actions;
+\item Model participant fitness projections, Evaluate them, Decompose residual obligations, Bridge admissible corrections, and select Stability or Adaptation responses;
+\item validate certificates and governance conditions;
+\item Store accepted identities, verdicts, and unresolved obligations;
+\item Express selected states through $\OutOp$ and pass them through declared channels;
+\item realize admitted consequences, update three-dimensional fitness states, and record all residuals and resource use.
+\end{enumerate}
+The ordering is itself stored and tested. An implementation may parallelize independent substeps but may not alter their dependency relation without a registered alternative contract.
+
+\subsection{Deterministic replay and provenance}
+
+Every run writes a manifest containing source commit, registry hash, configuration hash, dependency lock, hardware class, random seeds, and environment versions. Replaying a deterministic witness must reproduce an identical event hash. Replaying a stochastic run with its seed must reproduce the same trajectory. Derived tables are regenerated from event logs by versioned queries. No manually edited primary-result table is accepted.
+
+\subsection{Split-generator detector}
+
+A conformance test deliberately replaces one module with a locally equivalent-on-training surrogate that diverges on a held-out witness. The release suite must detect the substitution through event-schema mismatch, registry/provenance mismatch, or joint-signature failure. Passing this test demonstrates that the infrastructure can detect the exact failure mode in which coordinated modules appear to instantiate one model while actually using separate generators.
+
+\section{Synthetic world and target generator}
+
+\subsection{Stratified self-typed conceptual worlds}
+
+The primary synthetic world is a finite stratified typed multigraph. Level one contains grounded concept nodes and typed relations. For $n\ge1$,
+\begin{equation}
+X_{n+1}=\{\rho_n(A):A\in\AdmSub_n(X_{\le n})\},
+\end{equation}
+where $\AdmSub_n$ is the frozen admissibility predicate and $\rho_n$ is either the composite Create/promotion candidate or the primitive comparator. Types are strictly level raising. Each world includes local regions, sparse target-relevant cross-region relations, admissible and inadmissible composite operands, decoy bridges, and certificate objects.
+
+\subsection{Paired nonfactorizing worlds}
+
+For every order $n$, generate pairs $(W^0,W^1)$ such that their complete order-$n$ observable projections are identical:
+\begin{equation}
+q_n(W^0)=q_n(W^1),
+\end{equation}
+but an order-$(n+1)$ target differs:
+\begin{equation}
+\Phi_{n+1}(W^0)\ne\Phi_{n+1}(W^1).
+\end{equation}
+Targets include higher-order relation presence, admissible composite classification, global support membership, participant consequence, and certificate-valid path existence. Leakage tests train flexible lower-order decoders; any above-chance recovery beyond the preregistered tolerance invalidates the pair.
+
+\subsection{Signal carriers and channels}
+
+Each grounded input and propagated output passes through a typed carrier. Primary channel families include exact, erasure, substitution, many-to-one compression, bounded-capacity, delayed, and correlated-noise channels. Register and Express can be exact, lossy, ambiguous, or target-aware. Channel parameters are instance conditions, not model-derived values. Round-trip targets are exact identity, relation preservation, verdict preservation, or action preservation depending on the task.
+
+\subsection{Active context and recoverable identity}
+
+The active-context allocation satisfies
+\begin{equation}
+\sum_{c\in\Gamma_t}\kappa(c)\operatorname{res}_t(c)\le C_t.
+\end{equation}
+Store fidelity controls target-relative preservation of identity and load-bearing relations; Recall fidelity controls reactivation; both are implemented through the same generator and measured through recovery residuals. Compression may lower resolution but cannot be relabeled as successful Store if the target is no longer recoverable.
+
+\subsection{Three-dimensional participant fitness worlds}
+
+The primary synthetic target families have known order embeddings $u_{i,\tau}$. Each participant has
+\begin{equation}
+\mathbf f_{i,t}(a)=\left(f^{\rm cur}_{i,t},f^{\rm tar}_{i,t},f^{\rm proj}_{i,t+1\mid a}\right)\in\mathbb R^3,
+\end{equation}
+with realized successor $f^{\rm cur}_{i,t+1}$. World generators independently vary current adequacy, target, projected action effect, model error, selection error, viability region, participant conflict, and governance support. Adversarial worlds omit one coordinate, add an alleged fourth coordinate, or use a non-embeddable partial order.
+
+\subsection{Decision and survival layers}
+
+Unique terminal consequences are attached to certified trajectories. Branching, reliability, decision windows, reversibility, realization, and hazard bridges are generated and logged. Values are not assigned to paths independently; terminal participant displacement induces the decision view. Positive, neutral, and inversion hazard regimes are generated explicitly so survival is never predetermined by the CNS label.
+
+\subsection{Primary world counts}
+
+The default confirmatory design, frozen after a runtime-only pilot, is:
+\begin{itemize}
+\item 10,000 deterministic paired witness instances distributed across boundary, conceptual, fitness, and order-nonfactorization families;
+\item 1,024 Sobol-sampled integrated boundary regimes plus 64 preregistered corner regimes;
+\item nine interventions applied to every regime with 32 common-random-number trajectory replicates and horizon 256, yielding 313,344 primary stochastic trajectories;
+\item primary participant count $N=16$, with robustness at $N\in\{4,64,256\}$;
+\item order depth $n\in\{1,2,3,4\}$ and graph sizes chosen so exact reach is available for the smaller half and Monte Carlo reach for the larger half.
+\end{itemize}
+The runtime pilot may reduce or increase replicate counts before any outcome is inspected; the final counts and power/Monte Carlo precision calculations are preregistered.
+
+\section{Interventions, comparators, and candidate reconstructions}
+
+\subsection{Nine matched interventions}
+
+Every integrated world is run under:
+\begin{enumerate}
+\item local order-preserving baseline;
+\item matched compute increase;
+\item matched memory/context increase;
+\item matched population increase;
+\item matched communication increase;
+\item certification/observation improvement without lift;
+\item operand lift without global certified span;
+\item global span without operand lift;
+\item full CNS: grounded boundary, target-adequate Store/Recall, recursive lift, certified span, residual closure, and participant-complete governance.
+\end{enumerate}
+A preregistered incoherent-CNS negative control uses the same capability superset with one or more certificate, Modeling, boundary, or governance residuals outside budget. Resource matching uses event-log counts and reports any dimension that cannot be matched exactly.
+
+\subsection{Function ablations}
+
+Each boundary and internal function is removed in a designated micro-witness suite. The removed contract may not be supplied through preprocessing, target labels, evaluator access, cached identity, or a special-case world generator. A hidden-resource detector audits data dependencies and intentionally inserts forbidden support to ensure the audit catches it.
+
+\subsection{Candidate reconstruction library}
+
+The initial model-identification library contains:
+\begin{longtable}{p{0.10\textwidth}p{0.29\textwidth}p{0.49\textwidth}}
+\toprule
+\textbf{ID} & \textbf{Reconstruction} & \textbf{Load-bearing divergence}\\
+\midrule\endhead
+$M^\ast$ & Canonical v8 model & One boundary pair per FSS, $S/R/L/G$, three-dimensional fitness, six internal functions, lift, certified span, governance, and one generator.\\
+$M_1$ & Signal-less conceptual model & External signals are treated as already conceptual; Register/Express are absent.\\
+$M_2$ & Recursive signal-FSS regress & Every signal carrier is treated as an FSS requiring another boundary pair.\\
+$M_3$ & Store/Recall collapse & Persistence and reactivation are supplied by an external index or one undifferentiated memory operation.\\
+$M_4$ & Verdict-only $L/G$ & $L/G$ label claims but do not transform evidence/support graphs or preserve successor obligations.\\
+$M_5$ & Connectivity-only $G$ & Global coherence is replaced by generic graph connectivity.\\
+$M_6$ & Primitive promotion & A primitive $\rho$ is added and the Create/promotion composite is not required.\\
+$M_7$ & Two-dimensional fitness, no target & Current and projected fitness are retained but adequacy is externally supplied.\\
+$M_8$ & Two-dimensional fitness, no projection & Current and target are retained but actions are chosen without internally represented consequences.\\
+$M_9$ & Aggregate-governed model & Participant fitness is collapsed into one mean objective.\\
+$M_{10}$ & Uncertified reach model & Nominal reach is counted as capability regardless of false bridges and residuals.\\
+$M_{11}$ & Split-generator implementation & Each module uses a locally fitted transition mechanism with coordinated output names.\\
+$M_{12}$ & Target-shift value model & Moving the target is counted as achieved positive displacement without a governance bridge.\\
+\bottomrule
+\end{longtable}
+Admissible renamings and contract-preserving refinements of $M^\ast$ are included as positive controls and must decode as equivalent, not as distinct models.
+
+\subsection{Held-out adversarial models}
+
+After the codeword test suite is frozen, an independent script and external reviewers generate at least four additional reconstructions by recombining or subtly modifying contracts. These held-out models test whether the signature captures the invariant rather than merely memorizing the initial candidate list.
+
+\section{Phase 0: executable conformance and deterministic witnesses}
+
+\subsection{Registry and type conformance}
+
+Phase 0 fails closed unless:
+\begin{itemize}
+\item every function call resolves to one registry entry and declared projection;
+\item every signal carrier validates as a carrier and fails if assigned an FSS internal basis;
+\item every local inventory is generated from $\InvReg$;
+\item R1 and R2 appear as stored obligations with statuses;
+\item every target revision is separated from achieved-fitness displacement;
+\item every scalar $u_\tau$ carries an order-embedding certificate or a partial-order status;
+\item every result query is read-only and reproducible from an event log.
+\end{itemize}
+
+\subsection{Deterministic witness suite}
+
+The suite includes at least one constructive target pair for each of: input transduction, output transduction, Store, Recall, $L$, $G$, current fitness, target fitness, projected fitness, Modeling, Evaluation, Stability, Adaptation, Decomposition, Bridging, promotion/Create, lift, span, certificate fidelity, and participant governance. The full model must resolve each target. The designated ablation must fail or return undetermined for the correct typed reason. Any ablation that succeeds triggers a hidden-resource audit before the basis claim can survive.
+
+\subsection{Metamorphic tests}
+
+Admissible renaming, node relabeling, order-preserving fitness transformations, graph isomorphism, event replay, and contract-preserving inventory grouping must leave target verdicts invariant. Contract inversion, type erasure, dropped Store provenance, target-coordinate omission, and false-certificate insertion must change at least one designated verdict. These tests distinguish invariant structure from superficial presentation.
+
+\section{Phase 1: integrated CNS phase-transition experiment}
+
+\subsection{Primary construction}
+
+For every paired world, each intervention receives the same order-$n$ projection, signals, resource budget, random stream, and target. The target may depend on an order-$(n+1)$ relation unavailable to every lower-order decoder. The full CNS must construct the admissible composition, validate and Store it, Recall it as an operand, span the lifted domain with certified bridges, and Express a target-relevant result through the declared signal chain.
+
+\subsection{Primary estimands}
+
+The principal phase-transition estimands are:
+\begin{align}
+\Delta R_{\rm cert}&=R_{\rm cert}^{\CNS}-R_{\rm cert}^{\rm comparator},\\
+\Delta P_{\rm target}&=P(\text{correct target verdict})_{\CNS}-P(\text{correct})_{\rm comparator},\\
+\Delta U_{\rm reuse}&=P(\text{successful recursive reuse})_{\CNS}-P(\text{successful})_{\rm comparator},\\
+\Delta C_{\rm false}&=R_{\rm nominal}-R_{\rm cert}.
+\end{align}
+The confirmatory interaction is lift $\times$ span $\times$ certification, with Store/Recall recovery as a gating mediator rather than a separately added value coordinate.
+
+\subsection{Support rule}
+
+The phase-transition claim is supported only if:
+\begin{enumerate}
+\item lower-order leakage tests remain below tolerance;
+\item lift-only and span-only fail the nonfactorizing target family;
+\item the full CNS has strictly greater certified reach and target accuracy than every matched comparator on at least one preregistered higher-order family;
+\item the advantage vanishes or contracts in preregistered no-higher-order-target regimes;
+\item nominal reach without certificate fidelity does not count as support.
+\end{enumerate}
+
+\section{Phase 2: coherence-conditioned importance, valence, and survival}
+
+\subsection{Nested option construction}
+
+Each integrated world supplies a comparator option set $O_b$ and a CNS superset $O_a\supseteq O_b$. Realized and represented participant fitness values are controlled independently. The generator selects actions using the stored governance rule, modeled projections, admissibility gate, and residual budgets. Exact coherent cells satisfy the option lemma assumptions; negative controls violate one typed premise at a time.
+
+\subsection{Primary displacement outcomes}
+
+For every participant report current/projected achieved-fitness displacement at fixed target, target revision separately, viability violation, tail loss, and signal/realization success. Primary collective outcomes are Pareto containment, minimum-participant displacement, fraction harmed, effective governance support, and probability of a terminal-risk consequence. No ungenerated scalar aggregate is primary.
+
+\subsection{Coherence and inversion contrasts}
+
+The primary paired contrasts are:
+\begin{enumerate}
+\item full coherent CNS versus best matched comparator;
+\item identical capability superset with bounded versus out-of-budget Evaluation/Modeling residual;
+\item participant-complete versus aggregate/narrow governance;
+\item certified versus false-bridge span;
+\item target-adequate versus lossy Express--channel--Register realization;
+\item fixed target versus ungoverned target revision.
+\end{enumerate}
+The model is supported when coherent cells satisfy the participantwise bound within tolerance and the declared negative controls produce the predicted inversion or undetermined verdict rather than false positive value.
+
+\subsection{Survival projection}
+
+Synthetic hazard mappings convert trial intensity, risk-path density, and realization probability into cumulative hazard. The CNS label carries no fixed sign. Report $\Delta\Lambda(T)$ with the exact bridge that generated it. A positive, neutral, or negative survival result is coherent if it follows the preregistered residual and governance regime.
+
+\section{Phase 3: bounded observation and real-trace measurement}
+
+\subsection{Synthetic bounded-registration suite}
+
+The same bounded-projection schema is instantiated at active context, signal input, signal output, communication channel, oversight record, and trace summary. Each instance has a ground-truth target graph and one or more projections. Exact adequacy is evaluated by target factorization; approximate adequacy uses decoder risk and three-valued verdict calibration.
+
+\subsection{Real externally available trace design}
+
+Use at least three independently implemented language-model families, version-locked before collection, on synthetic tasks with known relational ground truth. The study evaluates externally available generated reasoning records only and makes no claim that they are complete internal cognition. The preregistered grid is:
+\begin{itemize}
+\item critical relation depth $L\in\{2,4,6,8,12,16\}$;
+\item projection budget $K\in\{128,256,512,1024\}$ matched tokens or equivalent structured fields;
+\item redundancy multiplicity $r\in\{1,2,4\}$;
+\item at least 30 independent tasks per $(L,K,r)$ cell and model family;
+\item three projection pipelines: generic summary, fixed-budget relation extraction, and target-aware three-valued monitor.
+\end{itemize}
+This yields at least 19,440 projected records before retries or robustness models.
+
+\subsection{Trace targets and scores}
+
+Task families include graph reach, higher-order relation classification, theorem-premise tracking, program execution traces, multi-participant governance, and signal-round-trip reconstruction. Scores are per-relation retention, exact critical-subgraph recovery, graph edit distance, valid/invalid/undetermined accuracy, abstention calibration, false-confidence rate, recovery of backward Store/Recall references, and preservation of boundary provenance.
+
+\subsection{Correlation-aware models}
+
+Fit and compare:
+\begin{enumerate}
+\item homogeneous conditional independence $q^L$;
+\item heterogeneous independence $\prod_j q_j$;
+\item latent pipeline-quality correlation;
+\item redundancy-aware graph recovery;
+\item a flexible preregistered hierarchical model with relation type, distance, and projection class.
+\end{enumerate}
+Performance above $q^L$ rejects only the homogeneous null. The bounded-registration account is defeated at this boundary only if target recovery is independent of the declared capacity/structure factors or if a projection certified exact systematically loses target distinctions.
+
+\section{Phase 4: model identification and propagation closure}
+
+\subsection{Codeword test selection}
+
+Before the confirmatory run, compute predicted outcome categories or distributions for every candidate model on a large pool of witness and integrated tasks. A greedy plus local-search algorithm selects the smallest test set maximizing minimum pairwise codeword distance while retaining at least one test from each causal layer. Twenty percent of candidate-separating tasks are withheld from selection for honest validation.
+
+\subsection{Noise-aware identification}
+
+For deterministic tests, distance is Hamming distance over typed verdicts and invariant numeric relations. For stochastic tests, use preregistered likelihoods or confidence regions. The canonical model is identified only when its observed codeword is within the declared error radius and every non-equivalent candidate lies outside it. Report confusion matrix, posterior or likelihood ratio, minimum margin, and performance on held-out candidate models.
+
+\subsection{Nested artifact packages}
+
+Independent receivers are randomly assigned one of five packages:
+\begin{enumerate}
+\item Article text only;
+\item Article plus Supplement;
+\item Article, Supplement, and canonical registry/projection table;
+\item previous package plus source code and conformance/witness suite;
+\item complete package plus result signature, event-log examples, and model-identification manifest.
+\end{enumerate}
+A sixth negative-control package removes or inverts one load-bearing contract while preserving superficial fluency. This tests whether receivers follow the exhibited invariant rather than merely accepting prose.
+
+\subsection{Machine receiver class}
+
+The primary computer experiment uses at least three independent receiver-model families with browsing disabled, fresh contexts, fixed tool access, and no exposure to private conversation history. Each family contributes 30 independent reconstructions per package condition, for at least 540 reconstructions including the negative control. Model snapshot, system prompt, tool budget, token budget, and random seed are frozen. An optional human replication may follow under separate review but is not required for the primary computer experiment.
+
+\subsection{Receiver tasks}
+
+Every receiver must:
+\begin{enumerate}
+\item emit a standardized JSON reconstruction of layers, spaces, functions, signatures, residuals, generator ordering, and theorem dependencies;
+\item map every local inventory to the canonical registry or state why it cannot;
+\item predict the canonical model's outcomes on 20 secret held-out benchmark instances;
+\item run or complete an implementation adapter against the conformance suite;
+\item solve one unseen extension task generated after the artifact package is frozen;
+\item identify and reject the negative-control package's contract inversion.
+\end{enumerate}
+The unseen extension changes surface vocabulary and world topology while preserving the functional structure. Success requires deriving the result, not retrieving a memorized example.
+
+\subsection{Competence screen and no-author-repair rule}
+
+Receivers first complete generic typed-graph, control-triad, and software-schema tasks unrelated to FMI. Failed competence screens are reported separately and excluded according to the preregistered rule. After assignment there is no author clarification. Automated error messages from the public conformance suite are permitted because they are part of the transmitted artifact; bespoke correction is not.
+
+\subsection{Propagation-closure decision rule}
+
+For the complete package, propagation closure for the declared receiver class requires:
+\begin{enumerate}
+\item zero systematic fatal contract inversion across receiver families;
+\item exact recovery of mandatory layer and function contracts up to admissible renaming;
+\item at least 95\% deterministic held-out prediction accuracy per passing reconstruction;
+\item at least 90\% success on the unseen extension task;
+\item a package-level pass rate whose lower 95\% confidence bound exceeds 0.80;
+\item an absolute pass-rate improvement of at least 0.25 over Article-only and a positive contribution from the experimental-signature package beyond registry plus code;
+\item canonical model-identification accuracy whose lower 95\% confidence bound exceeds 0.90 on preregistered and held-out candidate models.
+\end{enumerate}
+These are preregistered transmission decision thresholds, not universal laws. Failure localizes the residual to text, registry, implementation, result signature, receiver budget, or unseen-target extension.
+
+\section{Primary outcomes and estimands}
+
+\begin{longtable}{p{0.22\textwidth}p{0.32\textwidth}p{0.34\textwidth}}
+\toprule
+\textbf{Outcome family} & \textbf{Primary quantity} & \textbf{Interpretation}\\
+\midrule\endhead
+Boundary & input/output witness accuracy; round-trip residual & Necessity and target adequacy of signal transduction.\\
+Conceptual basis & designated witness success and recovery residual & Irreducibility of Store, Recall, $L$, and $G$.\\
+Fitness geometry & two-coordinate Bayes/control error; full-triple recovery & Necessity and sufficiency of the three-dimensional carrier.\\
+CNS transition & certified reach, target accuracy, recursive reuse & Nonfactorizing lift--span transition versus matched comparators.\\
+Coherence & residual closure time, unresolved burden, GCA verdict & Whether capability expansion is globally coherent.\\
+Importance & participant displacement distribution, Pareto containment, tail loss & Magnitude and valence without unlicensed scalarization.\\
+Observation & relation retention, critical-subgraph recovery, false confidence & Adequacy of bounded projections.\\
+Identification & codeword margin, candidate confusion, held-out accuracy & Whether the experiment uniquely constrains model identity.\\
+Propagation & typed residual vector and conjunction verdict & Whether receivers reconstruct, execute, and extend the invariant.\\
+History & full-profile dominance/status & Strongest supported historical title and claim.\\
+\bottomrule
+\end{longtable}
+
+\section{Statistical and computational plan}
+
+\subsection{Preregistration objects}
+
+Freeze before confirmatory execution: registry, schemas, source commit, candidate models, admissible projection maps, world generator, target families, resource matcher, intervention patches, primary and negative-control contrasts, codeword test selector, sample counts, random seeds or seed-generation rule, statistical models, propagation packages, receiver prompts/budgets, exclusion rules, title ladder, and historical rubric.
+
+\subsection{Deterministic results}
+
+Exact theorem witnesses, schema and type checks, replay tests, and codeword predictions receive one of three typed verdicts: pass, fail, or undetermined. Each non-pass verdict includes a complete counterexample or residual. Statistical significance is not used to rescue a failed deterministic contract.
+
+\subsection{Synthetic stochastic models}
+
+Use paired hierarchical models with world instance and seed as random effects. Binary targets use logistic mixed models; reach and counts use appropriate generalized or nonparametric paired models; time-to-closure uses survival or competing-risk models; continuous displacement uses robust hierarchical regression and paired bootstrap confidence intervals. The lift $\times$ span $\times$ certification interaction is the primary CNS mechanism term. Governance and signal fidelity are preregistered effect modifiers.
+
+\subsection{Distributional importance}
+
+Report participantwise empirical distributions, quantiles, minimum participant outcome, violation probability, stochastic-dominance tests where assumptions hold, and tail risk. Means are secondary. Target revision is analyzed separately from fixed-target achieved displacement.
+
+\subsection{Trace models}
+
+Compare the five preregistered retention models by held-out predictive likelihood, calibration, and critical-subgraph recovery. Relation-level clustering by task and model family is retained. No independence law is selected after inspecting the full data without correction.
+
+\subsection{Propagation models}
+
+Use hierarchical logistic or ordinal models with package condition fixed effects and receiver family/random run effects. Primary contrasts are complete package versus Article-only, registry increment, code/test increment, and result-signature increment. Report typed residual frequencies separately; a package can increase average accuracy while still failing closure through a fatal inversion.
+
+\subsection{Multiplicity}
+
+The five confirmatory result families are controlled by Holm adjustment at familywise $0.05$, with effect sizes and confidence intervals primary. Within-family mechanistic diagnostics are labelled secondary. Historical rank is a rule-based audit result, not a p-value.
+
+\subsection{Monte Carlo precision and runtime pilot}
+
+A runtime-only pilot estimates wall time, memory, failure rate, and stochastic variance without exposing intervention labels to the analyst. Final replicate counts target Monte Carlo standard error below 0.01 for primary probabilities and sufficiently narrow paired intervals to distinguish the preregistered effect threshold. Any count change occurs before outcome unblinding and is recorded in the registry.
+
+\section{Robustness, ablations, and explicit counterexample regimes}
+
+\subsection{Propagation-critical robustness}
+
+Repeat model identification under admissible alias scrambling, reordered exposition, figure-only function inventories, and contract-preserving implementation refinement. The canonical model should remain identifiable. Repeat after deleting the registry, code, result signature, or one load-bearing contract to locate which artifact supplies correction.
+
+\subsection{Graph and order robustness}
+
+Vary graph size, region count, hyperedge arity, order depth, admissibility rules, target prevalence, and certificate correlation. Include worlds in which higher-order targets are absent; the CNS advantage should then vanish or become cost-dominated. Include non-embeddable path orders; the scalar fitness representation should return undetermined rather than fabricate a number.
+
+\subsection{Signal robustness}
+
+Vary input/output asymmetry, exact and lossy round trips, many-to-one encodings, delay, bandwidth, redundancy, correlated noise, and unidirectional target classes. Causally isolated or one-direction-only targets are explicit scope boundaries rather than counterexamples to the bidirectional theorem.
+
+\subsection{Basis and promotion robustness}
+
+Test hidden persistence indexes, external evaluator labels, pre-unitized composites, primitive Create, primitive promotion, and resource-unmatched composites. If the full basis is unnecessary only when hidden support is present, report the hidden resource as the actual function carrier.
+
+\subsection{Fitness and governance robustness}
+
+Drop each of current, target, and projected fitness; add adversarial fourth-coordinate targets; vary participant conflict, viability regions, influence concentration, and trade rules. Count target revision separately. A CNS that improves the mean while violating one participant's declared viability fails participant-complete containment.
+
+\subsection{Certification and hazard robustness}
+
+Vary false-positive and false-negative certificates, stale models, realization delay, target drift, branching correlation, reversibility, risk density, and capability intensity. The same capability increase must exhibit positive, neutral, and negative valence in the appropriate regimes.
+
+\subsection{Explicit regimes where the CNS should not dominate}
+
+The following are preregistered non-dominance or undetermined regimes: no higher-order targets; lift failure; span failure; Store or Recall recovery failure; ungrounded signal input; unexpressible result; certificate residual outside budget; bounded context too small to form the composition; comparator resources sufficient to enumerate the complete target; capability cost exceeding benefit; participant-incomplete governance; target order non-embeddable without a valid partial-order controller; target revision without governance; realization failure; subcritical decision ecology; hazard increase dominating recognition benefit; historical comparator matching the full profile; and propagation packages that do not produce equivalent receiver reconstructions.
+
+\section{Primary hypotheses and defeat conditions v8}
+
+\begin{enumerate}
+\item \textbf{H1 Single-generator conformance.} Every primary result is reproducible from one generator/event log. Defeat: a module-local state transition or mixed model hash is required.
+\item \textbf{H2 Boundary and conceptual necessity.} Proper subsets or type inversions of $\{\InOp,\OutOp,S,R,L,G\}$ fail their designated witnesses. Defeat: a subset succeeds without hidden support.
+\item \textbf{H3 Three-dimensional fitness necessity and sufficiency.} Every two-coordinate projection loses a control distinction and the full triple resolves the declared minimal controller. Defeat: a two-coordinate model is sufficient or a valid fourth distinction survives.
+\item \textbf{H4 Six-function fitness necessity.} Proper subsets fail matched fitness-control witnesses. Defeat: a subset reproduces all target behavior.
+\item \textbf{H5 CNS lift--span transition.} Only recursive lift plus certified span and target-adequate recovery yields the nonfactorizing certified-reach transition. Defeat: a matched order-preserving comparator or one factor alone reproduces it.
+\item \textbf{H6 Global-coherence gate.} Residual-closed cells satisfy participantwise option/displacement bounds; typed residual violations yield inversion or undetermined status. Defeat: a coherent cell produces an unexplained harmful superset or an incoherent cell is falsely certified positive.
+\item \textbf{H7 Bounded-registration prediction.} Target recovery degrades with missing critical relations and finite projection budgets according to the best preregistered correlation-aware model. Defeat: recovery is independent of target structure and capacity or exact certified projections systematically lose targets.
+\item \textbf{H8 Experimental model identification.} The joint signature uniquely identifies $M^\ast$ within the candidate and held-out libraries. Defeat: a target-different model has an indistinguishable codeword within the error budget.
+\item \textbf{H9 Propagation closure.} The complete package meets the vector decision rule and materially outperforms text-only and artifact ablations. Defeat: systematic non-isomorphic reconstruction, fatal inversion, or failure on unseen extension.
+\item \textbf{H10 Historical status.} The preregistered full-profile audit yields status 1, 2, or 3 without changing the class boundary. Defeat of the strongest claim: a prior innovation matches the full profile or the evidence remains undetermined.
+\end{enumerate}
+
+\section{Result-contingent interpretation branches}
+
+\begin{enumerate}
+\item \textbf{Branch A: full closure and strongest historical status.} One generator passes conformance; the CNS transition, coherent displacement, bounded observation, model identification, propagation, and historical maximality all hold. Use title status 1.
+\item \textbf{Branch B: model and propagation close, historical maximality does not.} Report the maximal functional class or undetermined historical localization and use title status 2 or 3.
+\item \textbf{Branch C: synthetic mechanism closes, real-trace boundary fails.} Retain the formal/synthetic result but reject the claimed trace-interface instantiation and revise that bridge.
+\item \textbf{Branch D: capability transition without coherent value.} Report a CNS capability phase transition and governance/certification inversion; do not infer positive importance.
+\item \textbf{Branch E: model identifies but does not propagate.} The experiment distinguishes the canonical implementation, yet receivers reconstruct incompatible models. Localize the propagation residual and reopen only the transmitting artifacts or contracts involved.
+\item \textbf{Branch F: propagation succeeds but split-generator test fails.} Treat the apparent result as implementation incoherence; no scientific interpretation until one generator is restored.
+\item \textbf{Branch G: candidate model shares the joint signature.} Expand the test pool or weaken the uniqueness claim; do not declare propagation closure.
+\item \textbf{Branch H: two-dimensional or reduced bases suffice.} Revise the model inventory and rerun all downstream predictions; the canonical basis claim is defeated.
+\item \textbf{Branch I: target revision drives apparent importance.} Remove the false value attribution and report target change separately.
+\item \textbf{Branch J: no higher-order target ecology.} Report the mechanism without a general advantage claim for that ecology.
+\end{enumerate}
+
+\section{Historical comparison strategy}
+
+\subsection{Full functional profile}
+
+Prior innovations are not excluded merely because they contain partial order lifts. Audit writing, formal mathematics, scientific institutions, programmable and networked computing, machine learning, and any additional preregistered candidate against
+\begin{equation}
+\Theta(a)=\left(
+\begin{array}{c}
+\text{operand breadth, recursive lift, certified span, Store/Recall recovery,}\\
+\text{signal reconstruction, global coherence, fitness governance, and }\Delta_{\F}^{T}
+\end{array}
+\right).
+\end{equation}
+Criteria, evidence sources, cut-off date, ambiguity rules, and scoring resolution are frozen before comparative scoring.
+
+\subsection{Three statuses}
+
+Status 1 requires support that no prior innovation matches the full profile and that the coherent CNS displacement dominates within the declared comparison class. Status 2 supports first or strongest membership in a formally maximal class but not unconditional historical rank. Status 3 leaves historical rank undetermined while retaining the mechanism and benchmark results. Each status maps to the precommitted title ladder.
+
+\subsection{Anti-tuning rule}
+
+A prior innovation that matches the profile defeats the exclusive historical claim; it is not excluded by redefining CNS after inspection. Missing evidence yields undetermined, not zero. Computing is preregistered as the strongest likely competitor on code-as-data and recursive execution; writing and mathematics are preregistered as strong persistence and composition candidates.
+
+\section{Positioning and citation infrastructure}
+
+The final Article develops every construct self-containedly. The following literatures position rather than define it:
+\begin{longtable}{p{0.28\textwidth}p{0.60\textwidth}}
+\toprule
+\textbf{Construct} & \textbf{Positioning fields}\\
+\midrule\endhead
+Typed conceptual and signal graphs & Algebraic graph transformation, typed multigraphs, hypergraphs, and higher-order networks.\\
+Register/Express and channels & Transducer automata, source/channel coding, communication systems, encoder/decoder design, and interactive protocols.\\
+Store/Recall and active context & Memory systems, working-memory capacity, associative retrieval, event sourcing, and persistent data structures.\\
+Local/global assessment & Formal verification, abstraction soundness, recursive proof search, model checking, and three-valued logics.\\
+Self-typing and operand levels & Predicative type universes, reflective computation, staged metaprogramming, and typed self-description.\\
+Three-dimensional fitness control & Feedback control, model-predictive control, reference tracking, state estimation, and action-conditioned prediction.\\
+Decomposition/Bridging & Compositional systems, modular verification, interface theories, constraint decomposition, and synthesis.\\
+Certified reach and bounded observation & Sufficient statistics, data processing, state aggregation, lumpability, monitorability, and lossy compression.\\
+One executable generator & State-machine semantics, event sourcing, reproducible simulation, conformance testing, and metamorphic testing.\\
+Model identification and propagation & System identification, program synthesis, model extraction, experimental design, code design, and active test selection.\\
+Participant-indexed governance & Multi-objective control, viability theory, distributed decision systems, mechanism design, and influence concentration.\\
+Importance and option value & Decision theory, value of information, option value, irreversible decisions, and stochastic dominance.\\
+\bottomrule
+\end{longtable}
+No cross-domain analogy is required to derive the model.
+
+\section{Article v8 blueprint: one paper}
+
+\subsection{Results sequence}
+
+\begin{enumerate}
+\item One executable coupled generator, typed signal carriers, bidirectional transduction, canonical registry, and split-generator conformance.
+\item Conceptual Store--Recall and $L$--$G$ basis, strict self-typing, three-dimensional fitness geometry, and six internal fitness functions with deterministic necessity witnesses.
+\item Paired nonfactorizing worlds, Create/promotion comparison, lift--span matrix, and the CNS certified-reach phase transition against matched comparators.
+\item Global-coherence residual closure, participantwise option/displacement containment, governance, valence inversion, realization, and survival projections.
+\item Synthetic bounded registration and correlation-aware real-trace results.
+\item Candidate-model codeword separation, held-out model identification, nested-package reconstruction, and unseen-target propagation closure.
+\item Historical full-profile audit and strongest supported title/status.
+\end{enumerate}
+
+\subsection{Narrative rule}
+
+Every Results section begins with a local map of its purpose, input, test, and payoff. The paper does not introduce independent models per section. Each figure states which events and registry entries generated it. The Discussion interprets one invariant through several projections and distinguishes model-internal laws, measured boundary conditions, and historical localization.
+
+\section{Supplement v8 blueprint}
+
+The Supplement is self-contained and ordered as: notation/status; registry and projection maps including R1/R2; schemas and generator semantics; signal carrier type discipline and boundary theorem; conceptual basis and witnesses; three-dimensional fitness theorem, scalarization defeat, and six-function witnesses; self-typing and admissibility; Create/promotion comparison; paired-world construction; lift--span and certificates; residual/GCA architecture; importance, governance, option, decision, survival; propagation closure definitions and codeword theorem; repository and event schemas; full experiment configurations; deterministic witness catalog; synthetic statistical analysis; real-trace protocols; receiver prompts, package manifests, scoring, and exclusions; historical rubric; claim-status ledger; full reproducibility manifest.
+
+\section{Reproducibility and release artifacts}
+
+The public release must contain source, environment lock, registry and aliases, obligations, schemas, configurations, seed manifests, generated worlds or generators, raw event logs or lossless compressed logs, derived-data scripts, statistical notebooks/scripts, receiver package files, standardized receiver outputs, codeword manifests, historical audit table, and a one-command or documented workflow that rebuilds every figure and table. Code and data licenses must permit verification and extension. Any unavailable external model output is accompanied by prompts, version metadata, hashes where possible, and a regeneration protocol.
+
+\section{Decision gates and co-contraction work sequence}
+
+\subsection{Release gates}
+
+No confirmatory run begins until: the registry and R1/R2 are frozen; signal carriers fail FSS-regress tests; conceptual factorization is correctly scoped; Create/promotion is cross-linked; $u_\tau$ defeat logic is executable; target revision is separately scored; one generator and event schema pass replay; hidden-resource and split-generator detectors pass; deterministic witnesses are complete; candidate models and test selector are frozen; and the unlicensed quantity bin is empty.
+
+No propagation-closure claim is made until: the full package is frozen; held-out candidate models are generated without modifying the selected tests; receiver contexts are independent; automated grading is reproducible; the unseen extension is secret until execution; and no author repair occurs.
+
+\subsection{Work sequence}
+
+\begin{enumerate}
+\item Implement registry, obligations R1/R2, schemas, aliases, and status-conditioned title manifest.
+\item Implement the canonical state, one generator, event log, and signal carriers.
+\item Implement Register/Express, Store/Recall/$L/G$, and three-dimensional participant fitness.
+\item Implement the six fitness functions, certificates, governance, and residual ledger.
+\item Implement deterministic witness and hidden-resource suites.
+\item Implement Create/promotion candidates, paired worlds, lift--span comparators, resource matcher, structural reach, occupation, and integrated trajectories.
+\item Implement importance, option, decision, realization, propagation, and survival views as read-only log queries.
+\item Freeze candidate reconstruction library, generate codewords, select discriminating tests, and reserve held-out tasks.
+\item Run the synthetic confirmatory benchmark and robustness suite.
+\item Run real-trace collection and analysis.
+\item Assemble nested propagation packages; run machine receiver study and unseen extension.
+\item Localize any formal, execution, or propagation residual; revise only the implicated contract or artifact; rerun affected gates.
+\item Freeze Article, Supplement, repository, historical audit, and title only after closure verdicts are available.
+\end{enumerate}
+
+\subsection{Closure-based freeze rule}
+
+The final freeze criterion is
+\begin{equation}
+\boxed{\operatorname{Formal}=\gc\ \land\ \operatorname{Execution}=\gc\ \land\ \operatorname{Propagation}=\gc}
+\end{equation}
+within stated target, receiver, budget, and resolution classes. An undetermined propagation verdict does not become coherent because planning has become expensive or because implementation exists. Conversely, an editorial imperfection that cannot produce a target-different reconstruction does not block freeze.
+
+\section{Remaining author decisions}
+
+The author must still fix: the exact $\AdmSub$ predicate; stable display names while preserving registry identifiers; target families and order embeddings; participant set and governance rule; real-trace model families and available trace format; synthetic realization and hazard bridges; runtime budget and final sample counts after the blinded pilot; receiver model families and tool budgets; historical comparators/evidence cut-off; and acceptable propagation receiver class. These are explicit instance or interface decisions, not hidden model primitives.
+
+\section{Source and dependency discipline}
+
+The Article and Supplement rely on no unpublished paper, private conversation, internal session artifact, or external definitional source. Every load-bearing definition and contract appears in the transmitted package. Published prior work may be cited for lineage and positioning. The current result must be assessable, executable, and extendable from the public Article, Supplement, code, registry, tests, and data alone.
+
+\section{Final target state}
+
+\begin{equation}
+\boxed{\begin{aligned}
+&\text{one canonical registry and one event-sourced coupled generator;}\\
+&\text{typed signal carriers with one bidirectional boundary pair per observable FSS;}\\
+&\text{a stratified self-typing conceptual graph with }\{S,R,L,G\};\\
+&\text{one flat current--target--projected fitness space per participant;}\\
+&\text{six internal fitness functions derived from its three pairwise control relations;}\\
+&\text{recursive Create/promotion, operand lift, certified span, and residual closure;}\\
+&\text{one participant-indexed importance object with target revision kept separate;}\\
+&\text{one integrated experiment whose joint signature identifies the model;}\\
+&\text{one public package from which independent receivers reconstruct, execute, and extend it;}\\
+&\text{one Article containing mechanism, importance, survival, propagation, and history.}
+\end{aligned}}
+\end{equation}
+The operative completion claim is not that the model is invariant in the author's private representation. It is that the exhibited registry, generator, tests, and result signature regenerate the same operational invariant in independent receivers within declared budgets, and that any remaining difference is an admissible projection rather than a target-different model.
+
+\section{Questions for independent reviewers}
+
+\subsection{Formal and graph reviewer}
+
+Does the signal-carrier type stop the regress? Is conceptual basis factorization scoped correctly? Are Store/Recall, $L/G$, Create/promotion, and self-typing contracts noncircular and finitely falsifiable? Can any named function be removed without the designated target loss?
+
+\subsection{Control and importance reviewer}
+
+Are current, target, and projected fitness genuinely independent and sufficient for the declared controller? Is $u_\tau$ used only with an order embedding? Are target revision and achieved progress separated? Do option and displacement claims exceed their participantwise or stochastic assumptions?
+
+\subsection{Computational and reproducibility reviewer}
+
+Do all modules query one event log? Can the infrastructure detect a split generator or hidden support? Are resource matches complete, seeds/replay valid, and primary results rebuildable? Does the codeword design overfit the initial candidate library?
+
+\subsection{Propagation reviewer}
+
+Does the artifact package force the intended operational reconstruction? Are receiver competence, budgets, package conditions, scoring, and unseen extension adequate? Can a target-different reconstruction pass because the residual metric averages away a fatal contract error?
+
+\subsection{Historical reviewer}
+
+Are prior partial lifts scored under fixed criteria? Can writing, mathematics, institutions, or computing match the full profile? Does the selected title follow the preregistered status rather than post hoc preference?
+
+\end{document}

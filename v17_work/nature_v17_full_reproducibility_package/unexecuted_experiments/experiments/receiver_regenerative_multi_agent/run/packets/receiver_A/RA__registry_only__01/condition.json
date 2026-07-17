@@ -1,0 +1,11 @@
+{
+  "semantic_identity": ["metric", "typed_interaction", "relative_position", "boundary", "warrant", "fitness", "continuation"],
+  "first_order_conflation": "same projection plus target-different latent states defeats projection-only decoding",
+  "reflection": "exposes residual; does not increment order",
+  "operation_types": {"Register": "signal_to_concept", "Recall": "memory_to_concept", "L": "concept_to_concept", "G": "concept_to_concept"},
+  "order_lift": ["new_non_equivalent_spanning_composition", "operand_expansion", "current_residual_reversal"],
+  "dynamic_bridge": ["contraction", "closure", "invariance"],
+  "governance": "participantwise_option_bound",
+  "great_filter_max_without_external_evidence": "GF-3 conditional structural filter",
+  "external_open": ["physical_force_mapping", "current_AI_mapping", "historical_lifts", "real_branch_hazard_outcome"]
+}

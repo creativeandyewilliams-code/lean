@@ -1,0 +1,1 @@
+Audit temporal order, context isolation, visible-file lists, answer-key access, cross-receiver access, author intervention, and output hashes. A study fails contamination audit if any receiver could read a sealed key, another receiver's output, or unassigned source material.

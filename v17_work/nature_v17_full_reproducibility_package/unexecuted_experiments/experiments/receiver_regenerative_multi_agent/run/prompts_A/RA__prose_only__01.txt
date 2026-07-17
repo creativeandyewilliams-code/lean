@@ -1,0 +1,26 @@
+You are an isolated first-generation receiver. Read only the assigned condition material and hidden task packet. For every task, return JSON fields `task_id`, `verdict`, `missing_premises`, `affected_claims`, `rationale`, and `confidence`. Then create a standalone transmission document that teaches the recovered dependency structure without copying task answers verbatim. Do not request author repair. Do not access any sealed key or other receiver output.
+
+
+OUTPUT FORMAT: return exactly one fenced ```json block containing a JSON array; each element has fields task_id, verdict, missing_premises (array), affected_claims (array), rationale (short), confidence (0-1). After the json block, add a section '## TRANSMISSION' (<=180 words) teaching the recovered dependency structure WITHOUT copying task answers.
+
+=== CONDITION MATERIAL ===
+# Prose-only condition
+
+Semantic identity is constituted by target-relevant metric relations, typed interactions, relative position, boundaries, warrant, fitness, and continuation conditions. First-order projection can identify two latent states that require different target outputs; no decoder using only the collapsed projection can recover that distinction. Reflection exposes residuals but does not itself add a new reusable composition. Register has signal input, Recall has memory input, while L and G are conceptual endomorphisms. Cognitive order counts non-equivalent reusable spanning compositions. A valid lift adds a new non-equivalent spanning composition, expands the admissible operand domain, and reverses the current unresolved residual. Continued growth at fixed capacity can recreate backlog; scaling service or adding a further lift can prevent recurrence. The dynamical CNS bridge additionally requires contraction, closure, and invariance. Governance claims are participantwise, not aggregate. The Great Filter result reaches a conditional structural-filter level only when external branch, hazard, timescale, outcome, and residue premises are supplied. Physical-force assignments and claims about current AI remain external mappings.
+
+
+=== HIDDEN TASKS (14) ===
+- HF-RECALL-A: A memory-to-concept retrieval is claimed to equal a conceptual L/G word.
+- HF-GF-PROMOTION-A: Formal properties and synthetic branch tests close, but no real hazard/outcome evidence exists.
+- HF-ORDER-A: A new notation abbreviates an existing composition without adding a new functional-equivalence class.
+- HF-GF-TARGET-A: A target becomes unobservable but the system continues physically. Is this automatically terminal extinction?
+- HF-BRIDGE-DYN-LIFT-A: A contracting invariant operator exists but uses only old compositions. Does it prove an order lift?
+- HF-GOVERNANCE-A: Mean utility rises while one participant loses an option beyond the registered error budget.
+- HF-EXTERNAL-A: A Lean theorem accepts PhysicalMapping M as a parameter. Has the physical mapping been measured?
+- HF-CONFLATE-A: Two latent equipment faults share dashboard code Q. Repair target differs. Can a Q-only decoder always choose correctly?
+- HF-METRIC-A: Labels and edges are unchanged, but a target-relevant distance crosses an admissibility threshold.
+- HF-BRIDGE-LIFT-DYN-A: An order lift expands operands and reverses backlog, but no contraction constant is known. Is dynamical CNS established?
+- HF-REFLECTION-A: A system represents its unresolved error but adds no reusable composition. Did cognitive order rise?
+- HF-SEM-RENAME-A: Every node, metric coordinate, interaction type, boundary and warrant is bijectively preserved under renaming.
+- HF-RECURRENCE-A: After a lift, service scales above every new arrival rate. Must backlog recur?
+- HF-REGISTER-A: A signal-to-concept ingestion step is claimed to equal a word made only of conceptual L/G endomorphisms.

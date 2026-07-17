@@ -1,0 +1,146 @@
+{
+ "generation": "A",
+ "condition": "corrupted_artifact",
+ "run_id": "RA__corrupted_artifact__01",
+ "answers": [
+  {
+   "task_id": "HF-EXTERNAL-A",
+   "verdict": "not_measured",
+   "missing_premises": [
+    "external measurement of M"
+   ],
+   "affected_claims": [
+    "formal admissibility implies physical realization"
+   ]
+  },
+  {
+   "task_id": "HF-RECURRENCE-A",
+   "verdict": "no_recurrence_forced",
+   "missing_premises": [
+    "arrival exceeding service"
+   ],
+   "affected_claims": [
+    "backlog must recur"
+   ]
+  },
+  {
+   "task_id": "HF-CONFLATE-A",
+   "verdict": "cannot_always_choose",
+   "missing_premises": [
+    "distinguishing signal beyond Q"
+   ],
+   "affected_claims": [
+    "Q-only decoder correct"
+   ]
+  },
+  {
+   "task_id": "HF-GF-TARGET-A",
+   "verdict": "not_terminal",
+   "missing_premises": [
+    "physical continuation ceased"
+   ],
+   "affected_claims": [
+    "unobservability equals extinction"
+   ]
+  },
+  {
+   "task_id": "HF-ORDER-A",
+   "verdict": "order_unchanged",
+   "missing_premises": [
+    "new non-equivalent reusable composition"
+   ],
+   "affected_claims": [
+    "new notation raises order"
+   ]
+  },
+  {
+   "task_id": "HF-GF-PROMOTION-A",
+   "verdict": "gf3_conditional_only",
+   "missing_premises": [
+    "real hazard evidence",
+    "outcome evidence"
+   ],
+   "affected_claims": [
+    "formal+synthetic identifies cosmic Great Filter"
+   ]
+  },
+  {
+   "task_id": "HF-REGISTER-A",
+   "verdict": "type_mismatch_reject",
+   "missing_premises": [
+    "signal-concept as concept endomorphism"
+   ],
+   "affected_claims": [
+    "Register equals L/G word"
+   ]
+  },
+  {
+   "task_id": "HF-GOVERNANCE-A",
+   "verdict": "governance_fails",
+   "missing_premises": [
+    "participantwise within budget"
+   ],
+   "affected_claims": [
+    "mean utility establishes governance"
+   ]
+  },
+  {
+   "task_id": "HF-RECALL-A",
+   "verdict": "type_mismatch_reject",
+   "missing_premises": [
+    "memory-concept as concept endomorphism"
+   ],
+   "affected_claims": [
+    "Recall equals L/G word"
+   ]
+  },
+  {
+   "task_id": "HF-METRIC-A",
+   "verdict": "not_semantics_preserving",
+   "missing_premises": [
+    "metric preserved below threshold"
+   ],
+   "affected_claims": [
+    "labels/edges guarantee semantics"
+   ]
+  },
+  {
+   "task_id": "HF-SEM-RENAME-A",
+   "verdict": "semantics_preserved",
+   "missing_premises": [],
+   "affected_claims": []
+  },
+  {
+   "task_id": "HF-BRIDGE-LIFT-DYN-A",
+   "verdict": "dynamical_not_established",
+   "missing_premises": [
+    "contraction constant",
+    "closure",
+    "invariance"
+   ],
+   "affected_claims": [
+    "reversing backlog establishes dynamical CNS"
+   ]
+  },
+  {
+   "task_id": "HF-BRIDGE-DYN-LIFT-A",
+   "verdict": "lift_not_established",
+   "missing_premises": [
+    "new non-equivalent reusable spanning composition"
+   ],
+   "affected_claims": [
+    "contracting operator proves lift"
+   ]
+  },
+  {
+   "task_id": "HF-REFLECTION-A",
+   "verdict": "order_unchanged",
+   "missing_premises": [
+    "new reusable spanning composition"
+   ],
+   "affected_claims": [
+    "reflection automatically raises order"
+   ]
+  }
+ ]
+}

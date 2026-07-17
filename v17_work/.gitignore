@@ -1,0 +1,9 @@
+.venv17/
+exec/
+unexec/
+executed.zip
+unexecuted.zip
+validate_run.log
+*.pyc
+__pycache__/
+nature_v17_full_reproducibility_package.zip

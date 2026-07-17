@@ -1,0 +1,22 @@
+name: Lean formalization
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: leanprover/lean-action@v1
+        with:
+          test: true
+      - run: lake env lean AxiomReport.lean > axiom-report.txt 2>&1
+      - run: bash scripts/audit.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: lean-reports
+          path: |
+            axiom-report.txt
+            lake-manifest.json

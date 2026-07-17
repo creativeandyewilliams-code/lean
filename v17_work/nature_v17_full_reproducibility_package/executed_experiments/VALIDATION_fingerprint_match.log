@@ -1,0 +1,118 @@
+{
+  "generator_exit": 0,
+  "conformance_exit": 0,
+  "key_count": 15,
+  "exact_matches": 15,
+  "all_exact": true,
+  "elapsed_seconds": 29.555864334106445,
+  "zip_sha256": "f21b7ba677c32140710092405a37de460f81a77fe8f6c459a965266eb8842a72"
+}
+recurrence done; derived_fingerprint 7b8f8c0002633c9f
+  fixed_post_lift            rev=1.000 rec=1.000 final=  694.1 regions=11.99
+  proportional_service       rev=1.000 rec=0.000 final=   36.1 regions=0.43
+  regenerative_distribution  rev=1.000 rec=0.000 final=   65.1 regions=1.49
+  second_order_lift          rev=1.000 rec=0.000 final=   53.8 regions=1.01
+  branch_heterogeneity       rev=1.000 rec=1.000 final=  989.0 regions=9.70
+{
+  "worlds": 500,
+  "admissible_cases": 2000,
+  "mutation_cases": 3000,
+  "admissible_invariance_rate": 1.0,
+  "mutation_detection_rate": 1.0,
+  "order_relation_pass_rate": 1.0,
+  "operation_rates": {
+    "boundary": 1.0,
+    "continuation": 1.0,
+    "edge_order": 1.0,
+    "edge_type": 1.0,
+    "full_iso": 1.0,
+    "metric": 1.0,
+    "rename": 1.0,
+    "rigid_isometry": 1.0,
+    "role": 1.0,
+    "warrant": 1.0
+  },
+  "scope": "finite generated FSSs and frozen bounded target language"
+}
+{
+  "protocol": {
+    "id": "EXP-GOVERNANCE-OPTION-MONOTONICITY-V16",
+    "seed": 2026071702,
+    "worlds": 10000,
+    "participants": 24,
+    "actions": 12,
+    "epsilon": 0.08,
+    "delta": 0.12,
+    "primary_bound": "participantwise regret <= 2 epsilon + delta",
+    "controls": [
+      "aggregate_mean_single_action",
+      "residual_open_participantwise"
+    ]
+  },
+  "bound": 0.28,
+  "results": {
+    "participant_complete": {
+      "mean": 0.001695427249991475,
+      "median": 0.0,
+      "p95": 0.0,
+      "p99": 0.06090323891768716,
+      "max": 0.15616359747345465,
+      "violation_rate": 0.0,
+      "harm_rate": 0.0010291666666666667,
+      "worlds_with_any_bound_violation": 0.0
+    },
+    "residual_open": {
+      "mean": 0.014140265857727081,
+      "median": 0.0,
+      "p95": 0.028784871948426428,
+      "p99": 0.5587568481953701,
+      "max": 1.4742049785455658,
+      "violation_rate": 0.015620833333333334,
+      "harm_rate": 0.0050625,
+      "worlds_with_any_bound_violation": 0.3179
+    },
+    "aggregate_mean": {
+      "mean": 1.3620332243775597,
+      "median": 1.2543398512709865,
+      "p95": 3.2990696649878313,
+      "p99": 4.240733181461239,
+      "max": 7.738266534501062,
+      "violation_rate": 0.7981458333333333,
+      "harm_rate": 0.4308375,
+      "worlds_with_any_bound_violation": 1.0
+    }
+  },
+  "interpretation": "finite common-world verification; residual-open control intentionally violates the registered residual-budget premise in rare events"
+}
+{
+  "accuracy": 0.8666666666666667,
+  "checks": {
+    "summable_survival_exceeds_non_summable_at_H": true,
+    "correlation_nonincreasing_system_survival_with_tolerance": true,
+    "heldout_generator_accuracy_above_chance": true
+  }
+}
+{
+  "worlds": 600,
+  "rates": {
+    "holonomy_iso_gauge": 1.0,
+    "typed_cycle_iso": 1.0,
+    "closure_iso": 1.0,
+    "path_association": 1.0,
+    "transport_mutation_detected": 1.0,
+    "edge_type_mutation_detected": 1.0,
+    "metric_mutation_detected": 1.0
+  },
+  "representation_bytes": {
+    "direct_graph_mean": 819.965,
+    "worldsheet_cycle_mean": 314.87166666666667
+  },
+  "scope": "finite computational invariance/sensitivity"
+}
+gate_zero: MATCH 60aececb566a8ab2 60aececb566a8ab2
+direct_recurrence: MATCH 7b8f8c0002633c9f 7b8f8c0002633c9f
+semantic_equivalence_structural: MATCH 06afccc2f7e0172d 06afccc2f7e0172d
+governance_option_monotonicity: MATCH b4993f44e09f1bc4 b4993f44e09f1bc4
+gf_branch_hazard_robust: MATCH 346448509b350ca8 346448509b350ca8
+cst_computational_geometry: MATCH 18bb20e0171e9e00 18bb20e0171e9e00
+All executable experiments rebuilt successfully.

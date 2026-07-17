@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "required": [
+    "trajectory_id",
+    "event_index",
+    "operator_id",
+    "model_hash",
+    "registry_hash",
+    "pre_hash",
+    "post_hash",
+    "target",
+    "resource_delta",
+    "residual_delta",
+    "seed"
+  ],
+  "title": "ISGPE event",
+  "type": "object"
+}

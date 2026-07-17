@@ -1,0 +1,24 @@
+witness_id,function,target,full_model_verdict,designated_ablation_verdict,typed_reason,model_hash
+W01,Register,grounded external symbol must become a typed conceptual node,pass,fail,input signal remains outside the conceptual state,797b16e309348bbabba0927c4639aae41a7209584d730505e4b451bdaf607bf3
+W02,Express,stored verdict must be reconstructed by an external receiver,pass,fail,no output carrier contains the verdict,797b16e309348bbabba0927c4639aae41a7209584d730505e4b451bdaf607bf3
+W03,Store,identity must persist after active context eviction,pass,fail,identity and provenance are lost,797b16e309348bbabba0927c4639aae41a7209584d730505e4b451bdaf607bf3
+W04,Recall,stored bridge must reactivate under a later target,pass,fail,stored object remains inert,797b16e309348bbabba0927c4639aae41a7209584d730505e4b451bdaf607bf3
+W05,L,local relation classification from active evidence,pass,fail,local evidence is not evaluated,797b16e309348bbabba0927c4639aae41a7209584d730505e4b451bdaf607bf3
+W06,G,cross-region support must preserve all successor obligations,pass,undetermined,local verdict cannot certify the global target,797b16e309348bbabba0927c4639aae41a7209584d730505e4b451bdaf607bf3
+W07,current fitness,detect present viability violation with equal target and projection,pass,fail,two states collapse without current coordinate,797b16e309348bbabba0927c4639aae41a7209584d730505e4b451bdaf607bf3
+W08,target fitness,distinguish adequacy under equal current and projected outcomes,pass,fail,two goals collapse without target coordinate,797b16e309348bbabba0927c4639aae41a7209584d730505e4b451bdaf607bf3
+W09,projected fitness,select between actions with equal current and target,pass,fail,action consequences collapse without projected coordinate,797b16e309348bbabba0927c4639aae41a7209584d730505e4b451bdaf607bf3
+W10,Model,represent action-conditioned consequences,pass,undetermined,consequences are unavailable,797b16e309348bbabba0927c4639aae41a7209584d730505e4b451bdaf607bf3
+W11,Evaluate,compare projected state with target and viability,pass,undetermined,no target-relative verdict,797b16e309348bbabba0927c4639aae41a7209584d730505e4b451bdaf607bf3
+W12,Stability,preserve a viable action against unnecessary perturbation,pass,fail,controller changes a viable trajectory,797b16e309348bbabba0927c4639aae41a7209584d730505e4b451bdaf607bf3
+W13,Adaptation,change action after a target-relevant deviation,pass,fail,controller remains on a failing trajectory,797b16e309348bbabba0927c4639aae41a7209584d730505e4b451bdaf607bf3
+W14,Decomposition,localize a conjunctive failure to its typed obligations,pass,undetermined,residual cannot be assigned,797b16e309348bbabba0927c4639aae41a7209584d730505e4b451bdaf607bf3
+W15,Bridging,construct a correction joining separated obligations,pass,fail,obligations remain disconnected,797b16e309348bbabba0927c4639aae41a7209584d730505e4b451bdaf607bf3
+W16,CreatePromotion,promote an admissible composite as a reusable operand,pass,undetermined,higher-order target remains outside operand domain,797b16e309348bbabba0927c4639aae41a7209584d730505e4b451bdaf607bf3
+W17,operand lift,distinguish paired worlds with identical lower-order projections,pass,undetermined,pair remains observationally equivalent,797b16e309348bbabba0927c4639aae41a7209584d730505e4b451bdaf607bf3
+W18,certified span,connect lifted operand to a remote target with certificate,pass,fail,lifted object has no reliable path,797b16e309348bbabba0927c4639aae41a7209584d730505e4b451bdaf607bf3
+W19,Certificate,reject a decoy bridge with identical surface type,pass,fail,nominal reach is mistaken for certified reach,797b16e309348bbabba0927c4639aae41a7209584d730505e4b451bdaf607bf3
+W20,Governance,reject mean-positive action that violates one participant viability region,pass,fail,participant harm is averaged away,797b16e309348bbabba0927c4639aae41a7209584d730505e4b451bdaf607bf3
+W21,signal carrier type,reject recursive assignment of an internal FSS basis to a carrier,pass,fail,type regress is admitted,797b16e309348bbabba0927c4639aae41a7209584d730505e4b451bdaf607bf3
+W22,target revision gate,separate target change from achieved progress,pass,fail,target motion is counted as positive displacement,797b16e309348bbabba0927c4639aae41a7209584d730505e4b451bdaf607bf3
+W23,split generator,detect a locally fitted surrogate on a held-out transition,pass,fail,mixed transition semantics pass unnoticed,797b16e309348bbabba0927c4639aae41a7209584d730505e4b451bdaf607bf3

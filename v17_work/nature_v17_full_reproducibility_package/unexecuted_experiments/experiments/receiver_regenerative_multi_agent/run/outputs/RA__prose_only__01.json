@@ -1,0 +1,155 @@
+{
+ "generation": "A",
+ "condition": "prose_only",
+ "run_id": "RA__prose_only__01",
+ "answers": [
+  {
+   "task_id": "HF-RECALL-A",
+   "verdict": "type_domain_mismatch",
+   "missing_premises": [
+    "Recall input is memory not concept"
+   ],
+   "affected_claims": [
+    "Recall equals L/G word"
+   ]
+  },
+  {
+   "task_id": "HF-GF-PROMOTION-A",
+   "verdict": "promotion_unwarranted",
+   "missing_premises": [
+    "real hazard premise",
+    "real outcome premise",
+    "residue premise"
+   ],
+   "affected_claims": [
+    "Great Filter promoted above structural"
+   ]
+  },
+  {
+   "task_id": "HF-ORDER-A",
+   "verdict": "no_order_increase",
+   "missing_premises": [
+    "new non-equivalent spanning composition"
+   ],
+   "affected_claims": [
+    "new notation raises cognitive order"
+   ]
+  },
+  {
+   "task_id": "HF-GF-TARGET-A",
+   "verdict": "not_automatically_terminal",
+   "missing_premises": [
+    "outcome premise",
+    "residue premise"
+   ],
+   "affected_claims": [
+    "unobservability implies extinction"
+   ]
+  },
+  {
+   "task_id": "HF-BRIDGE-DYN-LIFT-A",
+   "verdict": "no_lift",
+   "missing_premises": [
+    "new non-equivalent spanning composition",
+    "operand expansion"
+   ],
+   "affected_claims": [
+    "contracting operator proves order lift"
+   ]
+  },
+  {
+   "task_id": "HF-GOVERNANCE-A",
+   "verdict": "governance_violation",
+   "missing_premises": [
+    "participantwise non-harm within budget"
+   ],
+   "affected_claims": [
+    "mean utility justifies outcome"
+   ]
+  },
+  {
+   "task_id": "HF-EXTERNAL-A",
+   "verdict": "external_unmeasured",
+   "missing_premises": [
+    "measurement of PhysicalMapping M"
+   ],
+   "affected_claims": [
+    "parameter certifies physical mapping"
+   ]
+  },
+  {
+   "task_id": "HF-CONFLATE-A",
+   "verdict": "not_recoverable",
+   "missing_premises": [
+    "distinguishing feature beyond code Q"
+   ],
+   "affected_claims": [
+    "Q-only decoder always correct"
+   ]
+  },
+  {
+   "task_id": "HF-METRIC-A",
+   "verdict": "identity_changed",
+   "missing_premises": [
+    "target-relevant metric preserved"
+   ],
+   "affected_claims": [
+    "unchanged labels preserve identity"
+   ]
+  },
+  {
+   "task_id": "HF-BRIDGE-LIFT-DYN-A",
+   "verdict": "dyn_cns_not_established",
+   "missing_premises": [
+    "contraction constant",
+    "closure",
+    "invariance"
+   ],
+   "affected_claims": [
+    "lift establishes dynamical CNS"
+   ]
+  },
+  {
+   "task_id": "HF-REFLECTION-A",
+   "verdict": "no_order_increase",
+   "missing_premises": [
+    "new reusable spanning composition"
+   ],
+   "affected_claims": [
+    "reflection raises order"
+   ]
+  },
+  {
+   "task_id": "HF-SEM-RENAME-A",
+   "verdict": "identity_preserved_conditional",
+   "missing_premises": [
+    "preservation of position",
+    "fitness",
+    "continuation"
+   ],
+   "affected_claims": [
+    "renaming preserves identity"
+   ]
+  },
+  {
+   "task_id": "HF-RECURRENCE-A",
+   "verdict": "no_recurrence",
+   "missing_premises": [
+    "fixed-capacity assumption"
+   ],
+   "affected_claims": [
+    "backlog must recur"
+   ]
+  },
+  {
+   "task_id": "HF-REGISTER-A",
+   "verdict": "type_domain_mismatch",
+   "missing_premises": [
+    "Register input is signal not concept"
+   ],
+   "affected_claims": [
+    "Register equals L/G word"
+   ]
+  }
+ ]
+}

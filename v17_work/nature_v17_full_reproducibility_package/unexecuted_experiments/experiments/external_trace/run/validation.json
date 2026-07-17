@@ -1,0 +1,16 @@
+{
+  "pass": true,
+  "records": 20,
+  "worlds": 10,
+  "paired_worlds": 10,
+  "version_locks": [
+    [
+      "fixture",
+      "mock",
+      "1"
+    ]
+  ],
+  "train_worlds": 7,
+  "test_worlds": 3,
+  "input_sha256": "70207c851af63f37cf6c32cb414e10b371030372c9a329d8bac25eefd4ae517f"
+}

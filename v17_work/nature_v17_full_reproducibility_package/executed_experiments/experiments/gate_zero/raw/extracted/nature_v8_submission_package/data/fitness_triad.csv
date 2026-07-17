@@ -1,0 +1,5 @@
+model,accuracy,status
+two_coordinate_without_current,0.5,defeated
+two_coordinate_without_target,0.5,defeated
+two_coordinate_without_projected,0.5,defeated
+full_three_coordinate_controller,1.0,pass

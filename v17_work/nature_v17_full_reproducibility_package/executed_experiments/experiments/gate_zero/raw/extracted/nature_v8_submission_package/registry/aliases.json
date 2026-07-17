@@ -1,0 +1,26 @@
+{
+  "CreatePromotion": [
+    "Create",
+    "promotion"
+  ],
+  "Express": [
+    "output transduction"
+  ],
+  "G": [
+    "global coherence assessment"
+  ],
+  "L": [
+    "local assessment"
+  ],
+  "Recall": [
+    "R",
+    "recover"
+  ],
+  "Register": [
+    "input transduction"
+  ],
+  "Store": [
+    "S",
+    "persist"
+  ]
+}

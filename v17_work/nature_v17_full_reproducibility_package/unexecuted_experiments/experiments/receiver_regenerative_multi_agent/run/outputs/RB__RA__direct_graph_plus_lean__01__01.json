@@ -1,0 +1,147 @@
+{
+ "generation": "B",
+ "condition": "transmission_only:direct_graph_plus_lean",
+ "run_id": "RB__RA__direct_graph_plus_lean__01__01",
+ "answers": [
+  {
+   "task_id": "HF-RECURRENCE-B",
+   "verdict": "recurrence_blocked",
+   "missing_premises": [
+    "renewed positive gap"
+   ],
+   "affected_claims": [
+    "backlog_recurrence"
+   ]
+  },
+  {
+   "task_id": "HF-SEM-RENAME-B",
+   "verdict": "invariance_holds",
+   "missing_premises": [],
+   "affected_claims": [
+    "semantic_invariance"
+   ]
+  },
+  {
+   "task_id": "HF-CONFLATE-B",
+   "verdict": "projection_fails",
+   "missing_premises": [
+    "fibre_constancy"
+   ],
+   "affected_claims": [
+    "decoder_identification"
+   ]
+  },
+  {
+   "task_id": "HF-REGISTER-B",
+   "verdict": "substitution_invalid",
+   "missing_premises": [
+    "cross_layer_type_identity"
+   ],
+   "affected_claims": [
+    "order_lift"
+   ]
+  },
+  {
+   "task_id": "HF-GF-TARGET-B",
+   "verdict": "empirical_parameter",
+   "missing_premises": [
+    "observability_versus_extinction"
+   ],
+   "affected_claims": [
+    "filter_target"
+   ]
+  },
+  {
+   "task_id": "HF-RECALL-B",
+   "verdict": "substitution_invalid",
+   "missing_premises": [
+    "certified_fresh_class"
+   ],
+   "affected_claims": [
+    "order_lift"
+   ]
+  },
+  {
+   "task_id": "HF-REFLECTION-B",
+   "verdict": "no_new_class",
+   "missing_premises": [
+    "certified_fresh_class"
+   ],
+   "affected_claims": [
+    "order_lift"
+   ]
+  },
+  {
+   "task_id": "HF-ORDER-B",
+   "verdict": "order_not_raised",
+   "missing_premises": [
+    "certified_fresh_class"
+   ],
+   "affected_claims": [
+    "order_lift"
+   ]
+  },
+  {
+   "task_id": "HF-GOVERNANCE-B",
+   "verdict": "guarantee_violated",
+   "missing_premises": [
+    "registered_error_budget"
+   ],
+   "affected_claims": [
+    "participant_guarantee"
+   ]
+  },
+  {
+   "task_id": "HF-GF-PROMOTION-B",
+   "verdict": "promotion_blocked",
+   "missing_premises": [
+    "physical_mapping",
+    "hazard",
+    "outcome"
+   ],
+   "affected_claims": [
+    "actual_filter_identification"
+   ]
+  },
+  {
+   "task_id": "HF-BRIDGE-LIFT-DYN-B",
+   "verdict": "dyn_bridge_fails",
+   "missing_premises": [
+    "domain_closure",
+    "contraction_constant",
+    "fixed_normal_form"
+   ],
+   "affected_claims": [
+    "dynamical_cns"
+   ]
+  },
+  {
+   "task_id": "HF-METRIC-B",
+   "verdict": "invariance_broken",
+   "missing_premises": [],
+   "affected_claims": [
+    "semantic_invariance"
+   ]
+  },
+  {
+   "task_id": "HF-EXTERNAL-B",
+   "verdict": "lift_uncertified",
+   "missing_premises": [
+    "preregistered_evidence_classification"
+   ],
+   "affected_claims": [
+    "order_lift"
+   ]
+  },
+  {
+   "task_id": "HF-BRIDGE-DYN-LIFT-B",
+   "verdict": "lift_bridge_fails",
+   "missing_premises": [
+    "prior_unavailable_spanning_composition"
+   ],
+   "affected_claims": [
+    "order_lift"
+   ]
+  }
+ ]
+}

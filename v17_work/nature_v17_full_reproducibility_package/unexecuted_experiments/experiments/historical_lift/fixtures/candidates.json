@@ -1,0 +1,4 @@
+[
+  {"candidate_id":"fixture_qualifies","name":"Fixture A","evidence_dossier":"synthetic component-test evidence","fixture_status":"qualifies"},
+  {"candidate_id":"fixture_undetermined","name":"Fixture B","evidence_dossier":"insufficient evidence","fixture_status":"undetermined"}
+]

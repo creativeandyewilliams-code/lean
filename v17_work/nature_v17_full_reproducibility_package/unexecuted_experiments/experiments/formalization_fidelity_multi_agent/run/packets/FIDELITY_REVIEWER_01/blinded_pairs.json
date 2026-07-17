@@ -1,0 +1,242 @@
+[
+  {
+    "item_id": "M-SEM-LABEL",
+    "manuscript_passage": "Semantic identity depends on metric, interactions, position, boundaries, warrant, fitness, and continuation.",
+    "candidate_lean_declaration": "def SemEq (x y : Node) := x.label = y.label",
+    "candidate_registry_warrant": "definition",
+    "review_fields": [
+      "verdict",
+      "mismatch_dimensions",
+      "counterexample",
+      "confidence"
+    ]
+  },
+  {
+    "item_id": "M-REGIONAL",
+    "manuscript_passage": "Regional fragmentation requires locality and unresolved cross-region obligations.",
+    "candidate_lean_declaration": "theorem regional_fragmentation (h : backlog_unbounded U) : exists_regions U",
+    "candidate_registry_warrant": "theorem",
+    "review_fields": [
+      "verdict",
+      "mismatch_dimensions",
+      "counterexample",
+      "confidence"
+    ]
+  },
+  {
+    "item_id": "T-CONFLATE",
+    "manuscript_passage": "If two latent states share first-order projection but require different target values, no projection-only decoder is correct on both.",
+    "candidate_lean_declaration": "theorem conflation (hq : q x = q y) (h\u03c6 : \u03c6 x \u2260 \u03c6 y) : \u00ac \u2203 d, d (q x)=\u03c6 x \u2227 d (q y)=\u03c6 y",
+    "candidate_registry_warrant": "theorem",
+    "review_fields": [
+      "verdict",
+      "mismatch_dimensions",
+      "counterexample",
+      "confidence"
+    ]
+  },
+  {
+    "item_id": "T-OM",
+    "manuscript_passage": "Under bounded evaluation error and residual budget, participantwise selected options are within the registered regret bound for every participant.",
+    "candidate_lean_declaration": "theorem option_bound (i : Participant) : regret i selected \u2264 2*\u03b5+\u03b4",
+    "candidate_registry_warrant": "theorem",
+    "review_fields": [
+      "verdict",
+      "mismatch_dimensions",
+      "counterexample",
+      "confidence"
+    ]
+  },
+  {
+    "item_id": "T-ORDER-INVARIANCE",
+    "manuscript_passage": "Cognitive order is preserved by a bijection on qualifying functional-equivalence classes induced by an admissible representation.",
+    "candidate_lean_declaration": "theorem order_invariant (e : QualClass X \u2243 QualClass Y) : Fintype.card (QualClass X)=Fintype.card (QualClass Y)",
+    "candidate_registry_warrant": "theorem",
+    "review_fields": [
+      "verdict",
+      "mismatch_dimensions",
+      "counterexample",
+      "confidence"
+    ]
+  },
+  {
+    "item_id": "M-GF-PROMOTION",
+    "manuscript_passage": "Without external evidence the strongest result is GF-3 conditional structural admissibility.",
+    "candidate_lean_declaration": "theorem actual_great_filter_identified : ObservedCosmicFilter = FMICNS",
+    "candidate_registry_warrant": "theorem",
+    "review_fields": [
+      "verdict",
+      "mismatch_dimensions",
+      "counterexample",
+      "confidence"
+    ]
+  },
+  {
+    "item_id": "T-SEM-EQUIV",
+    "manuscript_passage": "Admissible pointed FSS isomorphisms preserve every formula in the registered metric-interaction target language.",
+    "candidate_lean_declaration": "theorem semantic_invariance (e : AdmissibleIso X Y) (\u03c6 : Formula) : Eval X v \u03c6 \u2194 Eval Y (e.toFun v) \u03c6",
+    "candidate_registry_warrant": "theorem",
+    "review_fields": [
+      "verdict",
+      "mismatch_dimensions",
+      "counterexample",
+      "confidence"
+    ]
+  },
+  {
+    "item_id": "M-METRIC-OMIT",
+    "manuscript_passage": "Metric is constitutive and target-relevant changes can alter semantic identity.",
+    "candidate_lean_declaration": "structure FSS where nodes : Type; edges : Node \u2192 Node \u2192 Prop",
+    "candidate_registry_warrant": "definition",
+    "review_fields": [
+      "verdict",
+      "mismatch_dimensions",
+      "counterexample",
+      "confidence"
+    ]
+  },
+  {
+    "item_id": "M-EXTERNAL-AXIOM",
+    "manuscript_passage": "Physical mappings remain external premises.",
+    "candidate_lean_declaration": "axiom gravity_is_G : PhysicalMapping Gravity G",
+    "candidate_registry_warrant": "axiom",
+    "review_fields": [
+      "verdict",
+      "mismatch_dimensions",
+      "counterexample",
+      "confidence"
+    ]
+  },
+  {
+    "item_id": "T-RECURRENCE",
+    "manuscript_passage": "After a valid reversal, a persistent positive post-lift arrival-service gap makes backlog unbounded.",
+    "candidate_lean_declaration": "theorem recurrence (hgap : \u2200 t\u2265T, \u03b4 \u2264 A t - S t) : \u2200 M, \u2203 t, M \u2264 U t",
+    "candidate_registry_warrant": "theorem",
+    "review_fields": [
+      "verdict",
+      "mismatch_dimensions",
+      "counterexample",
+      "confidence"
+    ]
+  },
+  {
+    "item_id": "M-BRIDGE-OMIT",
+    "manuscript_passage": "The lift-to-dynamical bridge needs contraction, closure, and invariance.",
+    "candidate_lean_declaration": "theorem lift_to_dyn (h : CNSLift M c) : DynamicCNS f D",
+    "candidate_registry_warrant": "theorem",
+    "review_fields": [
+      "verdict",
+      "mismatch_dimensions",
+      "counterexample",
+      "confidence"
+    ]
+  },
+  {
+    "item_id": "T-HOL-INVARIANCE",
+    "manuscript_passage": "Admissible isomorphism and gauge transformation preserve semantic holonomy around corresponding closed paths.",
+    "candidate_lean_declaration": "theorem holonomy_invariant (e : AdmissibleIso X Y) (g : Gauge) : holonomy (transportPath e g p) = holonomy p",
+    "candidate_registry_warrant": "theorem",
+    "review_fields": [
+      "verdict",
+      "mismatch_dimensions",
+      "counterexample",
+      "confidence"
+    ]
+  },
+  {
+    "item_id": "M-TERMINAL-OBS",
+    "manuscript_passage": "Terminal and observability targets are distinct.",
+    "candidate_lean_declaration": "def TerminalFilter := ObservabilityLoss",
+    "candidate_registry_warrant": "definition",
+    "review_fields": [
+      "verdict",
+      "mismatch_dimensions",
+      "counterexample",
+      "confidence"
+    ]
+  },
+  {
+    "item_id": "COR-GF-CNS",
+    "manuscript_passage": "The mechanism yields a conditional structural filter only when branch, hazard, timescale, outcome, and residue premises are supplied.",
+    "candidate_lean_declaration": "theorem conditional_filter (hbranch : BranchClosure M) (hhazard : NonSummableHazard M) (htime : Timescale M) (hout : TargetOutcome M) (hres : ResidueSuppression M) : StructuralFilter M",
+    "candidate_registry_warrant": "corollary",
+    "review_fields": [
+      "verdict",
+      "mismatch_dimensions",
+      "counterexample",
+      "confidence"
+    ]
+  },
+  {
+    "item_id": "M-ORDER-CHOICE",
+    "manuscript_passage": "Cognitive order is the number of non-equivalent reusable spanning compositions.",
+    "candidate_lean_declaration": "def CognitiveOrder (m : Model) := m.choiceDepth",
+    "candidate_registry_warrant": "definition",
+    "review_fields": [
+      "verdict",
+      "mismatch_dimensions",
+      "counterexample",
+      "confidence"
+    ]
+  },
+  {
+    "item_id": "M-REFLECTION-LIFT",
+    "manuscript_passage": "Reflection exposes residual but does not by itself raise cognitive order.",
+    "candidate_lean_declaration": "theorem reflection_increments_order : Ord (reflect M) = Ord M + 1",
+    "candidate_registry_warrant": "theorem",
+    "review_fields": [
+      "verdict",
+      "mismatch_dimensions",
+      "counterexample",
+      "confidence"
+    ]
+  },
+  {
+    "item_id": "T-OP-NONREDUCTION",
+    "manuscript_passage": "Register and Recall are not equal to words generated solely by conceptual L/G endomorphisms without typed bridges.",
+    "candidate_lean_declaration": "theorem register_not_word (w : LGWord) : Register \u2260 w.eval",
+    "candidate_registry_warrant": "theorem",
+    "review_fields": [
+      "verdict",
+      "mismatch_dimensions",
+      "counterexample",
+      "confidence"
+    ]
+  },
+  {
+    "item_id": "T-CNS-LIFT",
+    "manuscript_passage": "A valid lift adds a prior-unavailable non-equivalent spanning composition, expands the operand domain, and reverses the current residual.",
+    "candidate_lean_declaration": "theorem cns_lift (hnew : NewComposition M c) (hspan : Spans c) (hexpand : StrictOperandExpansion M c) (hrev : ReversesResidual M c) : CNSLift M c",
+    "candidate_registry_warrant": "theorem",
+    "review_fields": [
+      "verdict",
+      "mismatch_dimensions",
+      "counterexample",
+      "confidence"
+    ]
+  },
+  {
+    "item_id": "T-BRIDGE-LIFT-TO-DYN",
+    "manuscript_passage": "An order lift enters the dynamical CNS regime only with contraction, closure, and invariance premises.",
+    "candidate_lean_declaration": "theorem lift_to_dyn (hL : CNSLift M c) (hc : Contractive f) (hcl : ClosedOn f D) (hi : Invariant target f) : DynamicCNS f D",
+    "candidate_registry_warrant": "theorem",
+    "review_fields": [
+      "verdict",
+      "mismatch_dimensions",
+      "counterexample",
+      "confidence"
+    ]
+  },
+  {
+    "item_id": "M-GOV-MEAN",
+    "manuscript_passage": "Governance is participantwise and cannot be reduced to aggregate mean improvement.",
+    "candidate_lean_declaration": "theorem governance_ok (h : meanUtility after \u2265 meanUtility before) : GoodGovernance after",
+    "candidate_registry_warrant": "theorem",
+    "review_fields": [
+      "verdict",
+      "mismatch_dimensions",
+      "counterexample",
+      "confidence"
+    ]
+  }
+]

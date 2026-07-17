@@ -1,0 +1,5 @@
+{
+  "fields": ["prior_order_representability", "preexisting_compositions", "new_non_equivalent_composition", "span", "reuse", "operand_expansion", "adoptability", "world_comparator", "participant_consequences", "uncertainty"],
+  "lift_rule": "new_non_equivalent_composition AND span AND reuse AND operand_expansion, with evidence for prior unavailability",
+  "statuses": ["qualifies", "does_not_qualify", "undetermined"]
+}

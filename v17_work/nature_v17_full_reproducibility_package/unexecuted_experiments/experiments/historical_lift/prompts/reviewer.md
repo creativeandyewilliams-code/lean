@@ -1,0 +1,1 @@
+Classify each blinded historical candidate using only the frozen rubric and supplied evidence dossier. Return every rubric field, quoted evidence locator, uncertainty, and final status. Missing evidence yields `undetermined`, not a favorable assumption. Do not change the rubric after seeing candidates.

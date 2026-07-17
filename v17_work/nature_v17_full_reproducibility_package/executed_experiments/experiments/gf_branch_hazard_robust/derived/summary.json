@@ -1,0 +1,298 @@
+{
+  "hazard_classes": [
+    {
+      "alpha": 0.7,
+      "summability_class": "non-summable",
+      "survival_H": 0.007916438292090227,
+      "survival_prefix": [
+        0.27751314239447483,
+        0.10331441166256723,
+        0.056893363529953625,
+        0.007916438292090227
+      ],
+      "cumulative_hazard": 4.816081037105145
+    },
+    {
+      "alpha": 1.0,
+      "summability_class": "non-summable",
+      "survival_H": 0.33156302573311325,
+      "survival_prefix": [
+        0.5299294606282847,
+        0.43704366590415133,
+        0.40218341080071984,
+        0.33156302573311325
+      ],
+      "cumulative_hazard": 1.0913410623581323
+    },
+    {
+      "alpha": 1.3,
+      "summability_class": "summable",
+      "survival_H": 0.6370870701301999,
+      "survival_prefix": [
+        0.6827734894609111,
+        0.6570851804751139,
+        0.649488293545535,
+        0.6370870701301999
+      ],
+      "cumulative_hazard": 0.44076285314765395
+    },
+    {
+      "alpha": 1.8,
+      "summability_class": "summable",
+      "survival_H": 0.7910553649954905,
+      "survival_prefix": [
+        0.7938988092691972,
+        0.7917471409387549,
+        0.7913972943242538,
+        0.7910553649954905
+      ],
+      "cumulative_hazard": 0.22570278327277826
+    }
+  ],
+  "branch_correlation": [
+    {
+      "K": 1,
+      "rho": 0.0,
+      "system_survival_mc": 0.006166666666666667,
+      "branch_survival_mc": 0.006166666666666667,
+      "branch_survival_formula": 0.006464643586620846,
+      "independent_system_formula": 0.0064646435866208
+    },
+    {
+      "K": 1,
+      "rho": 0.25,
+      "system_survival_mc": 0.005166666666666667,
+      "branch_survival_mc": 0.005166666666666667,
+      "branch_survival_formula": 0.006464643586620846,
+      "independent_system_formula": 0.0064646435866208
+    },
+    {
+      "K": 1,
+      "rho": 0.5,
+      "system_survival_mc": 0.005833333333333334,
+      "branch_survival_mc": 0.005833333333333334,
+      "branch_survival_formula": 0.006464643586620846,
+      "independent_system_formula": 0.0064646435866208
+    },
+    {
+      "K": 1,
+      "rho": 0.75,
+      "system_survival_mc": 0.006833333333333334,
+      "branch_survival_mc": 0.006833333333333334,
+      "branch_survival_formula": 0.006464643586620846,
+      "independent_system_formula": 0.0064646435866208
+    },
+    {
+      "K": 1,
+      "rho": 1.0,
+      "system_survival_mc": 0.006583333333333333,
+      "branch_survival_mc": 0.006583333333333333,
+      "branch_survival_formula": 0.006464643586620846,
+      "independent_system_formula": 0.0064646435866208
+    },
+    {
+      "K": 2,
+      "rho": 0.0,
+      "system_survival_mc": 0.013416666666666667,
+      "branch_survival_mc": 0.0067083333333333335,
+      "branch_survival_formula": 0.006464643586620846,
+      "independent_system_formula": 0.012887495556539563
+    },
+    {
+      "K": 2,
+      "rho": 0.25,
+      "system_survival_mc": 0.014583333333333334,
+      "branch_survival_mc": 0.007375,
+      "branch_survival_formula": 0.006464643586620846,
+      "independent_system_formula": 0.012887495556539563
+    },
+    {
+      "K": 2,
+      "rho": 0.5,
+      "system_survival_mc": 0.0115,
+      "branch_survival_mc": 0.005916666666666666,
+      "branch_survival_formula": 0.006464643586620846,
+      "independent_system_formula": 0.012887495556539563
+    },
+    {
+      "K": 2,
+      "rho": 0.75,
+      "system_survival_mc": 0.010083333333333333,
+      "branch_survival_mc": 0.005583333333333333,
+      "branch_survival_formula": 0.006464643586620846,
+      "independent_system_formula": 0.012887495556539563
+    },
+    {
+      "K": 2,
+      "rho": 1.0,
+      "system_survival_mc": 0.006083333333333333,
+      "branch_survival_mc": 0.006083333333333333,
+      "branch_survival_formula": 0.006464643586620846,
+      "independent_system_formula": 0.012887495556539563
+    },
+    {
+      "K": 4,
+      "rho": 0.0,
+      "system_survival_mc": 0.025333333333333333,
+      "branch_survival_mc": 0.006458333333333333,
+      "branch_survival_formula": 0.006464643586620846,
+      "independent_system_formula": 0.025608903571359254
+    },
+    {
+      "K": 4,
+      "rho": 0.25,
+      "system_survival_mc": 0.024083333333333335,
+      "branch_survival_mc": 0.006166666666666667,
+      "branch_survival_formula": 0.006464643586620846,
+      "independent_system_formula": 0.025608903571359254
+    },
+    {
+      "K": 4,
+      "rho": 0.5,
+      "system_survival_mc": 0.022416666666666668,
+      "branch_survival_mc": 0.0063125,
+      "branch_survival_formula": 0.006464643586620846,
+      "independent_system_formula": 0.025608903571359254
+    },
+    {
+      "K": 4,
+      "rho": 0.75,
+      "system_survival_mc": 0.0165,
+      "branch_survival_mc": 0.006375,
+      "branch_survival_formula": 0.006464643586620846,
+      "independent_system_formula": 0.025608903571359254
+    },
+    {
+      "K": 4,
+      "rho": 1.0,
+      "system_survival_mc": 0.0069166666666666664,
+      "branch_survival_mc": 0.0069166666666666664,
+      "branch_survival_formula": 0.006464643586620846,
+      "independent_system_formula": 0.025608903571359254
+    },
+    {
+      "K": 8,
+      "rho": 0.0,
+      "system_survival_mc": 0.04566666666666667,
+      "branch_survival_mc": 0.005802083333333334,
+      "branch_survival_formula": 0.006464643586620846,
+      "independent_system_formula": 0.05056199120059146
+    },
+    {
+      "K": 8,
+      "rho": 0.25,
+      "system_survival_mc": 0.04758333333333333,
+      "branch_survival_mc": 0.006510416666666667,
+      "branch_survival_formula": 0.006464643586620846,
+      "independent_system_formula": 0.05056199120059146
+    },
+    {
+      "K": 8,
+      "rho": 0.5,
+      "system_survival_mc": 0.03916666666666667,
+      "branch_survival_mc": 0.006416666666666667,
+      "branch_survival_formula": 0.006464643586620846,
+      "independent_system_formula": 0.05056199120059146
+    },
+    {
+      "K": 8,
+      "rho": 0.75,
+      "system_survival_mc": 0.022583333333333334,
+      "branch_survival_mc": 0.0070416666666666666,
+      "branch_survival_formula": 0.006464643586620846,
+      "independent_system_formula": 0.05056199120059146
+    },
+    {
+      "K": 8,
+      "rho": 1.0,
+      "system_survival_mc": 0.00575,
+      "branch_survival_mc": 0.00575,
+      "branch_survival_formula": 0.006464643586620846,
+      "independent_system_formula": 0.05056199120059146
+    },
+    {
+      "K": 16,
+      "rho": 0.0,
+      "system_survival_mc": 0.09775,
+      "branch_survival_mc": 0.006369791666666667,
+      "branch_survival_formula": 0.006464643586620846,
+      "independent_system_formula": 0.09856746744701417
+    },
+    {
+      "K": 16,
+      "rho": 0.25,
+      "system_survival_mc": 0.08766666666666667,
+      "branch_survival_mc": 0.006546875,
+      "branch_survival_formula": 0.006464643586620846,
+      "independent_system_formula": 0.09856746744701417
+    },
+    {
+      "K": 16,
+      "rho": 0.5,
+      "system_survival_mc": 0.057,
+      "branch_survival_mc": 0.006203125,
+      "branch_survival_formula": 0.006464643586620846,
+      "independent_system_formula": 0.09856746744701417
+    },
+    {
+      "K": 16,
+      "rho": 0.75,
+      "system_survival_mc": 0.02033333333333333,
+      "branch_survival_mc": 0.005682291666666667,
+      "branch_survival_formula": 0.006464643586620846,
+      "independent_system_formula": 0.09856746744701417
+    },
+    {
+      "K": 16,
+      "rho": 1.0,
+      "system_survival_mc": 0.004333333333333333,
+      "branch_survival_mc": 0.004333333333333333,
+      "branch_survival_formula": 0.006464643586620846,
+      "independent_system_formula": 0.09856746744701417
+    }
+  ],
+  "heldout_discrimination": {
+    "accuracy": 0.8666666666666667,
+    "n_train": 280,
+    "n_test": 120,
+    "confusion": {
+      "independent": {
+        "independent": 30,
+        "correlated": 0,
+        "regenerative": 2,
+        "mixed": 0
+      },
+      "correlated": {
+        "independent": 0,
+        "correlated": 29,
+        "regenerative": 0,
+        "mixed": 3
+      },
+      "regenerative": {
+        "independent": 5,
+        "correlated": 0,
+        "regenerative": 25,
+        "mixed": 0
+      },
+      "mixed": {
+        "independent": 3,
+        "correlated": 3,
+        "regenerative": 0,
+        "mixed": 20
+      }
+    },
+    "features": [
+      "early_mean",
+      "early_trend",
+      "pairwise_correlation",
+      "branch_dispersion",
+      "late_mean"
+    ]
+  },
+  "registered_checks": {
+    "summable_survival_exceeds_non_summable_at_H": true,
+    "correlation_nonincreasing_system_survival_with_tolerance": true,
+    "heldout_generator_accuracy_above_chance": true
+  },
+  "scope": "finite model-regime tests and held-out generator identifiability; no external extinction estimate"
+}

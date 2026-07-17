@@ -1,0 +1,187 @@
+\begin{longtable}{p{0.07\textwidth}p{0.16\textwidth}p{0.12\textwidth}p{0.50\textwidth}}
+\caption{Canonical function registry.}\label{tab:registry}\\
+\toprule ID & Function & Layer & Contract \\ \midrule \endfirsthead
+\toprule ID & Function & Layer & Contract \\ \midrule \endhead
+B01 & Register & boundary & admit typed external signal structure into an FSS \\
+B02 & Express & boundary & encode selected FSS structure onto a typed external carrier \\
+C01 & Store & conceptual & preserve recoverable identity, relation, verdict, and provenance \\
+C02 & Recall & conceptual & reactivate a stored object under a declared target and budget \\
+C03 & L & conceptual & evaluate or transform within the active represented region \\
+C04 & G & conceptual & evaluate or transform across represented regions while preserving successor obligations \\
+C05 & CreatePromotion & conceptual & promote an admissible composite to a reusable higher-order operand \\
+F01 & Model & fitness & represent action-conditioned participant consequences \\
+F02 & Evaluate & fitness & compare represented consequences with participant targets and viability \\
+F03 & Stability & fitness & preserve a viable trajectory when correction is unnecessary \\
+F04 & Adaptation & fitness & change trajectory when represented deviation requires correction \\
+F05 & Decomposition & fitness & factor a failed target into typed residual obligations \\
+F06 & Bridging & fitness & construct an admissible correction spanning decomposed obligations \\
+X01 & Certificate & coupling & validate a target-relevant path and its boundary conditions \\
+X02 & Governance & coupling & authorize participant-complete action selection and target revision \\
+\bottomrule
+\end{longtable}
+
+\begin{longtable}{p{0.05\textwidth}p{0.16\textwidth}p{0.28\textwidth}p{0.15\textwidth}p{0.17\textwidth}}
+\caption{Deterministic target-pair witnesses. The complete model passed every row.}\label{tab:witness}\\
+\toprule ID & Contract & Target distinction & Ablation & Typed reason \\ \midrule \endfirsthead
+\toprule ID & Contract & Target distinction & Ablation & Typed reason \\ \midrule \endhead
+W01 & Register & grounded external symbol must become a typed conceptual node & fail & input signal remains outside the conceptual state \\
+W02 & Express & stored verdict must be reconstructed by an external receiver & fail & no output carrier contains the verdict \\
+W03 & Store & identity must persist after active context eviction & fail & identity and provenance are lost \\
+W04 & Recall & stored bridge must reactivate under a later target & fail & stored object remains inert \\
+W05 & L & local relation classification from active evidence & fail & local evidence is not evaluated \\
+W06 & G & cross-region support must preserve all successor obligations & undetermined & local verdict cannot certify the global target \\
+W07 & current fitness & detect present viability violation with equal target and projection & fail & two states collapse without current coordinate \\
+W08 & target fitness & distinguish adequacy under equal current and projected outcomes & fail & two goals collapse without target coordinate \\
+W09 & projected fitness & select between actions with equal current and target & fail & action consequences collapse without projected coordinate \\
+W10 & Model & represent action-conditioned consequences & undetermined & consequences are unavailable \\
+W11 & Evaluate & compare projected state with target and viability & undetermined & no target-relative verdict \\
+W12 & Stability & preserve a viable action against unnecessary perturbation & fail & controller changes a viable trajectory \\
+W13 & Adaptation & change action after a target-relevant deviation & fail & controller remains on a failing trajectory \\
+W14 & Decomposition & localize a conjunctive failure to its typed obligations & undetermined & residual cannot be assigned \\
+W15 & Bridging & construct a correction joining separated obligations & fail & obligations remain disconnected \\
+W16 & CreatePromotion & promote an admissible composite as a reusable operand & undetermined & higher-order target remains outside operand domain \\
+W17 & operand lift & distinguish paired worlds with identical lower-order projections & undetermined & pair remains observationally equivalent \\
+W18 & certified span & connect lifted operand to a remote target with certificate & fail & lifted object has no reliable path \\
+W19 & Certificate & reject a decoy bridge with identical surface type & fail & nominal reach is mistaken for certified reach \\
+W20 & Governance & reject mean-positive action that violates one participant viability region & fail & participant harm is averaged away \\
+W21 & signal carrier type & reject recursive assignment of an internal FSS basis to a carrier & fail & type regress is admitted \\
+W22 & target revision gate & separate target change from achieved progress & fail & target motion is counted as positive displacement \\
+W23 & split generator & detect a locally fitted surrogate on a held-out transition & fail & mixed transition semantics pass unnoticed \\
+\bottomrule
+\end{longtable}
+
+\begin{table}[p]
+\centering
+\caption{Higher-order paired worlds.}\label{tab:high}
+\small
+\begin{tabular}{lrrrrr}
+\toprule Condition & Target acc. & Certified reach & Reuse & Containment & Harm \\ \midrule
+local\_baseline & 0.311 & 0.000 & 0.000 & 1.000 & 0.000 \\
+matched\_compute & 0.346 & 0.000 & 0.000 & 1.000 & 0.000 \\
+matched\_memory & 0.316 & 0.000 & 0.000 & 1.000 & 0.000 \\
+matched\_population & 0.333 & 0.000 & 0.000 & 1.000 & 0.000 \\
+matched\_communication & 0.400 & 0.000 & 0.000 & 1.000 & 0.000 \\
+certification\_only & 0.327 & 0.003 & 0.000 & 1.000 & 0.000 \\
+lift\_only & 0.310 & 0.000 & 0.000 & 1.000 & 0.000 \\
+span\_only & 0.317 & 0.000 & 0.000 & 1.000 & 0.000 \\
+full\_cns & 0.585 & 0.435 & 0.347 & 0.993 & 0.007 \\
+incoherent\_cns & 0.397 & 0.160 & 0.130 & 0.713 & 0.156 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[p]
+\centering
+\caption{Local-target worlds.}\label{tab:local}
+\small
+\begin{tabular}{lrrrrr}
+\toprule Condition & Target acc. & Certified reach & Reuse & Containment & Harm \\ \midrule
+local\_baseline & 0.468 & 0.000 & 0.000 & 1.000 & 0.000 \\
+matched\_compute & 0.595 & 0.000 & 0.000 & 1.000 & 0.000 \\
+matched\_memory & 0.522 & 0.000 & 0.000 & 1.000 & 0.000 \\
+matched\_population & 0.476 & 0.002 & 0.000 & 1.000 & 0.000 \\
+matched\_communication & 0.571 & 0.002 & 0.000 & 1.000 & 0.000 \\
+certification\_only & 0.478 & 0.004 & 0.000 & 1.000 & 0.000 \\
+lift\_only & 0.498 & 0.000 & 0.000 & 1.000 & 0.000 \\
+span\_only & 0.552 & 0.000 & 0.000 & 1.000 & 0.000 \\
+full\_cns & 0.679 & 0.472 & 0.397 & 0.976 & 0.022 \\
+incoherent\_cns & 0.554 & 0.172 & 0.125 & 0.724 & 0.155 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[p]
+\centering
+\caption{Mean recorded resources per trajectory.}\label{tab:resources}
+\small
+\begin{tabular}{lrrrrr}
+\toprule Condition & Compute & Memory & Communication & Validation & Operations \\ \midrule
+certification\_only & 6.00 & 2.50 & 3.20 & 5.30 & 8 \\
+full\_cns & 6.70 & 2.50 & 3.62 & 4.03 & 8 \\
+incoherent\_cns & 6.70 & 2.50 & 3.62 & 4.03 & 8 \\
+lift\_only & 6.00 & 2.50 & 3.20 & 3.50 & 8 \\
+local\_baseline & 6.00 & 2.50 & 3.20 & 3.50 & 8 \\
+matched\_communication & 6.00 & 2.50 & 5.00 & 3.50 & 8 \\
+matched\_compute & 9.00 & 2.50 & 3.20 & 3.50 & 8 \\
+matched\_memory & 6.00 & 2.50 & 3.20 & 3.50 & 8 \\
+matched\_population & 6.00 & 2.50 & 3.44 & 3.50 & 8 \\
+span\_only & 6.00 & 2.50 & 4.40 & 3.50 & 8 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[p]
+\centering
+\caption{Bounded-registration results at budget 256 and redundancy one, averaged across three synthetic trace families.}\label{tab:obs}
+\small
+\begin{tabular}{rlrrr}
+\toprule $L$ & Pipeline & Exact recovery & Relation retention & False confidence \\ \midrule
+2 & generic\_summary & 0.300 & 0.561 & 0.333 \\
+2 & relation\_extraction & 0.700 & 0.822 & 0.144 \\
+2 & target\_aware\_monitor & 0.867 & 0.928 & 0.000 \\
+4 & generic\_summary & 0.156 & 0.544 & 0.544 \\
+4 & relation\_extraction & 0.211 & 0.656 & 0.411 \\
+4 & target\_aware\_monitor & 0.622 & 0.875 & 0.000 \\
+6 & generic\_summary & 0.044 & 0.387 & 0.522 \\
+6 & relation\_extraction & 0.056 & 0.531 & 0.411 \\
+6 & target\_aware\_monitor & 0.233 & 0.750 & 0.000 \\
+8 & generic\_summary & 0.000 & 0.324 & 0.533 \\
+8 & relation\_extraction & 0.022 & 0.417 & 0.511 \\
+8 & target\_aware\_monitor & 0.067 & 0.611 & 0.000 \\
+12 & generic\_summary & 0.000 & 0.109 & 0.478 \\
+12 & relation\_extraction & 0.000 & 0.152 & 0.267 \\
+12 & target\_aware\_monitor & 0.000 & 0.249 & 0.000 \\
+16 & generic\_summary & 0.000 & 0.023 & 0.500 \\
+16 & relation\_extraction & 0.000 & 0.041 & 0.233 \\
+16 & target\_aware\_monitor & 0.000 & 0.113 & 0.000 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[p]
+\centering
+\caption{Noise-aware nearest-codeword identification accuracy.}\label{tab:id}
+\small
+\begin{tabular}{lr}
+\toprule True model & Accuracy \\ \midrule
+M1\_signal\_less & 1.000 \\
+M4\_verdict\_only\_LG & 1.000 \\
+M3\_store\_recall\_collapse & 0.996 \\
+M2\_signal\_regress & 0.988 \\
+M5\_connectivity\_only\_G & 0.972 \\
+M7\_no\_target & 0.964 \\
+M6\_primitive\_promotion & 0.964 \\
+M11\_split\_generator & 0.960 \\
+M8\_no\_projection & 0.952 \\
+M\_star & 0.940 \\
+M10\_uncertified\_reach & 0.938 \\
+M12\_target\_shift\_value & 0.934 \\
+M9\_aggregate\_governed & 0.932 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{longtable}{p{0.17\textwidth}p{0.18\textwidth}rrrr}
+\caption{Algorithmic artifact-reconstruction stress test.}\label{tab:prop}\\
+\toprule Receiver & Package & Contract recovery & Exact recovery & Extension & Pass \\ \midrule \endfirsthead
+\toprule Receiver & Package & Contract recovery & Exact recovery & Extension & Pass \\ \midrule \endhead
+conformance\_parser & article\_only & 0.300 & 0.000 & 0.367 & 0.000 \\
+conformance\_parser & article\_supplement & 0.380 & 0.000 & 0.467 & 0.000 \\
+conformance\_parser & complete\_package & 0.998 & 0.967 & 0.867 & 0.833 \\
+conformance\_parser & negative\_control & 1.000 & 1.000 & 0.933 & 0.867 \\
+conformance\_parser & plus\_code\_tests & 0.948 & 0.333 & 0.900 & 0.333 \\
+conformance\_parser & plus\_registry & 0.683 & 0.000 & 0.733 & 0.000 \\
+lexical\_parser & article\_only & 0.500 & 0.000 & 0.400 & 0.000 \\
+lexical\_parser & article\_supplement & 0.548 & 0.000 & 0.367 & 0.000 \\
+lexical\_parser & complete\_package & 1.000 & 1.000 & 1.000 & 0.967 \\
+lexical\_parser & negative\_control & 0.985 & 0.767 & 0.967 & 0.333 \\
+lexical\_parser & plus\_code\_tests & 0.712 & 0.000 & 0.800 & 0.000 \\
+lexical\_parser & plus\_registry & 0.673 & 0.000 & 0.600 & 0.000 \\
+schema\_parser & article\_only & 0.377 & 0.000 & 0.367 & 0.000 \\
+schema\_parser & article\_supplement & 0.455 & 0.000 & 0.467 & 0.000 \\
+schema\_parser & complete\_package & 0.995 & 0.900 & 0.933 & 0.767 \\
+schema\_parser & negative\_control & 0.998 & 0.967 & 1.000 & 0.733 \\
+schema\_parser & plus\_code\_tests & 0.957 & 0.567 & 0.967 & 0.567 \\
+schema\_parser & plus\_registry & 0.832 & 0.033 & 0.833 & 0.033 \\
+\bottomrule
+\end{longtable}

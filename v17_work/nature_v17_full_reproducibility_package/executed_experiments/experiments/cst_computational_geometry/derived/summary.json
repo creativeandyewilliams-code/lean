@@ -1,0 +1,17 @@
+{
+  "worlds": 600,
+  "rates": {
+    "holonomy_iso_gauge": 1.0,
+    "typed_cycle_iso": 1.0,
+    "closure_iso": 1.0,
+    "path_association": 1.0,
+    "transport_mutation_detected": 1.0,
+    "edge_type_mutation_detected": 1.0,
+    "metric_mutation_detected": 1.0
+  },
+  "representation_bytes": {
+    "direct_graph_mean": 819.965,
+    "worldsheet_cycle_mean": 314.87166666666667
+  },
+  "scope": "finite computational invariance/sensitivity"
+}

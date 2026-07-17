@@ -1,0 +1,111 @@
+{
+  "functions": [
+    {
+      "contract": "admit typed external signal structure into an FSS",
+      "dual": "B02",
+      "id": "B01",
+      "layer": "boundary",
+      "name": "Register"
+    },
+    {
+      "contract": "encode selected FSS structure onto a typed external carrier",
+      "dual": "B01",
+      "id": "B02",
+      "layer": "boundary",
+      "name": "Express"
+    },
+    {
+      "contract": "preserve recoverable identity, relation, verdict, and provenance",
+      "dual": "C02",
+      "id": "C01",
+      "layer": "conceptual",
+      "name": "Store"
+    },
+    {
+      "contract": "reactivate a stored object under a declared target and budget",
+      "dual": "C01",
+      "id": "C02",
+      "layer": "conceptual",
+      "name": "Recall"
+    },
+    {
+      "contract": "evaluate or transform within the active represented region",
+      "dual": "C04",
+      "id": "C03",
+      "layer": "conceptual",
+      "name": "L"
+    },
+    {
+      "contract": "evaluate or transform across represented regions while preserving successor obligations",
+      "dual": "C03",
+      "id": "C04",
+      "layer": "conceptual",
+      "name": "G"
+    },
+    {
+      "contract": "promote an admissible composite to a reusable higher-order operand",
+      "dual": null,
+      "id": "C05",
+      "layer": "conceptual",
+      "name": "CreatePromotion"
+    },
+    {
+      "contract": "represent action-conditioned participant consequences",
+      "dual": "F02",
+      "id": "F01",
+      "layer": "fitness",
+      "name": "Model"
+    },
+    {
+      "contract": "compare represented consequences with participant targets and viability",
+      "dual": "F01",
+      "id": "F02",
+      "layer": "fitness",
+      "name": "Evaluate"
+    },
+    {
+      "contract": "preserve a viable trajectory when correction is unnecessary",
+      "dual": "F04",
+      "id": "F03",
+      "layer": "fitness",
+      "name": "Stability"
+    },
+    {
+      "contract": "change trajectory when represented deviation requires correction",
+      "dual": "F03",
+      "id": "F04",
+      "layer": "fitness",
+      "name": "Adaptation"
+    },
+    {
+      "contract": "factor a failed target into typed residual obligations",
+      "dual": "F06",
+      "id": "F05",
+      "layer": "fitness",
+      "name": "Decomposition"
+    },
+    {
+      "contract": "construct an admissible correction spanning decomposed obligations",
+      "dual": "F05",
+      "id": "F06",
+      "layer": "fitness",
+      "name": "Bridging"
+    },
+    {
+      "contract": "validate a target-relevant path and its boundary conditions",
+      "dual": null,
+      "id": "X01",
+      "layer": "coupling",
+      "name": "Certificate"
+    },
+    {
+      "contract": "authorize participant-complete action selection and target revision",
+      "dual": null,
+      "id": "X02",
+      "layer": "coupling",
+      "name": "Governance"
+    }
+  ],
+  "registry_hash": "b7a6ef0e1d8c5c13f5699cb62142b2965d2391ecda5bd09e2d969eb191ad0385",
+  "version": "v8.0.0"
+}

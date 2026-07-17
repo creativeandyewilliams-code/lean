@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "model_hash": {
+      "const": "797b16e309348bbabba0927c4639aae41a7209584d730505e4b451bdaf607bf3"
+    },
+    "phase": {
+      "maximum": 8,
+      "minimum": 0,
+      "type": "integer"
+    },
+    "registry_hash": {
+      "const": "b7a6ef0e1d8c5c13f5699cb62142b2965d2391ecda5bd09e2d969eb191ad0385"
+    },
+    "signal": {
+      "description": "Typed carrier. It is not an FSS and cannot contain an internal_basis.",
+      "not": {
+        "required": [
+          "internal_basis"
+        ]
+      },
+      "type": "object"
+    }
+  },
+  "required": [
+    "model_hash",
+    "registry_hash",
+    "world",
+    "intervention",
+    "phase",
+    "conceptual",
+    "fitness",
+    "signal",
+    "residuals",
+    "resources"
+  ],
+  "title": "ISGPE canonical state",
+  "type": "object"
+}

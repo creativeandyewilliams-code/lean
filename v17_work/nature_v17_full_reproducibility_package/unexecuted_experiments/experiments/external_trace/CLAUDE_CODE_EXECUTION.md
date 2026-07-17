@@ -1,0 +1,3 @@
+# External trace execution
+
+Obtain genuinely external, version-locked traces not generated from the study's answer key. Freeze source licenses, URLs or repository commits, model/provider/version, prompts, budgets, timestamps, and raw responses. Construct common worlds across conditions without using intervention labels as target truth. Run `validate_and_split.py` before any labelled analysis. Use isolated scorers blinded to condition. Add the scored fields required by `analyze.py`, freeze them, and analyze only the held-out test split. Report leakage, missing-world, unstable-version, and pseudo-replication gates. A failed design gate ends the experiment without scientific promotion.

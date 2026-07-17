@@ -1,0 +1,1 @@
+Construct the strongest mapping certificate supported by primary physical sources. Define the exact scale/regime, operational support, local factorization or global nonfactorization witness, parallel commutation or sequential precedence witness, topology-generating consequence, cross-FSS invariant, and explicit defeaters. Missing evidence must remain missing.

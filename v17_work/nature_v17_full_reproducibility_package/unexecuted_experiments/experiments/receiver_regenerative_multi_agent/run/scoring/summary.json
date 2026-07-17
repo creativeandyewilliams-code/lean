@@ -1,0 +1,41 @@
+{
+  "groups": {
+    "A::corrupted_artifact": {
+      "n": 14,
+      "mean_score": 0.023809523809523808,
+      "verdict_accuracy": 0.0,
+      "fatal_error_rate": 0.0
+    },
+    "A::cst_plus_lean": {
+      "n": 14,
+      "mean_score": 0.07142857142857142,
+      "verdict_accuracy": 0.14285714285714285,
+      "fatal_error_rate": 0.0
+    },
+    "A::direct_graph_plus_lean": {
+      "n": 14,
+      "mean_score": 0.023809523809523808,
+      "verdict_accuracy": 0.0,
+      "fatal_error_rate": 0.0
+    },
+    "A::equivalent_reencoding": {
+      "n": 14,
+      "mean_score": 0.047619047619047616,
+      "verdict_accuracy": 0.07142857142857142,
+      "fatal_error_rate": 0.0
+    },
+    "A::prose_only": {
+      "n": 14,
+      "mean_score": 0.07142857142857142,
+      "verdict_accuracy": 0.14285714285714285,
+      "fatal_error_rate": 0.0
+    },
+    "A::registry_only": {
+      "n": 14,
+      "mean_score": 0.07142857142857142,
+      "verdict_accuracy": 0.14285714285714285,
+      "fatal_error_rate": 0.0
+    }
+  },
+  "n_items": 84
+}

@@ -1,0 +1,7 @@
+{
+  "experiment_id": "EXP-FORMALIZATION-FIDELITY-MULTIAGENT-V16",
+  "seed": 2026071706,
+  "reviewers_per_item": 3,
+  "dimensions": ["identity", "scope", "warrant", "target", "boundary", "countermodel_representability"],
+  "primary_endpoints": ["mismatch_detection", "false_acceptance", "dimension_accuracy", "counterexample_quality"]
+}

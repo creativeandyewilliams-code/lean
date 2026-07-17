@@ -1,0 +1,184 @@
+[
+  {
+    "task_id": "HF-EXTERNAL-A",
+    "family": "HF-EXTERNAL",
+    "variant": "A",
+    "prompt": "A Lean theorem accepts PhysicalMapping M as a parameter. Has the physical mapping been measured?",
+    "response_schema": [
+      "verdict",
+      "missing_premises",
+      "affected_claims",
+      "rationale",
+      "confidence"
+    ]
+  },
+  {
+    "task_id": "HF-REFLECTION-A",
+    "family": "HF-REFLECTION",
+    "variant": "A",
+    "prompt": "A system represents its unresolved error but adds no reusable composition. Did cognitive order rise?",
+    "response_schema": [
+      "verdict",
+      "missing_premises",
+      "affected_claims",
+      "rationale",
+      "confidence"
+    ]
+  },
+  {
+    "task_id": "HF-GF-PROMOTION-A",
+    "family": "HF-GF-PROMOTION",
+    "variant": "A",
+    "prompt": "Formal properties and synthetic branch tests close, but no real hazard/outcome evidence exists.",
+    "response_schema": [
+      "verdict",
+      "missing_premises",
+      "affected_claims",
+      "rationale",
+      "confidence"
+    ]
+  },
+  {
+    "task_id": "HF-METRIC-A",
+    "family": "HF-METRIC",
+    "variant": "A",
+    "prompt": "Labels and edges are unchanged, but a target-relevant distance crosses an admissibility threshold.",
+    "response_schema": [
+      "verdict",
+      "missing_premises",
+      "affected_claims",
+      "rationale",
+      "confidence"
+    ]
+  },
+  {
+    "task_id": "HF-GOVERNANCE-A",
+    "family": "HF-GOVERNANCE",
+    "variant": "A",
+    "prompt": "Mean utility rises while one participant loses an option beyond the registered error budget.",
+    "response_schema": [
+      "verdict",
+      "missing_premises",
+      "affected_claims",
+      "rationale",
+      "confidence"
+    ]
+  },
+  {
+    "task_id": "HF-GF-TARGET-A",
+    "family": "HF-GF-TARGET",
+    "variant": "A",
+    "prompt": "A target becomes unobservable but the system continues physically. Is this automatically terminal extinction?",
+    "response_schema": [
+      "verdict",
+      "missing_premises",
+      "affected_claims",
+      "rationale",
+      "confidence"
+    ]
+  },
+  {
+    "task_id": "HF-BRIDGE-LIFT-DYN-A",
+    "family": "HF-BRIDGE-LIFT-DYN",
+    "variant": "A",
+    "prompt": "An order lift expands operands and reverses backlog, but no contraction constant is known. Is dynamical CNS established?",
+    "response_schema": [
+      "verdict",
+      "missing_premises",
+      "affected_claims",
+      "rationale",
+      "confidence"
+    ]
+  },
+  {
+    "task_id": "HF-ORDER-A",
+    "family": "HF-ORDER",
+    "variant": "A",
+    "prompt": "A new notation abbreviates an existing composition without adding a new functional-equivalence class.",
+    "response_schema": [
+      "verdict",
+      "missing_premises",
+      "affected_claims",
+      "rationale",
+      "confidence"
+    ]
+  },
+  {
+    "task_id": "HF-REGISTER-A",
+    "family": "HF-REGISTER",
+    "variant": "A",
+    "prompt": "A signal-to-concept ingestion step is claimed to equal a word made only of conceptual L/G endomorphisms.",
+    "response_schema": [
+      "verdict",
+      "missing_premises",
+      "affected_claims",
+      "rationale",
+      "confidence"
+    ]
+  },
+  {
+    "task_id": "HF-BRIDGE-DYN-LIFT-A",
+    "family": "HF-BRIDGE-DYN-LIFT",
+    "variant": "A",
+    "prompt": "A contracting invariant operator exists but uses only old compositions. Does it prove an order lift?",
+    "response_schema": [
+      "verdict",
+      "missing_premises",
+      "affected_claims",
+      "rationale",
+      "confidence"
+    ]
+  },
+  {
+    "task_id": "HF-CONFLATE-A",
+    "family": "HF-CONFLATE",
+    "variant": "A",
+    "prompt": "Two latent equipment faults share dashboard code Q. Repair target differs. Can a Q-only decoder always choose correctly?",
+    "response_schema": [
+      "verdict",
+      "missing_premises",
+      "affected_claims",
+      "rationale",
+      "confidence"
+    ]
+  },
+  {
+    "task_id": "HF-SEM-RENAME-A",
+    "family": "HF-SEM-RENAME",
+    "variant": "A",
+    "prompt": "Every node, metric coordinate, interaction type, boundary and warrant is bijectively preserved under renaming.",
+    "response_schema": [
+      "verdict",
+      "missing_premises",
+      "affected_claims",
+      "rationale",
+      "confidence"
+    ]
+  },
+  {
+    "task_id": "HF-RECURRENCE-A",
+    "family": "HF-RECURRENCE",
+    "variant": "A",
+    "prompt": "After a lift, service scales above every new arrival rate. Must backlog recur?",
+    "response_schema": [
+      "verdict",
+      "missing_premises",
+      "affected_claims",
+      "rationale",
+      "confidence"
+    ]
+  },
+  {
+    "task_id": "HF-RECALL-A",
+    "family": "HF-RECALL",
+    "variant": "A",
+    "prompt": "A memory-to-concept retrieval is claimed to equal a conceptual L/G word.",
+    "response_schema": [
+      "verdict",
+      "missing_premises",
+      "affected_claims",
+      "rationale",
+      "confidence"
+    ]
+  }
+]

@@ -1,0 +1,37 @@
+{
+  "EXP-LEAN-FORMAL-CLOSURE-V16": {
+    "implementation": "complete",
+    "component_test": "passed",
+    "decisive_execution": "requires Lean/Lake and second clean environment"
+  },
+  "EXP-FORMALIZATION-FIDELITY-MULTIAGENT-V16": {
+    "implementation": "complete",
+    "component_test": "passed",
+    "decisive_execution": "requires isolated independent reviewers"
+  },
+  "EXP-RECEIVER-REGENERATIVE-MULTIAGENT-V16": {
+    "implementation": "complete",
+    "component_test": "passed",
+    "decisive_execution": "requires isolated Receiver A/B agents"
+  },
+  "EXP-CST-GEOMETRY-UTILITY-MULTIAGENT-V16": {
+    "implementation": "complete",
+    "component_test": "passed",
+    "decisive_execution": "requires isolated receiver agents"
+  },
+  "EXP-EXTERNAL-TRACE-V16": {
+    "implementation": "complete",
+    "component_test": "passed",
+    "decisive_execution": "requires version-locked external traces and blinded scorers"
+  },
+  "EXP-HISTORICAL-LIFT-V16": {
+    "implementation": "complete",
+    "component_test": "passed",
+    "decisive_execution": "requires frozen candidate evidence dossiers and reviewers"
+  },
+  "EXP-PHYSICAL-FSS-MAPPING-V16": {
+    "implementation": "complete",
+    "component_test": "passed",
+    "decisive_execution": "requires primary physical evidence and adversarial reviewers"
+  }
+}

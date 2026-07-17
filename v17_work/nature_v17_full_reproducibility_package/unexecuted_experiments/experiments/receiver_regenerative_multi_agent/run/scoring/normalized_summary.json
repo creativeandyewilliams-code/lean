@@ -1,0 +1,40 @@
+{
+  "metric": "disclosed claim-ID recovery + exact fatal rate",
+  "groups": {
+    "A::corrupted_artifact": {
+      "n": 14,
+      "claim_id_recovery": 0.0,
+      "fatal_error_rate": 0.0
+    },
+    "A::cst_plus_lean": {
+      "n": 14,
+      "claim_id_recovery": 0.0,
+      "fatal_error_rate": 0.0
+    },
+    "A::direct_graph_plus_lean": {
+      "n": 14,
+      "claim_id_recovery": 0.786,
+      "fatal_error_rate": 0.0
+    },
+    "A::equivalent_reencoding": {
+      "n": 14,
+      "claim_id_recovery": 0.0,
+      "fatal_error_rate": 0.0
+    },
+    "A::prose_only": {
+      "n": 14,
+      "claim_id_recovery": 0.0,
+      "fatal_error_rate": 0.0
+    },
+    "A::registry_only": {
+      "n": 14,
+      "claim_id_recovery": 0.0,
+      "fatal_error_rate": 0.0
+    },
+    "B::transmission_only:direct_graph_plus_lean": {
+      "n": 14,
+      "claim_id_recovery": 0.0,
+      "fatal_error_rate": 0.0
+    }
+  }
+}

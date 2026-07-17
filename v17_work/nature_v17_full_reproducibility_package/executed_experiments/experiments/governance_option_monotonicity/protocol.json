@@ -1,0 +1,14 @@
+{
+  "id": "EXP-GOVERNANCE-OPTION-MONOTONICITY-V16",
+  "seed": 2026071702,
+  "worlds": 10000,
+  "participants": 24,
+  "actions": 12,
+  "epsilon": 0.08,
+  "delta": 0.12,
+  "primary_bound": "participantwise regret <= 2 epsilon + delta",
+  "controls": [
+    "aggregate_mean_single_action",
+    "residual_open_participantwise"
+  ]
+}

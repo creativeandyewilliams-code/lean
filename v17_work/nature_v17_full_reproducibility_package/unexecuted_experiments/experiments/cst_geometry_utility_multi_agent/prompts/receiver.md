@@ -1,0 +1,1 @@
+You are an isolated receiver evaluating one representation condition. Solve each hidden graph/CST task, return `task_id`, `verdict`, `semantic_signature`, `holonomy`, `closure`, `drift_detected`, `rationale`, and `confidence`. Record elapsed seconds and the byte count of your retransmission artifact. Do not access the answer key or another condition.

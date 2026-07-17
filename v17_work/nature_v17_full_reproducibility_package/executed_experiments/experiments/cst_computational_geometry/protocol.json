@@ -1,0 +1,9 @@
+{
+  "id": "EXP-CST-COMPUTATIONAL-GEOMETRY-V16",
+  "seed": 2026071704,
+  "worlds": 600,
+  "nodes_min": 7,
+  "nodes_max": 13,
+  "transport_modulus": 17,
+  "claim": "finite computational invariance/sensitivity"
+}

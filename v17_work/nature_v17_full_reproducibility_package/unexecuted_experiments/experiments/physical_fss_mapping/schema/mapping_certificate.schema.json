@@ -1,0 +1,4 @@
+{
+  "required": ["mapping_id", "candidate_interaction", "candidate_operation", "scale_regime", "support_definition", "factorization_witness", "schedule_witness", "topological_consequence", "cross_fss_invariant", "defeaters", "evidence_sources", "status"],
+  "status_values": ["supported_at_registered_scope", "defeated", "undetermined"]
+}

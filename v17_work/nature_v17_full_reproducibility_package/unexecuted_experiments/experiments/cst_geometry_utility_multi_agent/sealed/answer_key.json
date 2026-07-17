@@ -1,0 +1,218 @@
+{
+  "CST-W00": {
+    "verdict": "mutation_changes_semantics",
+    "holonomy": 6,
+    "closure": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "drift_detected": true,
+    "semantic_signature": [
+      "closed",
+      "theorem",
+      "Register"
+    ]
+  },
+  "CST-W01": {
+    "verdict": "mutation_changes_semantics",
+    "holonomy": 1,
+    "closure": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "drift_detected": true,
+    "semantic_signature": [
+      "open",
+      "definition",
+      "G"
+    ]
+  },
+  "CST-W02": {
+    "verdict": "mutation_changes_semantics",
+    "holonomy": 4,
+    "closure": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "drift_detected": true,
+    "semantic_signature": [
+      "closed",
+      "theorem",
+      "Register"
+    ]
+  },
+  "CST-W03": {
+    "verdict": "mutation_changes_semantics",
+    "holonomy": 7,
+    "closure": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "drift_detected": true,
+    "semantic_signature": [
+      "closed",
+      "theorem",
+      "G"
+    ]
+  },
+  "CST-W04": {
+    "verdict": "mutation_changes_semantics",
+    "holonomy": 10,
+    "closure": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "drift_detected": true,
+    "semantic_signature": [
+      "open",
+      "external",
+      "Recall"
+    ]
+  },
+  "CST-W05": {
+    "verdict": "mutation_changes_semantics",
+    "holonomy": 2,
+    "closure": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "drift_detected": true,
+    "semantic_signature": [
+      "open",
+      "theorem",
+      "L"
+    ]
+  },
+  "CST-W06": {
+    "verdict": "mutation_changes_semantics",
+    "holonomy": 1,
+    "closure": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "drift_detected": true,
+    "semantic_signature": [
+      "closed",
+      "theorem",
+      "G"
+    ]
+  },
+  "CST-W07": {
+    "verdict": "mutation_changes_semantics",
+    "holonomy": 3,
+    "closure": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "drift_detected": true,
+    "semantic_signature": [
+      "open",
+      "definition",
+      "L"
+    ]
+  },
+  "CST-W08": {
+    "verdict": "mutation_changes_semantics",
+    "holonomy": 5,
+    "closure": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "drift_detected": true,
+    "semantic_signature": [
+      "open",
+      "theorem",
+      "L"
+    ]
+  },
+  "CST-W09": {
+    "verdict": "mutation_changes_semantics",
+    "holonomy": 2,
+    "closure": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "drift_detected": true,
+    "semantic_signature": [
+      "open",
+      "external",
+      "L"
+    ]
+  },
+  "CST-W10": {
+    "verdict": "mutation_changes_semantics",
+    "holonomy": 8,
+    "closure": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "drift_detected": true,
+    "semantic_signature": [
+      "closed",
+      "definition",
+      "Register"
+    ]
+  },
+  "CST-W11": {
+    "verdict": "mutation_changes_semantics",
+    "holonomy": 10,
+    "closure": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "drift_detected": true,
+    "semantic_signature": [
+      "open",
+      "theorem",
+      "Register"
+    ]
+  }
+}

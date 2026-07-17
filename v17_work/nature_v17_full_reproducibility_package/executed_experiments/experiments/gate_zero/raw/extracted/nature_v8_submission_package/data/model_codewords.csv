@@ -1,0 +1,14 @@
+model,T_register,T_store,T_global,T_current,T_target,T_projected,T_certificate,T_governance,T_generator,T_target_shift,T_signal_type,T_G_obligations,T_promotion_composite,T_reach_certificate_gate,T_express,T_recall,T_local,T_promotion,T_stability,T_adaptation,T_decompose,T_bridge,T_memory_distinction,T_boundary_roundtrip,T_cns,T_coherent_value,T_propagation_adapter
+M_star,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+M1_signal_less,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,0,0,1,0
+M2_signal_regress,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+M3_store_recall_collapse,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,0
+M4_verdict_only_LG,1,1,0,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,0,0,1,1,0,1,1
+M5_connectivity_only_G,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+M6_primitive_promotion,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+M7_no_target,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1
+M8_no_projection,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1
+M9_aggregate_governed,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1
+M10_uncertified_reach,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1
+M11_split_generator,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0
+M12_target_shift_value,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1

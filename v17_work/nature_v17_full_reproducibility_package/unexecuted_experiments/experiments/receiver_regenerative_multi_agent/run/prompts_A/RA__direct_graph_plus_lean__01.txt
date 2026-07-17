@@ -1,0 +1,26 @@
+You are an isolated first-generation receiver. Read only the assigned condition material and hidden task packet. For every task, return JSON fields `task_id`, `verdict`, `missing_premises`, `affected_claims`, `rationale`, and `confidence`. Then create a standalone transmission document that teaches the recovered dependency structure without copying task answers verbatim. Do not request author repair. Do not access any sealed key or other receiver output.
+
+
+OUTPUT FORMAT: return exactly one fenced ```json block containing a JSON array; each element has fields task_id, verdict, missing_premises (array), affected_claims (array), rationale (short), confidence (0-1). After the json block, add a section '## TRANSMISSION' (<=180 words) teaching the recovered dependency structure WITHOUT copying task answers.
+
+=== CONDITION MATERIAL ===
+# Direct typed graph plus Lean condition
+
+Use the prose condition plus the attached expanded Lean project. The theorem inventory includes semantic invariance, first-order conflation, typed nonreduction, order invariance, queue/reversal/recurrence, CNS lift, dynamical bridge, option monotonicity, Great Filter necessary lemmas, and CST transport/closure. Treat each theorem at its exact declared scope. External empirical premises remain theorem parameters.
+
+
+=== HIDDEN TASKS (14) ===
+- HF-RECURRENCE-A: After a lift, service scales above every new arrival rate. Must backlog recur?
+- HF-SEM-RENAME-A: Every node, metric coordinate, interaction type, boundary and warrant is bijectively preserved under renaming.
+- HF-BRIDGE-DYN-LIFT-A: A contracting invariant operator exists but uses only old compositions. Does it prove an order lift?
+- HF-GF-PROMOTION-A: Formal properties and synthetic branch tests close, but no real hazard/outcome evidence exists.
+- HF-METRIC-A: Labels and edges are unchanged, but a target-relevant distance crosses an admissibility threshold.
+- HF-REFLECTION-A: A system represents its unresolved error but adds no reusable composition. Did cognitive order rise?
+- HF-CONFLATE-A: Two latent equipment faults share dashboard code Q. Repair target differs. Can a Q-only decoder always choose correctly?
+- HF-GOVERNANCE-A: Mean utility rises while one participant loses an option beyond the registered error budget.
+- HF-EXTERNAL-A: A Lean theorem accepts PhysicalMapping M as a parameter. Has the physical mapping been measured?
+- HF-BRIDGE-LIFT-DYN-A: An order lift expands operands and reverses backlog, but no contraction constant is known. Is dynamical CNS established?
+- HF-RECALL-A: A memory-to-concept retrieval is claimed to equal a conceptual L/G word.
+- HF-REGISTER-A: A signal-to-concept ingestion step is claimed to equal a word made only of conceptual L/G endomorphisms.
+- HF-GF-TARGET-A: A target becomes unobservable but the system continues physically. Is this automatically terminal extinction?
+- HF-ORDER-A: A new notation abbreviates an existing composition without adding a new functional-equivalence class.

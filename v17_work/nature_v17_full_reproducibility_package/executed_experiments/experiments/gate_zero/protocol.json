@@ -1,0 +1,15 @@
+{
+  "id": "EXP-GATE-ZERO-V16-RERUN",
+  "required": [
+    "generator",
+    "raw event log",
+    "trajectory table",
+    "registry",
+    "frozen configuration",
+    "conformance suite",
+    "environment specification",
+    "source data/figures",
+    "checksums"
+  ],
+  "acceptance": "generator and conformance exit 0; regenerated key results equal frozen record"
+}

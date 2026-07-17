@@ -1,0 +1,108 @@
+{
+  "T-SEM-EQUIV": {
+    "verdict": "matched",
+    "mismatch_dimensions": []
+  },
+  "T-CONFLATE": {
+    "verdict": "matched",
+    "mismatch_dimensions": []
+  },
+  "T-OP-NONREDUCTION": {
+    "verdict": "matched",
+    "mismatch_dimensions": []
+  },
+  "T-ORDER-INVARIANCE": {
+    "verdict": "matched",
+    "mismatch_dimensions": []
+  },
+  "T-RECURRENCE": {
+    "verdict": "matched",
+    "mismatch_dimensions": []
+  },
+  "T-CNS-LIFT": {
+    "verdict": "matched",
+    "mismatch_dimensions": []
+  },
+  "T-OM": {
+    "verdict": "matched",
+    "mismatch_dimensions": []
+  },
+  "COR-GF-CNS": {
+    "verdict": "matched",
+    "mismatch_dimensions": []
+  },
+  "T-HOL-INVARIANCE": {
+    "verdict": "matched",
+    "mismatch_dimensions": []
+  },
+  "T-BRIDGE-LIFT-TO-DYN": {
+    "verdict": "matched",
+    "mismatch_dimensions": []
+  },
+  "M-ORDER-CHOICE": {
+    "verdict": "mismatched",
+    "mismatch_dimensions": [
+      "identity"
+    ]
+  },
+  "M-REFLECTION-LIFT": {
+    "verdict": "mismatched",
+    "mismatch_dimensions": [
+      "identity",
+      "scope"
+    ]
+  },
+  "M-GF-PROMOTION": {
+    "verdict": "mismatched",
+    "mismatch_dimensions": [
+      "warrant",
+      "target",
+      "scope"
+    ]
+  },
+  "M-SEM-LABEL": {
+    "verdict": "mismatched",
+    "mismatch_dimensions": [
+      "identity",
+      "boundary"
+    ]
+  },
+  "M-REGIONAL": {
+    "verdict": "mismatched",
+    "mismatch_dimensions": [
+      "scope"
+    ]
+  },
+  "M-EXTERNAL-AXIOM": {
+    "verdict": "mismatched",
+    "mismatch_dimensions": [
+      "warrant"
+    ]
+  },
+  "M-GOV-MEAN": {
+    "verdict": "mismatched",
+    "mismatch_dimensions": [
+      "identity",
+      "target"
+    ]
+  },
+  "M-METRIC-OMIT": {
+    "verdict": "mismatched",
+    "mismatch_dimensions": [
+      "boundary",
+      "identity"
+    ]
+  },
+  "M-BRIDGE-OMIT": {
+    "verdict": "mismatched",
+    "mismatch_dimensions": [
+      "scope"
+    ]
+  },
+  "M-TERMINAL-OBS": {
+    "verdict": "mismatched",
+    "mismatch_dimensions": [
+      "target"
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+model,modified_contracts,T_register,T_express,T_store,T_recall,T_local,T_global,T_promotion,T_current,T_target,T_projected,T_stability,T_adaptation,T_decompose,T_bridge,T_certificate,T_governance,T_generator,T_target_shift,T_signal_type,T_memory_distinction,T_G_obligations,T_promotion_composite,T_reach_certificate_gate,T_boundary_roundtrip,T_cns,T_coherent_value,T_propagation_adapter,distance_to_canonical
+H1,"Express,promotion_composite",1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,0,1,0,5
+H2,"Express,Certificate",1,0,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,0,0,0,0,6
+H3,"Stability,Decomposition",1,1,1,1,1,0,1,1,1,1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,3
+H4,"Express,Bridging",1,0,1,1,1,0,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,0,0,1,0,6
+H5,"Model,G_preserves_obligations,current",1,1,1,1,1,1,1,0,1,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,0,1,4
+H6,"Certificate,reach_requires_certificate",1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,0,1,0,0,1,4
+H7,Express,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,0,4
+H8,"target_shift_guard,Decomposition",1,1,1,1,1,0,1,1,1,1,1,1,0,1,1,1,1,0,1,1,1,1,1,1,1,0,1,4

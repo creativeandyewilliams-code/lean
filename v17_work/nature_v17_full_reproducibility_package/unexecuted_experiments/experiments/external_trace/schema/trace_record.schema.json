@@ -1,0 +1,5 @@
+{
+  "required": ["trace_id", "model_provider", "model_name", "model_version", "task_family", "world_id", "condition", "prompt_hash", "response", "target_label", "timestamp_utc"],
+  "condition_values": ["first_order", "reflective_fixed_order", "valid_order_lift", "matched_capacity_control"],
+  "notes": "JSONL records; intervention labels may not be used as target truth. Worlds must be paired across compared conditions."
+}

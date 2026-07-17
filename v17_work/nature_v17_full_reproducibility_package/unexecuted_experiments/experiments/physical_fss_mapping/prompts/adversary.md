@@ -1,0 +1,1 @@
+Audit one proposed physical FSS mapping. Search for regime dependence, ambiguous support, failure of factorization/nonfactorization, schedule counterexamples, nonunique operation assignment, absent topological consequence, and false promotion from analogy to measurement. Return a typed defeating witness or `undetermined`; do not reject merely because the mapping is novel.

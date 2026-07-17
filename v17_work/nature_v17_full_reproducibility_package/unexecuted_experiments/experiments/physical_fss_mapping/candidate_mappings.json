@@ -1,0 +1,6 @@
+[
+  {"mapping_id":"MAP-STRONG-REGISTER","candidate_interaction":"strong interaction","candidate_operation":"Register"},
+  {"mapping_id":"MAP-WEAK-RECALL","candidate_interaction":"weak interaction","candidate_operation":"Recall"},
+  {"mapping_id":"MAP-EM-L","candidate_interaction":"electromagnetism","candidate_operation":"L"},
+  {"mapping_id":"MAP-GRAVITY-G","candidate_interaction":"gravity","candidate_operation":"G"}
+]

@@ -1,0 +1,184 @@
+[
+  {
+    "task_id": "HF-METRIC-B",
+    "family": "HF-METRIC",
+    "variant": "B",
+    "prompt": "Names are unchanged while an interaction edge changes from local-factorizing to globally nonfactorizing.",
+    "response_schema": [
+      "verdict",
+      "missing_premises",
+      "affected_claims",
+      "rationale",
+      "confidence"
+    ]
+  },
+  {
+    "task_id": "HF-REFLECTION-B",
+    "family": "HF-REFLECTION",
+    "variant": "B",
+    "prompt": "A reviewer can name every residual, yet the available composition library is unchanged.",
+    "response_schema": [
+      "verdict",
+      "missing_premises",
+      "affected_claims",
+      "rationale",
+      "confidence"
+    ]
+  },
+  {
+    "task_id": "HF-BRIDGE-DYN-LIFT-B",
+    "family": "HF-BRIDGE-DYN-LIFT",
+    "variant": "B",
+    "prompt": "A fixed-point contraction is discovered with no prior-unavailable spanning composition.",
+    "response_schema": [
+      "verdict",
+      "missing_premises",
+      "affected_claims",
+      "rationale",
+      "confidence"
+    ]
+  },
+  {
+    "task_id": "HF-SEM-RENAME-B",
+    "family": "HF-SEM-RENAME",
+    "variant": "B",
+    "prompt": "A graph is permuted and rigidly transformed while all target-relevant relations are preserved.",
+    "response_schema": [
+      "verdict",
+      "missing_premises",
+      "affected_claims",
+      "rationale",
+      "confidence"
+    ]
+  },
+  {
+    "task_id": "HF-GF-TARGET-B",
+    "family": "HF-GF-TARGET",
+    "variant": "B",
+    "prompt": "All observers lose access to a process that nevertheless continues.",
+    "response_schema": [
+      "verdict",
+      "missing_premises",
+      "affected_claims",
+      "rationale",
+      "confidence"
+    ]
+  },
+  {
+    "task_id": "HF-RECALL-B",
+    "family": "HF-RECALL",
+    "variant": "B",
+    "prompt": "A stored-memory retrieval is replaced by a conceptual generalization sequence.",
+    "response_schema": [
+      "verdict",
+      "missing_premises",
+      "affected_claims",
+      "rationale",
+      "confidence"
+    ]
+  },
+  {
+    "task_id": "HF-GOVERNANCE-B",
+    "family": "HF-GOVERNANCE",
+    "variant": "B",
+    "prompt": "Aggregate welfare improves while a protected participant crosses a hard loss bound.",
+    "response_schema": [
+      "verdict",
+      "missing_premises",
+      "affected_claims",
+      "rationale",
+      "confidence"
+    ]
+  },
+  {
+    "task_id": "HF-BRIDGE-LIFT-DYN-B",
+    "family": "HF-BRIDGE-LIFT-DYN",
+    "variant": "B",
+    "prompt": "A novel composition is present, but its update map is not closed on the declared domain.",
+    "response_schema": [
+      "verdict",
+      "missing_premises",
+      "affected_claims",
+      "rationale",
+      "confidence"
+    ]
+  },
+  {
+    "task_id": "HF-EXTERNAL-B",
+    "family": "HF-EXTERNAL",
+    "variant": "B",
+    "prompt": "A historical case is called an order lift without a preregistered evidence classification.",
+    "response_schema": [
+      "verdict",
+      "missing_premises",
+      "affected_claims",
+      "rationale",
+      "confidence"
+    ]
+  },
+  {
+    "task_id": "HF-ORDER-B",
+    "family": "HF-ORDER",
+    "variant": "B",
+    "prompt": "A macro expands to an already available transformation and adds no new target reach.",
+    "response_schema": [
+      "verdict",
+      "missing_premises",
+      "affected_claims",
+      "rationale",
+      "confidence"
+    ]
+  },
+  {
+    "task_id": "HF-REGISTER-B",
+    "family": "HF-REGISTER",
+    "variant": "B",
+    "prompt": "A sensor registration boundary is replaced by a conceptual rewrite sequence.",
+    "response_schema": [
+      "verdict",
+      "missing_premises",
+      "affected_claims",
+      "rationale",
+      "confidence"
+    ]
+  },
+  {
+    "task_id": "HF-GF-PROMOTION-B",
+    "family": "HF-GF-PROMOTION",
+    "variant": "B",
+    "prompt": "A conditional filter theorem is used to claim identification of the actual astronomical filter.",
+    "response_schema": [
+      "verdict",
+      "missing_premises",
+      "affected_claims",
+      "rationale",
+      "confidence"
+    ]
+  },
+  {
+    "task_id": "HF-CONFLATE-B",
+    "family": "HF-CONFLATE",
+    "variant": "B",
+    "prompt": "Two patient states share triage label A but require incompatible treatments.",
+    "response_schema": [
+      "verdict",
+      "missing_premises",
+      "affected_claims",
+      "rationale",
+      "confidence"
+    ]
+  },
+  {
+    "task_id": "HF-RECURRENCE-B",
+    "family": "HF-RECURRENCE",
+    "variant": "B",
+    "prompt": "Post-lift proportional capacity maintains a positive service margin indefinitely.",
+    "response_schema": [
+      "verdict",
+      "missing_premises",
+      "affected_claims",
+      "rationale",
+      "confidence"
+    ]
+  }
+]

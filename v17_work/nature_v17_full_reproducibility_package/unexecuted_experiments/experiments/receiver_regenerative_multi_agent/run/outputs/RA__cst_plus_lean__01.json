@@ -1,0 +1,148 @@
+{
+ "generation": "A",
+ "condition": "cst_plus_lean",
+ "run_id": "RA__cst_plus_lean__01",
+ "answers": [
+  {
+   "task_id": "HF-GF-TARGET-A",
+   "verdict": "not_automatically_terminal",
+   "missing_premises": [
+    "physical cessation",
+    "external hazard/outcome"
+   ],
+   "affected_claims": [
+    "terminal extinction claim"
+   ]
+  },
+  {
+   "task_id": "HF-REGISTER-A",
+   "verdict": "type_mismatch",
+   "missing_premises": [
+    "domain equality signal=concept"
+   ],
+   "affected_claims": [
+    "Register = L/G word equality"
+   ]
+  },
+  {
+   "task_id": "HF-METRIC-A",
+   "verdict": "semantic_identity_may_change",
+   "missing_premises": [
+    "admissibility of metric mutation"
+   ],
+   "affected_claims": [
+    "semantic holonomy preservation"
+   ]
+  },
+  {
+   "task_id": "HF-REFLECTION-A",
+   "verdict": "order_unchanged",
+   "missing_premises": [
+    "new reusable spanning composition"
+   ],
+   "affected_claims": [
+    "cognitive order increase"
+   ]
+  },
+  {
+   "task_id": "HF-ORDER-A",
+   "verdict": "no_order_lift",
+   "missing_premises": [
+    "new functional-equivalence class"
+   ],
+   "affected_claims": [
+    "order lift via notation"
+   ]
+  },
+  {
+   "task_id": "HF-RECALL-A",
+   "verdict": "type_mismatch",
+   "missing_premises": [
+    "domain equality memory=concept"
+   ],
+   "affected_claims": [
+    "Recall = L/G word equality"
+   ]
+  },
+  {
+   "task_id": "HF-SEM-RENAME-A",
+   "verdict": "semantic_identity_preserved",
+   "missing_premises": [],
+   "affected_claims": [
+    "renaming invariance"
+   ]
+  },
+  {
+   "task_id": "HF-BRIDGE-DYN-LIFT-A",
+   "verdict": "no_order_lift",
+   "missing_premises": [
+    "new non-equivalent spanning composition"
+   ],
+   "affected_claims": [
+    "order lift from contraction"
+   ]
+  },
+  {
+   "task_id": "HF-GF-PROMOTION-A",
+   "verdict": "remains_conditional",
+   "missing_premises": [
+    "real hazard/outcome evidence"
+   ],
+   "affected_claims": [
+    "GF-3 promotion"
+   ]
+  },
+  {
+   "task_id": "HF-EXTERNAL-A",
+   "verdict": "not_measured",
+   "missing_premises": [
+    "measurement of PhysicalMapping M"
+   ],
+   "affected_claims": [
+    "physical realization of theorem"
+   ]
+  },
+  {
+   "task_id": "HF-BRIDGE-LIFT-DYN-A",
+   "verdict": "dynamical_cns_not_established",
+   "missing_premises": [
+    "contraction constant",
+    "closure",
+    "invariance"
+   ],
+   "affected_claims": [
+    "dynamical CNS bridge"
+   ]
+  },
+  {
+   "task_id": "HF-RECURRENCE-A",
+   "verdict": "backlog_need_not_recur",
+   "missing_premises": [
+    "arrival rate exceeding service"
+   ],
+   "affected_claims": [
+    "forced backlog recurrence"
+   ]
+  },
+  {
+   "task_id": "HF-GOVERNANCE-A",
+   "verdict": "governance_violation",
+   "missing_premises": [
+    "no participant loss beyond budget"
+   ],
+   "affected_claims": [
+    "participantwise improvement"
+   ]
+  },
+  {
+   "task_id": "HF-CONFLATE-A",
+   "verdict": "not_uniquely_decodable",
+   "missing_premises": [
+    "distinguishing observable"
+   ],
+   "affected_claims": [
+    "Q-only decoder correctness"
+   ]
+  }
+ ]
+}

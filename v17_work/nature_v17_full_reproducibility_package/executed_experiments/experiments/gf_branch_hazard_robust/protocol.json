@@ -1,0 +1,33 @@
+{
+  "id": "EXP-GF-BRANCH-HAZARD-ROBUST-V16",
+  "seed": 2026071703,
+  "hazard_horizon": 5000,
+  "hazard_c": 0.12,
+  "hazard_exponents": [
+    0.7,
+    1.0,
+    1.3,
+    1.8
+  ],
+  "branch_horizon": 160,
+  "branch_replicates": 12000,
+  "branches": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "correlations": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "discrimination_worlds_per_class": 100,
+  "discrimination_replicates": 180,
+  "discrimination_branches": 8,
+  "discrimination_horizon": 120,
+  "claim": "finite model-regime tests and held-out generator identifiability; no external extinction estimate"
+}

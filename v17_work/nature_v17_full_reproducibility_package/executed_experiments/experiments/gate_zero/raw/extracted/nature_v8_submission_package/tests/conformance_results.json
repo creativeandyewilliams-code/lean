@@ -1,0 +1,92 @@
+{
+  "model_hash": "797b16e309348bbabba0927c4639aae41a7209584d730505e4b451bdaf607bf3",
+  "registry_hash": "b7a6ef0e1d8c5c13f5699cb62142b2965d2391ecda5bd09e2d969eb191ad0385",
+  "all_pass": true,
+  "tests": [
+    {
+      "test": "unique_registry_ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "R1_R2_present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "signal_carrier_not_fss",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "single_generator_symbol",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "single_model_hash_trajectories",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "single_model_hash_events",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "single_registry_hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "eight_events_per_trajectory",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "deterministic_replay",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "replay_summary_target_correct",
+      "pass": true,
+      "detail": "1.0 != 1.0"
+    },
+    {
+      "test": "replay_summary_certified_reach",
+      "pass": true,
+      "detail": "0.0 != 0.0"
+    },
+    {
+      "test": "replay_summary_recursive_reuse",
+      "pass": true,
+      "detail": "0.0 != 0.0"
+    },
+    {
+      "test": "replay_summary_mean_displacement",
+      "pass": true,
+      "detail": "0.04166416357519774 != 0.0416641635751977"
+    },
+    {
+      "test": "replay_summary_terminal_risk",
+      "pass": true,
+      "detail": "0.0 != 0.0"
+    },
+    {
+      "test": "no_ablation_passes",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "split_generator_codeword_detected",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "signal_regress_codeword_detected",
+      "pass": true,
+      "detail": ""
+    }
+  ]
+}

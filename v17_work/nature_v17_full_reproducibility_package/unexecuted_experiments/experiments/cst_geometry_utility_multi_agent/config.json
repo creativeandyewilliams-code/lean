@@ -1,0 +1,8 @@
+{
+  "experiment_id": "EXP-CST-GEOMETRY-UTILITY-MULTIAGENT-V16",
+  "seed": 2026071707,
+  "worlds": 12,
+  "receiver_instances_per_condition": 3,
+  "conditions": ["prose_only", "registry_only", "direct_graph_plus_lean", "cst_plus_lean", "cst_optional_action", "cst_ablation"],
+  "primary_endpoints": ["novel_execution_accuracy", "semantic_drift_detection", "equivalent_encoding_stability", "reconstruction_time_seconds", "registration_cost_bytes", "retransmission_success"]
+}

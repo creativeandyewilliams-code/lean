@@ -1,0 +1,4 @@
+model,heldout_log_loss,brier
+correlation_aware_logistic,0.2582779083095572,0.08123886818108221
+heterogeneous_independence,0.4649797124909845,0.15472865152820958
+homogeneous_independence,1.0236277794019122,0.31680994905527027

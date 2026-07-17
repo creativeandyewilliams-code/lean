@@ -1,0 +1,26 @@
+{
+  "EXP-GATE-ZERO-V16-RERUN": {
+    "status": "closed-positive",
+    "scope": "supplied v8 computational lineage"
+  },
+  "EXP-DIRECT-RECURRENCE-V16-RERUN": {
+    "status": "closed-bounded",
+    "scope": "registered queue-and-region synthetic model"
+  },
+  "EXP-SEMANTIC-EQUIVALENCE-STRUCTURAL-V16": {
+    "status": "closed-bounded",
+    "scope": "finite generated FSS and target language"
+  },
+  "EXP-GOVERNANCE-OPTION-MONOTONICITY-V16": {
+    "status": "closed-bounded",
+    "scope": "finite common-world utility model"
+  },
+  "EXP-GF-BRANCH-HAZARD-ROBUST-V16": {
+    "status": "closed-bounded",
+    "scope": "finite analytic/Monte Carlo generator class"
+  },
+  "EXP-CST-COMPUTATIONAL-GEOMETRY-V16": {
+    "status": "closed-bounded",
+    "scope": "finite discrete typed graph/CST class"
+  }
+}

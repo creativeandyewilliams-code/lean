@@ -1,0 +1,406 @@
+{
+  "HF-CONFLATE-A": {
+    "verdict": "projection_decoder_impossible",
+    "required_missing_premises": [
+      "target_difference",
+      "collapsed_projection"
+    ],
+    "required_affected_claims": [
+      "T-CONFLATE"
+    ],
+    "fatal_verdicts": [
+      "theorem_applies",
+      "gf6_identified",
+      "order_lift"
+    ]
+  },
+  "HF-CONFLATE-B": {
+    "verdict": "projection_decoder_impossible",
+    "required_missing_premises": [
+      "target_difference",
+      "collapsed_projection"
+    ],
+    "required_affected_claims": [
+      "T-CONFLATE"
+    ],
+    "fatal_verdicts": [
+      "theorem_applies",
+      "gf6_identified",
+      "order_lift"
+    ]
+  },
+  "HF-REFLECTION-A": {
+    "verdict": "reflection_only",
+    "required_missing_premises": [
+      "new_composition"
+    ],
+    "required_affected_claims": [
+      "L-ORDER-INCREMENT"
+    ],
+    "fatal_verdicts": [
+      "theorem_applies",
+      "gf6_identified",
+      "order_lift"
+    ]
+  },
+  "HF-REFLECTION-B": {
+    "verdict": "reflection_only",
+    "required_missing_premises": [
+      "new_composition"
+    ],
+    "required_affected_claims": [
+      "L-ORDER-INCREMENT"
+    ],
+    "fatal_verdicts": [
+      "theorem_applies",
+      "gf6_identified",
+      "order_lift"
+    ]
+  },
+  "HF-REGISTER-A": {
+    "verdict": "typed_mismatch",
+    "required_missing_premises": [
+      "typed_bridge"
+    ],
+    "required_affected_claims": [
+      "T-OP-NONREDUCTION"
+    ],
+    "fatal_verdicts": [
+      "theorem_applies",
+      "gf6_identified",
+      "order_lift"
+    ]
+  },
+  "HF-REGISTER-B": {
+    "verdict": "typed_mismatch",
+    "required_missing_premises": [
+      "typed_bridge"
+    ],
+    "required_affected_claims": [
+      "T-OP-NONREDUCTION"
+    ],
+    "fatal_verdicts": [
+      "theorem_applies",
+      "gf6_identified",
+      "order_lift"
+    ]
+  },
+  "HF-RECALL-A": {
+    "verdict": "typed_mismatch",
+    "required_missing_premises": [
+      "typed_bridge"
+    ],
+    "required_affected_claims": [
+      "T-OP-NONREDUCTION"
+    ],
+    "fatal_verdicts": [
+      "theorem_applies",
+      "gf6_identified",
+      "order_lift"
+    ]
+  },
+  "HF-RECALL-B": {
+    "verdict": "typed_mismatch",
+    "required_missing_premises": [
+      "typed_bridge"
+    ],
+    "required_affected_claims": [
+      "T-OP-NONREDUCTION"
+    ],
+    "fatal_verdicts": [
+      "theorem_applies",
+      "gf6_identified",
+      "order_lift"
+    ]
+  },
+  "HF-ORDER-A": {
+    "verdict": "no_order_lift",
+    "required_missing_premises": [
+      "non_equivalence",
+      "span",
+      "reuse"
+    ],
+    "required_affected_claims": [
+      "L-ORDER-INCREMENT"
+    ],
+    "fatal_verdicts": [
+      "theorem_applies",
+      "gf6_identified",
+      "order_lift"
+    ]
+  },
+  "HF-ORDER-B": {
+    "verdict": "no_order_lift",
+    "required_missing_premises": [
+      "non_equivalence",
+      "span",
+      "reuse"
+    ],
+    "required_affected_claims": [
+      "L-ORDER-INCREMENT"
+    ],
+    "fatal_verdicts": [
+      "theorem_applies",
+      "gf6_identified",
+      "order_lift"
+    ]
+  },
+  "HF-RECURRENCE-A": {
+    "verdict": "no_recurrence",
+    "required_missing_premises": [
+      "positive_arrival_service_gap"
+    ],
+    "required_affected_claims": [
+      "T-RECURRENCE"
+    ],
+    "fatal_verdicts": [
+      "theorem_applies",
+      "gf6_identified",
+      "order_lift"
+    ]
+  },
+  "HF-RECURRENCE-B": {
+    "verdict": "no_recurrence",
+    "required_missing_premises": [
+      "positive_arrival_service_gap"
+    ],
+    "required_affected_claims": [
+      "T-RECURRENCE"
+    ],
+    "fatal_verdicts": [
+      "theorem_applies",
+      "gf6_identified",
+      "order_lift"
+    ]
+  },
+  "HF-BRIDGE-LIFT-DYN-A": {
+    "verdict": "bridge_requires_premise",
+    "required_missing_premises": [
+      "contraction",
+      "closure",
+      "invariance"
+    ],
+    "required_affected_claims": [
+      "T-BRIDGE-LIFT-TO-DYN"
+    ],
+    "fatal_verdicts": [
+      "theorem_applies",
+      "gf6_identified",
+      "order_lift"
+    ]
+  },
+  "HF-BRIDGE-LIFT-DYN-B": {
+    "verdict": "bridge_requires_premise",
+    "required_missing_premises": [
+      "contraction",
+      "closure",
+      "invariance"
+    ],
+    "required_affected_claims": [
+      "T-BRIDGE-LIFT-TO-DYN"
+    ],
+    "fatal_verdicts": [
+      "theorem_applies",
+      "gf6_identified",
+      "order_lift"
+    ]
+  },
+  "HF-BRIDGE-DYN-LIFT-A": {
+    "verdict": "bridge_requires_premise",
+    "required_missing_premises": [
+      "new_non_equivalent_composition",
+      "operand_expansion"
+    ],
+    "required_affected_claims": [
+      "T-BRIDGE-DYN-TO-LIFT"
+    ],
+    "fatal_verdicts": [
+      "theorem_applies",
+      "gf6_identified",
+      "order_lift"
+    ]
+  },
+  "HF-BRIDGE-DYN-LIFT-B": {
+    "verdict": "bridge_requires_premise",
+    "required_missing_premises": [
+      "new_non_equivalent_composition",
+      "operand_expansion"
+    ],
+    "required_affected_claims": [
+      "T-BRIDGE-DYN-TO-LIFT"
+    ],
+    "fatal_verdicts": [
+      "theorem_applies",
+      "gf6_identified",
+      "order_lift"
+    ]
+  },
+  "HF-GOVERNANCE-A": {
+    "verdict": "governance_violation",
+    "required_missing_premises": [
+      "participantwise_completeness"
+    ],
+    "required_affected_claims": [
+      "T-OM"
+    ],
+    "fatal_verdicts": [
+      "theorem_applies",
+      "gf6_identified",
+      "order_lift"
+    ]
+  },
+  "HF-GOVERNANCE-B": {
+    "verdict": "governance_violation",
+    "required_missing_premises": [
+      "participantwise_completeness"
+    ],
+    "required_affected_claims": [
+      "T-OM"
+    ],
+    "fatal_verdicts": [
+      "theorem_applies",
+      "gf6_identified",
+      "order_lift"
+    ]
+  },
+  "HF-GF-TARGET-A": {
+    "verdict": "target_mismatch",
+    "required_missing_premises": [
+      "terminal_target_identity"
+    ],
+    "required_affected_claims": [
+      "L-GF-OUTCOME"
+    ],
+    "fatal_verdicts": [
+      "theorem_applies",
+      "gf6_identified",
+      "order_lift"
+    ]
+  },
+  "HF-GF-TARGET-B": {
+    "verdict": "target_mismatch",
+    "required_missing_premises": [
+      "terminal_target_identity"
+    ],
+    "required_affected_claims": [
+      "L-GF-OUTCOME"
+    ],
+    "fatal_verdicts": [
+      "theorem_applies",
+      "gf6_identified",
+      "order_lift"
+    ]
+  },
+  "HF-GF-PROMOTION-A": {
+    "verdict": "gf3_only",
+    "required_missing_premises": [
+      "external_branch",
+      "external_hazard",
+      "timescale",
+      "outcome",
+      "residue"
+    ],
+    "required_affected_claims": [
+      "COR-GF-CNS"
+    ],
+    "fatal_verdicts": [
+      "theorem_applies",
+      "gf6_identified",
+      "order_lift"
+    ]
+  },
+  "HF-GF-PROMOTION-B": {
+    "verdict": "gf3_only",
+    "required_missing_premises": [
+      "external_branch",
+      "external_hazard",
+      "timescale",
+      "outcome",
+      "residue"
+    ],
+    "required_affected_claims": [
+      "COR-GF-CNS"
+    ],
+    "fatal_verdicts": [
+      "theorem_applies",
+      "gf6_identified",
+      "order_lift"
+    ]
+  },
+  "HF-SEM-RENAME-A": {
+    "verdict": "admissible_equivalent",
+    "required_missing_premises": [],
+    "required_affected_claims": [
+      "T-SEM-EQUIV"
+    ],
+    "fatal_verdicts": [
+      "semantic_mutation"
+    ]
+  },
+  "HF-SEM-RENAME-B": {
+    "verdict": "admissible_equivalent",
+    "required_missing_premises": [],
+    "required_affected_claims": [
+      "T-SEM-EQUIV"
+    ],
+    "fatal_verdicts": [
+      "semantic_mutation"
+    ]
+  },
+  "HF-METRIC-A": {
+    "verdict": "semantic_mutation",
+    "required_missing_premises": [
+      "metric_preservation"
+    ],
+    "required_affected_claims": [
+      "T-SEM-EQUIV"
+    ],
+    "fatal_verdicts": [
+      "theorem_applies",
+      "gf6_identified",
+      "order_lift"
+    ]
+  },
+  "HF-METRIC-B": {
+    "verdict": "semantic_mutation",
+    "required_missing_premises": [
+      "metric_preservation"
+    ],
+    "required_affected_claims": [
+      "T-SEM-EQUIV"
+    ],
+    "fatal_verdicts": [
+      "theorem_applies",
+      "gf6_identified",
+      "order_lift"
+    ]
+  },
+  "HF-EXTERNAL-A": {
+    "verdict": "external_open",
+    "required_missing_premises": [
+      "external_measurement"
+    ],
+    "required_affected_claims": [
+      "conditional_great_filter"
+    ],
+    "fatal_verdicts": [
+      "theorem_applies",
+      "gf6_identified",
+      "order_lift"
+    ]
+  },
+  "HF-EXTERNAL-B": {
+    "verdict": "external_open",
+    "required_missing_premises": [
+      "external_measurement"
+    ],
+    "required_affected_claims": [
+      "conditional_great_filter"
+    ],
+    "fatal_verdicts": [
+      "theorem_applies",
+      "gf6_identified",
+      "order_lift"
+    ]
+  }
+}

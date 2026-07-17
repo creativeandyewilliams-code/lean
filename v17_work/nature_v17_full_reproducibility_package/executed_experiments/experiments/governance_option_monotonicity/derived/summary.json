@@ -1,0 +1,50 @@
+{
+  "protocol": {
+    "id": "EXP-GOVERNANCE-OPTION-MONOTONICITY-V16",
+    "seed": 2026071702,
+    "worlds": 10000,
+    "participants": 24,
+    "actions": 12,
+    "epsilon": 0.08,
+    "delta": 0.12,
+    "primary_bound": "participantwise regret <= 2 epsilon + delta",
+    "controls": [
+      "aggregate_mean_single_action",
+      "residual_open_participantwise"
+    ]
+  },
+  "bound": 0.28,
+  "results": {
+    "participant_complete": {
+      "mean": 0.001695427249991475,
+      "median": 0.0,
+      "p95": 0.0,
+      "p99": 0.06090323891768716,
+      "max": 0.15616359747345465,
+      "violation_rate": 0.0,
+      "harm_rate": 0.0010291666666666667,
+      "worlds_with_any_bound_violation": 0.0
+    },
+    "residual_open": {
+      "mean": 0.014140265857727081,
+      "median": 0.0,
+      "p95": 0.028784871948426428,
+      "p99": 0.5587568481953701,
+      "max": 1.4742049785455658,
+      "violation_rate": 0.015620833333333334,
+      "harm_rate": 0.0050625,
+      "worlds_with_any_bound_violation": 0.3179
+    },
+    "aggregate_mean": {
+      "mean": 1.3620332243775597,
+      "median": 1.2543398512709865,
+      "p95": 3.2990696649878313,
+      "p99": 4.240733181461239,
+      "max": 7.738266534501062,
+      "violation_rate": 0.7981458333333333,
+      "harm_rate": 0.4308375,
+      "worlds_with_any_bound_violation": 1.0
+    }
+  },
+  "interpretation": "finite common-world verification; residual-open control intentionally violates the registered residual-budget premise in rare events"
+}

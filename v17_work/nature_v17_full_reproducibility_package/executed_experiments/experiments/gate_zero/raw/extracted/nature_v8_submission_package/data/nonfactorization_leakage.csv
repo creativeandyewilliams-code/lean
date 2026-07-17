@@ -1,0 +1,4 @@
+decoder,accuracy
+logistic,0.4805714285714286
+random_forest,0.24885714285714286
+paired_oracle_lower_bound,0.5

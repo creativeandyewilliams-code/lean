@@ -1,0 +1,223 @@
+{
+  "project": "FmiCnsFull",
+  "toolchain": "leanprover/lean4:v4.32.0",
+  "mathlib": "v4.32.0",
+  "kernel_status": "NOT EXECUTED IN GENERATING ENVIRONMENT",
+  "forbidden_token_scan": {
+    "sorry": 0,
+    "sorryAx": 0,
+    "admit": 0,
+    "custom_axiom": 0
+  },
+  "theorems": [
+    {
+      "id": "T-RSUB",
+      "declaration": "FmiCnsFull.reflectiveSubspaceRepresentation",
+      "file": "FmiCnsFull/Reflective/Subspace.lean",
+      "status": "candidate"
+    },
+    {
+      "id": "T-SEM-EQUIV",
+      "declaration": "FmiCnsFull.Formula.eval_map_iff",
+      "file": "FmiCnsFull/Core/Semantics.lean",
+      "status": "candidate"
+    },
+    {
+      "id": "T-CONFLATE",
+      "declaration": "FmiCnsFull.firstOrderConflation",
+      "file": "FmiCnsFull/Projection/Conflation.lean",
+      "status": "candidate"
+    },
+    {
+      "id": "COR-LOCAL-STABILITY",
+      "declaration": "FmiCnsFull.localStability",
+      "file": "FmiCnsFull/Projection/Conflation.lean",
+      "status": "candidate"
+    },
+    {
+      "id": "T-REFLECTIVE-NECESSITY",
+      "declaration": "FmiCnsFull.reflectiveNecessity",
+      "file": "FmiCnsFull/Projection/Conflation.lean",
+      "status": "candidate"
+    },
+    {
+      "id": "T-OP-NONREDUCTION",
+      "declaration": "FmiCnsFull.registerNotGenerated / FmiCnsFull.recallNotGenerated",
+      "file": "FmiCnsFull/FMI/Operations.lean",
+      "status": "candidate"
+    },
+    {
+      "id": "T-ORDER-INVARIANCE",
+      "declaration": "FmiCnsFull.orderInvariance",
+      "file": "FmiCnsFull/Order/Composition.lean",
+      "status": "candidate"
+    },
+    {
+      "id": "T-SPAN-DECIDABLE-FINITE",
+      "declaration": "FmiCnsFull.spanDecidableFinite",
+      "file": "FmiCnsFull/Order/Span.lean",
+      "status": "candidate"
+    },
+    {
+      "id": "L-ORDER-INCREMENT",
+      "declaration": "FmiCnsFull.orderIncrement",
+      "file": "FmiCnsFull/Order/Composition.lean",
+      "status": "candidate"
+    },
+    {
+      "id": "T-UFRAG-QUEUE",
+      "declaration": "FmiCnsFull.backlogUnbounded / FmiCnsFull.queueGrowth",
+      "file": "FmiCnsFull/Fragmentation/Backlog.lean",
+      "status": "candidate"
+    },
+    {
+      "id": "T-REGIONAL-FRAG",
+      "declaration": "FmiCnsFull.regionalFragmentation",
+      "file": "FmiCnsFull/Fragmentation/Regional.lean",
+      "status": "candidate-restricted"
+    },
+    {
+      "id": "T-SEM-FRAG",
+      "declaration": "FmiCnsFull.collapsedPairLoss / collapsedPairWeightedLoss",
+      "file": "FmiCnsFull/Fragmentation/SemanticLoss.lean",
+      "status": "candidate-finite-witness"
+    },
+    {
+      "id": "T-REVERSAL",
+      "declaration": "FmiCnsFull.boundedResidual / queueReversalStep",
+      "file": "FmiCnsFull/Fragmentation/Backlog.lean",
+      "status": "candidate"
+    },
+    {
+      "id": "T-RECURRENCE",
+      "declaration": "FmiCnsFull.queueRecurrence",
+      "file": "FmiCnsFull/Fragmentation/Backlog.lean",
+      "status": "candidate"
+    },
+    {
+      "id": "T-CNS-LIFT",
+      "declaration": "FmiCnsFull.cnsLift",
+      "file": "FmiCnsFull/CNS/Lift.lean",
+      "status": "candidate-substantive"
+    },
+    {
+      "id": "T-SING-CONTENT",
+      "declaration": "FmiCnsFull.minimalLiftDominatesNonlift",
+      "file": "FmiCnsFull/CNS/NearSingular.lean",
+      "status": "candidate-comparator"
+    },
+    {
+      "id": "T-OM",
+      "declaration": "FmiCnsFull.optionMonotonicityPointwise",
+      "file": "FmiCnsFull/Governance/Options.lean",
+      "status": "candidate"
+    },
+    {
+      "id": "T-PROJECTION-ADEQUACY",
+      "declaration": "FmiCnsFull.targetAdequate_iff_factorsThrough_of_surjective",
+      "file": "FmiCnsFull/Projection/Conflation.lean",
+      "status": "candidate"
+    },
+    {
+      "id": "T-REGENERATIVE-THRESHOLD",
+      "declaration": "FmiCnsFull.regenerativeThreshold",
+      "file": "FmiCnsFull/Propagation/Regenerative.lean",
+      "status": "candidate-bounded-independent-stage"
+    },
+    {
+      "id": "L-GF-UPPER-TAIL",
+      "declaration": "FmiCnsFull.upperTailNecessary",
+      "file": "FmiCnsFull/GreatFilter/Necessary.lean",
+      "status": "candidate"
+    },
+    {
+      "id": "L-GF-BRANCH",
+      "declaration": "FmiCnsFull.branchClosureNecessary",
+      "file": "FmiCnsFull/GreatFilter/Necessary.lean",
+      "status": "candidate"
+    },
+    {
+      "id": "L-GF-CAUSAL",
+      "declaration": "FmiCnsFull.causalSelfInstantiationNecessary",
+      "file": "FmiCnsFull/GreatFilter/Necessary.lean",
+      "status": "candidate"
+    },
+    {
+      "id": "L-GF-FIRST-MOVER",
+      "declaration": "FmiCnsFull.firstMoverNecessary",
+      "file": "FmiCnsFull/GreatFilter/Necessary.lean",
+      "status": "candidate"
+    },
+    {
+      "id": "L-GF-SUBSTRATE",
+      "declaration": "FmiCnsFull.substrateInvarianceNecessary",
+      "file": "FmiCnsFull/GreatFilter/Necessary.lean",
+      "status": "candidate"
+    },
+    {
+      "id": "L-GF-ADAPT",
+      "declaration": "FmiCnsFull.adaptiveNonEscapabilityNecessary",
+      "file": "FmiCnsFull/GreatFilter/Necessary.lean",
+      "status": "candidate"
+    },
+    {
+      "id": "L-GF-OUTCOME",
+      "declaration": "FmiCnsFull.outcomeTimescaleResidueNecessary",
+      "file": "FmiCnsFull/GreatFilter/Necessary.lean",
+      "status": "candidate"
+    },
+    {
+      "id": "T-GF-CONSTRAINT",
+      "declaration": "FmiCnsFull.greatFilterConstraint",
+      "file": "FmiCnsFull/GreatFilter/Necessary.lean",
+      "status": "candidate"
+    },
+    {
+      "id": "T-CNS-ADMISSIBILITY",
+      "declaration": "FmiCnsFull.cnsStructuralAdmissibility",
+      "file": "FmiCnsFull/GreatFilter/Admissibility.lean",
+      "status": "candidate"
+    },
+    {
+      "id": "COR-GF-CNS",
+      "declaration": "FmiCnsFull.conditionalGreatFilter",
+      "file": "FmiCnsFull/GreatFilter/Conditional.lean",
+      "status": "candidate-universal-conclusion"
+    },
+    {
+      "id": "T-BRIDGE-LIFT-TO-DYN",
+      "declaration": "FmiCnsFull.bridgeLiftToDynamic",
+      "file": "FmiCnsFull/CNS/Dynamic.lean",
+      "status": "candidate-conditional"
+    },
+    {
+      "id": "T-BRIDGE-DYN-TO-LIFT",
+      "declaration": "FmiCnsFull.bridgeDynamicToLift",
+      "file": "FmiCnsFull/CNS/Dynamic.lean",
+      "status": "candidate"
+    },
+    {
+      "id": "T-HOL-INVARIANCE",
+      "declaration": "FmiCnsFull.holonomyInvariance",
+      "file": "FmiCnsFull/CST/Transport.lean",
+      "status": "candidate"
+    },
+    {
+      "id": "T-HOL-DRIFT",
+      "declaration": "FmiCnsFull.holonomyDrift",
+      "file": "FmiCnsFull/CST/Transport.lean",
+      "status": "candidate"
+    }
+  ],
+  "top_level": [
+    {
+      "id": "FORMAL-FMI-CNS-COHERENCE",
+      "declaration": "FmiCnsFull.formalFmiCnsCoherence"
+    },
+    {
+      "id": "FORMAL-CONDITIONAL-GREAT-FILTER",
+      "declaration": "FmiCnsFull.formalConditionalGreatFilter"
+    }
+  ],
+  "policy": "Status becomes kernel-proved only after two clean successful builds and axiom review."
+}

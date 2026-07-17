@@ -1,0 +1,3 @@
+# Physical FSS mapping execution
+
+Use primary physical literature and versioned sources. For each candidate mapping, run a fresh proponent agent and a fresh adversarial reviewer with no shared scratch context. The proponent must complete the certificate schema; the adversary receives the frozen proposal and sources and attempts a typed defeat. A mapping is supported only at the exact scale/regime for which factorization/nonfactorization, schedule, topological consequence, and invariant witnesses survive review. Analogy, interaction range, or a suggestive name is insufficient. Failed mappings narrow the cross-FSS alphabet and do not defeat the conceptual CNS theorem unless explicitly imported as a theorem premise.

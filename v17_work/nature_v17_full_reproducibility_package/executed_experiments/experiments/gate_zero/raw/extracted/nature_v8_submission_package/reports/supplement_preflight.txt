@@ -1,0 +1,6 @@
+PDF: nature_supplement_v8.pdf
+Pages: 14
+Encrypted: False
+Openable (PyMuPDF): True
+Likely scanned: False
+XFA present: False

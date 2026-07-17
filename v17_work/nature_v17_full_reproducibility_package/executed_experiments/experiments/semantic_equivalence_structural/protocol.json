@@ -1,0 +1,27 @@
+{
+  "id": "EXP-SEMANTIC-EQUIVALENCE-STRUCTURAL-V16",
+  "seed": 2026071701,
+  "worlds": 500,
+  "nodes_min": 6,
+  "nodes_max": 10,
+  "admissible_transforms": [
+    "rename",
+    "rigid_isometry",
+    "edge_order",
+    "full_iso"
+  ],
+  "mutations": [
+    "metric",
+    "edge_type",
+    "boundary",
+    "warrant",
+    "continuation",
+    "role"
+  ],
+  "metric_thresholds": [
+    1.25,
+    2.0,
+    3.0
+  ],
+  "claim": "bounded invariance/sensitivity within the generated finite FSS class"
+}

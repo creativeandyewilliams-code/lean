@@ -1,0 +1,21 @@
+{
+  "worlds": 500,
+  "admissible_cases": 2000,
+  "mutation_cases": 3000,
+  "admissible_invariance_rate": 1.0,
+  "mutation_detection_rate": 1.0,
+  "order_relation_pass_rate": 1.0,
+  "operation_rates": {
+    "boundary": 1.0,
+    "continuation": 1.0,
+    "edge_order": 1.0,
+    "edge_type": 1.0,
+    "full_iso": 1.0,
+    "metric": 1.0,
+    "rename": 1.0,
+    "rigid_isometry": 1.0,
+    "role": 1.0,
+    "warrant": 1.0
+  },
+  "scope": "finite generated FSSs and frozen bounded target language"
+}

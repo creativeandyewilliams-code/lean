@@ -1,0 +1,26 @@
+{
+  "experiment_id": "EXP-RECEIVER-REGENERATIVE-MULTIAGENT-V16",
+  "seed": 2026071705,
+  "conditions": [
+    "prose_only",
+    "registry_only",
+    "direct_graph_plus_lean",
+    "cst_plus_lean",
+    "corrupted_artifact",
+    "equivalent_reencoding"
+  ],
+  "receiver_A_instances_per_condition": 1,
+  "receiver_B_instances_per_transmission": 1,
+  "families": 14,
+  "tasks_per_receiver": 14,
+  "author_repair_allowed": false,
+  "primary_endpoints": [
+    "novel_target_accuracy",
+    "theorem_status_accuracy",
+    "false_promotion_rate",
+    "missing_premise_recovery",
+    "second_generation_accuracy",
+    "first_to_second_loss",
+    "fatal_error_rate"
+  ]
+}

@@ -1,0 +1,152 @@
+{
+ "generation": "A",
+ "condition": "direct_graph_plus_lean",
+ "run_id": "RA__direct_graph_plus_lean__01",
+ "answers": [
+  {
+   "task_id": "HF-RECURRENCE-A",
+   "verdict": "recurrence_not_forced",
+   "missing_premises": [
+    "renewed positive arrival-service gap"
+   ],
+   "affected_claims": [
+    "queueRecurrence (T-RECURRENCE)"
+   ]
+  },
+  {
+   "task_id": "HF-SEM-RENAME-A",
+   "verdict": "invariance_holds",
+   "missing_premises": [
+    "AdmissiblePointedIso preserving all fields"
+   ],
+   "affected_claims": [
+    "eval_map_iff (T-SEM-EQUIV)"
+   ]
+  },
+  {
+   "task_id": "HF-BRIDGE-DYN-LIFT-A",
+   "verdict": "no_order_lift",
+   "missing_premises": [
+    "fresh qualifying class OrderLift certificate"
+   ],
+   "affected_claims": [
+    "bridgeDynamicToLift (T-BRIDGE-DYN-TO-LIFT)"
+   ]
+  },
+  {
+   "task_id": "HF-GF-PROMOTION-A",
+   "verdict": "remains_conditional",
+   "missing_premises": [
+    "physicalMapping",
+    "nonSummableHazard",
+    "residueOutcomeSufficient"
+   ],
+   "affected_claims": [
+    "conditionalGreatFilter (COR-GF-CNS)"
+   ]
+  },
+  {
+   "task_id": "HF-METRIC-A",
+   "verdict": "equivalence_broken",
+   "missing_premises": [
+    "dist_preserved",
+    "admissible_preserved"
+   ],
+   "affected_claims": [
+    "eval_map_iff (T-SEM-EQUIV)"
+   ]
+  },
+  {
+   "task_id": "HF-REFLECTION-A",
+   "verdict": "order_unchanged",
+   "missing_premises": [
+    "fresh reusable qualifying class"
+   ],
+   "affected_claims": [
+    "orderIncrement (L-ORDER-INCREMENT)"
+   ]
+  },
+  {
+   "task_id": "HF-CONFLATE-A",
+   "verdict": "decoder_impossible",
+   "missing_premises": [
+    "finer projection separating faults"
+   ],
+   "affected_claims": [
+    "firstOrderConflation (T-CONFLATE)"
+   ]
+  },
+  {
+   "task_id": "HF-GOVERNANCE-A",
+   "verdict": "participant_guarantee_void",
+   "missing_premises": [
+    "per-participant error within budget"
+   ],
+   "affected_claims": [
+    "optionMonotonicityPointwise (T-OM)"
+   ]
+  },
+  {
+   "task_id": "HF-EXTERNAL-A",
+   "verdict": "not_measured",
+   "missing_premises": [
+    "measurement of PhysicalMapping M"
+   ],
+   "affected_claims": [
+    "conditionalGreatFilter"
+   ]
+  },
+  {
+   "task_id": "HF-BRIDGE-LIFT-DYN-A",
+   "verdict": "dynamical_cns_not_established",
+   "missing_premises": [
+    "contraction constant kappa<1",
+    "closure",
+    "fixed normal form"
+   ],
+   "affected_claims": [
+    "bridgeLiftToDynamic (T-BRIDGE-LIFT-TO-DYN)"
+   ]
+  },
+  {
+   "task_id": "HF-RECALL-A",
+   "verdict": "refuted_type_mismatch",
+   "missing_premises": [
+    "Recall domain memory vs LGWord concept"
+   ],
+   "affected_claims": [
+    "recallNotGenerated (T-OP-NONREDUCTION Recall)"
+   ]
+  },
+  {
+   "task_id": "HF-REGISTER-A",
+   "verdict": "refuted_type_mismatch",
+   "missing_premises": [
+    "Register domain signal vs LGWord concept"
+   ],
+   "affected_claims": [
+    "registerNotGenerated (T-OP-NONREDUCTION Register)"
+   ]
+  },
+  {
+   "task_id": "HF-GF-TARGET-A",
+   "verdict": "not_automatic_extinction",
+   "missing_premises": [
+    "identify unobservability with terminal outcome"
+   ],
+   "affected_claims": [
+    "FilterModel.outcome"
+   ]
+  },
+  {
+   "task_id": "HF-ORDER-A",
+   "verdict": "no_new_class",
+   "missing_premises": [
+    "new functional-equivalence class"
+   ],
+   "affected_claims": [
+    "orderInvariance (T-ORDER-INVARIANCE)"
+   ]
+  }
+ ]
+}

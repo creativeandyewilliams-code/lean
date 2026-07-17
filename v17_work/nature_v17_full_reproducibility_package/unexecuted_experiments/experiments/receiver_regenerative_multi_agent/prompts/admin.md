@@ -1,0 +1,1 @@
+The administrator freezes hashes, runs packet generation, creates fresh agent contexts, exposes only allowed files, records full prompts and access lists, freezes outputs, terminates Receiver A contexts before Receiver B begins, and never solves tasks.
