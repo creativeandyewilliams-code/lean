@@ -1,6 +1,6 @@
 {
   "package": "nature_v16_full_reproducibility_package",
-  "file_count": 119,
+  "file_count": 128,
   "files": [
     {
       "path": ".github/workflows/reproducibility.yml",
@@ -759,10 +759,31 @@
       "kind": "generated"
     },
     {
+      "path": "reports/external_mapping_dispositions.md",
+      "size": 813,
+      "sha256": "2dc408eacbd96e3ba02c70059510993416fce9a0ada81fdd434ca50b1e7194fd",
+      "mime": "text/markdown",
+      "kind": "generated"
+    },
+    {
+      "path": "reports/final_independent_signoff.md",
+      "size": 1326,
+      "sha256": "bc70dcde8fe863030a3e038a754b5eea409e43d37d03f5b5becdf4b979339dba",
+      "mime": "text/markdown",
+      "kind": "generated"
+    },
+    {
       "path": "reports/final_status_vector.json",
       "size": 2311,
       "sha256": "e360858f4de4df52a38dcdc7ebea0f0a7ca17934e5bb7bd59daf3121f0c73cd3",
       "mime": "application/json",
+      "kind": "generated"
+    },
+    {
+      "path": "reports/formalization_fidelity.md",
+      "size": 534,
+      "sha256": "f03e2744f1da23e9abb05ad9af4271c912075777bded3fb2a803bef1367c4176",
+      "mime": "text/markdown",
       "kind": "generated"
     },
     {
@@ -780,6 +801,13 @@
       "kind": "generated"
     },
     {
+      "path": "reports/independent_reproduction.md",
+      "size": 1326,
+      "sha256": "bc70dcde8fe863030a3e038a754b5eea409e43d37d03f5b5becdf4b979339dba",
+      "mime": "text/markdown",
+      "kind": "generated"
+    },
+    {
       "path": "reports/lean_formal_closure.md",
       "size": 2239,
       "sha256": "6bcffc6393aff4da6b322bba67b778d6c4e42897df239c2b05fc5baddde16f2e",
@@ -787,9 +815,44 @@
       "kind": "generated"
     },
     {
+      "path": "reports/manuscript_claim_audit.md",
+      "size": 1027,
+      "sha256": "889b04443c10407627d0a0f85dfc8134197ea0cc59eb1f3ab0c341a3825f0bdc",
+      "mime": "text/markdown",
+      "kind": "generated"
+    },
+    {
+      "path": "reports/portability_audit.md",
+      "size": 539,
+      "sha256": "251e51e67af403624efc773f4ef33e55bac303a7fb32d53fea1babd3d864254b",
+      "mime": "text/markdown",
+      "kind": "generated"
+    },
+    {
       "path": "reports/receiver_propagation.md",
       "size": 1561,
       "sha256": "f6e7eb55d4e1078ba5f8c7a3014eb23d1c0cefb14e657a126dc98fc90de8b4e6",
+      "mime": "text/markdown",
+      "kind": "generated"
+    },
+    {
+      "path": "reports/recurrence_reproduction.md",
+      "size": 940,
+      "sha256": "38f0163782572181c2fe8257c92cbb8e4ff3849a488c9718cea2acbfa2175727",
+      "mime": "text/markdown",
+      "kind": "generated"
+    },
+    {
+      "path": "reports/release_validation.md",
+      "size": 771,
+      "sha256": "8848938ca3df4cf331265000f1178032f6ef4fb6b3e63b450a7160d5155464f0",
+      "mime": "text/markdown",
+      "kind": "generated"
+    },
+    {
+      "path": "reports/self_containment_audit.md",
+      "size": 632,
+      "sha256": "111ff5391403faa7a2422df0120a1622de0edfed2b3eec70b9a3043a6b680bfb",
       "mime": "text/markdown",
       "kind": "generated"
     },
