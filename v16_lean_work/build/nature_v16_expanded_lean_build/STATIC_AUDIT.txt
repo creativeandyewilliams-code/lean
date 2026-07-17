@@ -1,0 +1,14 @@
+Static source audit performed in generating environment
+======================================================
+
+- Lean source files: 32
+- Total Lean source lines: 1759
+- `sorry`: 0
+- `sorryAx`: 0
+- `admit`: 0
+- custom `axiom` declarations: 0
+- unresolved project imports: 0
+- registered theorem targets in THEOREM_MANIFEST.json: 33
+- kernel build: NOT EXECUTED (Lean unavailable in generating environment)
+
+This audit is not a substitute for elaboration or kernel checking.

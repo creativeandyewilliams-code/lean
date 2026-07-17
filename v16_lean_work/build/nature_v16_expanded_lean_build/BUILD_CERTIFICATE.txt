@@ -1,0 +1,64 @@
+================================================================================
+BUILD CERTIFICATE  —  nature_v16_expanded_lean  (FmiCnsFull)
+================================================================================
+Issued by:      second-LLM validator (Claude), 2026-07-17
+Project:        FmiCnsFull
+Toolchain:      leanprover/lean4:v4.32.0   (pinned; matches mathlib4 v4.32.0)
+Mathlib:        v4.32.0 = commit 81a5d257c8e410db227a6665ed08f64fea08e997
+
+--------------------------------------------------------------------------------
+KERNEL BUILD STATUS:  NOT EXECUTED  —  blocked by environment egress policy
+--------------------------------------------------------------------------------
+This is an HONEST certificate. It does NOT attest a successful kernel build,
+because none could be run here. It attests exactly what was verified.
+
+Why the kernel build could not run
+----------------------------------
+Installing Lean 4.32.0 requires downloading the compiler binary from GitHub
+release assets. In this environment those downloads return HTTP 403 under the
+organization's egress policy (both the lean4 toolchain tarball and elan). No
+alternate release host is reachable, and no precompiled Mathlib cache can be
+fetched. Mathlib/Lean SOURCE is reachable over git, but there is no compiler
+binary to build it with. Per the agent-proxy policy, 403 denials are reported,
+not retried. Evidence: egress_block_evidence.txt.
+
+Therefore the following remain UNEXECUTED:
+  - lake update / lake build           (no compiler)
+  - lake env lean AxiomReport.lean     (#print axioms report)
+  - second clean-environment build     (hash-equal reproduction)
+
+WHAT WAS VERIFIED (static / structural — see VALIDATION_REPORT.md)
+-----------------------------------------------------------------
+  [PASS] MANIFEST.sha256 integrity: all files OK.
+  [PASS] Static audit reproduced: 32 Lean files; sorry/sorryAx/admit = 0;
+         custom axiom declarations = 0.
+  [PASS] All 33 registered theorem targets are declared in their named files;
+         both top-level theorems present.
+  [PASS] Intra-project imports: 0 unresolved; single external dep (Mathlib).
+  [PASS] Pins mutually consistent: package toolchain == mathlib4 v4.32.0
+         toolchain; Mathlib tag resolved to an exact commit; a fully pinned
+         lake-manifest.json (Mathlib + 8 transitive deps) is included.
+  [INFO] Source-quality spot check: genuine Lean/Mathlib proofs, plausibly
+         correct; author-listed elaboration-risk sites independently concurred.
+  [NOTE] No Lean source statement was modified or weakened by the validator.
+
+EXACT REPRODUCTION (run where GitHub release binaries are reachable)
+-------------------------------------------------------------------
+  curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh -s -- -y \
+      --default-toolchain leanprover/lean4:v4.32.0
+  source "$HOME/.elan/env"
+  cd nature_v16_expanded_lean_build
+  lake exe cache get            # optional: prebuilt Mathlib oleans (much faster)
+  lake build            2>&1 | tee build.log
+  lake env lean AxiomReport.lean 2>&1 | tee axiom-report.txt
+  bash scripts/audit.sh
+  # second clean build:
+  rm -rf .lake && lake build 2>&1 | tee build-2.log
+
+Acceptance for a POSITIVE certificate (to be completed by the builder):
+  - lake build exits 0 for all modules;
+  - axiom-report.txt shows no sorryAx and no unregistered custom axioms
+    (ordinary Lean/Mathlib axioms — propext, Classical.choice, Quot.sound —
+    are permitted and must be reported as such, not relabelled);
+  - the second clean build reproduces the theorem/axiom reports.
+================================================================================

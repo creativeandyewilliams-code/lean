@@ -1,0 +1,21 @@
+{
+  "toolchain": "leanprover/lean4:v4.32.0",
+  "toolchain_matches_mathlib_requirement": true,
+  "toolchain_match_evidence": "mathlib4 lean-toolchain @ v4.32.0 == leanprover/lean4:v4.32.0 (fetched from raw.githubusercontent.com)",
+  "mathlib": {
+    "tag": "v4.32.0",
+    "commit": "81a5d257c8e410db227a6665ed08f64fea08e997",
+    "git": "https://github.com/leanprover-community/mathlib4.git"
+  },
+  "mathlib_transitive_pins": {
+    "plausible": "e12c1910fe855cbfc38803cd4e55543906d5fa62",
+    "LeanSearchClient": "c5d5b8fe6e51",
+    "importGraph": "7e9612bf0b9e",
+    "proofwidgets": "6e311e2a844d",
+    "aesop": "a7dbf0c63b69",
+    "Qq": "38d591e778f1",
+    "batteries": "023ce7d62a05",
+    "Cli": "88679d088c97"
+  },
+  "note": "Transitive short-revs mirror mathlib4's own lake-manifest.json at v4.32.0; the full pinned manifest is lake-manifest.json in this package."
+}

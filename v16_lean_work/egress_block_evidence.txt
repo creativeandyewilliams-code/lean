@@ -1,0 +1,13 @@
+Lean toolchain / kernel build capability probe — Fri Jul 17 12:02:21 UTC 2026
+-------------------------------------------------------------
+$ curl github.com/leanprover/lean4/releases/download/v4.32.0/lean-4.32.0-linux.tar.zst
+  -> HTTP 403 (release binary)
+$ curl github.com/leanprover/elan/releases/latest/download/elan-x86_64-unknown-linux-gnu.tar.gz
+  -> HTTP 403 (elan binary)
+$ git ls-remote mathlib4 v4.32.0  (git-over-https, source only)
+81a5d257c8e410db227a6665ed08f64fea08e997	refs/tags/v4.32.0
+
+FINDING: Lean/elan release BINARIES are blocked (HTTP 403, organization egress policy).
+         Mathlib/Lean SOURCE is reachable via git, but no compiler binary can be obtained
+         and no precompiled Mathlib cache is fetchable, so 'lake build' cannot run here.
+         Per the agent-proxy README, policy denials (403) must be reported, not retried.
