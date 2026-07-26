@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "challenge_id",
+    "review_instance_hash",
+    "input_corpus_hash",
+    "node_id",
+    "challenge_kind",
+    "challenged_object",
+    "admissible_variation",
+    "evidence_refs",
+    "root_relevance_path",
+    "recommendation_effect",
+    "activation_condition",
+    "defeat_condition",
+    "resolved",
+    "resolution_record_ids",
+    "resolution_summary"
+  ],
+  "properties": {
+    "record_type": {
+      "const": "carrier_challenge"
+    },
+    "challenge_id": {
+      "type": "string"
+    },
+    "review_instance_hash": {
+      "type": "string"
+    },
+    "input_corpus_hash": {
+      "type": "string"
+    },
+    "node_id": {
+      "type": "string"
+    },
+    "challenge_kind": {
+      "type": "string"
+    },
+    "challenged_object": {
+      "type": "string"
+    },
+    "admissible_variation": {
+      "type": "string",
+      "minLength": 20
+    },
+    "evidence_refs": {
+      "type": "array"
+    },
+    "root_relevance_path": {
+      "type": "array",
+      "minItems": 2
+    },
+    "recommendation_effect": {
+      "enum": [
+        "none",
+        "minor_non_root",
+        "major_revision",
+        "reject"
+      ]
+    },
+    "activation_condition": {
+      "type": "string"
+    },
+    "defeat_condition": {
+      "type": "string"
+    },
+    "resolved": {
+      "type": "boolean"
+    },
+    "resolution_record_ids": {
+      "type": "array"
+    },
+    "resolution_summary": {
+      "type": "string",
+      "minLength": 20
+    }
+  }
+}

@@ -1,0 +1,2 @@
+INVALID: template records are non-executable
+EXIT_CODE=1

@@ -1,0 +1,26 @@
+{
+  "certificate_type": "qpdf-check",
+  "version": "v23",
+  "status": "executed",
+  "utc_timestamp": "2026-07-26T23:27:53.694059+00:00",
+  "platform": "Linux-6.18.5-x86_64-with-glibc2.39",
+  "qpdf_version": "qpdf version 11.9.0\nRun qpdf --copyright to see copyright and license information.",
+  "command_template": "qpdf --check <file>",
+  "warning_exit_0_used": false,
+  "files": [
+    {
+      "path": "target_relative_residue_main_v23.pdf",
+      "sha256": "d86426f857f2a09fe039319a1f60c5ed290db011f276d8f2cb1594457aa75cbd",
+      "exit_code": 0
+    },
+    {
+      "path": "target_relative_residue_supplement_v23.pdf",
+      "sha256": "5cddd793469ac9cfb2a5216ac7430ad95934821cc732135d22597c2e0bc9f106",
+      "exit_code": 0
+    }
+  ],
+  "all_exit_zero": true,
+  "transcript": "QPDFCheckTranscript_v23.txt",
+  "transcript_sha256": "a5a45ca3a5eb28a8ecb73bf0480bcd65e9f338bacbffb99f883c560a34c7ba8f",
+  "scope_note": "Exit zero means qpdf found no errors or warnings; it is not a proof that every possible PDF defect is absent."
+}

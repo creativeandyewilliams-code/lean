@@ -1,0 +1,72 @@
+ManuscriptObject,RepresentingNode,CoverageType
+The Version-23 package satisfies the carrier-complete submission-stage target.,O00,explicit node
+Frozen target is adequate for the requested overall submission target.,T00,explicit node
+Formal theorem family is correct and supports sound Choice-gated bounded closure.,F00,explicit node
+"Article carrier is scope-fit, original, significant, central, self-contained, and legible.",C00,explicit node
+Artifacts faithfully support their attributed claims.,A00,explicit node
+Fresh recommendation-changing review challenges are closed.,R00,explicit node
+Submission-stage editorial conditions are correctly represented.,E00,explicit node
+Requested target is the carrier-complete submission-stage verdict.,T01,explicit node
+Frozen target includes all mandatory carrier families.,T02,explicit node
+Requested verdict factors through the frozen target observation.,T03,explicit node
+Every omitted object has a root-invariance or factorization witness.,T04,explicit node
+Target-relative residue is correctly defined.,F01,explicit node
+Empty residue is equivalent to image-relative factorization.,F02,explicit node
+Residual pairs obstruct simultaneous evaluator correctness.,F03,explicit node
+Refinement is monotone for target-relative residue.,F04,explicit node
+The target-image observation is canonical up to image isomorphism.,F05,explicit node
+Every target-sufficient refinement separates every residual pair.,F06,explicit node
+Admissible-completion semantics instantiate the residue theorem.,F07,explicit node
+Candidate actions are uniformly typed and finite relative to the registered grammar.,F08,explicit node
+Projected fitness is totally comparable for the fixed target.,F09,explicit node
+Choice emits an action from the equal greatest-fitness class.,F10,explicit node
+Strict local emission holds against the complete registered candidate set.,F11,explicit node
+Strict global emission holds against the complete registered candidate set.,F12,explicit node
+Parent-mode information is erased before control computations.,F13,explicit node
+"Parent-mode noninterference holds for candidate generation, projection, fitness, and Choice.",F14,explicit node
+Progress totality and well-founded decrease imply terminal bounded execution.,F15,explicit node
+Transition conjugacy preserves verdicts under admissible reconfiguration.,F16,explicit node
+Sound Choice-gated bounded closure holds.,F17,explicit node
+Finite relative completeness holds under sufficient budget and fair execution.,F18,explicit node
+Global-only recursion is strictly separated from Choice-gated recursion.,F19,explicit node
+Local-only recursion is strictly separated from Choice-gated recursion.,F20,explicit node
+Choice is stable under bounded projection error below half the strict margin.,F21,explicit node
+Current Studia Logica scope is registered and the paper is within it.,C01,explicit node
+The sound bounded-closure theorem is the central theorem throughout the carrier.,C02,explicit node
+Novelty is established theorem-to-theorem against a dated baseline.,C03,explicit node
+Significance is connected to a new formal closure and separation capability.,C04,explicit node
+The title and abstract accurately state the proved result.,C05,explicit node
+"The theorem hierarchy separates core theorems, requirements, and case-study claims.",C06,explicit node
+Related work identifies known components and the novel integrated result.,C07,explicit node
+The article is self-contained and has no unpublished dependencies.,C08,explicit node
+Each section provides local orientation and payoff.,C09,explicit node
+Notation is bounded and consistently typed.,C10,explicit node
+The article satisfies the current word and printed-page limits.,C11,explicit node
+"Editable source, abstract, keywords, and affiliation are present.",C12,explicit node
+The cover letter leads with the central theorem and exact significance.,C13,explicit node
+The integrated recommendation is accept-level and no active major-revision condition remains.,C14,explicit node
+Main and supplement compile from the supplied LaTeX sources.,A01,explicit node
+qpdf --check returns exit code zero for the final main PDF.,A02,explicit node
+qpdf --check returns exit code zero for the final supplement PDF.,A03,explicit node
+Every final PDF page is rendered and visually inspected without clipping or broken glyphs.,A04,explicit node
+PDF hashes are bound to the source and build transcript.,A05,explicit node
+Artifact manifest and SHA-256 inventory are complete.,A06,explicit node
+Lean builds successfully under the recorded toolchain.,A07,explicit node
+Lean source contains no sorry/admit placeholders or unintended axioms.,A08,explicit node
+Theorem-to-Lean correspondence is exact and status-labeled.,A09,explicit node
+The trace structural validator passes the independent trace.,A10,explicit node
+The substantive-warrant report addresses every mandatory node and challenge.,A11,explicit node
+Evidence provenance is node-specific and hash-bound.,A12,explicit node
+The final ZIP passes integrity and manifest verification.,A13,explicit node
+Fresh conventional review is performed independently of the author proposal.,R01,explicit node
+Every recommendation-changing objection is imported as a typed challenge.,R02,explicit node
+Every admitted challenge has a concrete variation and root-relevance path.,R03,explicit node
+Every reopened node receives a complete seven-action candidate set.,R04,explicit node
+Every selected action has a node-specific Choice record.,R05,explicit node
+Every selected action is validated and executed with successor and budget records.,R06,explicit node
+The independent trace is substantively audited rather than only schema checked.,R07,explicit node
+"A second-order audit checks target adequacy, trace warrant, and root derivation.",R08,explicit node
+The final recommendation is integrated into the carrier root rather than detached.,R09,explicit node
+The current object is evaluated at submission stage.,E01,explicit node
+"Future journal acceptance is registered as a successor-stage condition, not asserted.",E02,explicit node
+Publication-stage GC requires accepted-artifact identity in a successor instance.,E03,explicit node

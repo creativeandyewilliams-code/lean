@@ -1,0 +1,72 @@
+EvidenceID,NodeID,EvidenceType,SourceArtifact,Locator,EvidenceClaim,Status
+EVID-O00,O00,manuscript proof/requirement,target_relative_residue_main_v23.tex,O00,The Version-23 package satisfies the carrier-complete submission-stage target.,available author evidence
+EVID-T00,T00,manuscript proof/requirement,target_relative_residue_main_v23.tex,T00,Frozen target is adequate for the requested overall submission target.,available author evidence
+EVID-F00,F00,manuscript proof/requirement,target_relative_residue_main_v23.tex,F00,Formal theorem family is correct and supports sound Choice-gated bounded closure.,available author evidence
+EVID-C00,C00,carrier evidence,JournalProfileSnapshot_v23.md; NoveltyBaseline_v23.csv; SignificanceWarrant_v23.md,C00,"Article carrier is scope-fit, original, significant, central, self-contained, and legible.",available author evidence
+EVID-A00,A00,artifact evidence,author preflight and pending independent tool certificates,A00,Artifacts faithfully support their attributed claims.,author evidence available
+EVID-R00,R00,review evidence,pending independent Claude Code trace,R00,Fresh recommendation-changing review challenges are closed.,pending independent execution
+EVID-E00,E00,manuscript proof/requirement,target_relative_residue_main_v23.tex,E00,Submission-stage editorial conditions are correctly represented.,available author evidence
+EVID-T01,T01,manuscript proof/requirement,target_relative_residue_main_v23.tex,T01,Requested target is the carrier-complete submission-stage verdict.,available author evidence
+EVID-T02,T02,manuscript proof/requirement,target_relative_residue_main_v23.tex,T02,Frozen target includes all mandatory carrier families.,available author evidence
+EVID-T03,T03,manuscript proof/requirement,target_relative_residue_main_v23.tex,T03,Requested verdict factors through the frozen target observation.,available author evidence
+EVID-T04,T04,manuscript proof/requirement,target_relative_residue_main_v23.tex,T04,Every omitted object has a root-invariance or factorization witness.,available author evidence
+EVID-F01,F01,manuscript proof/requirement,target_relative_residue_main_v23.tex,F01,Target-relative residue is correctly defined.,available author evidence
+EVID-F02,F02,manuscript proof/requirement,target_relative_residue_main_v23.tex,F02,Empty residue is equivalent to image-relative factorization.,available author evidence
+EVID-F03,F03,manuscript proof/requirement,target_relative_residue_main_v23.tex,F03,Residual pairs obstruct simultaneous evaluator correctness.,available author evidence
+EVID-F04,F04,manuscript proof/requirement,target_relative_residue_main_v23.tex,F04,Refinement is monotone for target-relative residue.,available author evidence
+EVID-F05,F05,manuscript proof/requirement,target_relative_residue_main_v23.tex,F05,The target-image observation is canonical up to image isomorphism.,available author evidence
+EVID-F06,F06,manuscript proof/requirement,target_relative_residue_main_v23.tex,F06,Every target-sufficient refinement separates every residual pair.,available author evidence
+EVID-F07,F07,manuscript proof/requirement,target_relative_residue_main_v23.tex,F07,Admissible-completion semantics instantiate the residue theorem.,available author evidence
+EVID-F08,F08,manuscript proof/requirement,target_relative_residue_main_v23.tex,F08,Candidate actions are uniformly typed and finite relative to the registered grammar.,available author evidence
+EVID-F09,F09,manuscript proof/requirement,target_relative_residue_main_v23.tex,F09,Projected fitness is totally comparable for the fixed target.,available author evidence
+EVID-F10,F10,manuscript proof/requirement,target_relative_residue_main_v23.tex,F10,Choice emits an action from the equal greatest-fitness class.,available author evidence
+EVID-F11,F11,manuscript proof/requirement,target_relative_residue_main_v23.tex,F11,Strict local emission holds against the complete registered candidate set.,available author evidence
+EVID-F12,F12,manuscript proof/requirement,target_relative_residue_main_v23.tex,F12,Strict global emission holds against the complete registered candidate set.,available author evidence
+EVID-F13,F13,manuscript proof/requirement,target_relative_residue_main_v23.tex,F13,Parent-mode information is erased before control computations.,available author evidence
+EVID-F14,F14,manuscript proof/requirement,target_relative_residue_main_v23.tex,F14,"Parent-mode noninterference holds for candidate generation, projection, fitness, and Choice.",available author evidence
+EVID-F15,F15,manuscript proof/requirement,target_relative_residue_main_v23.tex,F15,Progress totality and well-founded decrease imply terminal bounded execution.,available author evidence
+EVID-F16,F16,manuscript proof/requirement,target_relative_residue_main_v23.tex,F16,Transition conjugacy preserves verdicts under admissible reconfiguration.,available author evidence
+EVID-F17,F17,manuscript proof/requirement,target_relative_residue_main_v23.tex,F17,Sound Choice-gated bounded closure holds.,available author evidence
+EVID-F18,F18,manuscript proof/requirement,target_relative_residue_main_v23.tex,F18,Finite relative completeness holds under sufficient budget and fair execution.,available author evidence
+EVID-F19,F19,manuscript proof/requirement,target_relative_residue_main_v23.tex,F19,Global-only recursion is strictly separated from Choice-gated recursion.,available author evidence
+EVID-F20,F20,manuscript proof/requirement,target_relative_residue_main_v23.tex,F20,Local-only recursion is strictly separated from Choice-gated recursion.,available author evidence
+EVID-F21,F21,manuscript proof/requirement,target_relative_residue_main_v23.tex,F21,Choice is stable under bounded projection error below half the strict margin.,available author evidence
+EVID-C01,C01,carrier evidence,JournalProfileSnapshot_v23.md; NoveltyBaseline_v23.csv; SignificanceWarrant_v23.md,C01,Current Studia Logica scope is registered and the paper is within it.,available author evidence
+EVID-C02,C02,carrier evidence,JournalProfileSnapshot_v23.md; NoveltyBaseline_v23.csv; SignificanceWarrant_v23.md,C02,The sound bounded-closure theorem is the central theorem throughout the carrier.,available author evidence
+EVID-C03,C03,carrier evidence,JournalProfileSnapshot_v23.md; NoveltyBaseline_v23.csv; SignificanceWarrant_v23.md,C03,Novelty is established theorem-to-theorem against a dated baseline.,available author evidence
+EVID-C04,C04,carrier evidence,JournalProfileSnapshot_v23.md; NoveltyBaseline_v23.csv; SignificanceWarrant_v23.md,C04,Significance is connected to a new formal closure and separation capability.,available author evidence
+EVID-C05,C05,carrier evidence,JournalProfileSnapshot_v23.md; NoveltyBaseline_v23.csv; SignificanceWarrant_v23.md,C05,The title and abstract accurately state the proved result.,available author evidence
+EVID-C06,C06,carrier evidence,JournalProfileSnapshot_v23.md; NoveltyBaseline_v23.csv; SignificanceWarrant_v23.md,C06,"The theorem hierarchy separates core theorems, requirements, and case-study claims.",available author evidence
+EVID-C07,C07,carrier evidence,JournalProfileSnapshot_v23.md; NoveltyBaseline_v23.csv; SignificanceWarrant_v23.md,C07,Related work identifies known components and the novel integrated result.,available author evidence
+EVID-C08,C08,carrier evidence,JournalProfileSnapshot_v23.md; NoveltyBaseline_v23.csv; SignificanceWarrant_v23.md,C08,The article is self-contained and has no unpublished dependencies.,available author evidence
+EVID-C09,C09,carrier evidence,JournalProfileSnapshot_v23.md; NoveltyBaseline_v23.csv; SignificanceWarrant_v23.md,C09,Each section provides local orientation and payoff.,available author evidence
+EVID-C10,C10,carrier evidence,JournalProfileSnapshot_v23.md; NoveltyBaseline_v23.csv; SignificanceWarrant_v23.md,C10,Notation is bounded and consistently typed.,available author evidence
+EVID-C11,C11,carrier evidence,JournalProfileSnapshot_v23.md; NoveltyBaseline_v23.csv; SignificanceWarrant_v23.md,C11,The article satisfies the current word and printed-page limits.,available author evidence
+EVID-C12,C12,carrier evidence,JournalProfileSnapshot_v23.md; NoveltyBaseline_v23.csv; SignificanceWarrant_v23.md,C12,"Editable source, abstract, keywords, and affiliation are present.",available author evidence
+EVID-C13,C13,carrier evidence,JournalProfileSnapshot_v23.md; NoveltyBaseline_v23.csv; SignificanceWarrant_v23.md,C13,The cover letter leads with the central theorem and exact significance.,available author evidence
+EVID-C14,C14,carrier evidence,JournalProfileSnapshot_v23.md; NoveltyBaseline_v23.csv; SignificanceWarrant_v23.md,C14,The integrated recommendation is accept-level and no active major-revision condition remains.,available author evidence
+EVID-A01,A01,artifact evidence,author preflight and pending independent tool certificates,A01,Main and supplement compile from the supplied LaTeX sources.,author evidence available
+EVID-A02,A02,artifact evidence,author preflight and pending independent tool certificates,A02,qpdf --check returns exit code zero for the final main PDF.,pending independent execution
+EVID-A03,A03,artifact evidence,author preflight and pending independent tool certificates,A03,qpdf --check returns exit code zero for the final supplement PDF.,pending independent execution
+EVID-A04,A04,artifact evidence,author preflight and pending independent tool certificates,A04,Every final PDF page is rendered and visually inspected without clipping or broken glyphs.,author evidence available
+EVID-A05,A05,artifact evidence,author preflight and pending independent tool certificates,A05,PDF hashes are bound to the source and build transcript.,author evidence available
+EVID-A06,A06,artifact evidence,author preflight and pending independent tool certificates,A06,Artifact manifest and SHA-256 inventory are complete.,author evidence available
+EVID-A07,A07,artifact evidence,author preflight and pending independent tool certificates,A07,Lean builds successfully under the recorded toolchain.,pending independent execution
+EVID-A08,A08,artifact evidence,author preflight and pending independent tool certificates,A08,Lean source contains no sorry/admit placeholders or unintended axioms.,pending independent execution
+EVID-A09,A09,artifact evidence,author preflight and pending independent tool certificates,A09,Theorem-to-Lean correspondence is exact and status-labeled.,pending independent execution
+EVID-A10,A10,artifact evidence,author preflight and pending independent tool certificates,A10,The trace structural validator passes the independent trace.,pending independent execution
+EVID-A11,A11,artifact evidence,author preflight and pending independent tool certificates,A11,The substantive-warrant report addresses every mandatory node and challenge.,pending independent execution
+EVID-A12,A12,artifact evidence,author preflight and pending independent tool certificates,A12,Evidence provenance is node-specific and hash-bound.,author evidence available
+EVID-A13,A13,artifact evidence,author preflight and pending independent tool certificates,A13,The final ZIP passes integrity and manifest verification.,author evidence available
+EVID-R01,R01,review evidence,pending independent Claude Code trace,R01,Fresh conventional review is performed independently of the author proposal.,pending independent execution
+EVID-R02,R02,review evidence,pending independent Claude Code trace,R02,Every recommendation-changing objection is imported as a typed challenge.,pending independent execution
+EVID-R03,R03,review evidence,pending independent Claude Code trace,R03,Every admitted challenge has a concrete variation and root-relevance path.,pending independent execution
+EVID-R04,R04,review evidence,pending independent Claude Code trace,R04,Every reopened node receives a complete seven-action candidate set.,pending independent execution
+EVID-R05,R05,review evidence,pending independent Claude Code trace,R05,Every selected action has a node-specific Choice record.,pending independent execution
+EVID-R06,R06,review evidence,pending independent Claude Code trace,R06,Every selected action is validated and executed with successor and budget records.,pending independent execution
+EVID-R07,R07,review evidence,pending independent Claude Code trace,R07,The independent trace is substantively audited rather than only schema checked.,pending independent execution
+EVID-R08,R08,review evidence,pending independent Claude Code trace,R08,"A second-order audit checks target adequacy, trace warrant, and root derivation.",pending independent execution
+EVID-R09,R09,review evidence,pending independent Claude Code trace,R09,The final recommendation is integrated into the carrier root rather than detached.,pending independent execution
+EVID-E01,E01,manuscript proof/requirement,target_relative_residue_main_v23.tex,E01,The current object is evaluated at submission stage.,available author evidence
+EVID-E02,E02,manuscript proof/requirement,target_relative_residue_main_v23.tex,E02,"Future journal acceptance is registered as a successor-stage condition, not asserted.",available author evidence
+EVID-E03,E03,manuscript proof/requirement,target_relative_residue_main_v23.tex,E03,Publication-stage GC requires accepted-artifact identity in a successor instance.,available author evidence

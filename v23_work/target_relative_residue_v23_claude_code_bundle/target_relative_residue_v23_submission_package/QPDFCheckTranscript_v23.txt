@@ -1,0 +1,29 @@
+=== ENVIRONMENT ===
+UTC=2026-07-26T23:27:53Z
+Linux vm 6.18.5 #1 SMP PREEMPT_DYNAMIC @0 x86_64 x86_64 x86_64 GNU/Linux
+=== QPDF IDENTITY ===
+/usr/bin/qpdf
+qpdf version 11.9.0
+Run qpdf --copyright to see copyright and license information.
+10fc302c4ca9860f24b8d2cb7f8a4cc454ba59d4a91e7a8e40f6b2c229486df7  /usr/bin/qpdf
+=== INPUT HASHES ===
+d86426f857f2a09fe039319a1f60c5ed290db011f276d8f2cb1594457aa75cbd  target_relative_residue_main_v23.pdf
+5cddd793469ac9cfb2a5216ac7430ad95934821cc732135d22597c2e0bc9f106  target_relative_residue_supplement_v23.pdf
+=== CHECK target_relative_residue_main_v23.pdf ===
+COMMAND=qpdf --check target_relative_residue_main_v23.pdf
+checking target_relative_residue_main_v23.pdf
+PDF Version: 1.5
+File is not encrypted
+File is not linearized
+No syntax or stream encoding errors found; the file may still contain
+errors that qpdf cannot detect
+EXIT_CODE=0
+=== CHECK target_relative_residue_supplement_v23.pdf ===
+COMMAND=qpdf --check target_relative_residue_supplement_v23.pdf
+checking target_relative_residue_supplement_v23.pdf
+PDF Version: 1.5
+File is not encrypted
+File is not linearized
+No syntax or stream encoding errors found; the file may still contain
+errors that qpdf cannot detect
+EXIT_CODE=0

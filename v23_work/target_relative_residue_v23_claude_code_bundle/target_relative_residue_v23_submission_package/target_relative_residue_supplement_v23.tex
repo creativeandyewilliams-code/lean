@@ -1,0 +1,515 @@
+\documentclass[10pt]{article}
+\usepackage[a4paper,margin=19mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{enumitem}
+\usepackage{booktabs,tabularx,array,longtable}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{fancyvrb}
+\usepackage{listings}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,fit,calc,backgrounds}
+\hypersetup{colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue}
+\setlist{nosep,leftmargin=*}
+\setlength{\parskip}{3pt}
+\setlength{\parindent}{1.25em}
+\emergencystretch=2em
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{lemma}[definition]{Lemma}
+\newtheorem{proposition}[definition]{Proposition}
+\newtheorem{corollary}[definition]{Corollary}
+\newtheorem{remark}[definition]{Remark}
+\newtheorem{example}[definition]{Example}
+\newtheorem{requirement}[definition]{Requirement}
+\newcommand{\Res}{\operatorname{Res}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\Choice}{\operatorname{Choice}}
+\newcommand{\GCA}{\operatorname{GCA}}
+\newcommand{\LCA}{\operatorname{LCA}}
+\newcommand{\Adm}{\operatorname{Adm}}
+\newcommand{\Succ}{\operatorname{Succ}}
+\newcommand{\Best}{\operatorname{Best}}
+\newcommand{\Loc}{\mathsf L}
+\newcommand{\Glob}{\mathsf G}
+\newcommand{\GC}{\mathsf{GC}}
+\newcommand{\GI}{\mathsf{GI}}
+\newcommand{\UB}{\mathsf{U}_B}
+\newcommand{\NE}{\mathsf{NE}}
+\newcommand{\TraceWF}{\mathsf{TraceWF}}
+\newcommand{\TraceW}{\mathsf{TraceWarranted}}
+\newcommand{\ValidReview}{\mathsf{ValidGCAReview}}
+\newcommand{\CA}{\textsf{conditionally accepted}}
+\newcommand{\GCS}{\textsf{global coherence assessed}}
+\newcommand{\Genome}{\mathcal H}
+\newcommand{\Config}{\Sigma}
+\newcommand{\Target}{\Theta}
+\newcommand{\ProjFit}{\widehat F}
+\newcommand{\OntFit}{F^{\mathrm{ont}}}
+\newcommand{\RealFit}{F^{\mathrm{real}}}
+\newcommand{\Candidates}{\mathsf{Candidates}}
+\newcommand{\Project}{\mathsf{Project}}
+\newcommand{\Validate}{\mathsf{Validate}}
+\newcommand{\Execute}{\mathsf{Execute}}
+\newcommand{\BudgetUpdate}{\mathsf{BudgetUpdate}}
+\newcommand{\Bridge}{\mathsf{Br}}
+\newcommand{\hash}{\operatorname{hash}}
+\newcommand{\GCsub}{\mathsf{GC}_{\mathrm{sub}}}
+\newcommand{\GCpub}{\mathsf{GC}_{\mathrm{pub}}}
+\newcommand{\Carrier}{\mathsf{Carrier}}
+\newcommand{\TargetAdeq}{\mathsf{TargetAdeq}}
+\newcommand{\RootDerives}{\mathsf{RootDerives}}
+\input{gca_status_v23.tex}
+\title{Formal Supplement to\\Target-Relative Residue and Sound Choice-Gated Closure for Finite Assessment Systems\\Version 23}
+\author{Andy E. Williams}
+\date{}
+\begin{document}
+\maketitle
+\tableofcontents
+
+
+\section{Purpose, dependency spine, and pre-audit status}
+
+This supplement specifies the carrier-complete Version-23 instance.  Its dependency spine is
+\[
+\begin{aligned}
+\text{residue}&\to\text{target adequacy}\to\text{projected Choice}\to\text{mode noninterference}\\
+&\to\text{bounded traversal}\to\text{completion semantics}\to\text{carrier root}.
+\end{aligned}
+\]
+The supplement also defines the machine-readable schemas and Claude Code execution contract.
+
+Version 23 is written under the design hypothesis that the independent carrier-complete assessment returns $\GCsub$.  The design hypothesis is stored outside the evidence registry and does not enter candidate projection or aggregation.  Before independent execution the actual status is $\ActualOverallGCA$.  A valid result must be generated from the frozen instance, target-adequacy certificate, qpdf and Lean certificates, independent Choice-and-execution trace, substantive-warrant report, second-order audit, and carrier root certificate.
+
+The paper, supplement, and package distinguish five statuses:
+\begin{enumerate}
+  \item theorem proved in prose;
+  \item theorem successfully formalized in Lean;
+  \item architecture requirement or schema contract;
+  \item author proposal for independent assessment; and
+  \item independently executed and certified result.
+\end{enumerate}
+No proposal is upgraded by being named in a manifest.  No expected verdict is upgraded by being repeated in the manuscript.
+
+\section{Expanded target-relative residue formalization}
+
+\begin{definition}[Kernel and residue]
+For $f:X\to Y$ define
+\[
+\Ker(f)=\{(x,y)\in X^2:f(x)=f(y)\}.
+\]
+For observation $q:X\to Y$ and target $\delta:X\to D$ define
+\[
+\Res_\delta(q)=\Ker(q)\setminus\Ker(\delta).
+\]
+\end{definition}
+
+\begin{theorem}[Factorization through the image]
+The following are equivalent: $\Res_\delta(q)=\varnothing$; $\delta$ is constant on fibres of $q$; and there is a unique $\bar\delta:\operatorname{im}(q)\to D$ with $\delta=\bar\delta\circ\widehat q$, where $\widehat q:X\to\operatorname{im}(q)$ is the corestriction.
+\end{theorem}
+
+\begin{proof}
+The first two statements both say $\Ker(q)\subseteq\Ker(\delta)$.  Under this inclusion define $\bar\delta(\widehat q(x))=\delta(x)$.  Fibre constancy makes this well defined; surjectivity of $\widehat q$ gives uniqueness.  The converse follows immediately from the factorization.
+\end{proof}
+
+\begin{corollary}[Two-state evaluator obstruction]
+If $(x,y)\in\Res_\delta(q)$, no deterministic evaluator $e$ depending only on $q$ can be correct at both $x$ and $y$.
+\end{corollary}
+
+\begin{proof}
+Correctness at both states would give $\delta(x)=e(q(x))=e(q(y))=\delta(y)$, contradiction.
+\end{proof}
+
+\begin{proposition}[Refinement monotonicity]
+If $q=h\circ q'$ then $\Res_\delta(q')\subseteq\Res_\delta(q)$.
+\end{proposition}
+
+\begin{definition}[Target-image observation]
+The canonical observation is $q_\delta:X\to\operatorname{im}(\delta)$, $q_\delta(x)=\delta(x)$.
+\end{definition}
+
+\begin{theorem}[Canonical target quotient]
+For every target-sufficient $s:X\to O$, its corestriction $\widehat s:X\to\operatorname{im}(s)$ admits a unique $\phi_s:\operatorname{im}(s)\to\operatorname{im}(\delta)$ satisfying $q_\delta=\phi_s\circ\widehat s$.
+\end{theorem}
+
+\begin{theorem}[Universal splitting obligation]
+Every target-sufficient successor observation separates every residual pair.
+\end{theorem}
+
+
+
+\section{Stage-indexed carrier targets and target adequacy}
+
+\begin{definition}[Submission-stage target]
+$\Target_J^{\mathrm{sub}}$ evaluates the present formal package, carrier, artifacts, registered review state, and submission-stage editorial state.  Its $\GCsub$ result requires an accept recommendation or only edits certified unable to change the root target.  It registers the future editorial decision as a successor-stage condition rather than asserting it.
+\end{definition}
+
+\begin{definition}[Publication-stage target]
+$\Target_J^{\mathrm{pub}}$ extends the submission-stage object with the authenticated journal decision, all required revisions, and the hashes of the accepted and final production artifacts.
+\end{definition}
+
+\begin{definition}[Target-adequacy certificate]
+A target-adequacy certificate records the requested target identifier and hash, frozen target identifier and hash, included root families, omitted objects, an irrelevance or factorization witness for every omission, all target-selection residual-pair challenges, and the certificate conclusion.  It is valid only when the requested verdict factors through the frozen-target observation.
+\end{definition}
+
+\begin{requirement}[Carrier coordinates inside the root]
+The Version-23 root includes scope, novelty, significance, centrality, self-containment, legibility, related-work adequacy, artifact fidelity, recommendation-changing review challenges, integrated recommendation, and editorial stage.  A carrier challenge may not be rejected solely because it does not refute a native mathematical theorem.
+\end{requirement}
+
+\begin{requirement}[Submission-stage aggregation]
+A terminal $\GCsub$ certificate requires closure of every mandatory formal, carrier, artifact, and review family; no active major-revision condition; an accept-level recommendation; and explicit registration that actual journal acceptance remains a successor-stage event.
+\end{requirement}
+
+
+\section{Registered finite review instance}
+
+\begin{definition}[Review instance]
+\[
+\mathfrak R=(J,\mathcal P,\Target,\Pi_\Target,\partial_\Target,
+G_0,\mathcal G,H_\Target,\Config,B,\mathcal S).
+\]
+$G_0$ is a finite policy-selected inclusion-minimal target-complete graph; $\mathcal G$ is a finite candidate grammar; $H_\Target$ is the search horizon; and $\mathcal S$ contains the required record schemas.  The review-instance hash commits to all components.
+\end{definition}
+
+\begin{definition}[Completeness relative to $\mathfrak R$]
+An operand set, candidate set, or trace is complete only relative to the frozen grammar, registries, boundary, and horizon of $\mathfrak R$.  A newly proposed operand or action must be introduced through a typed reconfiguration challenge and creates a new instance version when admitted.
+\end{definition}
+
+\section{Operand selection, contexts, and conditional children}
+
+\begin{definition}[Target-complete graph]
+A finite rooted graph is target complete when it is ancestor closed, dependency complete for registered node types, provenance preserving, and retains every root-relevant omitted object as residue with an activation condition.
+\end{definition}
+
+\begin{definition}[Policy-selected inclusion-minimal graph]
+Let $\mathfrak C_\Target$ be the finite family generated under the registered selection grammar.  The selector returns
+\[
+\tau_\Omega(\operatorname{Min}_{\subseteq}\mathfrak C_\Target).
+\]
+This permits several incomparable inclusion-minimal graphs and makes the deterministic policy explicit.  Unique leastness is asserted only when a closure operator and least-fixed-point theorem are supplied.
+\end{definition}
+
+\begin{definition}[Conditional child]
+A child interface is $(r_c,\chi_c,R_c)$: native result, activation condition, and unresolved role residue.  Parameterized state spaces, contexts, bridges, or validators may remain conditional when no typed challenge identifies an admissible variation capable of changing the root verdict within the review instance.
+\end{definition}
+
+The relevance rule blocks nonterminating elaboration demands.  The possibility of asking for a semantics of the implementation language, then a semantics of that semantics, is not itself root relevance.
+
+\section{Admissible-completion semantics}
+
+For a partial state $s$ of the frozen instance $\mathfrak R$, let $X_{\mathfrak R,s}$ be the set of schema-valid, budget-respecting terminal completions consistent with the current native results, evidence, conditions, and residue.  The current review observation $q_s$ forgets every distinction not yet registered at $s$, while $\delta_{\mathfrak R}$ returns the completion's root verdict.
+
+\begin{theorem}[Assessment-sufficiency bridge]
+The current review observation supports a unique correct root evaluator on all admissible completions if and only if
+\[
+\Res_{\delta_{\mathfrak R}}(q_s)=\varnothing.
+\]
+An unresolved condition is root relevant precisely when it witnesses or generates a pair of admissible completions identified by $q_s$ and separated by $\delta_{\mathfrak R}$.
+\end{theorem}
+
+The theorem is the direct specialization of the image-relative factorization theorem to the review completion space.  It supplies the formal bridge between the residue family and conditional root aggregation.
+
+\section{Typed projected-fitness pipeline}
+
+\begin{definition}[Pipeline types]
+\[
+\begin{aligned}
+\Project &: (s,a,\kappa,M,E)\to\mathcal P_\Target,\\
+\rho_\Target &: \mathcal P_\Target\times E\to\widetilde{\mathcal P}_\Target,\\
+S_\Target &: \widetilde{\mathcal P}_\Target\to\mathbb F_\Target,\\
+\ProjFit_\Target &= S_\Target\circ\rho_\Target\circ\Project.
+\end{aligned}
+\]
+$(\mathbb F_\Target,\preceq_\Target)$ is a total preorder.  Ontic fitness and realized fitness are separate from projected fitness.
+\end{definition}
+
+The exposed feature record may be $(A,Z,P,W,V,L,K)$, but it is an intermediate projected outcome.  The target-fixed aggregator completes comparison.  Pareto dominance may prune candidates under monotonicity but cannot replace Choice.
+
+\section{Finite candidate grammar and corrected Choice}
+
+Every Choice state represents all seven registered action types.  Inapplicability is a node-specific projected outcome with bottom fitness, not an omitted candidate.
+
+
+The registered grammar may produce local, global, decompose, acquire-information, revise-model, rollback, and halt-$\UB$ actions in finite registered contexts.  Candidate completeness means enumeration of every grammar-generated action within the horizon.  Safe halt ensures nonemptiness.
+
+\begin{definition}[Best class and Choice]
+\[
+\Best_\Target(s)=\{a:\ProjFit_\Target(b\mid s)\preceq_\Target
+\ProjFit_\Target(a\mid s)\text{ for all admissible }b\},
+\qquad
+\Choice_\Target(s)=\tau_\Target(\Best_\Target(s)).
+\]
+\end{definition}
+
+Local and global emission compare the proposed action against the complete registered candidate set.  Residual pairs and factorization certificates are evidence affecting projection, not bypass rules.
+
+
+\section{Carrier invariants and evidence requirements}
+
+The carrier family uses mandatory, noncompensable coordinates.  Failure of theorem correctness, target adequacy, artifact identity, or recommendation closure maps an action to bottom fitness for the $\GCsub$ target; legibility and cost compare only otherwise admissible carriers.
+
+\begin{definition}[Scope fit]
+$\mathsf{ScopeFit}_J(P)$ holds when the central result concerns a formal system or its properties and employs formal mathematical or logical methods consistent with the current dated journal profile.
+\end{definition}
+
+\begin{definition}[Novelty warrant]
+$\mathsf{Novel}_J(P,T)$ requires a theorem-level baseline, a statement of the admitted closure of each baseline result, and a witness that the central theorem $T$ is not already contained in that closure.  Broad framework comparison is insufficient.
+\end{definition}
+
+\begin{definition}[Significance warrant]
+$\mathsf{Significant}_J(P,T)$ requires a theorem-to-capability path showing that $T$ establishes a formal capability, separation, closure, representation, robustness, decidability, or complexity result not supplied by the baseline theorem family.
+\end{definition}
+
+\begin{definition}[Theorem centrality]
+$\mathsf{Central}(P,T)$ holds when the title, abstract, introduction, formal development, related work, conclusion, cover letter, theorem map, and artifacts identify the same theorem family $T$ as the principal contribution without incompatible overstatement.
+\end{definition}
+
+\begin{definition}[Carrier transmission]
+$\mathsf{CarrierFit}_J(P)$ requires self-contained definitions, local section orientation, bounded notation, current length and source compliance, accurate theorem-status labels, and a reviewer path from the principal claim to its proof and artifacts within the declared carrier budget.
+\end{definition}
+
+\begin{definition}[Artifact fidelity]
+$\mathsf{ArtifactFaithful}(P,A)$ requires canonical source/PDF binding, successful structural and visual PDF checks, package hashes, exact theorem-to-Lean correspondence, a successful Lean build and axiom/placeholder audit for claims attributed to Lean, trace structural validity, and evidence provenance.
+\end{definition}
+
+\begin{definition}[Review closure]
+$\mathsf{ReviewClosed}(R)$ holds when every recommendation-changing conventional objection is imported as a typed challenge, executed through Choice, and discharged, narrowed to a root-invariant edit, or retained as active residue producing $\UB$ or $\GI$ rather than $\GCsub$.
+\end{definition}
+
+
+\section{Typed challenges}
+
+\begin{definition}[Challenge schema]
+\begin{Verbatim}[fontsize=\small,frame=single]
+TypedChallenge {
+  challenge_id, review_instance_hash, node_id, challenge_kind,
+  challenged_object_id, admissible_variation_or_countermodel,
+  evidence_refs[], root_relevance_path[], projected_root_effect,
+  activation_conditions[], defeat_conditions[], status
+}
+\end{Verbatim}
+\end{definition}
+
+A challenge enters the global traversal only if the root-relevance path is nonempty and identifies how the variation can alter the fixed target.  Carrier comments and optional elaborations can be recorded separately without reopening the global graph.
+
+\section{Choice and execution records}
+
+\subsection{Choice record}
+\begin{Verbatim}[fontsize=\small,frame=single]
+ChoiceRecord {
+  record_id, review_instance_hash, genome_version, node_id,
+  state_hash, triggering_challenge_ids[], target_hash, policy_hash,
+  candidate_grammar_id, candidates[] {
+    candidate_id, action_type, operand_id, context_id, bridge_id,
+    projected_outcome_id, projected_outcome, uncertainty_adjustment,
+    feature_vector, fitness_value, evidence_refs[], budget_effect,
+    applicability { status, reason }
+  },
+  best_fitness_class[], tie_rule_id, selected_candidate_id,
+  projection_defeat_conditions[], validator_attestations[]
+}
+\end{Verbatim}
+
+\subsection{Execution record}
+\begin{Verbatim}[fontsize=\small,frame=single]
+ExecutionRecord {
+  record_id, review_instance_hash, choice_record_id,
+  selected_candidate_id, validation_result, validation_evidence_refs[],
+  native_result, realized_outcome, realized_fitness,
+  unresolved_residue[], activation_conditions[], successor_node_ids[],
+  budget_before, budget_after, predecessor_history_hash,
+  resulting_history_hash, calibration_update
+}
+\end{Verbatim}
+
+A Choice record without its candidate-specific objects is invalid.  An execution record without a valid preceding Choice record is not a calculus transition.
+
+\section{Parent-mode-history erasure}
+
+\begin{definition}[Erasure]
+$\mathsf{erase}_{\mathrm{pm}}$ removes the parent local/global tag and every history channel from which that tag can be reconstructed.  Candidate generation, projection, fitness, and Choice must factor through the erased state.
+\end{definition}
+
+\begin{theorem}[Noninterference]
+Equal erased states induce equal candidate sets, candidate projections, fitness values, best classes, and Choice outputs.
+\end{theorem}
+
+This theorem is stronger than saying that a structure lacks a field named \texttt{parentMode}; it constrains indirect transmission through history, evidence construction, and context generation.
+
+\section{Progress, termination, and budgets}
+
+\begin{requirement}[Progress totality]
+Every reachable state is terminal with exactly one verdict in $\{\GC,\GI,\UB\}$ or has a validated executable successor.  Safe halt must be generated, validated, executable, and verdict producing whenever it is required for progress.
+\end{requirement}
+
+\begin{theorem}[Termination]
+If every nonterminal transition strictly decreases a well-founded measure and progress totality holds, every traversal terminates with exactly one verdict.
+\end{theorem}
+
+Projected budgets count proposed actions; consumed budgets count only executed actions.  The frozen Version-23 proposal has projected counts
+\[
+B_\Glob^{\mathrm{prop}}=7,\qquad
+B_\Loc^{\mathrm{prop}}=33,\qquad
+B_{\mathrm{meta}}^{\mathrm{prop}}=0.
+\]
+The attached baseline execution consumes exactly the same counts, with forty transitions.
+
+\section{Trace well-formedness, warrant, and verdict gate}
+
+\begin{definition}[Trace well formed]
+$\TraceWF_{\mathfrak R}(T)$ requires schema validity, referential closure, identity and hash consistency, complete grammar-relative candidates, candidate-specific projections, valid Choice selection, Choice-before-execution ordering, valid successor and history hashes, budget conservation, and a root aggregation record.
+\end{definition}
+
+\begin{definition}[Trace warranted]
+$\TraceW_{\mathfrak R}(T)$ requires native-context warrant for mathematical claims, challenge root relevance, bridge validity, projection evidence, execution results, and root aggregation premises.  This predicate is defeasible and is not established merely by JSON-schema or arithmetic validation.
+\end{definition}
+
+\begin{definition}[Valid review and output]
+\[
+\ValidReview_{\mathfrak R}(T,v)
+\iff \TraceWF_{\mathfrak R}(T)\land\TraceW_{\mathfrak R}(T)
+\land\mathsf{RootDerives}_{\mathfrak R}(T,v).
+\]
+The reporting interface emits a GCA result only under this predicate; otherwise it emits $\NE$.
+\end{definition}
+
+$\NE$ means not executed or invalidly executed.  $\UB$ means that a valid traversal executed to its bounded stopping condition while unresolved root-relevant residue remained.
+
+\subsection{Root aggregation certificate}
+\begin{Verbatim}[fontsize=\small,frame=single]
+RootAggregationCertificate {
+  certificate_id, review_instance_hash, final_genome_hash,
+  terminal_node_statuses[] { node_id, global_status, native_status,
+    activation_conditions[], unresolved_residue[], supporting_execution_ids[] },
+  admitted_challenges[], challenge_dispositions[],
+  active_conditions[], discharged_conditions[], unresolved_residue[],
+  executed_budgets, derivation_rule_id, verdict, stopping_condition,
+  referenced_choice_records[], referenced_execution_records[],
+  substantive_warrant_attestations[] { attestation_id, reviewer, scope,
+    statement, evidence_refs[] }
+}
+\end{Verbatim}
+
+For $\GI$, the certificate identifies a surviving typed defeat and why no fitter repair path preserves the root.  For $\UB$, it identifies the remaining residue and bounded stopping condition.  For $\GC$, every root-relevant condition and challenge must be discharged or shown unable to change the verdict.  The terminal-status table covers every node in the frozen operand graph exactly once.  Each status identifies its supporting execution records or the activation conditions under which it remains conditionally accepted.
+
+\section{Anti-trace-laundering constraints}
+
+The structural validator rejects:
+\begin{enumerate}
+  \item certificate identifiers without resolved records;
+  \item candidates without projected outcomes, evidence references, and fitness values;
+  \item selected actions outside the best class;
+  \item executions without a preceding Choice record;
+  \item repeated generic evidence text substituted for node-specific objects;
+  \item budget counts inconsistent with executions;
+  \item $\UB$ without an executed stopping condition; and
+  \item $\GC$ or $\GI$ without a root aggregation certificate.
+\end{enumerate}
+
+The validator reports only structural success.  It prints an explicit warning that mathematical warrant remains to be assessed.
+
+
+\section{Carrier-complete functional genome}
+
+The frozen Version-23 proposal genome contains seventy-one nodes.  The root O00 has six family children:
+\begin{enumerate}
+  \item T00 target adequacy;
+  \item F00 formal theorem family;
+  \item C00 carrier adequacy;
+  \item A00 artifact fidelity;
+  \item R00 independent review closure; and
+  \item E00 submission-stage editorial status.
+\end{enumerate}
+The exact children, sibling relations, dependencies, native contexts, activation conditions, and projected budgets are recorded in \texttt{ClaimGenome\_v23.csv} and \texttt{FunctionalGenome\_v23.json}.  All nodes begin conditionally accepted.  The proposal schedule selects global assessment for O00 and the six family nodes and local assessment for sixty-four leaves.  This schedule is a defeasible author projection and consumes no budget.
+
+\section{Carrier root certificate}
+
+A carrier root certificate must cover every frozen node exactly once and contain:
+\begin{enumerate}
+  \item the target-adequacy certificate hash;
+  \item trace, instance, corpus, policy, boundary, and genome hashes;
+  \item final status, residue, and active conditions for every node;
+  \item qpdf certificate hashes for the final main and supplement PDFs;
+  \item the Lean build certificate and theorem-coverage hashes;
+  \item the integrated journal recommendation and its challenge closure;
+  \item the second-order audit result;
+  \item consumed local, global, meta, and transition budgets;
+  \item the submission-stage editorial condition; and
+  \item the derived verdict.
+\end{enumerate}
+For $\GCsub$, the integrated recommendation must be \texttt{accept} or \texttt{accept\_non\_root\_edits}; \texttt{major\_revision} and \texttt{reject} are schema-valid carrier outputs but incompatible with $\GCsub$.
+
+\section{Structural versus substantive validation}
+
+$\TraceWF$ checks schemas, identifiers, hashes, candidate coverage, Choice arithmetic, history continuity, budget arithmetic, node coverage, certificate references, and aggregation consistency.  $\TraceW$ checks mathematical proofs, novelty and significance arguments, bridge meaning, challenge relevance, projections, evidence, and the reasonableness of the integrated recommendation.  The structural validator must refuse generic trace laundering, but it cannot establish $\TraceW$.
+
+The independent audit therefore produces both a machine-readable trace and a prose substantive-warrant report.  A second-order audit checks that the report addresses every challenge and every mandatory carrier coordinate and that the root certificate does not exceed the report's conclusions.
+
+\section{Claude Code execution layer}
+
+Claude Code is instructed through the project-root \texttt{CLAUDE.md}, which imports the detailed start file and review prompt.  The mechanical sequence is:
+\begin{enumerate}
+  \item run \texttt{setup\_claude\_code\_environment\_v23.sh};
+  \item run \texttt{run\_author\_preflight\_v23.sh};
+  \item compile the LaTeX sources and freeze their hashes;
+  \item run \texttt{run\_qpdf\_checks\_v23.sh};
+  \item debug and build Lean with \texttt{lake build};
+  \item complete the Lean certificate and correspondence table;
+  \item execute the carrier-complete semantic review and write the independent trace;
+  \item run \texttt{validate\_carrier\_gca\_trace\_v23.py}; and
+  \item update the status only through \texttt{apply\_gca\_result\_v23.py}.
+\end{enumerate}
+
+The setup script attempts to install qpdf on Debian/Ubuntu when qpdf is absent and package-manager privileges and network access are available.  Otherwise the audit may consume an external qpdf certificate, provided it is bound to the exact frozen PDF hashes.  qpdf exit code zero means that qpdf found no errors or warnings; the certificate does not claim that qpdf detects every possible PDF defect.
+
+\section{Lean correspondence and build certificate}
+
+The Lean source remains provisional until compiled.  The intended formalized subset includes residue/factorization, evaluator obstruction, refinement, target-selection sufficiency as another factorization instance, finite scalar Choice, parent-mode erasure, report gating, a finite projection-margin lemma, and the proposed mode counts.  Completion-space soundness, theorem-level novelty, semantic bridge warrant, and the carrier recommendation remain prose/schema-level unless separately encoded.
+
+The completed build certificate records the exact Lean and Lake versions, platform, source and toolchain hashes, commands, exit codes, warnings, theorem inventory, and results of searches for \texttt{sorry}, \texttt{admit}, unsafe placeholders, and unexpected axioms.  A clean build upgrades only the declarations listed as fully formalized.
+
+\section{Validator acceptance conditions}
+
+The structural validator accepts a $\GCsub$ trace only when:
+\begin{enumerate}
+  \item the instance and assessed-input hashes match;
+  \item a valid target-adequacy certificate is present;
+  \item every genome node has exactly one baseline Choice and execution record or an explicitly authorized incremental predecessor relation;
+  \item every Choice record contains all seven registered action types;
+  \item the selected action lies in the equal greatest-fitness class;
+  \item histories and budgets form continuous chains;
+  \item qpdf and Lean certificates are present and bound to the final artifact hashes;
+  \item every recommendation-changing challenge is resolved or the verdict is not $\GCsub$;
+  \item the integrated recommendation is accept-level;
+  \item a substantive-warrant report and second-order audit are referenced; and
+  \item the root certificate covers all nodes and derives the reported verdict.
+\end{enumerate}
+
+\section{Version 22 to Version 23 revision map}
+
+Version 23:
+\begin{enumerate}
+  \item replaces the narrowed model-internal root with a carrier-complete stage-indexed target;
+  \item adds the target-selection sufficiency theorem;
+  \item adds sound bounded closure, finite relative completeness, strict local/global separation, and a projection-error margin theorem;
+  \item moves novelty, significance, scope, centrality, legibility, artifacts, recommendation, and editorial stage into the root genome;
+  \item prohibits a major-revision recommendation from coexisting with overall $\GCsub$;
+  \item expands the genome from forty to seventy-one nodes;
+  \item removes the author-issued executed $\GC$ certificate;
+  \item records expected $\GCsub$ separately from actual pre-audit $\NE$;
+  \item adds target-adequacy, carrier challenge, and carrier root schemas;
+  \item adds qpdf, Lean, Claude Code, status-update, and second-order-audit controls; and
+  \item requires the manuscript to be regenerated from the actual independent result.
+\end{enumerate}
+
+\section{Conclusion}
+
+The supplement makes the requested assessment object carrier complete.  A globally coherent theorem package transmitted through a major-revision carrier is not an overall globally coherent submission.  Conversely, carrier preferences that are proven root invariant do not create artificial residue.  The frozen finite instance supplies a stopping rule, while target-selection residue prevents the stopping rule from being achieved by dropping difficult coordinates.
+
+The Version-23 files are prepared for an independent Claude Code execution.  Until that execution produces a valid carrier root certificate, the expected verdict is a design hypothesis and the external actual-status record remains $\ActualOverallGCA$.  The execution outputs do not modify the frozen manuscript inputs; a recommendation-changing failure requires a successor manuscript version.
+
+\end{document}

@@ -1,0 +1,52 @@
+{
+  "version": "v23",
+  "root_target_id": "THETA-J-SUB-V23",
+  "stage": "submission",
+  "expected_verdict": "GC_sub",
+  "expected_verdict_is_evidence": false,
+  "verdicts": [
+    "GC_sub",
+    "GI",
+    "UB"
+  ],
+  "not_executed_status": "NE",
+  "fitness_classes": [
+    "f0",
+    "f1",
+    "f2",
+    "f3",
+    "f4"
+  ],
+  "candidate_actions": [
+    "local",
+    "global",
+    "decompose",
+    "acquire_info",
+    "revise_model",
+    "rollback",
+    "halt_UB"
+  ],
+  "tie_rule": "fixed candidate order inside equal greatest-fitness class",
+  "mandatory_carrier_coordinates": [
+    "scope",
+    "novelty",
+    "significance",
+    "centrality",
+    "self_containment",
+    "legibility",
+    "artifact_fidelity",
+    "review_closure",
+    "integrated_recommendation"
+  ],
+  "gc_recommendations": [
+    "accept",
+    "accept_non_root_edits"
+  ],
+  "major_revision_blocks_gc": true,
+  "budgets": {
+    "local": 64,
+    "global": 7,
+    "meta": 20,
+    "total_transitions": 120
+  }
+}

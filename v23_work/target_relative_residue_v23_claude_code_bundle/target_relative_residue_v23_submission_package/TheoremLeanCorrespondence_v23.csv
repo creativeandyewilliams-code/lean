@@ -1,0 +1,13 @@
+ArticleClaim,LeanDeclaration,Coverage,BuildStatus
+Image-relative factorization,factorization_of_noResidue,intended full,pending actual build
+Evaluator obstruction,evaluator_obstruction_at_both_states,intended full,pending actual build
+Refinement monotonicity,residue_refinement,intended full,pending actual build
+Canonical target observation,canonical_targetImage_factorization,intended core statement,pending actual build
+Universal splitting,sufficientObservation_splits_residue,intended full,pending actual build
+Finite scalar Choice,chooseBest / strict_local_emission / strict_global_emission,finite control spine,pending actual build
+Parent-mode noninterference,parentModeHistory_noninterference,finite encoded model,pending actual build
+Target-selection sufficiency,targetSelectionSufficiency,intended full factorization instance,pending actual build
+Projection-margin stability,projected_choice_stable,integer finite version,pending actual build
+Sound bounded closure,none,prose/completion-semantics theorem,not encoded
+Relative completeness,none,prose finite-fragment theorem,not encoded
+Carrier root,none,schema and independent trace,not encoded

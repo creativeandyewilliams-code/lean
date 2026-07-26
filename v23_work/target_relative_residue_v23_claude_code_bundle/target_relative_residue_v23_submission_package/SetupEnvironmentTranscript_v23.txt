@@ -1,0 +1,6 @@
+=== system ===
+uid=0(root) gid=0(root) groups=0(root)
+Linux vm 6.18.5 #1 SMP PREEMPT_DYNAMIC @0 x86_64 x86_64 x86_64 GNU/Linux
+jsonschema available
+Lean (version 4.29.0, x86_64-unknown-linux-gnu, commit 98dc76e3c0a9b856c9b98726b713fb04fab16740, Release)
+Lake version 5.0.0-src+98dc76e (Lean version 4.29.0)

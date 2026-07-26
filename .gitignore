@@ -1,0 +1,4 @@
+# Heavy Lean/Mathlib from-source build attempt (not a deliverable)
+v23_work/lean_build_attempt/
+v23_work/mathlib_build.log
+v23_work/run_mathlib_build.sh

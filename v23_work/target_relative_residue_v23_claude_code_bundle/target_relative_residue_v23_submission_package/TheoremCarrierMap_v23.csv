@@ -1,0 +1,8 @@
+CarrierClaim,FormalSupport,ArtifactSupport,JournalCriterion
+Central theorem is correct,F17 and dependencies,main/supplement/Lean correspondence,significant original formal-system result
+Target is carrier complete,T03-T04,GCAReviewInstance and target certificate,method and assessability
+Novelty is theorem-level,C03,NoveltyBaseline_v23.csv,originality
+Significance is capability-level,C04,SignificanceWarrant_v23.md,significance
+Carrier transmits theorem,C02/C05-C10,main PDF/source,reviewability
+Artifacts are faithful,A01-A13,certificates and hashes,source completeness
+Recommendation is integrated,C14/R09,carrier root certificate,acceptance readiness

@@ -1,0 +1,15 @@
+{
+  "version": "v23",
+  "stage": "submission",
+  "expected_overall_verdict": "GC_sub",
+  "actual_status": "executed",
+  "actual_overall_verdict": "UB",
+  "reason": "Recorded from a structurally valid independent carrier-complete assessment.",
+  "expected_result_is_evidence": false,
+  "updated_by": "apply_gca_result_v23.py",
+  "review_instance_hash": "f1bac795ab0a8cac2ca617dbaa24b2b4c73fa9068a2278065973955a07e55212",
+  "input_corpus_hash": "f212f0a9d84ac90e7553160874b9cda6b230fb7f7345d3aaa51ce5ff27aff5a0",
+  "updated_utc": "2026-07-26T23:47:23.032252+00:00",
+  "frozen_manuscript_modified": false,
+  "successor_version_required_for_manuscript_change": true
+}

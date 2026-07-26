@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "record_id",
+    "review_instance_hash",
+    "input_corpus_hash",
+    "trace_kind",
+    "genome_version",
+    "target_hash",
+    "policy_hash",
+    "declared_budgets",
+    "expected_node_count"
+  ],
+  "properties": {
+    "record_type": {
+      "const": "assessment_identity"
+    },
+    "record_id": {
+      "type": "string"
+    },
+    "review_instance_hash": {
+      "type": "string"
+    },
+    "input_corpus_hash": {
+      "type": "string"
+    },
+    "trace_kind": {
+      "const": "independent_carrier_complete"
+    },
+    "genome_version": {
+      "const": "v23"
+    },
+    "target_hash": {
+      "type": "string"
+    },
+    "policy_hash": {
+      "type": "string"
+    },
+    "declared_budgets": {
+      "type": "object"
+    },
+    "expected_node_count": {
+      "const": 71
+    }
+  }
+}

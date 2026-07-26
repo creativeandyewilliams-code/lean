@@ -1,0 +1,1 @@
+STRUCTURALLY VALID v23 carrier-complete trace. Derived verdict: UB; recommendation: major_revision; choices: 71; challenges: 5

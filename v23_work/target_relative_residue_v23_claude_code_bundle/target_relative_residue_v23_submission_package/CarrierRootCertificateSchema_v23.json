@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "record_id",
+    "review_instance_hash",
+    "input_corpus_hash",
+    "target_adequacy_record_id",
+    "covered_nodes",
+    "final_node_statuses",
+    "unresolved_root_residue",
+    "active_root_conditions",
+    "integrated_recommendation",
+    "editorial_stage",
+    "future_decision_registered",
+    "qpdf_certificate",
+    "lean_build_certificate",
+    "substantive_warrant_report",
+    "second_order_audit",
+    "consumed_budgets",
+    "derived_verdict",
+    "trace_well_formed",
+    "trace_warranted",
+    "root_derives"
+  ],
+  "properties": {
+    "record_type": {
+      "const": "carrier_root_aggregation"
+    },
+    "record_id": {
+      "type": "string"
+    },
+    "review_instance_hash": {
+      "type": "string"
+    },
+    "input_corpus_hash": {
+      "type": "string"
+    },
+    "target_adequacy_record_id": {
+      "type": "string"
+    },
+    "covered_nodes": {
+      "type": "array",
+      "minItems": 71,
+      "maxItems": 71
+    },
+    "final_node_statuses": {
+      "type": "object"
+    },
+    "unresolved_root_residue": {
+      "type": "array"
+    },
+    "active_root_conditions": {
+      "type": "array"
+    },
+    "integrated_recommendation": {
+      "enum": [
+        "accept",
+        "accept_non_root_edits",
+        "major_revision",
+        "reject"
+      ]
+    },
+    "editorial_stage": {
+      "const": "submission"
+    },
+    "future_decision_registered": {
+      "const": true
+    },
+    "qpdf_certificate": {
+      "type": "string"
+    },
+    "lean_build_certificate": {
+      "type": "string"
+    },
+    "substantive_warrant_report": {
+      "type": "string"
+    },
+    "second_order_audit": {
+      "type": "string"
+    },
+    "consumed_budgets": {
+      "type": "object"
+    },
+    "derived_verdict": {
+      "enum": [
+        "GC_sub",
+        "GI",
+        "UB"
+      ]
+    },
+    "trace_well_formed": {
+      "const": true
+    },
+    "trace_warranted": {
+      "const": true
+    },
+    "root_derives": {
+      "const": true
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "record_id",
+    "review_instance_hash",
+    "input_corpus_hash",
+    "requested_target_hash",
+    "frozen_target_hash",
+    "included_families",
+    "omission_witnesses",
+    "residual_pair_challenges",
+    "adequate"
+  ],
+  "properties": {
+    "record_type": {
+      "const": "target_adequacy"
+    },
+    "record_id": {
+      "type": "string"
+    },
+    "review_instance_hash": {
+      "type": "string"
+    },
+    "input_corpus_hash": {
+      "type": "string"
+    },
+    "requested_target_hash": {
+      "type": "string"
+    },
+    "frozen_target_hash": {
+      "type": "string"
+    },
+    "included_families": {
+      "type": "array",
+      "minItems": 6
+    },
+    "omission_witnesses": {
+      "type": "array"
+    },
+    "residual_pair_challenges": {
+      "type": "array"
+    },
+    "adequate": {
+      "type": "boolean"
+    }
+  }
+}
